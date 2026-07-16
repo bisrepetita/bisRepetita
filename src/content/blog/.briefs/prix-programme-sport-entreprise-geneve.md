@@ -2,40 +2,54 @@
 
 ## Metadata
 - Slug: prix-programme-sport-entreprise-geneve
-- Slug rationale: descriptif + entités "prix" + "programme-sport-entreprise" + "geneve", evergreen (les tarifs sont mis à jour dans le corps, pas dans le slug), pas de date car article de référence price page destiné à durer
+- Slug rationale: descriptif + entités "prix" + "programme-sport-entreprise" + "geneve", evergreen. L'intention de recherche reste "prix" même si la réponse de fond est "sur devis, voici pourquoi et comment budgétiser quand même".
 - Module: B (SEO Local — prestataire service B2B à Genève)
-- Target word count: 1600–2200 mots
+- Target word count: 1500–2000 mots
 - Primary keyword: prix programme sport entreprise Genève
-- pubDate: 2026-05-28
+- pubDate: 2026-05-28 (à ajuster à la republication)
 - Author: Nicolas de Boccard
-- Persona: DRH ou CFO d'une entreprise genevoise (PME ou multinationale) — cherche des fourchettes tarifaires concrètes en CHF AVANT de remplir un formulaire de contact. Double cible : (1) le DRH qui budgétise un programme annuel, (2) le CFO qui valide la ligne budgétaire et cherche la déductibilité fiscale.
-- Tonalité: factuel, transparent, direct — même register que prix-cours-boxe-geneve-2026 : grille publiée sans euphémisme
+- Persona: DRH ou CFO d'une entreprise genevoise (PME ou multinationale) — cherche un ordre de grandeur budgétaire réaliste AVANT de remplir un formulaire de contact, et veut comprendre pourquoi il n'existe pas de grille figée pour ce type de prestation.
+- Tonalité: factuel, direct, honnête sur la limite du modèle sur-devis — pas de promesse de grille qu'on ne tient pas.
 - Registre: vouvoiement systématique
+- Page type: article
 - Contexte chargé depuis: docs/identity.md ✓ + docs/seo-context.md ✓ + docs/voice.md ✓
-- Golden sample structurel: src/content/blog/prix-cours-boxe-geneve-2026.mdx (même logique : TLDR, grille tableau, explication des écarts, guide choix selon profil)
+
+---
+
+## ANGLE — DÉCISION CLIENT (2026-07-16, définitive, ne pas re-litiger)
+
+Le corporate Bis Repetita est **100% sur devis**. Chaque projet est customisé (groupe, lieu, fréquence, format) : il n'existe **aucune fourchette Bis Repetita en CHF** à publier, contrairement à la grille individuelle (`/tarifs`) qui elle est fixe et publiée.
+
+**Interdit absolu** : inventer, estimer, extrapoler ou dériver un montant Bis Repetita corporate, y compris depuis la grille individuelle (`docs/tarifs-reference.md`, section Corporate = "Devis sur demande").
+
+**Nouvel angle** : de « voici notre grille » vers **« voici pourquoi c'est sur devis, voici les 4 paramètres qui font varier le prix, voici les fourchettes du marché genevois pour vous ancrer, voici ce qu'il faut préparer pour obtenir un devis sous 48h »**. La transparence n'est plus sur le prix Bis Repetita (qui n'existe pas en grille) mais sur **la logique de tarification** et **le processus**.
+
+L'intro ne doit plus reprocher aux concurrents de répondre "on verra selon votre projet" — Bis Repetita répond exactement la même chose, honnêtement assumée et expliquée.
 
 ---
 
 ## Snippet recommandé
 
-**Variante 1 — Transparence / Prix (recommandée) :**
-- Title: `Prix sport en entreprise Genève : grille corporate 2026` (53 car.)
-- H1: `Programme sport en entreprise à Genève : tous les tarifs corporate Bis Repetita publiés` (89 car.)
-- Meta: `Fourchettes tarifaires en CHF, studio vs sur site, séance ponctuelle vs programme mensuel. La grille corporate Bis Repetita sans formulaire obligatoire. Devis sous 48h.` (154 car.)
+**Variante 1 — Logique de prix (recommandée) :**
+- Title: `Prix sport entreprise Genève : ce qui varie le devis` (52 car. réels)
+- H1: `Programme sport en entreprise à Genève : pourquoi c'est sur devis, et comment budgétiser quand même` (99 car. réels)
+- Meta: `Groupe, lieu, fréquence, format : les 4 paramètres qui déterminent le prix d'un programme corporate à Genève. Fourchettes marché + devis sous 48h.` (146 car. réels)
 
 ---
 
 ## Snippet variantes
 
-**Variante 2 — Douleur / Solution :**
-- Title: `Sport corporate Genève : combien ça coûte vraiment ?` (53 car.)
-- H1: `Combien coûte un programme sport en entreprise à Genève ? Tarifs et fourchettes en CHF` (89 car.)
-- Meta: `Vous cherchez un budget réaliste pour le sport en entreprise à Genève ? Bis Repetita publie ses tarifs corporate : séance pilote, programme mensuel, demi-journée. Devis sous 48h.` (174 car.) → rogner : `Budget sport en entreprise à Genève : Bis Repetita publie ses tarifs corporate. Séance pilote, mensuel, demi-journée. Devis sous 48h.` (148 car.)
+**Variante 2 — Budget / DRH :**
+- Title: `Programme sport entreprise Genève : prix sur devis` (50 car. réels)
+- H1: `Combien coûte un programme sport en entreprise à Genève quand tout est sur devis ?` (82 car. réels)
+- Meta: `Pas de grille figée : chaque projet corporate est sur mesure. Ce qui fait varier le prix, fourchettes marché, devis sous 48h.` (125 car. réels)
 
-**Variante 3 — Local / GEO :**
-- Title: `Tarifs sport entreprise Genève : Bis Repetita corporate` (54 car.)
-- H1: `Prix d'un programme sport d'entreprise à Genève : ce que Bis Repetita pratique et ce que le marché propose` (103 car.)
-- Meta: `Studio ou locaux de votre entreprise, séance unique ou programme annuel : tarifs détaillés en CHF pour le corporate Bis Repetita à Genève. Sans formulaire, sans engagement.` (163 car.) → rogner : `Studio ou locaux entreprise, séance unique ou programme annuel : tarifs CHF corporate Bis Repetita Genève. Sans formulaire, sans engagement.` (150 car.)
+**Variante 3 — Process / Devis :**
+- Title: `Prix programme sport entreprise Genève : devis en 48h` (53 car. réels)
+- H1: `Programme sport en entreprise à Genève : ce qui détermine le prix de votre devis` (80 car. réels)
+- Meta: `Effectif, lieu, fréquence, objectif RH : préparez ces 4 informations pour un devis corporate sous 48h. Fourchettes marché pour situer votre budget.` (147 car. réels)
+
+**Note comptage** : tous les chiffres ci-dessus ont été recomptés caractère par caractère (pas d'estimation) après le FAIL du premier tour brief-critic (Title V1/V2 dépassaient 60 car. réels malgré l'annonce). Title cible ≤ 60 car., Meta cible ≤ 155-160 car.
 
 ---
 
@@ -43,104 +57,85 @@
 
 | Rôle | Keyword (query brut) | Volume | Placement | Formulation naturelle (prose) |
 |---|---|---|---|---|
-| **Principal** | prix programme sport entreprise Genève | ~0/mois | Title, H1, intro, meta | le prix d'un programme sport en entreprise à Genève / les tarifs d'un programme sport corporate à Genève |
-| Secondaire | tarif sport entreprise Genève | estimé | H2 grille, body | les tarifs du sport en entreprise à Genève |
-| Secondaire | prix team building sportif Genève | estimé | H2 marché, body | le prix d'un team building sportif à Genève |
-| Secondaire | budget sport entreprise Suisse | estimé | H2 budget DRH, body | le budget sport en entreprise en Suisse |
-| Secondaire | programme corporate boxe Genève | estimé | H2 Bis Repetita, body | un programme corporate de boxe à Genève |
-| Secondaire | coût séance sport entreprise | estimé | H2 grille, body | le coût d'une séance sport en entreprise |
-| Long-tail | prix team building boxe Genève | estimé | H2 marché, FAQ | le prix d'un team building boxe à Genève |
-| Long-tail | sport entreprise déductible impôts Suisse | estimé | H2 fiscalité, body | le sport en entreprise déductible fiscalement en Suisse |
-| Long-tail | intervention coach sport entreprise tarif | estimé | H2 grille, body | le tarif d'une intervention de coach sportif en entreprise |
-| Long-tail | programme bien-être entreprise prix Genève | estimé | Intro, body | le prix d'un programme bien-être en entreprise à Genève |
+| **Principal** | prix programme sport entreprise Genève | ~0/mois | Title, H1, intro, meta | le prix d'un programme sport en entreprise à Genève / le budget d'un programme sport corporate à Genève |
+| Secondaire | tarif sport entreprise Genève | Non vérifié (keywords-*.json vide sur ce champ) | H2 paramètres, body | ce qui détermine le tarif du sport en entreprise à Genève |
+| Secondaire | prix team building sportif Genève | Non vérifié | H2 marché, body | le prix d'un team building sportif à Genève |
+| Secondaire | budget sport entreprise Suisse | Non vérifié | H2 budget/devis, body | le budget sport en entreprise en Suisse |
+| Secondaire | devis programme sport entreprise | Non vérifié | H2 devis, body, CTA | obtenir un devis pour un programme sport entreprise |
+| Secondaire | coût séance sport entreprise | Non vérifié | H2 paramètres, body | le coût d'une séance sport en entreprise |
+| Long-tail | prix team building boxe Genève | Non vérifié | H2 marché, FAQ | le prix d'un team building boxe à Genève |
+| Long-tail | sport entreprise déductible impôts Suisse | Non vérifié | H2 fiscalité, body | le sport en entreprise déductible fiscalement en Suisse |
+| Long-tail | devis sport entreprise 48h | Non vérifié | H2 devis, body | un devis sous 48h pour un programme sport entreprise |
+| Long-tail | programme bien-être entreprise prix Genève | Non vérifié | Intro, body | le prix d'un programme bien-être en entreprise à Genève |
 
-**Rappel au writer** : volumes quasi nuls sur ce segment — la valeur est la transparence prix dans un marché opaque. Utiliser toujours la colonne "Formulation naturelle" dans la prose.
+**Rappel au writer** : volumes quasi nuls sur ce segment (`keywords-prix-programme-sport-entreprise-geneve.json` ne renvoie aucune donnée DataForSEO pour les secondaires/longue-traîne — "Non vérifié", pas de chiffre inventé) — la valeur est l'utilité (comprendre le sur-mesure + pouvoir budgétiser via le marché) et non le volume de recherche. Utiliser toujours la colonne "Formulation naturelle" dans la prose. Un `/seo-serp` frais sur ce nouvel angle (le scan existant du 2026-05-07 ciblait l'ancien angle "grille CHF" et n'a capturé aucun résultat) renforcerait la solidité de l'angle avant publication finale — non bloquant pour cette mission.
 
 ---
 
 ## Structure
 
-### TLDR (bloc résumé — avant l'intro, selon modèle golden sample)
-Keywords: prix sport entreprise Genève, tarifs corporate, fourchettes CHF
-Contenu: 4 bullet points factuels résumant les chiffres clés :
-- Séance pilote corporate Bis Repetita : à partir de X CHF (groupe 6–8 pers.)
-- Programme récurrent mensuel : fourchette Y–Z CHF/mois selon format et groupe
-- Demi-journée thématique : à partir de W CHF (2h, groupe 6–8 pers.)
-- Intervention sur site vs studio : même tarif, frais de déplacement Genève centre inclus dans un rayon de 5 km
-Remplir les valeurs avec les données brutes Nicolas à la rédaction.
+### TLDR (bloc résumé — avant l'intro)
+Keywords: prix sport entreprise Genève, sur devis, fourchettes marché, devis 48h
+Contenu: 4 bullet points factuels, **zéro montant Bis Repetita** :
+- Le programme corporate Bis Repetita est **100% sur devis** : pas de grille figée, chaque projet est customisé
+- 4 paramètres déterminent le prix : taille du groupe, lieu (studio ou sur site), fréquence, format
+- Sur le marché genevois, les activités sportives corporate se situent généralement entre 25 et 150 CHF par personne et par séance selon le format (sourcé dans l'article)
+- Devis sous 48h : effectif, fréquence souhaitée, lieu, objectif RH suffisent pour démarrer
 
 ---
 
 ### Intro (100–150 mots)
-Keywords: prix programme sport entreprise Genève, transparent, DRH budget
-Contenu: Entrée directe sur le problème — les DRH genevois passent un temps disproportionné à remplir des formulaires pour obtenir des fourchettes que tout prestataire sérieux devrait publier. Bis Repetita publie ses tarifs corporate en clair, comme pour ses cours individuels. L'article couvre : la grille Bis Repetita, les fourchettes du marché genevois, ce qui fait varier le prix, et les options de facturation. Ton direct, pas de formule de politesse inutile.
+Keywords: prix programme sport entreprise Genève, sur devis, budgétiser
+Contenu: Entrer directement sur le constat honnête : un programme sport en entreprise n'a pas de prix universel parce que chaque projet diffère (effectif, lieu, fréquence, objectif RH). Bis Repetita fonctionne à 100% sur devis pour le corporate — pas par opacité, mais parce que la grille individuelle fixe (`/tarifs`) ne peut pas s'appliquer telle quelle à un contexte entreprise variable. Ce que l'article donne à la place d'une grille : les paramètres qui font varier le prix, des fourchettes de marché genevois pour situer un budget, et la marche à suivre pour obtenir un devis rapide. Ton direct, aucune promesse de grille qu'on ne tient pas plus loin dans l'article.
 
 ---
 
-### H2: La grille tarifaire corporate Bis Repetita — en CHF, sans formule vague
-Keywords: tarif sport entreprise Genève, prix corporate boxe, grille CHF
-Contenu: Tableau central — le cœur de l'article. Structure en deux tableaux (modèle golden sample) :
-Tableau 1 — Séance à l'unité :
-| Format | Groupe | Prix séance |
-|---|---|---|
-| Coaching boxe en studio | jusqu'à 6 pers. | X CHF |
-| Coaching boxe sur site | jusqu'à 6 pers. | X CHF |
-| Round by Round corporate (2 coachs) | jusqu'à 8 pers. | X CHF |
-| Demi-journée thématique (2h) | jusqu'à 8 pers. | X CHF |
-Tableau 2 — Programme récurrent mensuel :
-| Format | Fréquence | Prix mensuel |
-|---|---|---|
-| 1 séance/semaine (studio, 6 pers.) | 4 séances | X CHF |
-| 2 séances/semaine (studio, 6 pers.) | 8 séances | X CHF |
-| Programme sur site mensuel | selon fréquence | sur devis |
-Préciser conditions : facturation 30 jours, annulation 48h, devis personnalisé sous 48h. Remplir les montants X à la rédaction avec les données Nicolas.
-
----
-
-### H2: Ce qui fait varier le prix — les 4 paramètres
-Keywords: prix team building Genève, facteurs tarif sport entreprise, studio ou sur site
-Contenu: Explication des 4 leviers qui font monter ou descendre le tarif (modèle golden sample section "pourquoi l'écart de prix") :
-1. La taille du groupe — le coût par tête baisse à mesure que le groupe grandit, mais la qualité pédagogique exige un plafond (6 max en coaching technique, 8 max en format collectif Round by Round).
-2. La localisation — studio Bis Repetita (La Voie-Creuse 16, centre Genève) vs intervention sur site dans les locaux de l'entreprise. Surface requise sur site : min. 30 m² dégagé. Frais de déplacement inclus dans un rayon de 5 km du studio.
-3. La fréquence — séance ponctuelle (one-shot, événement, kick-off) vs programme récurrent mensuel avec forfait négocié. Le programme récurrent est plus économique à l'unité et crée les effets durables.
-4. Le format — Round by Round collectif (format accessible, animation élevée) vs coaching technique boxe (charge cognitive élevée, pédagogie individualisée). Pas le même prix, pas le même objectif.
+### H2: Ce qui fait varier le prix — les 4 paramètres (PILIER de l'article)
+Keywords: tarif sport entreprise Genève, facteurs prix programme corporate, studio ou sur site
+Contenu: Cette section devient le cœur de l'article. Elle ne doit pas "subir" le sur-mesure, elle doit le **justifier** : chaque paramètre a un impact concret et compréhensible sur le devis.
+1. **La taille du groupe** — coût par tête qui baisse avec le nombre, mais plafond pédagogique ferme : 6 personnes max en coaching technique individualisé, 8 personnes max en format collectif Round by Round (2 coachs). Au-delà, la qualité de correction individuelle se dégrade — Bis Repetita ne propose pas de format "cours de masse" corporate, ce qui explique une partie du prix.
+2. **La localisation** — studio Bis Repetita (La Voie-Creuse 16, Genève) vs intervention sur site. Sur site : surface minimum 30 m² dégagés, sol dur ou parquet. Frais de déplacement inclus dans un rayon de 5 km du studio (centre-ville, Pâquis, Plainpalais, Eaux-Vives, Grottes) ; au-delà (Grand-Saconnex, Meyrin, Carouge, Lancy), supplément kilométrique précisé au devis.
+3. **La fréquence** — séance ponctuelle (kick-off, événement, journée cohésion) vs programme récurrent mensuel. Le récurrent optimise la planification des coachs et produit des effets durables (cohésion, récupération cognitive) qu'une séance one-shot ne produit pas.
+4. **Le format** — Round by Round corporate (collectif, animation élevée, 2 coachs, 8 pers.) vs coaching technique boxe (charge cognitive, pédagogie individualisée, 6 pers. max). Prestations différentes, objectifs différents, prix différents — pas un artifice tarifaire.
 
 ---
 
 ### H2: Fourchettes du marché genevois — à quoi comparer
 Keywords: prix team building sportif Genève, budget corporate sport Suisse, marché sport entreprise Genève
-Contenu: Section courte de mise en contexte (250–300 mots). Comparer les fourchettes Bis Repetita avec d'autres formats corporate disponibles à Genève : escape game corporate (fourchette), outdoor team building (fourchette), yoga/pilates en entreprise (fourchette), salle de sport avec cours collectifs corporate (fourchette). Sources : tarifs publiés sur les sites des prestataires genevois ou estimations marché transparentes. L'objectif n'est pas de disqualifier les concurrents — c'est de donner au DRH une grille de lecture pour comparer ce qui est comparable. Ancre naturelle vers `/blog/activites-sportives-entreprise-geneve-comparatif` pour le comparatif complet des formats.
+Contenu: Seule section chiffrée de l'article — donc critique à sourcer réellement (voir mission sources ci-dessous). Comparer plusieurs formats sportifs/team-building disponibles à Genève (yoga/pilates corporate, escape game, outdoor, salle fitness accès corporate, cours collectifs boxe en club) avec des fourchettes **réellement vérifiées** (source + lien + date d'accès). **Aucune ligne "Bis Repetita" chiffrée dans le tableau** — le tableau positionne uniquement le marché externe ; le texte qui suit peut situer qualitativement où se place le format boxe premium (charge technique, cadre professionnel) sans donner de CHF Bis Repetita. Si une fourchette externe ne se vérifie pas via recherche réelle, la retirer plutôt que la garder floue. Ancre vers `/blog/activites-sportives-entreprise-geneve-comparatif`.
 
 ---
 
-### H2: Quel format selon votre budget et votre objectif RH
-Keywords: programme sport entreprise budget, choisir format corporate, séance pilote vs programme mensuel
-Contenu: Guide décisionnel en 3 scenarios (modèle golden sample section "quel format selon votre budget") :
-Scenario A — Budget découverte / événement one-shot (kick-off, anniversaire entreprise, journée cohésion) : demi-journée thématique boxe, 2h, 6–8 pers. Tarif fixe, logistique simple, aucun engagement.
-Scenario B — Budget programme annuel récurrent : formule mensuelle 1×/semaine sur 3–6 mois. Effet mesurable sur la cohésion et la récupération cognitive. Tarif mensuel forfaitaire.
-Scenario C — Budget limité, groupe moyen : Round by Round corporate, format collectif, 8 pers., 2 coachs. Meilleur ratio coût/impact pour un groupe qui découvre la boxe.
-Pour chaque scenario : fourchette tarifaire indicative + lien contextuel vers les pages service correspondantes.
+### H2 (NOUVEAU): Ce qu'il faut préparer pour obtenir un devis sous 48h
+Keywords: devis programme sport entreprise, devis sous 48h, préparer devis corporate
+Contenu: Remplace la valeur perdue de la grille par une étape actionnable. Lister ce qu'un DRH doit avoir en tête avant de contacter Bis Repetita pour que le devis parte vite :
+- **Effectif** — combien de personnes, et si le groupe est fixe ou tournant (roulement d'équipe)
+- **Fréquence souhaitée** — one-shot / mensuel / hebdomadaire
+- **Lieu** — studio La Voie-Creuse 16 ou intervention sur site (préciser l'adresse pour vérifier la zone/surface)
+- **Objectif RH** — cohésion ponctuelle, bien-être récurrent, découverte technique — l'objectif oriente le format recommandé (Round by Round vs coaching technique)
+Peut intégrer ici, sous forme de 2-3 profils courts (sans montant), les anciens "scénarios A/B/C" reformulés par profil de besoin RH → format recommandé, plutôt que par montant. Terminer par la mention : devis sous 48h, créneau confirmé sous 5 jours ouvrés.
 
 ---
 
 ### H2: Traitement fiscal — ce que vous pouvez faire valoir en Suisse
 Keywords: sport entreprise déductible impôts Suisse, fiscalité corporate sport, AVS frais entreprise
-Contenu: Section courte (200–250 mots) — ton prudent, pas de conseil juridique engageant. Deux cas de figure selon la qualification comptable retenue par votre fiduciaire : (1) avantage en nature soumis AVS/LPP si individualisable par collaborateur, (2) frais généraux d'entreprise déductibles si collectif et non individualisable. Mention que Bis Repetita fournit une attestation de prestations pour faciliter la qualification. Recommandation : valider avec votre fiduciaire avant comptabilisation. Ancre naturelle vers le HUB `/blog/sport-en-entreprise-geneve-guide-drh` section fiscalité pour l'approfondissement.
+Contenu: Inchangé sur le fond (200–250 mots), ton prudent, sourcé réellement si possible (voir mission sources). Deux cas de qualification comptable (avantage en nature individualisable vs frais généraux collectifs), attestation de prestations Bis Repetita, recommandation de valider avec le fiduciaire. Ancre vers `/blog/sport-en-entreprise-geneve-guide-drh`.
 
 ---
 
 ### H2: Questions fréquentes (FAQ)
 Keywords: prix team building Genève, budget sport entreprise, devis corporate
-Contenu: 4 questions issues du PAA SERP :
-1. "Quel est le prix d'un programme sport en entreprise ?" — réponse courte avec fourchettes Bis Repetita
-2. "Comment financer le sport en entreprise en Suisse ?" — réponse courte : budget RH ou frais généraux selon qualification comptable
-3. "Combien coûte un team building sportif à Genève ?" — fourchette demi-journée + renvoi tableau
-4. "Le sport en entreprise est-il déductible fiscalement en Suisse ?" — réponse courte prudente + renvoi section fiscalité
+Contenu: Adapter les questions qui présupposaient une grille publiée :
+1. "Quel est le prix d'un programme sport en entreprise à Genève ?" — réponse honnête : sur devis, pas de grille fixe, pourquoi (renvoi aux 4 paramètres), et comment obtenir un ordre de grandeur (fourchettes marché).
+2. "Pourquoi Bis Repetita ne publie-t-il pas de grille tarifaire corporate ?" (NOUVELLE, remplace l'ancienne prémisse) — la grille individuelle est fixe parce que le contexte est fixe (studio, format standard) ; le corporate varie sur 4 paramètres réels, une grille figée serait soit fausse soit truffée d'exceptions.
+3. "Comment financer le sport en entreprise en Suisse ?" — inchangé.
+4. "Combien coûte un team building sportif à Genève ?" — répondre avec les fourchettes de marché sourcées, pas de montant Bis Repetita.
+5. "Le sport en entreprise est-il déductible fiscalement en Suisse ?" — inchangé, ton prudent.
 
 ---
 
 ### Conclusion + CTA (80–100 mots)
-Contenu: Pas de "en conclusion". Reformuler : les tarifs corporate Bis Repetita sont publiés pour que vous puissiez budgétiser sans passer par un formulaire. Si votre projet sort des forfaits standard (groupe plus grand, format hybride, programme multisite), un devis personnalisé est disponible sous 48h. CTA unique : `/services/corporate` — "Demander un devis corporate". Ancre contextuelle vers `/blog/prix-cours-boxe-geneve-2026` pour les profils qui cherchent aussi des tarifs individuels.
+Contenu: Pas de "en conclusion". Le prix d'un programme corporate se construit sur 4 paramètres réels, pas sur une case à cocher — c'est pour ça qu'il n'y a pas de grille figée. Ce que le lecteur peut faire maintenant : préparer effectif/fréquence/lieu/objectif et demander un devis sous 48h. CTA unique vers `/services/corporate`. Ancre contextuelle vers `/blog/prix-cours-boxe-geneve-2026` (grille individuelle, elle, publiée) pour les profils qui cherchent aussi les tarifs individuels.
 
 ---
 
@@ -150,85 +145,98 @@ Contenu: Pas de "en conclusion". Reformuler : les tarifs corporate Bis Repetita 
 |---|---|---|
 | "le guide complet pour structurer un programme sport en entreprise à Genève" | /blog/sport-en-entreprise-geneve-guide-drh | H2 fiscalité + intro |
 | "le comparatif des formats sportifs disponibles pour les entreprises à Genève" | /blog/activites-sportives-entreprise-geneve-comparatif | H2 fourchettes marché |
-| "les tarifs des cours de boxe individuels Bis Repetita" | /blog/prix-cours-boxe-geneve-2026 | Conclusion |
-| "Demander un devis corporate" | /services/corporate | H2 grille + conclusion |
-| "voir la grille tarifaire complète" | /tarifs | H2 grille (référence transversale) |
+| "les tarifs des cours de boxe individuels Bis Repetita" (grille fixe, elle, publiée) | /blog/prix-cours-boxe-geneve-2026 | Conclusion |
+| "Demander un devis corporate" | /services/corporate | H2 devis 48h + conclusion |
+| "voir la grille tarifaire complète" (formules individuelles) | /tarifs | Intro ou H2 paramètres (référence transversale, préciser qu'elle concerne les formules individuelles, pas corporate) |
+
+**Note maillage retour** : `sport-en-entreprise-geneve-guide-drh.mdx` (ligne ~80, ~153) et `activites-sportives-entreprise-geneve-comparatif.mdx` renvoient vers cet article en promettant parfois des "montants précis" corporate Bis Repetita — ce n'est plus le cas après ce reframe. Signalé au client dans le rapport de production ; correction de ces deux articles hors périmètre de cette mission.
 
 ---
 
 ## Image Briefs
 
 ### Cover (16:9 — blog header)
-- Placement: cover
-- Type: photo lifestyle éditorial
-- Subject: Studio Bis Repetita — espace professionnel, équipements visibles, ambiance premium épurée
-- Description: Vue d'ensemble du studio depuis l'entrée ou angle ring — sacs de frappe en cuir naturel, sol béton poli ou parquet, murs neutres, lumière propre. Pas de personnes. Cadre professionnel sans côté "salle de combat". Fond clair, composition centrée. Espace négatif côté gauche pour réserve texte titre.
-- Alt text: `Programme sport en entreprise à Genève — tarifs corporate Bis Repetita, La Voie-Creuse 16`
-- Aspect ratio: 16:9
+- Inchangé : photo lifestyle éditorial du studio, pas de personnes, espace négatif pour titre.
+- Alt text: `Programme sport en entreprise à Genève — devis corporate Bis Repetita, La Voie-Creuse 16`
 
-### Image 2 (4:3 — après H2 grille tarifaire)
-- Placement: after-h2:La grille tarifaire corporate Bis Repetita
-- Type: infographic / tableau visuel
-- Subject: Version visuelle de la grille tarifaire corporate
-- Description: Deux tableaux mis en page — fond sombre (#111111), typographie Manrope, highlight or (#D4A853) sur les lignes programme récurrent. Style data-viz minimal, pas de clipart. Peut être généré comme capture d'un composant HTML ou image plate. Valeurs réelles à insérer à la production.
-- Alt text: `Grille tarifaire corporate Bis Repetita Genève — prix sport en entreprise CHF`
+### Image 2 (4:3 — après H2 "Ce qui fait varier le prix")
+- Placement: after-h2:Ce qui fait varier le prix — les 4 paramètres
+- Type: infographic
+- Subject: **Remplace l'ancienne grille tarifaire (caduque).** Visuel des 4 paramètres qui déterminent le devis : taille du groupe / localisation / fréquence / format — 4 icônes ou 4 blocs sur fond sombre (#111111), typographie Manrope, accent or (#D4A853). Aucun montant CHF dans le visuel.
+- Alt text: `Les 4 paramètres qui déterminent le prix d'un programme sport en entreprise à Genève`
 - Aspect ratio: 4:3
 
-### Image 3 (4:3 — après H2 fourchettes marché)
+### Image 3 (4:3 — après H2 "Fourchettes du marché genevois")
 - Placement: after-h2:Fourchettes du marché genevois
 - Type: infographic comparatif
-- Subject: Comparatif visuel fourchettes tarifaires par format corporate à Genève
-- Description: Graphique barres horizontales comparant les fourchettes de prix de 4–5 formats corporate (yoga, escalade, team building outdoor, boxe Bis Repetita). Fond sombre, style minimal, highlight sur la barre Bis Repetita. Valeurs indicatives de marché — mentionner "estimations marché" dans le sous-titre de l'image.
-- Alt text: `Comparatif prix team building et sport corporate à Genève — yoga escalade boxe`
+- Subject: Graphique barres horizontales comparant les fourchettes de marché genevois réellement sourcées (yoga corporate, escape game, outdoor, salle fitness corporate...). **Ne pas inclure de barre "Bis Repetita" chiffrée** (retiré du brief original). Fond sombre, style data-viz minimal. Sous-titre : "estimations de marché, sources en fin d'article".
+- Alt text: `Comparatif prix team building et sport corporate à Genève — fourchettes de marché`
 - Aspect ratio: 4:3
+- Ne générer qu'avec les fourchettes effectivement validées par /seo-sources. Si moins de 3 formats sourcés, réduire le graphique en conséquence plutôt que combler avec des estimations non vérifiées.
 
-### Image 4 (1:1 — section auteur ou sidebar)
-- Placement: after-h2:Quel format selon votre budget et votre objectif RH
+### Image 4 (1:1 — section devis)
+- Placement: after-h2:Ce qu'il faut préparer pour obtenir un devis sous 48h
 - Type: portrait
-- Subject: Nicolas de Boccard, posture calme et directe
-- Description: Portrait plan buste de Nicolas, tenue technique sobre, fond studio épuré. Expression calme, regard caméra ou légèrement de 3/4. Pas de sourire commercial. Lumière douce naturelle. Alt en lien avec le rôle de conseil.
-- Alt text: `Nicolas de Boccard, fondateur Bis Repetita — tarifs et programmes corporate boxe Genève`
+- Subject: Nicolas de Boccard, posture calme et directe (inchangé)
+- Alt text: `Nicolas de Boccard, fondateur Bis Repetita — devis programme corporate boxe Genève`
 - Aspect ratio: 1:1
+
+---
+
+## MISSION SOURCES (critique — /seo-sources obligatoire avant publication)
+
+La section "Fourchettes du marché genevois" devient le **seul ancrage chiffré** de l'article. Chaque fourchette doit être réellement vérifiée (recherche web réelle, lien + date d'accès), pas une "estimation basée sur tarifs publiés" non attribuée. Si une fourchette ne se vérifie pas, la retirer plutôt que la garder floue.
+
+Le traitement fiscal (YMYL, implication financière entreprise) doit être formulé prudemment avec référence réelle si trouvée (AFC, fiduciaire, publication officielle), sinon reformuler pour éviter toute affirmation non sourcée engageante.
+
+---
+
+## Citations exploitables (GEO — Quotation Addition)
+
+À sourcer : aucune citation verbatim n'est encore disponible à ce stade du brief (le reframe précède le passage de `/seo-sources`). Ne pas inventer de citation. Une fois `/seo-sources` exécuté (étape obligatoire du pipeline, après `/humanizer`), reporter ici — ou directement dans le draft en inline — au moins une citation attribuable et datée par source retenue :
+- 1 citation verbatim d'un prestataire genevois (yoga corporate, escape game, outdoor ou fitness corporate) sur son tarif publié, avec lien + date d'accès.
+- 1 citation ou référence verbatim sur la qualification fiscale suisse du sport en entreprise (AFC, fiduciaire, publication professionnelle), avec lien + date d'accès — à défaut, formulation prudente sans citation inventée (cf. Mission sources ci-dessous).
+Le writer ne doit pas produire de citation avant que `/seo-sources` l'ait réellement vérifiée.
 
 ---
 
 ## Sources à intégrer (E-E-A-T)
 
-- Tarifs Bis Repetita corporate 2026 (source directe Nicolas — à confirmer à la rédaction)
-- Fourchettes marché : tarifs publiés de prestataires genevois team building (escape rooms, outdoor, yoga corporate)
-- AFC / fiduciaire : qualification comptable sport en entreprise (référence prudente, pas de conseil engageant)
-- SwissBoxing : licence Nicolas de Boccard #102860
+- Fourchettes marché : sources réelles à établir via /seo-sources (prestataires genevois team building — yoga corporate, escape game, outdoor, fitness corporate)
+- AFC / fiduciaire : qualification comptable sport en entreprise (référence réelle si trouvée, sinon prudence maximale)
+- SwissBoxing : licence Nicolas de Boccard #102860 (Nicolas de Boccard, 20 ans de pratique de la boxe, 5 ans de coaching via Bis Repetita)
+- Lionel de Boccard : licencié SwissBoxing #103010, Champion Suisse Romand 2013 Jeunes 65 kg
 
 ---
 
 ## Objectif business
 
-Capter les DRH et CFO en phase de comparaison budgétaire — les personnes qui cherchent "combien ça coûte" avant de demander un devis. Convertir directement vers `/services/corporate` (devis). Réduire la friction : publier les tarifs évite le formulaire de contact inutile et accélère la qualification du lead. Article satellite du cluster corporate — pointe vers le HUB #1 et reçoit du maillage retour depuis le HUB et l'article #2 (comparatif formats).
+Capter les DRH et CFO en phase de comparaison budgétaire — pas en leur promettant un prix qu'on ne peut pas tenir, mais en les aidant à comprendre pourquoi c'est sur devis et en accélérant la prise de devis (effectif/fréquence/lieu/objectif = devis sous 48h). Convertir vers `/services/corporate`. Article satellite du cluster corporate — pointe vers le HUB #1 et reçoit du maillage retour depuis le HUB et l'article #2 (comparatif formats) — maillage retour à corriger hors périmètre (voir note ci-dessus).
 
 ---
 
 ## Angle unique / POV
 
-Premier — et seul — prestataire corporate genevois à publier une grille tarifaire complète en CHF sans formulaire obligatoire. La transparence prix est le différenciant éditorial et commercial : elle signale la confiance et réduit la friction pour les DRH/CFO en phase de budgétisation. Structure calquée sur `prix-cours-boxe-geneve-2026.mdx` : TLDR chiffré, tableau grille, explication des écarts, guide choix selon profil et budget.
+Bis Repetita est honnête sur une limite structurelle : pas de grille corporate parce que chaque projet est réellement différent (contrairement à la grille individuelle, fixe par nature). Le différenciant n'est plus "on publie nos prix" mais "on vous explique précisément ce qui les détermine, et on vous donne de quoi comparer sans attendre un formulaire".
 
 ---
 
 ## Gap concurrent identifié
 
-Aucun prestataire genevois de sport corporate ne publie de grille tarifaire en CHF. Tous renvoient vers un formulaire de contact sans donner la moindre fourchette — ce qui crée de la friction et allonge le cycle de décision pour le DRH. Opportunity score : HIGH. Premier à publier = référence de marché sur cette requête.
+Constat basé sur l'analyse qualitative SERP du 2026-05-07 (`serp-prix-programme-sport-entreprise-geneve.json` — capture vide sur les résultats bruts, ciblait l'ancien angle "grille CHF publiée" ; champs qualitatifs `common_ground` seuls disponibles) : aucun concurrent identifié ne semblait détailler les paramètres qui déterminent un devis corporate, tous renvoyant vers un formulaire sans contexte. **Ce constat est une inférence, pas un fait vérifié sur données fraîches** — un `/seo-serp` actualisé sur ce nouvel angle est recommandé avant publication finale pour le confirmer. Expliquer la logique de tarification + donner des repères de marché reste différenciant même sans grille propriétaire. Opportunity score : MEDIUM (perdu le HIGH de la grille publiée, conservé sur la pédagogie du sur-mesure).
 
-Date de l'analyse : 2026-05-07
+Date de l'analyse initiale : 2026-05-07. Reframe : 2026-07-16.
 
 ---
 
 ## CTA cible
 
-- **Lead corporate (principal)** : `/services/corporate` — "Demander un devis corporate" — placer dans H2 grille + conclusion
-- **Nurturing vers HUB** : `/blog/sport-en-entreprise-geneve-guide-drh` — ancre "le guide complet" — placer en H2 fiscalité et intro
+- **Lead corporate (principal)** : `/services/corporate` — "Demander un devis corporate" — placer en H2 devis 48h + conclusion
+- **Nurturing vers HUB** : `/blog/sport-en-entreprise-geneve-guide-drh` — ancre "le guide complet" — intro + H2 fiscalité
 - **Nurturing horizontal** :
-  - `/blog/activites-sportives-entreprise-geneve-comparatif` (article #2 — comparatif formats + fourchettes marché)
-  - `/blog/prix-cours-boxe-geneve-2026` (article existant — tarifs individuels, profil dual audience)
-  - `/tarifs` (page service existante — grille complète)
+  - `/blog/activites-sportives-entreprise-geneve-comparatif` (comparatif formats + fourchettes marché)
+  - `/blog/prix-cours-boxe-geneve-2026` (grille individuelle publiée, profil dual audience)
+  - `/tarifs` (grille individuelle — préciser qu'elle ne couvre pas le corporate)
 
 ---
 
@@ -237,13 +245,11 @@ Date de l'analyse : 2026-05-07
 - Studio Bis Repetita : La Voie-Creuse 16, 1202 Genève
 - Nicolas de Boccard : licencié SwissBoxing #102860, 20 ans de pratique de la boxe, 5 ans de coaching via Bis Repetita
 - Formats corporate disponibles : coaching studio (6 max), coaching sur site (6 max, surface min. 30 m²), Round by Round corporate (8 max, 2 coachs), demi-journée thématique (2h)
-- Déplacement : Genève centre + communes proches (Grand-Saconnex, Meyrin, Carouge, Eaux-Vives) — frais à préciser
+- Déplacement : rayon 5 km du studio inclus (centre-ville, Pâquis, Plainpalais, Eaux-Vives, Grottes) ; au-delà (Grand-Saconnex, Meyrin, Carouge, Lancy) supplément à préciser au devis
 - Devis : sous 48h, créneau confirmé sous 5 jours ouvrés
 - Facturation : 30 jours pour les programmes corporate récurrents
 - Annulation : gratuite 48h à l'avance
-- Première séance / séance pilote : disponible sans engagement (à confirmer pour le format corporate)
-- Tarifs individuels Bis Repetita (référence croisée) : Solo 120 CHF, Duo 140 CHF, Trio 160 CHF, Small Group 200 CHF, Round by Round 40 CHF
-- Grille corporate : montants à confirmer avec Nicolas avant rédaction (les données brutes individuelles ci-dessus servent de plancher pour l'estimation)
+- **AUCUN montant CHF corporate Bis Repetita à utiliser** — la grille individuelle (Solo 120 CHF, Duo 140 CHF, Trio 160 CHF, Small Group 200 CHF, Round by Round 40 CHF) sert uniquement de référence si l'article compare explicitement au format individuel, jamais comme base d'extrapolation corporate.
 
 ---
 
@@ -251,9 +257,10 @@ Date de l'analyse : 2026-05-07
 
 1. **Règle absolue Nicolas** : "20 ans de pratique de la boxe" et "je coache via Bis Repetita depuis cinq ans" — JAMAIS "je coache depuis 20 ans".
 2. **Mots bannis** : game-changer, next-level, mindset, booster, disruptif, challenge, leverager, scaler.
-3. **Le TLDR est obligatoire** — bloc résumé chiffré en tête d'article, avant l'intro (modèle golden sample).
-4. **Les montants dans le tableau sont à confirmer avec Nicolas avant publication** — ne pas inventer les chiffres. Si non confirmés à la rédaction, laisser des placeholders [X CHF] et noter en frontmatter `draft: true`.
+3. **Le TLDR est obligatoire** — bloc résumé en tête d'article, avant l'intro. Zéro montant Bis Repetita dedans.
+4. **INTERDIT ABSOLU** : tout montant CHF corporate Bis Repetita, inventé ou dérivé. Seules les fourchettes de marché externes réellement sourcées apparaissent en CHF.
 5. **Section fiscalité : ton prudent** — pas de conseil juridique engageant. "à valider avec votre fiduciaire".
 6. **Vouvoiement systématique** : "votre budget", "vos équipes", "vous cherchez".
-7. **Transparence = ton** : le registre de cet article est celui d'un prestataire qui assume ses prix — pas de formules vagues, pas de "à partir de" sans plancher réel.
-8. **Longueur cible** : 1600–2200 mots. La grille tarifaire compte dans les mots mais doit rester lisible — ne pas gonfler avec des redites.
+7. **Cohérence intro/corps** : ne pas reprocher aux concurrents leur réponse "sur devis" — Bis Repetita répond pareil, assumé et expliqué.
+8. **Longueur cible** : 1500–2000 mots. Le tableau marché compte dans les mots mais doit rester lisible.
+9. **draft: true jusqu'à validation client** — le client doit relire le nouvel angle avant mise en ligne. Ne pas passer `draft: false`, ne pas publier sur le hub.
