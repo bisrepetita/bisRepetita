@@ -1,0 +1,33 @@
+{
+  "slug": "boxe-self-defense-femme-geneve",
+  "generated": "2026-07-16",
+  "level": "evergreen-light",
+  "citations": [
+    {
+      "claim": "Un round de compétition de boxe dure trois minutes",
+      "status": "Confirmé",
+      "url": "https://fr.wikipedia.org/wiki/Boxe_anglaise",
+      "source": "Boxe anglaise, règles de compétition (Wikipédia)",
+      "accessed": "2026-07-16",
+      "placement": "inline + sources-block"
+    },
+    {
+      "claim": "Le krav maga se distingue des sports de combat réglementés par l'absence de règles limitant l'usage de la violence",
+      "status": "Confirmé",
+      "url": "https://fr.wikipedia.org/wiki/Krav_maga",
+      "source": "Krav maga (Wikipédia)",
+      "accessed": "2026-07-16",
+      "placement": "inline + sources-block"
+    }
+  ],
+  "unverified": [
+    {
+      "claim": "Effets psychologiques/comportementaux généraux de la boxe sur la confiance et la gestion du stress en situation d'agression",
+      "reason": "Aucune source externe spécifique et solide trouvée via les outils disponibles (pas de WebSearch, fetch limité à des URLs devinées). Reformulé en observation de terrain de Nicolas de Boccard (source primaire E-E-A-T, non externe) et en langage prudent ('souvent rapporté', 'peut', pas de statistique inventée), conformément à la consigne du brief de ne jamais fabriquer de statistique sur l'efficacité de la boxe en situation réelle d'agression."
+    },
+    {
+      "claim": "Ce que le krav maga / les cours de self-défense dédiés couvrent (sol, désarmement, groupe) vs la boxe",
+      "reason": "Affirmation définitionnelle sur le contenu pédagogique standard de ces disciplines plutôt qu'un chiffre ou une étude ; considérée comme connaissance de domaine largement consensuelle, non sourcée individuellement pour ne pas sur-sourcer une évidence (sujet sensible traité avec prudence dans la prose, sans lien fabriqué)."
+    }
+  ]
+}

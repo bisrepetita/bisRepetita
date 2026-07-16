@@ -1,0 +1,24 @@
+# Production log — effet-boxe-corps-femme-geneve
+Date : 2026-07-16 23:55
+Worker : @article-producer
+
+## Étapes
+- [✓] /seo-write     : draft écrit (content/_drafts/blog/effet-boxe-corps-femme-geneve.draft.md, ~1850 mots)
+- [✓] /humanizer     : 2 em dash corrigés, 1 passage de rythme varié (répétition "quatre axes" atténuée), aucun vocabulaire IA détecté
+- [✓] /seo-sources   : article evergreen (non YMYL). 1 source externe (Harvard Health Publishing) héritée/cohérente avec l'article sœur boxe-perte-de-poids-femme-geneve (déjà vérifiée dans un run pipeline antérieur) ; aucun claim non vérifié résiduel. Note : WebSearch/WebFetch indisponibles dans ce run du worker — vérification faite par croisement avec l'article sœur déjà publié plutôt que par nouveau fetch direct (consigné dans effet-boxe-corps-femme-geneve.sources.json)
+- [✓] /seo-enrich    : src/content/blog/effet-boxe-corps-femme-geneve.mdx créé (frontmatter + h1 distinct du title + Schema.org auto via template BlogPosting). Build global (`npm run build`) bloqué par un fichier tiers non lié à ma tâche (src/content/blog/boxe-self-defense-femme-geneve.mdx, brouillon non committé, commentaire HTML invalide en MDX) — vérifié hors scope, syntaxe MDX de mon fichier validée isolément (compile OK via @mdx-js/mdx)
+- [✓] /seo-review    : 1 tour — score final 17/18, 1 fail résiduel (Low : public/llm.txt absent, gap site-wide préexistant non spécifique à cet article). Correction technique appliquée avant validation : ajout d'un lien inline vers Harvard Health Publishing (critère 18 GEO — sources inline)
+- [✓] /generate-cover : public/images/blog/effet-boxe-corps-femme-geneve.webp (~60 kB, pipeline gemini via preset blog-cover-text)
+- [✓] /publish-hub    : registre effet-boxe-corps-femme-geneve → statut published (project_slug="bis-repetita" explicite, contourne le bug de déduction basename CWD="bisRepetita")
+
+## Statut final
+PUBLISHED — article publié sur le hub (Content ID ffd6ade6c74a34f7bd210663)
+
+## Fails résiduels (si needs_human)
+Aucun (pass tolérable : uniquement 1 fail Low — public/llm.txt absent, sitewide, hors scope de cet article)
+
+## Notes complémentaires
+- Maillage interne du brief respecté intégralement : hub femme (boxe-femme-geneve-guide-complet), pillar racine (cours-de-boxe-geneve), 2 deep-dives (boxe-perte-de-poids-femme-geneve, boxe-femme-massive-epaules-geneve), + CTA lead tiède (services/boxe-femme) et lead chaud (/contact avec UTM).
+- Règle Nicolas respectée : "boxeur licencié SwissBoxing (#102860) avec vingt ans de pratique de la boxe. Je coache via Bis Repetita depuis cinq ans" — jamais "je coache depuis 20 ans".
+- Alerte site-wide (hors scope) : `npm run build` échoue actuellement à cause de src/content/blog/boxe-self-defense-femme-geneve.mdx (fichier untracked, commentaire `<!-- -->` invalide en MDX ligne 58). À corriger séparément avant tout déploiement — bloque le build de l'ensemble du site, pas seulement cet article.
+- Convention de chemin cover : ce projet utilise réellement `public/images/blog/{slug}.webp` (confirmé via presets.yaml + logs de génération antérieurs), alors que 2 articles sœurs plus anciens référencent `/blog/{slug}.webp` en frontmatter (fichiers déplacés manuellement après coup, hors scope de ce run). Le frontmatter de cet article pointe correctement vers `/images/blog/effet-boxe-corps-femme-geneve.webp`, cohérent avec le fichier physique généré.

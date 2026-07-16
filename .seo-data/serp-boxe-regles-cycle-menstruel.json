@@ -1,0 +1,133 @@
+{
+  "keyword": "boxe pendant les règles",
+  "location": null,
+  "location_note": "Requête volontairement non géociblée (sujet santé/sport générique, pas de local pack observé) — confirmé par le scan : 0 résultat local business/annuaire genevois dans le top organique.",
+  "scanned_at": "2026-07-16T00:00:00Z",
+  "sample_size": 5,
+  "results": [
+    {
+      "rank": 1,
+      "url": "https://lapause.jho.fr/article/faire-du-sport-pendant-ses-regles/",
+      "title": "Peut-on faire du sport pendant ses règles ?",
+      "page_type": "blog",
+      "competitor_type": "marketplace",
+      "covers": [
+        "pourquoi faire du sport pendant les règles",
+        "bienfaits du sport pendant les règles",
+        "faut-il adapter son activité physique",
+        "quels sports choisir pendant les règles",
+        "sports à impact à limiter (dont la boxe, citée en exemple)",
+        "protections hygiéniques adaptées au sport",
+        "impact sur la performance et le flux menstruel"
+      ],
+      "missing": [
+        "aucun focus boxe : la boxe n'est citée qu'une fois, en exemple de 'sport à impact' à limiter en cas de règles douloureuses",
+        "aucune adaptation par phase du cycle (folliculaire/lutéale)",
+        "aucune distinction sac (bag work) vs sparring/contact"
+      ],
+      "eeat_signals": ["author (Nikita, sans credentials médicaux)", "data (étude Strava, 78% des femmes)"]
+    },
+    {
+      "rank": 2,
+      "url": "https://www.naturactive.fr/blog-sante-naturelle/sante-et-bien-etre-au-quotidien/comment-concilier-sport-et-regles-douloureuses",
+      "title": "Le sport pendant les règles | Naturactive",
+      "page_type": "blog",
+      "competitor_type": "institutional",
+      "covers": [
+        "peut-on faire du sport pendant les règles",
+        "quels sports pendant les règles",
+        "comment concilier sport et règles douloureuses",
+        "conseil produit (phytothérapie) pour apaiser les règles douloureuses",
+        "témoignage utilisatrice",
+        "sports violents à éviter (arts martiaux, boxe, course/sprint — citation directe d'un médecin généraliste)"
+      ],
+      "missing": [
+        "boxe mentionnée une seule fois dans une liste de sports violents à éviter, sans nuance ni conseil pratique pour qui pratique déjà la boxe",
+        "aucune adaptation par intensité/phase du cycle",
+        "contenu orienté vente de compléments, pas conseil terrain coach"
+      ],
+      "eeat_signals": ["author", "sources (Dr Jean-Michel Morel, médecin généraliste ; Dr Géraldine Delot, gynécologue-sexologue)", "data (étude produit, 93% sur 91 personnes)", "testimonial"]
+    },
+    {
+      "rank": 3,
+      "url": "https://www.espace-musculation.com/entrainement-musculation/commencer-musculation/peut-on-faire-de-lexercice-pendant-les-regles/",
+      "title": "Peut-on faire de la musculation ou du sport pendant les règles ?",
+      "page_type": "blog",
+      "competitor_type": "editorial",
+      "covers": [
+        "est-ce sain de faire de l'exercice pendant les règles",
+        "s'entraîner le premier jour des règles",
+        "exercices d'abdominaux pendant les règles",
+        "impact de l'exercice sur les règles et les hormones",
+        "l'exercice peut-il aggraver ou avancer les règles",
+        "quels exercices faire pendant les règles",
+        "alimentation pendant les règles"
+      ],
+      "missing": [
+        "boxe citée une fois en exemple négatif ('le cours de HIIT intense ou de boxe thaï pourra poser problème'), sans développement",
+        "aucun auteur identifié, aucune source citée, aucune donnée chiffrée — E-E-A-T faible",
+        "pas d'angle spécifique combat sport / boxe anglaise"
+      ],
+      "eeat_signals": []
+    },
+    {
+      "rank": 4,
+      "url": "https://cemagcare.com/le-media/vrai-faux-regles-sport/",
+      "title": "Vrai ou Faux ? : Parlons des règles et du sport - Cemag Care",
+      "page_type": "blog",
+      "competitor_type": "marketplace",
+      "covers": [
+        "non vérifié en profondeur (page non fetchée) — déduit du titre : format 'vrai/faux' sur les idées reçues sport + règles, probablement générique comme les 3 pages lues"
+      ],
+      "missing": [
+        "non vérifié — hypothèse déduite du titre et de la cohérence avec les 3 autres résultats fetchés : probable absence de focus boxe spécifique"
+      ],
+      "eeat_signals": []
+    },
+    {
+      "rank": 5,
+      "url": "https://www.sistersrepublic.com/blogs/sisters/sport-et-regles",
+      "title": "Sport et Règles : Est-ce Compatible ? On Vous Dit Tout !",
+      "page_type": "blog",
+      "competitor_type": "marketplace",
+      "covers": [
+        "non vérifié en profondeur (page non fetchée) — déduit du titre : contenu générique sport + cycle menstruel, marque de culottes menstruelles (contenu marketing éditorial)"
+      ],
+      "missing": [
+        "non vérifié — hypothèse déduite du titre, cohérente avec le pattern observé sur les 3 pages fetchées : probable absence de focus boxe spécifique"
+      ],
+      "eeat_signals": []
+    }
+  ],
+  "excluded_from_sample_note": "La requête exacte 'boxe pendant les règles' remonte aussi des pages sur les RÈGLES DU SPORT de boxe (homonymie 'règles' = rules) : apollosportingclub.com, astucit-drachko.com, ffboxe.com, roninwear.fr. Ces 4 résultats sont hors-sujet (intent différent, ambiguïté lexicale) et exclus de l'échantillon Gap Analysis. Leur présence confirme cependant l'absence totale de résultats locaux/business genevois dans ce SERP.",
+  "serp_features": {
+    "local_pack": false,
+    "local_pack_note": "Confirmé : 0 résultat de type club/business local (genevois ou autre) dans les 2 requêtes testées ('boxe pendant les règles' et 'sport pendant les règles menstruelles'). Le SERP est intégralement occupé par du contenu éditorial santé/bien-être et des marques de produits menstruels.",
+    "people_also_ask": [],
+    "people_also_ask_note": "Non vérifié — l'outil WebSearch utilisé ne restitue pas les blocs PAA de façon fiable (pas de métadonnée SERP feature exposée). Ne pas affirmer leur absence ni leur contenu sans un second outil (ex. DataForSEO SERP API).",
+    "featured_snippet": null,
+    "featured_snippet_note": "Non vérifié pour la même raison — pas de capture visuelle du SERP réel.",
+    "image_pack": null,
+    "video": null
+  },
+  "intent_signal": "informational",
+  "dominant_format": "editorial-article",
+  "format_match": "aligné",
+  "format_note": "",
+  "common_ground": [
+    "bienfaits généraux du sport pendant les règles (endorphines, réduction des crampes, moins de stress)",
+    "recommandation générique : écouter son corps, adapter l'intensité selon la douleur",
+    "liste de sports doux recommandés (marche, yoga, natation) vs sports à impact/violents à limiter",
+    "la boxe apparaît systématiquement dans la liste des 'sports à éviter en cas de règles douloureuses', jamais comme sujet central",
+    "conseils sur les protections hygiéniques adaptées à l'activité physique"
+  ],
+  "gap": {
+    "description": "Confirmé sur les 3 pages lues en profondeur (jho.fr, naturactive.fr, espace-musculation.com) : aucune ne traite la boxe comme sujet central. Elle n'apparaît que comme une citation isolée dans une liste de 'sports violents/à impact à limiter', sans aucun conseil pratique pour une femme qui pratique déjà ou veut pratiquer la boxe pendant son cycle (adaptation sac vs sparring, gestion de l'intensité par phase du cycle folliculaire/lutéale, gestion des protections pendant les gants/le contact, retour d'expérience d'un coach). Déduit (non confirmé par lecture complète) pour cemagcare.com et sistersrepublic.com : leurs titres suggèrent le même pattern générique 'sport et règles' sans mention boxe visible dans le snippet — cohérent avec le pattern des 3 pages vérifiées, mais non lu en intégralité.",
+    "opportunity_score": "high"
+  },
+  "weakness": [
+    "espace-musculation.com : zéro source, zéro auteur identifié, zéro donnée chiffrée malgré des affirmations sur hormones/cycle — E-E-A-T faible pour un sujet à composante santé",
+    "toutes les pages traitent la boxe comme un épouvantail générique ('sport violent à éviter') sans nuance : aucune ne distingue l'intensité (technique/sac vs sparring plein contact) ni le niveau de la pratiquante"
+  ],
+  "recommended_angle": "Ne pas rejouer l'article générique 'sport et règles' : traiter frontalement la question que se pose une femme qui boxe (ou veut commencer) — pourquoi la boxe est citée comme sport à limiter, ce qui est vrai/exagéré, et comment adapter concrètement une séance selon la phase du cycle et le niveau de douleur (sac vs sparring, intensité, protections), avec le regard d'un coach qui encadre réellement des femmes au studio plutôt qu'un conseil générique de marque de produits menstruels."
+}

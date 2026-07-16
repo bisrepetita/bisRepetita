@@ -1,0 +1,13 @@
+{
+  "slug": "quelle-boxe-choisir-femme-geneve",
+  "generated": "2026-07-16",
+  "level": "evergreen",
+  "note": "Outils WebSearch/WebFetch indisponibles dans cette session d'exécution du skill seo-sources. Inventaire des claims effectue neanmoins : cet article est un comparatif de disciplines de sport de combat (definitions techniques generales : boxe anglaise = poings, boxe thai = poings+coudes+genoux+tibias, kickboxing = poings+jambes sans coudes/genoux au contact). Ce sont des faits definitionnels de discipline, pas des donnees chiffrees/statistiques necessitant une source externe liee. Aucune statistique comparative (calories, biomecanique) n'a ete inventee ni retraitee, conformement au brief qui renvoie explicitement vers l'article dedie boxe-perte-de-poids-femme-geneve pour ces chiffres. La seule source citee dans le draft est de premiere partie (bio Nicolas de Boccard, licence SwissBoxing #102860), qui ne necessite pas de verification web externe puisqu'il s'agit d'une information proprietaire de la marque (E-E-A-T), pas d'une citation externe.",
+  "citations": [],
+  "unverified": [
+    {
+      "claim": "Definitions techniques generales boxe anglaise / boxe thai / kickboxing (coudes, genoux, tibias, jambes)",
+      "reason": "Connaissance definitionnelle de discipline sportive largement etablie, non chiffree. Aurait pu etre liee a une federation (ex: IFMA/WBC Muaythai, Swiss Kickboxing) mais WebFetch indisponible dans cette session pour verifier une URL precise. Formulation gardee prudente et factuelle, sans invention de source."
+    }
+  ]
+}

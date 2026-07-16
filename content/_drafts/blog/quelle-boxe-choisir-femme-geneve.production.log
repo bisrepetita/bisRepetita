@@ -1,0 +1,25 @@
+# Production log — quelle-boxe-choisir-femme-geneve
+Date : 2026-07-16 23:56
+Worker : @article-producer
+
+## Étapes
+- [✓] /seo-write     : draft écrit dans content/_drafts/blog/quelle-boxe-choisir-femme-geneve.draft.md (1505 mots)
+- [✓] /humanizer     : draft humanisé en place (6 em dashes retirés, redondances de bold éliminées, phrasé varié). ~1502 mots après passe.
+- [~] /seo-sources   : mode dégradé — WebSearch/WebFetch indisponibles dans cette session. Sujet evergreen (comparatif de disciplines de sport de combat) sans claim chiffré tiers à sourcer ; les chiffres calorie sont explicitement renvoyés vers l'article dédié déjà sourcé (boxe-perte-de-poids-femme-geneve, Harvard Health Publishing). Documenté dans content/_drafts/blog/quelle-boxe-choisir-femme-geneve.sources.json. 0 citation Confirmé posée, 0 claim adouci (aucun claim chiffré tiers identifié).
+- [✓] /seo-enrich    : src/content/blog/quelle-boxe-choisir-femme-geneve.mdx créé. Frontmatter title (54 car.) + h1 distinct + description (121 car.) + image + tags + category. Insertion des 3 images inline du brief (2 photos réelles en markdown, 1 schema/diagram laissé en TODO:image pour production manuelle). 4/4 liens internes du brief posés. Composants projet <Tldr> et <ArticleCta> utilisés (mécanisme card réel de ce thème, équivalent du blockquote générique). image frontmatter alignée sur la convention canonique /images/blog/{slug}.webp (cohérente avec l'output réel de generate-cover, contrairement à l'ancienne convention /blog/{slug}.webp trouvée sur des articles plus anciens).
+- [✓] /seo-review    : 1 tour — score 17/18. Seul fail résiduel : #17 GEO llm.txt (Low, gap site-wide préexistant, hors scope d'un article). Aucun fail Critical/High → sortie de boucle tolérée sans 2e tour de correction.
+- [✓] /generate-cover : public/images/blog/quelle-boxe-choisir-femme-geneve.webp généré via preset blog-cover-text (pipeline Gemini, ~54 KB).
+- [✓] /publish-hub    : registre quelle-boxe-choisir-femme-geneve → statut published (project_slug explicite "bis-repetita", contournement du bug de détection basename CWD "bisRepetita"). Content ID 62abcaa9059cafd6b720feb1.
+
+## Statut final
+PUBLISHED — article publié sur le hub (status=published, aucun fail Critical/High résiduel)
+
+## Fails résiduels (si needs_human)
+Aucun (statut PUBLISHED). Note non bloquante : #17 GEO llm.txt absent (Low, site-wide, non spécifique à cet article).
+
+## Notes complémentaires
+- Règle Nicolas respectée : jamais "je coache depuis 20 ans" — formulations utilisées : "boxeur licencié 20 ans de pratique" / "5 ans de coaching via Bis Repetita".
+- Ton comparatif factuel maintenu (aucune formulation dénigrante envers boxe thaï/kickboxing).
+- Maillage obligatoire du brief respecté intégralement : hub femme (boxe-femme-geneve-guide-complet), perte-de-poids (boxe-perte-de-poids-femme-geneve), landing (/services/boxe-femme), pillar racine (/cours-de-boxe-geneve).
+- Build global (`npm run build`) bloqué par un fichier tiers préexistant et non lié à cette tâche (src/content/blog/boxe-self-defense-femme-geneve.mdx, untracked, erreur MDX ligne 58). Non touché (hors scope). Le fichier de cet article a été vérifié isolément via compilation MDX directe (`@mdx-js/mdx`) : OK.
+- Image schema/diagram (Image 3 du brief, grille de décision) laissée en `TODO:image` dans le corps — à produire manuellement ou via /generate-images (type SKIP par défaut sur ce projet pour les schemas/infographics, cf. moodboard/presets.yaml brief_type_to_preset).

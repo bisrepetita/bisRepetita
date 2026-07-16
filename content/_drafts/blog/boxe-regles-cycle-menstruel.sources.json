@@ -1,0 +1,45 @@
+{
+  "slug": "boxe-regles-cycle-menstruel",
+  "generated": "2026-07-17",
+  "level": "ymyl",
+  "citations": [
+    {
+      "claim": "L'effet du cycle menstruel sur la performance sportive reste minime et inconsistant d'une étude à l'autre ; aucune ligne directrice universelle par phase ne peut être établie.",
+      "status": "Confirmé",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32661839/",
+      "source": "McNulty et al., Sports Medicine, 2020 (PMID 32661839, DOI 10.1007/s40279-020-01319-3)",
+      "accessed": "2026-07-17",
+      "placement": "inline + quote"
+    },
+    {
+      "claim": "L'exercice thérapeutique régulier est associé à une amélioration de la sévérité des symptômes et de l'intensité de la douleur chez les femmes souffrant de dysménorrhée primaire, avec un niveau de preuve faible à très faible.",
+      "status": "Confirmé",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42355588/",
+      "source": "Arroyo-Fernández et al., Journal of Clinical Medicine, 2026 (PMID 42355588, DOI 10.3390/jcm15124418)",
+      "accessed": "2026-07-17",
+      "placement": "inline"
+    },
+    {
+      "claim": "Un entraînement très intensif et prolongé associé à un déficit énergétique important peut perturber le cycle menstruel (aménorrhée) chez les sportives à charge d'entraînement élevée.",
+      "status": "Confirmé",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29773536/",
+      "source": "Mountjoy et al., IOC consensus statement on RED-S: 2018 update, British Journal of Sports Medicine (PMID 29773536, DOI 10.1136/bjsports-2018-099193)",
+      "accessed": "2026-07-17",
+      "placement": "inline (FAQ)"
+    },
+    {
+      "claim": "L'exercice modéré (marche, natation, vélo, yoga) fait partie des mesures recommandées pour soulager les douleurs de règles ; consulter un médecin si les règles deviennent plus douloureuses, plus abondantes ou irrégulières, ou si la douleur reste sévère malgré les antalgiques.",
+      "status": "Confirmé",
+      "url": "https://www.nhs.uk/symptoms/period-pain/",
+      "source": "NHS (National Health Service, Royaume-Uni), Period pain",
+      "accessed": "2026-07-17",
+      "placement": "inline + sources-block"
+    }
+  ],
+  "unverified": [
+    {
+      "claim": "Effet spécifique de la boxe (par opposition au sport en général) sur le cycle menstruel ou la dysménorrhée.",
+      "reason": "Aucune étude publiée trouvée traitant spécifiquement de la boxe et du cycle menstruel. Les sources vérifiées portent sur l'exercice physique en général (endurance, force, sport de combat non spécifiquement isolé) — cohérence maintenue en formulant les affirmations au niveau de l'exercice physique général, jamais en les attribuant faussement à la boxe en particulier."
+    }
+  ]
+}

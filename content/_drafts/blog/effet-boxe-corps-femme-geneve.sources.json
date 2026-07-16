@@ -1,0 +1,21 @@
+{
+  "slug": "effet-boxe-corps-femme-geneve",
+  "generated": "2026-07-16",
+  "level": "evergreen",
+  "note": "WebSearch/WebFetch non disponibles dans ce run du worker article-producer. Verification faite par croisement avec l'article soeur deja publie et pipeline-verifie (boxe-perte-de-poids-femme-geneve.mdx), pas par nouveau fetch direct.",
+  "citations": [
+    {
+      "claim": "Une heure de boxe brule environ 500 a 600 calories",
+      "status": "Confirme (herite)",
+      "url": "https://www.health.harvard.edu/",
+      "source": "Harvard Health Publishing",
+      "accessed": "reprise de la verification anterieure, cf. boxe-perte-de-poids-femme-geneve.mdx",
+      "placement": "sources-block + mention inline resumee"
+    }
+  ],
+  "unverified": [],
+  "first_party_no_source_needed": [
+    "Observations terrain de Nicolas de Boccard sur la posture, le gainage et l'endurance des pratiquantes (E-E-A-T, pas une citation externe)",
+    "Renvoi vers l'article sur la boxe qui rend massive (mecanisme testosterone deja developpe et sourcé dans cet article soeur, non redeveloppe ici)"
+  ]
+}

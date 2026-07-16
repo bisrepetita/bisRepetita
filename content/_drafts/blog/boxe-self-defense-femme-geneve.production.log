@@ -1,0 +1,25 @@
+# Production log — boxe-self-defense-femme-geneve
+Date : 2026-07-16 23:58
+Worker : @article-producer
+
+## Étapes
+- [✓] /seo-write     : draft écrit (1694 mots initiaux, content/_drafts/blog/boxe-self-defense-femme-geneve.draft.md)
+- [✓] /humanizer     : 1 pattern IA corrigé (em dash résiduel dans la section Sources)
+- [✓] /seo-sources   : 2 sources Confirmé liées inline + bloc Sources (Boxe anglaise — durée des rounds ; Krav maga — absence de règles, avec citation verbatim attribuée). Aucun claim non vérifié laissé sans reformulation prudente. Sidecar content/_drafts/blog/boxe-self-defense-femme-geneve.sources.json produit.
+- [✓] /seo-enrich    : src/content/blog/boxe-self-defense-femme-geneve.mdx créé (~11.9 kB). Frontmatter validé (title 50 car., meta 116 car., H1 body 67 car. distinct du title). Schema BlogPosting généré automatiquement par le template (vérifié en dist : headline/author/datePublished corrects). Image cover référencée /images/blog/boxe-self-defense-femme-geneve.webp (chemin canonique). Image 3 (infographic comparatif) laissée en TODO MDX-comment, non générée (type non photo-réaliste, skip assumé selon la doctrine image-briefs.md).
+- [✓] /seo-review    : 1 tour — score final 17/18. Fixes appliqués pendant la préparation (avant le tour formel) : 2 formes de keyword brutes naturalisées, densité factuelle renforcée (+2 données sourcées), 1 citation attribuée (Quotation Addition, verbatim Wikipédia krav maga) ajoutée pour éviter tout FAIL critique par citation absente. Aucun fail Critical/High résiduel après ce tour.
+- [✓] /generate-cover : public/images/blog/boxe-self-defense-femme-geneve.webp (56.5 kB, pipeline Gemini via preset blog-cover-text). 1re génération avec title-text sans accents (erreur d'échappement bash) → régénérée avec accents corrects, validée visuellement (posture calme, mains bandées, fond clair, espace négatif à gauche, conforme au brief).
+- [✓] /publish-hub    : registre boxe-self-defense-femme-geneve → statut published (project_slug="bis-repetita" forcé explicitement en contournement du bug de détection CWD basename "bisRepetita"). Content ID: d00b7a97670a132d5531e06b.
+
+## Statut final
+PUBLISHED — article publié sur le hub (status=published, changedBy=autopilot).
+
+## Fails résiduels (si needs_human)
+Aucun fail Critical/High. 1 fail Low résiduel (non bloquant, tolérable) :
+- Critère 17 (GEO — llm.txt) : public/llm.txt absent. Gap pré-existant, à l'échelle du site entier (pas spécifique à cet article) — à traiter via /llm-txt hors du scope de cette production.
+
+## Notes complémentaires
+- Règle Nicolas respectée : jamais "je coache depuis 20 ans" — formulation utilisée "20 ans de pratique de la boxe" + "5 ans / cinq ans de coaching via Bis Repetita", toujours distinctes.
+- Sujet à connotation sécurité traité avec prudence : aucune statistique inventée sur l'efficacité de la boxe en situation réelle d'agression ; section dédiée "Les limites honnêtes de la boxe en situation réelle" assume explicitement ce que la boxe NE fait PAS (sol, désarmement, groupe).
+- Maillage obligatoire du brief : les 5 liens prévus sont tous présents (hub femme /blog/boxe-femme-geneve-guide-complet, pillar racine /cours-de-boxe-geneve, article confiance-en-soi /blog/boxe-confiance-en-soi-femme-geneve, landing /services/boxe-femme, /contact CTA final).
+- Site présente un pattern pré-existant de double <h1> rendu (frontmatter title dans le layout + H1 markdown du corps) — identique sur tous les articles publiés du site, non spécifique à cet article, non corrigé ici (hors scope d'une production unitaire).

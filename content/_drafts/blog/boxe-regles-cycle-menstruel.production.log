@@ -1,0 +1,27 @@
+# Production log — boxe-regles-cycle-menstruel
+Date : 2026-07-17 00:20
+Worker : @article-producer
+
+## Étapes
+- [✓] /seo-write     : draft écrit (~1670 mots avant sourçage, module C — YMYL léger)
+- [✓] /humanizer     : 9 em dashes corrigés + 1 titre de section reformulé (FAQ), aucun vocabulaire IA détecté
+- [✓] /seo-sources   : 4 sources médicales/scientifiques réelles Confirmé liées (NHS - Period pain ; McNulty et al. 2020, Sports Medicine ; Arroyo-Fernández et al. 2026, J Clin Med ; Mountjoy et al. 2018, BJSM/IOC RED-S). 1 claim marqué non vérifiable (effet spécifique de la boxe vs sport en général) et reformulé au niveau de l'exercice physique général, jamais attribué faussement à la boxe. Sourcing effectué via curl (WebFetch réel, pas de simulation) — NCBI eutils + PubMed + NHS.
+- [✓] /seo-enrich     : src/content/blog/boxe-regles-cycle-menstruel.mdx créé (15.2 kB, 2177 mots), build Astro OK (136 pages), frontmatter validé (title 56 car., meta 140 car., accents FR complets)
+- [✓] /seo-review    : 1 tour — score final 17/18, 1 seul fail résiduel (Low, llm.txt absent — gap systémique du site, non introduit par cet article). Aucun fail Critical/High → tolérable, pas de boucle de correction nécessaire.
+- [✓] /generate-cover : public/images/blog/boxe-regles-cycle-menstruel.webp (63.4 kB, 1376×768, pipeline Gemini + overlay PIL). Visuel sobre, silhouette sportive au sac, aucune imagerie clinique.
+- [✓] /publish-hub    : registre boxe-regles-cycle-menstruel → statut published (project_slug=bis-repetita explicite, contournement du bug de déduction CWD). Content ID b937ba557a924b23cf8467b2.
+
+## Statut final
+PUBLISHED — article publié sur le hub, disponible à /blog/boxe-regles-cycle-menstruel
+
+## Notes YMYL (rappel des garde-fous respectés)
+- Disclaimer d'ouverture exact présent en italique avant le premier H2 : "Cet article ne remplace pas un avis médical. Consultez un professionnel de santé en cas de doute ou de douleur inhabituelle."
+- Ton mythe vs réalité, prudent, jamais prescriptif ("certaines pratiquantes", "une partie des femmes"), aucune promesse de performance liée au cycle.
+- Angle brief respecté : distinction sac technique vs sparring engagé pour nuancer l'affirmation SERP générique "boxe = sport à impact à limiter pendant les règles".
+- Règle Nicolas respectée : "cinq ans de coaching via Bis Repetita" (jamais "je coache depuis 20 ans" — les 20 ans référencent la pratique, pas le coaching).
+- Maillage obligatoire du brief posé : hub femme (/services/boxe-femme), pillar racine (/cours-de-boxe-geneve), guide complet (/blog/boxe-femme-geneve-guide-complet), perte-de-poids (/blog/boxe-perte-de-poids-femme-geneve).
+- CTA soft unique en Conclusion, sans pression, cohérent avec un sujet santé.
+- Aucune affirmation médicale non sourcée : chaque claim physiologique est soit lié à une source Confirmé, soit reformulé en prudence.
+
+## Fails résiduels (si needs_human)
+Sans objet — statut final PUBLISHED, pas de fail Critical/High.
