@@ -32,6 +32,24 @@ const {
         }}
     />
     <div class="zenamu-calendar-wrapper">
-        <iframe src="https://app.bisrepetita.ch/embed/planning" style="width:100%; border:none;" scrolling="no"></iframe>
+        <iframe
+            id="br-planning-iframe"
+            src="https://app.bisrepetita.ch/embed/planning"
+            style="width:100%; border:none; min-height:400px; display:block;"
+            scrolling="no"
+        ></iframe>
     </div>
 </WidgetWrapper>
+
+<script>
+    window.addEventListener("message", (event) => {
+        if (event.origin !== "https://app.bisrepetita.ch") return;
+        const data = event.data;
+        if (data && data.type === "br-embed-resize" && typeof data.height === "number") {
+            const iframe = document.getElementById("br-planning-iframe");
+            if (iframe instanceof HTMLIFrameElement) {
+                iframe.style.height = `${data.height}px`;
+            }
+        }
+    });
+</script>
