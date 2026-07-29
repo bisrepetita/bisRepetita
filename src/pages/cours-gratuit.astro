@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/widgets/Hero.astro";
+import Features from "../components/widgets/Features.astro";
+import ZenamuCalendar from "../components/widgets/ZenamuCalendar.astro";
+import FAQ from "../components/widgets/FAQ.astro";
+import CTABanner from "../components/widgets/CTABanner.astro";
+import GsapReveal from "../components/widgets/GsapReveal.astro";
+
+const metadata = {
+    title: "Séance de Boxe Gratuite à Genève | Bis Repetita",
+    description:
+        "Votre première séance de boxe est offerte chez Bis Repetita à Genève. Choisissez un créneau, connectez-vous pour la première fois sur notre plateforme, et boxez gratuitement.",
+};
+
+const steps = [
+    {
+        title: "Choisissez un créneau",
+        description: "Parcourez les séances disponibles ci-dessous et repérez celle qui correspond à votre emploi du temps.",
+        icon: "lucide:calendar-search",
+    },
+    {
+        title: "Connectez-vous pour la première fois",
+        description: "Créez votre compte ou connectez-vous sur notre plateforme de réservation, en quelques secondes.",
+        icon: "lucide:user-plus",
+    },
+    {
+        title: "Votre séance est offerte",
+        description: "Dès votre toute première connexion, votre première séance est automatiquement gratuite.",
+        icon: "lucide:gift",
+    },
+];
+
+const faqs = [
+    {
+        question: "La séance gratuite, comment ça marche exactement ?",
+        answer: "C'est simple : vous choisissez un créneau dans le planning ci-dessus, puis vous vous connectez (ou créez votre compte) sur notre plateforme de réservation. S'il s'agit de votre toute première connexion, votre première séance vous est automatiquement offerte.",
+    },
+    {
+        question: "Dois-je apporter mon propre équipement ?",
+        answer: "Non, tout est fourni sur place : gants, bandes et protège-dents pour votre séance d'essai. Venez simplement en tenue de sport avec une bouteille d'eau.",
+    },
+    {
+        question: "Y a-t-il un engagement après la séance gratuite ?",
+        answer: "Aucun. Vous testez, vous voyez si l'expérience vous plaît, et vous décidez ensuite librement du format qui vous convient (solo, duo, petit groupe ou cours collectif).",
+    },
+    {
+        question: "Faut-il un niveau minimum ?",
+        answer: "Aucun niveau n'est requis. Que vous soyez débutant complet ou déjà pratiquant, le coach adapte la séance à votre profil.",
+    },
+];
+---
+
+<BaseLayout {metadata}>
+    <Hero
+        variant="centered"
+        title={`Votre première <br class="hidden md:block" /> <span class="text-primary">séance offerte</span>`}
+        description="Choisissez un créneau, connectez-vous pour la première fois sur notre plateforme de réservation, et votre première séance de boxe est automatiquement gratuite."
+        classes={{ container: "min-h-[70vh]" }}
+        actions={[
+            {
+                text: "Voir les créneaux disponibles",
+                href: "#planning",
+            },
+        ]}
+    />
+
+    <GsapReveal animation="fadeUp">
+        <Features
+            tagline="Comment ça marche"
+            title="Trois étapes, une séance offerte"
+            features={steps}
+            columns={3}
+        />
+    </GsapReveal>
+
+    <GsapReveal animation="fadeUp">
+        <ZenamuCalendar
+            id="planning"
+            title="Choisissez votre créneau"
+            subtitle="Cliquez sur une séance pour la réserver — votre première séance est offerte dès votre première connexion."
+        />
+    </GsapReveal>
+
+    <GsapReveal animation="fadeUp">
+        <FAQ
+            title="Questions fréquentes"
+            subtitle="Tout ce qu'il faut savoir avant votre séance gratuite."
+            items={faqs}
+        />
+    </GsapReveal>
+
+    <GsapReveal animation="fadeUp">
+        <CTABanner
+            title="Prêt à monter sur le ring ?"
+            description="Votre première séance ne vous coûtera rien — seulement votre énergie."
+            cta={{ text: "Réserver ma séance gratuite", href: "#planning" }}
+        />
+    </GsapReveal>
+</BaseLayout>
