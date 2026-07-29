@@ -15,8 +15,12 @@ const {
     title = "Réservez votre créneau",
     subtitle = "Consultez les disponibilités et réservez directement votre séance.",
     tagline = "Réservation",
-    isDark = false,
+    isDark = true,
 } = Astro.props;
+
+const iframeSrc = isDark
+    ? "https://app.bisrepetita.ch/embed/planning?theme=dark"
+    : "https://app.bisrepetita.ch/embed/planning";
 ---
 
 <WidgetWrapper id={id} isDark={isDark}>
@@ -34,7 +38,7 @@ const {
     <div class="zenamu-calendar-wrapper">
         <iframe
             id="br-planning-iframe"
-            src="https://app.bisrepetita.ch/embed/planning"
+            src={iframeSrc}
             style="width:100%; border:none; min-height:400px; display:block;"
             scrolling="no"
         ></iframe>
