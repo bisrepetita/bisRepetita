@@ -101,7 +101,7 @@ export const siteConfig = {
   },
   navCta: {
     text: "Séance d'essai gratuite",
-    href: "/contact",
+    href: "/cours-gratuit",
   },
   maps: {
     embedUrl:
