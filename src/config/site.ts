@@ -135,6 +135,7 @@ export const siteConfig = {
       ],
     },
     { text: "Tarifs", href: "/tarifs" },
+    { text: "Planning", href: "/#planning" },
     { text: "Blog", href: "/blog" },
   ],
   footerLinks: {
