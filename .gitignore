@@ -28,3 +28,4 @@ pnpm-debug.log*
 
 # moodboard backups (les générations sont versionnées, pas les backups)
 moodboard/.backup-*.md
+.vercel

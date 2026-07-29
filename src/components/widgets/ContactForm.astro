@@ -84,13 +84,11 @@ const inputClasses =
             <div class="gsap-reveal" data-animation="fadeUp" data-delay="0.15">
                 <div class="bg-card rounded-3xl border border-border p-8 md:p-10 shadow-[var(--shadow-gold-card)]">
                     <form
+                        id="contact-form"
                         name="contact"
                         method="POST"
-                        data-netlify="true"
-                        netlify-honeypot="bot-field"
                         class="space-y-5"
                     >
-                        <input type="hidden" name="form-name" value="contact" />
                         <p class="hidden">
                             <label>
                                 Ne remplissez pas ce champ si vous êtes humain :
@@ -206,9 +204,53 @@ const inputClasses =
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                             </svg>
                         </button>
+
+                        <p id="contact-form-status" class="hidden text-sm" role="status"></p>
                     </form>
                 </div>
             </div>
         </div>
     </Container>
 </section>
+
+<script>
+    const form = document.getElementById("contact-form");
+    const statusEl = document.getElementById("contact-form-status");
+    const submitBtn = form?.querySelector('button[type="submit"]');
+
+    form?.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        if (!(form instanceof HTMLFormElement)) return;
+
+        const data = Object.fromEntries(new FormData(form).entries());
+
+        if (submitBtn instanceof HTMLButtonElement) submitBtn.disabled = true;
+        if (statusEl) {
+            statusEl.textContent = "Envoi en cours…";
+            statusEl.classList.remove("hidden", "text-red-500", "text-primary");
+        }
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) throw new Error("request-failed");
+
+            form.reset();
+            if (statusEl) {
+                statusEl.textContent = "Message envoyé ! Nous vous répondons sous 24h.";
+                statusEl.classList.add("text-primary");
+            }
+        } catch {
+            if (statusEl) {
+                statusEl.textContent = "Une erreur est survenue. Réessayez ou appelez-nous directement.";
+                statusEl.classList.add("text-red-500");
+            }
+        } finally {
+            if (submitBtn instanceof HTMLButtonElement) submitBtn.disabled = false;
+        }
+    });
+</script>
