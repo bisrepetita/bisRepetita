@@ -5,6 +5,7 @@ import ZenamuCalendar from "../components/widgets/ZenamuCalendar.astro";
 import FAQ from "../components/widgets/FAQ.astro";
 import CTABanner from "../components/widgets/CTABanner.astro";
 import GsapReveal from "../components/widgets/GsapReveal.astro";
+import Container from "../components/ui/Container.astro";
 
 const metadata = {
     title: "Séance de Boxe Gratuite à Genève | Bis Repetita",
@@ -28,10 +29,6 @@ const faqs = [
     {
         question: "Faut-il un niveau minimum ?",
         answer: "Aucun niveau n'est requis. Que vous soyez débutant complet ou déjà pratiquant, le coach adapte la séance à votre profil.",
-    },
-    {
-        question: "Aucun créneau ne correspond à votre disponibilité ?",
-        answer: "Si vous souhaitez un coaching privé et qu'aucun créneau du planning ne vous convient, <a href='/contact' class='text-primary hover:underline'>contactez-nous directement</a> — nous trouverons une solution adaptée à votre emploi du temps.",
     },
 ];
 ---
@@ -57,6 +54,16 @@ const faqs = [
             subtitle="Cliquez sur une séance pour la réserver — votre première séance est offerte dès votre première connexion."
         />
     </GsapReveal>
+
+    <Container class="pb-16 md:pb-24 -mt-8 md:-mt-12">
+        <div class="max-w-2xl mx-auto text-center bg-card border border-border rounded-2xl px-6 py-6 md:px-8 md:py-7">
+            <p class="text-foreground">
+                Vous souhaitez un <span class="text-primary font-medium">coaching privé</span> et aucun créneau ne vous convient ?
+                <a href="/contact" class="text-primary font-medium hover:underline">Contactez-nous</a>,
+                nous trouverons une solution adaptée à votre emploi du temps.
+            </p>
+        </div>
+    </Container>
 
     <GsapReveal animation="fadeUp">
         <FAQ
