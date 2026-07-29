@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/widgets/Hero.astro";
-import Features from "../components/widgets/Features.astro";
 import ZenamuCalendar from "../components/widgets/ZenamuCalendar.astro";
 import FAQ from "../components/widgets/FAQ.astro";
 import CTABanner from "../components/widgets/CTABanner.astro";
@@ -13,24 +12,6 @@ const metadata = {
         "Votre première séance de boxe est offerte chez Bis Repetita à Genève. Choisissez un créneau, connectez-vous pour la première fois sur notre plateforme, et boxez gratuitement.",
 };
 
-const steps = [
-    {
-        title: "Choisissez un créneau",
-        description: "Parcourez les séances disponibles ci-dessous et repérez celle qui correspond à votre emploi du temps.",
-        icon: "lucide:calendar-search",
-    },
-    {
-        title: "Connectez-vous pour la première fois",
-        description: "Créez votre compte ou connectez-vous sur notre plateforme de réservation, en quelques secondes.",
-        icon: "lucide:user-plus",
-    },
-    {
-        title: "Votre séance est offerte",
-        description: "Dès votre toute première connexion, votre première séance est automatiquement gratuite.",
-        icon: "lucide:gift",
-    },
-];
-
 const faqs = [
     {
         question: "La séance gratuite, comment ça marche exactement ?",
@@ -38,7 +19,7 @@ const faqs = [
     },
     {
         question: "Dois-je apporter mon propre équipement ?",
-        answer: "Non, tout est fourni sur place : gants, bandes et protège-dents pour votre séance d'essai. Venez simplement en tenue de sport avec une bouteille d'eau.",
+        answer: "Non, tout est fourni sur place : gants et bandes pour votre séance d'essai. Venez simplement en tenue de sport avec une bouteille d'eau.",
     },
     {
         question: "Y a-t-il un engagement après la séance gratuite ?",
@@ -47,6 +28,10 @@ const faqs = [
     {
         question: "Faut-il un niveau minimum ?",
         answer: "Aucun niveau n'est requis. Que vous soyez débutant complet ou déjà pratiquant, le coach adapte la séance à votre profil.",
+    },
+    {
+        question: "Aucun créneau ne correspond à votre disponibilité ?",
+        answer: "Si vous souhaitez un coaching privé et qu'aucun créneau du planning ne vous convient, <a href='/contact' class='text-primary hover:underline'>contactez-nous directement</a> — nous trouverons une solution adaptée à votre emploi du temps.",
     },
 ];
 ---
@@ -64,15 +49,6 @@ const faqs = [
             },
         ]}
     />
-
-    <GsapReveal animation="fadeUp">
-        <Features
-            tagline="Comment ça marche"
-            title="Trois étapes, une séance offerte"
-            features={steps}
-            columns={3}
-        />
-    </GsapReveal>
 
     <GsapReveal animation="fadeUp">
         <ZenamuCalendar
