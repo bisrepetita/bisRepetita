@@ -1,4 +1,4 @@
-import nicolasPortrait from "../assets/nicolas-portrait.jpg";
+import nicolasPortrait from "../assets/nicolas-portrait.webp";
 
 export interface AuthorProfile {
   slug: string;
