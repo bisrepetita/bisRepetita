@@ -25,6 +25,7 @@ pnpm-debug.log*
 
 # Claude Code session-specific files
 .claude/
+.project-cache/
 
 # moodboard backups (les générations sont versionnées, pas les backups)
 moodboard/.backup-*.md
