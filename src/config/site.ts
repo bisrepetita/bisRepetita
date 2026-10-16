@@ -17,7 +17,7 @@ export interface ServicePage {
 export const servicePages: ServicePage[] = [
   {
     slug: "coaching-prive",
-    title: "Coaching Privé",
+    title: "Coaching privé",
     shortDescription: "Un accompagnement sur mesure pour atteindre vos objectifs, du solo au petit groupe.",
     href: "/services/coaching-prive",
     image: coursPortrait,
@@ -25,7 +25,7 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "coaching-solo",
-    title: "Coaching Solo",
+    title: "Coaching solo",
     shortDescription: "Séances individuelles construites sur vos objectifs, avec Nicolas de Boccard.",
     href: "/services/coaching-solo",
     image: nicolasPortrait,
@@ -33,7 +33,7 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "coaching-duo-trio",
-    title: "Coaching Duo & Trio",
+    title: "Coaching duo & trio",
     shortDescription: "Progressez ensemble grâce à la boxe anglaise, à deux ou trois.",
     href: "/services/coaching-duo-trio",
     image: ambianceBis,
@@ -49,7 +49,7 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "coaching-boxe-domicile",
-    title: "Coaching à Domicile",
+    title: "Coaching à domicile",
     shortDescription: "Le coach et le matériel viennent chez vous, partout à Genève.",
     href: "/services/coaching-boxe-domicile",
     image: coursPortrait,
@@ -73,7 +73,7 @@ export const servicePages: ServicePage[] = [
   },
   {
     slug: "boxe-femme",
-    title: "Boxe Femme",
+    title: "Boxe femme",
     shortDescription: "Cadre privé, intensité ajustée, aucun contact imposé.",
     href: "/services/boxe-femme",
     image: studioAtmosphere,
@@ -143,14 +143,14 @@ export const siteConfig = {
   ],
   footerLinks: {
     services: [
-      { text: "Coaching Privé", href: "/services/coaching-prive" },
-      { text: "Coaching Solo", href: "/services/coaching-solo" },
-      { text: "Coaching Duo & Trio", href: "/services/coaching-duo-trio" },
+      { text: "Coaching privé", href: "/services/coaching-prive" },
+      { text: "Coaching solo", href: "/services/coaching-solo" },
+      { text: "Coaching duo & trio", href: "/services/coaching-duo-trio" },
       { text: "Small Group Training", href: "/services/small-group-training" },
-      { text: "Coaching à Domicile", href: "/services/coaching-boxe-domicile" },
+      { text: "Coaching à domicile", href: "/services/coaching-boxe-domicile" },
       { text: "Round by Round", href: "/services/round-by-round" },
       { text: "Corporate", href: "/services/corporate" },
-      { text: "Boxe Femme", href: "/services/boxe-femme" },
+      { text: "Boxe femme", href: "/services/boxe-femme" },
       { text: "Offrir un cours", href: "/offrir-un-cours" },
     ],
     infos: [
@@ -158,7 +158,7 @@ export const siteConfig = {
       { text: "Nicolas de Boccard", href: "/equipe/nicolas-de-boccard" },
       { text: "Tarifs", href: "/tarifs" },
       { text: "Blog", href: "/blog" },
-      { text: "Cours de Boxe Genève", href: "/cours-de-boxe-geneve" },
+      { text: "Cours de boxe à Genève", href: "/cours-de-boxe-geneve" },
       { text: "CGV", href: "/cgv" },
     ],
   },

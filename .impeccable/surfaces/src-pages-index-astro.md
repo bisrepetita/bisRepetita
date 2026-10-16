@@ -19,7 +19,7 @@ STORY : le visiteur comprend en un écran ce qu'est Bis Repetita (boxe sur mesur
 
 FIRST VIEWPORT : nav fine (logo, Cours ▾, Studio, Tarifs, Planning, Journal, pilule « Réserver »). H1 « Coaching de boxe sur mesure à Genève » à gauche, intro + deux actions à droite ; sous eux le wordmark « bis repetita » à pleine largeur (~15vw, interligne .82). La vidéo N&B démarre en bande sous le wordmark, en retrait ; elle s'élargit bord à bord au scroll.
 
-FORM : édition de mode / lookbook suisse, position 1. seed: none (unavailable)
+FORM : édition de mode / lookbook suisse. Direction épinglée par le brief du propriétaire : pas de tirage concept-seed (règle d’arbitrage de Jon : brief > skills).
 
 SIGNATURE : la bande vidéo qui passe d'un cadre en retrait au plein écran au scroll (clip-path scrub, GSAP dans matchMedia, statique en reduced motion) ; index des formats en lignes à filet avec une photo qui suit le curseur au survol.
 

@@ -72,7 +72,9 @@ export function initGsapReveal() {
 
     // Signature : la bande photo/vidéo s'élargit jusqu'au plein écran au scroll.
     document.querySelectorAll<HTMLElement>("[data-clip-grow]").forEach((el) => {
-      const inset = getComputedStyle(document.documentElement).getPropertyValue("--gutter").trim() || "40px";
+      // --gutter est un clamp() : on lit la valeur résolue en px sur un .wrap pour que GSAP puisse interpoler.
+      const wrap = document.querySelector(".wrap");
+      const inset = `${wrap ? parseFloat(getComputedStyle(wrap).paddingLeft) : 40}px`;
       gsap.fromTo(
         el,
         { clipPath: `inset(0 ${inset} 0 ${inset})` },
