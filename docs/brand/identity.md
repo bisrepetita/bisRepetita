@@ -3,6 +3,7 @@ project: bisrepetita
 status: provisional
 sources:
   - docs/brand/interview/analysis.md
+  - docs/brand/interview/responses.md
   - docs/business/profile.md
   - https://www.bisrepetita.ch/
   - https://www.bisrepetita.ch/equipe/nicolas-de-boccard
@@ -21,6 +22,8 @@ Nicolas de Boccard a fondé Bis Repetita à Genève pour proposer une boxe angla
 
 Studio de boxe sur mesure à Genève : coaching privé, petits groupes, cours collectifs et programmes corporate. Le premium se manifeste par la qualité du cadre, la précision du feedback et l'adaptation, pas par une rhétorique de luxe.
 
+Pour les 12 prochains mois, Nicolas place Small Group en priorité 1 pour sa rentabilité horaire et sa stabilité, puis Round by Round en priorité 2. La préparation compétiteur ne doit pas être promue pour l'instant.
+
 ## Audience
 
 - débutants cherchant un cadre lisible et non intimidant ;
@@ -34,8 +37,8 @@ Ne pas canoniser âge, revenu, nationalité ou statut d'expatrié comme critère
 
 ## Valeurs observables
 
-- **Technique avant intensité** : fondamentaux et feedback précis.
-- **Adaptation réelle** : charge et format selon profil et objectif.
+- **Boxe au service des objectifs** : le format, la technique et l'intensité servent le besoin déclaré du client.
+- **Adaptation réelle** : échange initial, observation à l'échauffement, puis charge et contenu selon le profil, les capacités et l'état du jour.
 - **Exigence bienveillante** : cadre net, sans humiliation ni agressivité.
 - **Répétition** : maîtrise construite séance après séance.
 - **Sobriété premium** : qualité démontrée par le service et le suivi.

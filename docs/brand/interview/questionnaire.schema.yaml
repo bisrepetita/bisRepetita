@@ -1,0 +1,985 @@
+schema_version: 1
+project: bisrepetita
+status: internal_draft
+questionnaire: docs/brand/interview/questionnaire.md
+canonical_effect: none
+send_gate:
+  status: blocked
+  requirements:
+    - privacy.controller
+    - privacy.contact
+    - privacy.processors
+    - privacy.access_roles
+    - privacy.purposes
+    - privacy.storage_location
+    - privacy.retention_period
+    - privacy.secure_submission_channel
+    - privacy.data_subject_request_process
+    - privacy.collaborator_data_policy
+    - privacy.client_case_policy
+    - privacy.minor_data_policy
+    - privacy.asset_withdrawal_process
+
+answer_controls:
+  always_available:
+    - unknown
+    - to_verify
+    - not_applicable
+    - delegate
+  save_and_resume: true
+  raw_answers_immutable: true
+
+field_state:
+  coverage_status:
+    [supported, qualified, contradictory, missing, not_applicable]
+  evidence_requirement: [context_allowed, client_preferred, client_required]
+  permission_status: [unknown, internal_only, granted, restricted, denied]
+  validation_status: [unreviewed, needs_review, validated, rejected]
+  required_metadata:
+    - field_id
+    - source_id
+    - answer_id
+    - statement
+    - validator
+    - validation_date
+    - review_due
+  optional_metadata:
+    - permission_id
+    - proof_id
+  nullability:
+    source_id: nullable_only_when_coverage_is_missing_or_not_applicable
+    answer_id: nullable_before_answer_or_when_not_applicable
+    validator: nullable_only_while_validation_is_unreviewed
+    validation_date: nullable_unless_validation_is_validated_or_rejected
+    review_due: nullable_only_when_no_review_policy_applies
+    delegated_answer: requires_delegate_identity_and_keeps_answer_id_null_until_answered
+
+expression_language:
+  version: field-ref-v1
+  field_ref_format: "<question_id>.<field_name>"
+  runtime_ref_format: "<field|contract|record>.<property>"
+  source_ref_formats:
+    - question_id
+    - inclusive_question_range
+    - system_namespace
+  question_range_example: q01-q27
+  operators: [eq, ne, in]
+  boolean_combinators: [all, any]
+  unknown_result: false
+  enums:
+    publication_decision: [publish, publish_qualified, internal_only, withdraw]
+    permission_status: [unknown, internal_only, granted, restricted, denied]
+
+question_type_registry:
+  repeatable_record:
+    types:
+      [
+        canonical_choice_table,
+        repeatable_roster,
+        permission_matrix,
+        prefilled_offer_table,
+        prefilled_format_matrix,
+        prefilled_conversion_matrix,
+        geographic_service_matrix,
+        repeatable_anonymized_scene,
+        repeatable_verbatim,
+        repeatable_refusal,
+        repeatable_decision,
+        observable_differentiator_table,
+        natural_voice_corpus,
+        repeatable_anti_voice,
+        repeatable_claim_proof_record,
+        repeatable_asset_permission_record,
+        contact_sport_safety_matrix,
+        validation_authority_matrix,
+      ]
+  object:
+    types:
+      [
+        long_text_group,
+        repeatable_objection_and_criterion,
+        anonymized_method_scene,
+        point_of_view_examples,
+        promise_and_limit_matrix,
+        comparative_voice_preferences,
+        business_and_content_facts,
+        visual_assets_and_preferences,
+      ]
+  ranked_list:
+    types: [ranked_audience_situations]
+
+phases:
+  - id: facts_governance_safety
+    label: Validation factuelle, gouvernance et sécurité
+    estimated_minutes: 15-25
+    question_ids: [q01, q02, q03, q05, q06, q07, q08, q22, q24, q27]
+  - id: person_business_voice
+    label: Histoire, méthode, clients et voix
+    estimated_minutes: 25-40
+    question_ids:
+      [
+        q04,
+        q09,
+        q10,
+        q11,
+        q12,
+        q13,
+        q14,
+        q15,
+        q16,
+        q17,
+        q18,
+        q19,
+        q20,
+        q21,
+        q25,
+      ]
+  - id: assets_permissions_visual
+    label: Preuves, permissions et pièces jointes
+    estimated_minutes: 15-30
+    question_ids: [q23, q26]
+    linked_question_ids: [q19, q22]
+    delegation_allowed: true
+
+outputs:
+  - docs/business/profile.md
+  - docs/project/prd.md
+  - docs/brand/interview/responses.md
+  - docs/brand/interview/analysis.md
+  - docs/brand/identity.md
+  - docs/brand/voice.md
+  - docs/brand/message.md
+  - docs/brand/anti-patterns.md
+  - docs/brand/patte-ecrite.md
+  - docs/brand/themes.md
+  - docs/brand/proofs.md
+  - docs/seo/context.md
+  - docs/design/moodboard.md
+  - project.yaml
+
+output_contract_defaults:
+  allow_not_applicable_by_default: false
+  permission_policy_by_default: none
+  validation_policy: explicit_family_validator
+  review_due_required: true
+  field_override_precedence: field_then_contract_then_defaults
+
+permission_policies:
+  none:
+    applicable: false
+  internal_or_public:
+    direct_pass_statuses: [internal_only, granted]
+    restricted_pass_when: record.permission_scope_covers_target == true
+  compatible_if_public:
+    direct_pass_statuses: [granted]
+    restricted_pass_when: record.permission_scope_covers_target == true
+
+output_contracts:
+  docs/business/profile.md:
+    namespace: business
+    allow_not_applicable_by_default: false
+    validation_policy: explicit_family_validator
+    review_due_required: true
+    required_fields:
+      business.legal_identity: { source_refs: [q01] }
+      business.establishments: { source_refs: [q01] }
+      business.public_contacts: { source_refs: [q01] }
+      business.team: { source_refs: [q02] }
+      business.offers: { source_refs: [q05] }
+      business.offer_rules: { source_refs: [q06, q07, q24] }
+      business.geography: { source_refs: [q08] }
+      business.profile_owner: { source_refs: [q01, q27] }
+  docs/project/prd.md:
+    namespace: prd
+    allow_not_applicable_by_default: false
+    validation_policy: explicit_family_validator
+    review_due_required: true
+    required_fields:
+      prd.scope: { source_refs: [q05] }
+      prd.conversions: { source_refs: [q07] }
+      prd.priority_audiences: { source_refs: [q09] }
+      prd.objectives: { source_refs: [q25] }
+      prd.kpis: { source_refs: [q25] }
+  docs/brand/interview/responses.md:
+    namespace: responses
+    allow_not_applicable_by_default: false
+    validation_policy: immutable_source_record
+    review_due_required: false
+    required_fields:
+      responses.respondent: { source_refs: [system.session] }
+      responses.collected_at: { source_refs: [system.session] }
+      responses.raw_answers: { source_refs: [q01-q27] }
+      responses.answer_statuses: { source_refs: [q01-q27] }
+      responses.attachments:
+        { source_refs: [q19, q22, q23, q26], allow_not_applicable: true }
+  docs/brand/interview/analysis.md:
+    namespace: analysis
+    allow_not_applicable_by_default: false
+    validation_policy: needs_review_until_explicit_validation
+    review_due_required: true
+    required_fields:
+      analysis.fact_records: { source_refs: [system.coverage_matrix] }
+      analysis.verbatims: { source_refs: [q11, q19] }
+      analysis.inferences: { source_refs: [system.analysis] }
+      analysis.contradictions: { source_refs: [system.coverage_matrix] }
+      analysis.permissions: { source_refs: [q03, q22, q23] }
+      analysis.remaining_gaps: { source_refs: [system.completion_gate] }
+  docs/brand/identity.md:
+    namespace: identity
+    allow_not_applicable_by_default: false
+    validation_policy: explicit_family_validator
+    review_due_required: true
+    required_fields:
+      identity.origin: { source_refs: [q04] }
+      identity.audiences: { source_refs: [q09, q10] }
+      identity.method: { source_refs: [q14] }
+      identity.values: { source_refs: [q15] }
+      identity.convictions: { source_refs: [q16] }
+      identity.exclusions: { source_refs: [q13, q17] }
+      identity.positioning: { source_refs: [q18] }
+  docs/brand/voice.md:
+    namespace: voice
+    allow_not_applicable_by_default: false
+    validation_policy: explicit_family_validator
+    review_due_required: true
+    required_fields:
+      voice.spokespeople: { source_refs: [q03] }
+      voice.signature_rules: { source_refs: [q03] }
+      voice.corpus:
+        { source_refs: [q19], permission_policy: internal_or_public }
+      voice.anti_examples: { source_refs: [q20] }
+      voice.stable_rules: { source_refs: [q19, q21] }
+      voice.contextual_tones: { source_refs: [q21] }
+  docs/brand/message.md:
+    namespace: message
+    allow_not_applicable_by_default: false
+    validation_policy: explicit_family_validator
+    review_due_required: true
+    required_fields:
+      message.promise: { source_refs: [q17] }
+      message.mechanisms: { source_refs: [q14, q18] }
+      message.objections: { source_refs: [q12] }
+      message.cta: { source_refs: [q07] }
+      message.offer_priority: { source_refs: [q05, q25] }
+      message.claim_scope:
+        {
+          source_refs: [q22, q24],
+          permission_policy: compatible_if_public,
+          proof_required: true,
+        }
+  docs/brand/anti-patterns.md:
+    namespace: anti_patterns
+    allow_not_applicable_by_default: false
+    validation_policy: explicit_family_validator
+    review_due_required: true
+    required_fields:
+      anti_patterns.wrong_fit: { source_refs: [q13] }
+      anti_patterns.forbidden_claims:
+        { source_refs: [q17, q22], proof_required: true }
+      anti_patterns.words: { source_refs: [q20] }
+      anti_patterns.style: { source_refs: [q20, q21] }
+      anti_patterns.safety_claims: { source_refs: [q24] }
+  docs/brand/patte-ecrite.md:
+    namespace: written_style
+    allow_not_applicable_by_default: false
+    validation_policy: explicit_family_validator
+    review_due_required: true
+    required_fields:
+      written_style.natural_corpus:
+        { source_refs: [q19], permission_policy: internal_or_public }
+      written_style.rhythm: { source_refs: [q19, q21] }
+      written_style.structures: { source_refs: [q19, q21] }
+      written_style.vocabulary: { source_refs: [q19, q20] }
+      written_style.cta_rules: { source_refs: [q07, q21] }
+  docs/brand/themes.md:
+    namespace: themes
+    allow_not_applicable_by_default: false
+    validation_policy: explicit_family_validator
+    review_due_required: true
+    required_fields:
+      themes.active_offers: { source_refs: [q05] }
+      themes.audiences: { source_refs: [q09, q10] }
+      themes.editorial_angles: { source_refs: [q16] }
+      themes.priority_inputs: { source_refs: [q25] }
+      themes.out_of_scope: { source_refs: [q13, q17, q25] }
+  docs/brand/proofs.md:
+    namespace: proofs
+    allow_not_applicable_by_default: false
+    validation_policy: explicit_family_validator
+    review_due_required: true
+    required_fields:
+      proofs.qualifications:
+        {
+          source_refs: [q02, q23],
+          permission_policy: compatible_if_public,
+          proof_required: true,
+        }
+      proofs.method_evidence: { source_refs: [q14, q18], proof_required: true }
+      proofs.claims:
+        {
+          source_refs: [q22],
+          permission_policy: compatible_if_public,
+          proof_required: true,
+        }
+      proofs.assets:
+        {
+          source_refs: [q23],
+          permission_policy: compatible_if_public,
+          proof_required: true,
+        }
+      proofs.safety_validation: { source_refs: [q24], proof_required: true }
+  docs/seo/context.md:
+    namespace: seo
+    allow_not_applicable_by_default: false
+    validation_policy: explicit_family_validator
+    review_due_required: true
+    required_fields:
+      seo.active_offers: { source_refs: [q05] }
+      seo.local_facts: { source_refs: [q08] }
+      seo.audience_situations: { source_refs: [q09, q10] }
+      seo.customer_language: { source_refs: [q11, q12] }
+      seo.proof_boundaries: { source_refs: [q22, q24], proof_required: true }
+      seo.business_inputs: { source_refs: [q25] }
+  docs/design/moodboard.md:
+    namespace: moodboard
+    allow_not_applicable_by_default: true
+    not_applicable_requires_reason: true
+    validation_policy: explicit_family_validator
+    review_due_required: true
+    required_fields:
+      moodboard.preferences: { source_refs: [q26] }
+      moodboard.assets:
+        { source_refs: [q23, q26], permission_policy: compatible_if_public }
+      moodboard.constraints: { source_refs: [q26] }
+      moodboard.accessibility: { source_refs: [q26] }
+  project.yaml:
+    namespace: project
+    allow_not_applicable_by_default: false
+    validation_policy: gate_derived_never_answer_derived
+    review_due_required: false
+    required_fields:
+      project.output_contract_version: { source_refs: [system.schema_version] }
+      project.module_status: { source_refs: [system.completion_gate, q27] }
+      project.validator_registry: { source_refs: [q27] }
+
+gate_predicates:
+  field_covered:
+    pass:
+      any:
+        - {
+            runtime_ref: field.coverage_status,
+            operator: in,
+            value: [supported, qualified],
+          }
+        - all:
+            - {
+                runtime_ref: field.coverage_status,
+                operator: eq,
+                value: not_applicable,
+              }
+            - {
+                runtime_ref: field.not_applicable_allowed,
+                operator: eq,
+                value: true,
+              }
+            - {
+                runtime_ref: field.not_applicable_reason,
+                operator: ne,
+                value: null,
+              }
+  client_evidence_present:
+    applies:
+      {
+        runtime_ref: field.evidence_requirement,
+        operator: eq,
+        value: client_required,
+      }
+    pass: { runtime_ref: field.answer_id, operator: ne, value: null }
+  contradiction_resolved:
+    applies:
+      { runtime_ref: field.coverage_status, operator: eq, value: contradictory }
+    pass: { runtime_ref: field.resolution_answer_id, operator: ne, value: null }
+  permission_compatible:
+    applies: { runtime_ref: field.permission_policy, operator: ne, value: none }
+    pass:
+      any:
+        - all:
+            - {
+                runtime_ref: field.permission_policy,
+                operator: eq,
+                value: internal_or_public,
+              }
+            - {
+                runtime_ref: field.permission_status,
+                operator: in,
+                value: [internal_only, granted],
+              }
+        - all:
+            - {
+                runtime_ref: field.permission_policy,
+                operator: eq,
+                value: compatible_if_public,
+              }
+            - {
+                runtime_ref: field.permission_status,
+                operator: eq,
+                value: granted,
+              }
+        - all:
+            - {
+                runtime_ref: field.permission_policy,
+                operator: in,
+                value: [internal_or_public, compatible_if_public],
+              }
+            - {
+                runtime_ref: field.permission_status,
+                operator: eq,
+                value: restricted,
+              }
+            - {
+                runtime_ref: record.permission_scope_covers_target,
+                operator: eq,
+                value: true,
+              }
+  validation_recorded:
+    applies:
+      {
+        runtime_ref: contract.validation_policy,
+        operator: eq,
+        value: explicit_family_validator,
+      }
+    pass:
+      all:
+        - { runtime_ref: record.validator, operator: ne, value: null }
+        - {
+            runtime_ref: record.validation_status,
+            operator: in,
+            value: [needs_review, validated],
+          }
+  review_scheduled:
+    applies:
+      { runtime_ref: contract.review_due_required, operator: eq, value: true }
+    pass: { runtime_ref: record.review_due, operator: ne, value: null }
+  proof_relevant:
+    applies: { runtime_ref: field.proof_required, operator: eq, value: true }
+    pass:
+      all:
+        - { runtime_ref: record.proof_id, operator: ne, value: null }
+        - {
+            runtime_ref: record.proof_supports_field_id,
+            operator: eq,
+            value: true,
+          }
+  natural_corpus_available:
+    applies:
+      {
+        runtime_ref: field.field_id,
+        operator: in,
+        value: [voice.corpus, written_style.natural_corpus],
+      }
+    pass:
+      all:
+        - { runtime_ref: record.source_id, operator: ne, value: null }
+        - { runtime_ref: record.actual_author, operator: ne, value: null }
+        - {
+            runtime_ref: record.permission_status,
+            operator: in,
+            value: [internal_only, granted, restricted],
+          }
+
+questions:
+  q01:
+    number: 1
+    type: canonical_choice_table
+    required: true
+    evidence_requirement: client_required
+    downstream_fields:
+      - business.legal_identity
+      - business.jurisdiction
+      - business.registered_office
+      - business.establishments
+      - business.public_contacts
+      - business.public_urls
+      - business.accessibility
+      - business.profile_owner
+      - business.review_due
+  q02:
+    number: 2
+    type: repeatable_roster
+    required: true
+    evidence_requirement: client_required
+    fields:
+      [
+        public_name,
+        exact_role,
+        relationship,
+        qualifications,
+        services,
+        languages,
+        publish_name,
+        publish_photo,
+        publish_bio,
+        publish_quotes,
+      ]
+    downstream_fields:
+      [business.team, business.publication_rights, proofs.qualifications]
+  q03:
+    number: 3
+    type: permission_matrix
+    required: true
+    evidence_requirement: client_required
+    fields:
+      [
+        person,
+        channel,
+        signature,
+        approval_required,
+        delegated_writing_allowed,
+        approver,
+        approval_evidence,
+      ]
+    downstream_fields:
+      [voice.spokespeople, voice.signature_rules, governance.approval]
+  q04:
+    number: 4
+    type: long_text_group
+    required: true
+    evidence_requirement: client_required
+    max_length: 6000
+    downstream_fields:
+      [identity.origin, identity.turning_points, identity.preserve]
+  q05:
+    number: 5
+    type: prefilled_offer_table
+    required: true
+    fields:
+      [
+        status,
+        primary_audience,
+        actual_purpose,
+        commercial_capacity,
+        business_value,
+        priority_12_months,
+        avoid_promoting,
+      ]
+    downstream_fields:
+      [business.offers, prd.scope, message.offer_priority, seo.active_offers]
+  q06:
+    number: 6
+    type: prefilled_format_matrix
+    required: true
+    fields:
+      [
+        duration,
+        min_participants,
+        max_participants,
+        coach_count,
+        location,
+        equipment,
+        prerequisites,
+        contact_level,
+        sparring,
+      ]
+    downstream_fields:
+      [business.offer_rules, message.claims, proofs.offer_facts]
+  q07:
+    number: 7
+    type: prefilled_conversion_matrix
+    required: true
+    fields:
+      [
+        entry_offer,
+        price_source,
+        pack_validity,
+        payment,
+        cancellation,
+        refund_or_deduction,
+        booking_channel,
+        cta,
+        canonical_url,
+      ]
+    downstream_fields:
+      [business.commercial_rules, prd.conversions, message.cta, seo.cta_map]
+  q08:
+    number: 8
+    type: geographic_service_matrix
+    required: true
+    fields:
+      [
+        service_mode,
+        zones,
+        customer_vocabulary,
+        languages,
+        schedules,
+        seasonality,
+        capacity_limit,
+      ]
+    downstream_fields: [business.geography, business.languages, seo.local_facts]
+  q09:
+    number: 9
+    type: ranked_audience_situations
+    required: true
+    max_ranked_items: 5
+    downstream_fields:
+      [identity.audiences, prd.priority_audiences, seo.audience_situations]
+  q10:
+    number: 10
+    type: repeatable_anonymized_scene
+    required: true
+    minimum_items: 2
+    fields: [situation, prior_attempt, trigger, why_previous_insufficient]
+    downstream_fields:
+      [identity.audience_situations, themes.use_cases, seo.search_triggers]
+  q11:
+    number: 11
+    type: repeatable_verbatim
+    required: true
+    minimum_items: 5
+    fields: [exact_phrase, context, source_kind, permission_status]
+    downstream_fields:
+      [analysis.verbatims, voice.customer_language, seo.questions]
+  q12:
+    number: 12
+    type: repeatable_objection_and_criterion
+    required: true
+    minimum_objections: 3
+    minimum_criteria: 3
+    downstream_fields:
+      [message.objections, identity.decision_criteria, seo.objections]
+  q13:
+    number: 13
+    type: repeatable_refusal
+    required: true
+    minimum_items: 2
+    downstream_fields:
+      [identity.exclusions, anti_patterns.promises, business.referral_rules]
+  q14:
+    number: 14
+    type: anonymized_method_scene
+    required: true
+    downstream_fields:
+      [identity.method, identity.expertise, proofs.method_evidence]
+  q15:
+    number: 15
+    type: repeatable_decision
+    required: true
+    minimum_items: 2
+    fields: [decision, tradeoff, observable_value, consequence]
+    downstream_fields: [identity.values, voice.posture]
+  q16:
+    number: 16
+    type: point_of_view_examples
+    required: true
+    downstream_fields:
+      [
+        identity.convictions,
+        themes.editorial_angles,
+        anti_patterns.industry_claims,
+      ]
+  q17:
+    number: 17
+    type: promise_and_limit_matrix
+    required: true
+    fields:
+      [
+        honest_promise,
+        observable_success,
+        refused_promise,
+        qualification_required,
+      ]
+    downstream_fields:
+      [
+        message.promise,
+        anti_patterns.forbidden_claims,
+        proofs.claim_requirements,
+      ]
+  q18:
+    number: 18
+    type: observable_differentiator_table
+    required: true
+    minimum_items: 3
+    fields:
+      [claimed_attribute, observable_detail, source_or_example, fair_comparison]
+    downstream_fields:
+      [identity.positioning, message.mechanisms, proofs.service_details]
+  q19:
+    number: 19
+    type: natural_voice_corpus
+    required: true
+    minimum_spontaneous_phrases: 5
+    recommended_samples: 3
+    fields: [sample, format, context, actual_author, source, permission_status]
+    downstream_fields:
+      [
+        voice.verbatims,
+        voice.corpus,
+        written_style.rhythm,
+        written_style.structures,
+      ]
+  q20:
+    number: 20
+    type: repeatable_anti_voice
+    required: true
+    minimum_items: 3
+    downstream_fields:
+      [voice.anti_examples, anti_patterns.words, anti_patterns.style]
+  q21:
+    number: 21
+    type: comparative_voice_preferences
+    required: true
+    fields:
+      [
+        conclusion_order,
+        sentence_rhythm,
+        technical_vocabulary,
+        personal_or_team_voice,
+        humor,
+        lived_exceptions,
+      ]
+    downstream_fields:
+      [voice.stable_rules, voice.contextual_tones, written_style.rules]
+  q22:
+    number: 22
+    type: repeatable_claim_proof_record
+    required: true
+    fields:
+      [
+        exact_claim,
+        category,
+        primary_source,
+        file_or_url,
+        owner,
+        method,
+        period,
+        population,
+        numerator,
+        denominator,
+        observed_on,
+        verification_level,
+        permission_status,
+        allowed_scope,
+        validator,
+        review_due,
+        publication_decision,
+      ]
+    downstream_fields:
+      [proofs.claims, message.claim_scope, anti_patterns.blocked_claims]
+  q23:
+    number: 23
+    type: repeatable_asset_permission_record
+    required: true
+    fields:
+      [
+        asset_type,
+        owner_or_subject,
+        provenance,
+        identifiable_people,
+        consent_evidence,
+        purposes,
+        channels,
+        duration,
+        territory,
+        credit,
+        anonymization,
+        restrictions,
+        withdrawal_process,
+        minor_present,
+        permission_status,
+      ]
+    downstream_fields:
+      [proofs.assets, voice.corpus_permissions, moodboard.available_assets]
+  q24:
+    number: 24
+    type: contact_sport_safety_matrix
+    required: true
+    fields:
+      [
+        format,
+        contact_allowed,
+        contact_level,
+        sparring_allowed,
+        access_criteria,
+        explicit_consent,
+        protective_equipment,
+        supervision,
+        coach_ratio,
+        minors_allowed,
+        minimum_age,
+        parental_authorization,
+        insurance,
+        waiver,
+        medical_advice,
+        refusal_or_referral,
+        operational_owner,
+        claims_validator,
+      ]
+    downstream_fields:
+      [
+        business.constraints,
+        message.safety_scope,
+        anti_patterns.safety_claims,
+        proofs.validation_requirements,
+      ]
+  q25:
+    number: 25
+    type: business_and_content_facts
+    required: true
+    fields:
+      [
+        documentable_topics,
+        refused_topics,
+        recurring_questions,
+        unwanted_requests,
+        seasonality,
+        capacity_limits,
+        business_priorities,
+        canonical_ctas,
+        comparable_competitors,
+        english_service,
+        realistic_cadence,
+        available_kpis,
+      ]
+    downstream_fields:
+      [prd.objectives, prd.kpis, themes.priority_inputs, seo.factual_inputs]
+  q26:
+    number: 26
+    type: visual_assets_and_preferences
+    required: false
+    fields:
+      [
+        keep,
+        avoid,
+        liked_references,
+        disliked_references,
+        logos,
+        fonts_and_licenses,
+        photos,
+        videos,
+        rights_and_credits,
+        representable_people,
+        production_constraints,
+        intended_uses,
+        accessibility,
+        contrast,
+      ]
+    downstream_fields:
+      [moodboard.preferences, moodboard.assets, moodboard.constraints]
+  q27:
+    number: 27
+    type: validation_authority_matrix
+    required: true
+    fields:
+      [
+        document_family,
+        validator,
+        scope,
+        backup_validator,
+        approval_evidence,
+        review_frequency,
+      ]
+    downstream_fields:
+      [
+        governance.validators,
+        governance.approval_evidence,
+        governance.review_due,
+        project.module_status,
+      ]
+
+conditional_modules:
+  contact_or_sparring:
+    when:
+      any:
+        - { field_ref: q24.contact_allowed, operator: eq, value: true }
+        - { field_ref: q24.sparring_allowed, operator: eq, value: true }
+    require:
+      [
+        q24.access_criteria,
+        q24.explicit_consent,
+        q24.protective_equipment,
+        q24.supervision,
+        q24.insurance,
+        q24.refusal_or_referral,
+        q24.claims_validator,
+      ]
+  offer_accepting_minors:
+    when: { field_ref: q24.minors_allowed, operator: eq, value: true }
+    require:
+      [
+        q24.minimum_age,
+        q24.parental_authorization,
+        q24.supervision,
+        q24.insurance,
+        q24.operational_owner,
+        q24.claims_validator,
+      ]
+  asset_representing_minor:
+    when: { field_ref: q23.minor_present, operator: eq, value: true }
+    require:
+      [
+        q23.consent_evidence,
+        q23.purposes,
+        q23.channels,
+        q23.duration,
+        q23.territory,
+        q23.restrictions,
+        q23.withdrawal_process,
+      ]
+  publishable_asset:
+    when:
+      {
+        field_ref: q23.permission_status,
+        operator: in,
+        value: [granted, restricted],
+      }
+    require:
+      [
+        q23.consent_evidence,
+        q23.purposes,
+        q23.channels,
+        q23.duration,
+        q23.territory,
+        q23.restrictions,
+        q23.withdrawal_process,
+      ]
+  public_claim:
+    when:
+      {
+        field_ref: q22.publication_decision,
+        operator: in,
+        value: [publish, publish_qualified],
+      }
+    require:
+      [
+        q22.primary_source,
+        q22.observed_on,
+        q22.verification_level,
+        q22.allowed_scope,
+        q22.validator,
+        q22.review_due,
+      ]
+  delegated_signature:
+    when:
+      { field_ref: q03.delegated_writing_allowed, operator: eq, value: true }
+    require: [q03.approval_required, q03.approver, q03.approval_evidence]
+
+completion_gate:
+  version: 1
+  mode: per_output_field
+  contracts_ref: output_contracts
+  predicates_ref: gate_predicates
+  apply_predicates:
+    - field_covered
+    - client_evidence_present
+    - contradiction_resolved
+    - permission_compatible
+    - validation_recorded
+    - review_scheduled
+    - proof_relevant
+    - natural_corpus_available
+  output_complete_when: every_required_field_passes_every_applicable_predicate
+  output_incomplete_when: any_required_field_fails_an_applicable_predicate
+  not_applicable_resolution: contract_default_then_field_override
+  validation_effect:
+    completed: needs_review
+    validated: explicit_human_validation_only
+    canonical: never_from_gate_alone

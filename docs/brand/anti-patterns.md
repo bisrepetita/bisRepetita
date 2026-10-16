@@ -3,6 +3,7 @@ project: bisrepetita
 status: provisional
 sources:
   - docs/brand/interview/analysis.md
+  - docs/brand/interview/responses.md
   - docs/brand/voice.md
 validated_by: "pending final document review by Nicolas de Boccard"
 validated_on: null
@@ -16,19 +17,22 @@ review_due: "2027-01-30"
 - game-changer, next-level, mindset, booster, disruptif, leverager, scaler ;
 - meilleur studio, résultats garantis, transformation garantie ;
 - « je coache depuis 20 ans » ;
-- signature « Nicolas » sur un nouveau texte rédigé par un tiers sans autorisation explicite ;
-- réutilisation de `100+` ou `98 %` sans date, périmètre, dénominateur et méthode documentés ;
+- « Technique avant intensité. » ;
+- signature « Nicolas » sur un nouveau texte sans validation individuelle du texte dans le document ;
+- toute réutilisation de `100+`, `98 %` ou `10K+` ;
+- « 99% de nos clients ont atteint leurs objectifs » sans décision et méthode explicitement documentées ;
 - guérison, traitement du stress, thérapie ou promesse médicale ;
 - urgence ou rareté non réelle.
 
 ## Erreurs de fond
 
 - confondre 20 ans de pratique et années de coaching ;
-- citer `10K+` sans nommer la métrique ;
+- conserver `100+`, `98 %` ou `10K+` après la décision de retrait ;
 - figer prix, packs ou disponibilité sans relire la page tarifs ;
 - présenter 98 % comme garantie individuelle ;
-- inventer un coach, une qualification ou une attribution ;
+- nommer publiquement Jeremy, Lionel ou Eliza avant autorisation par personne, ou leur ajouter un nom de famille, une qualification, une attribution, une photo ou une citation non fournis ;
 - suggérer que tous les formats incluent combat ou sparring ;
+- promouvoir la préparation compétiteur alors que cette offre est en pause éditoriale ;
 - instrumentaliser l'insécurité des femmes pour vendre Boxe Femme ;
 - dénigrer clubs associatifs ou concurrents.
 
