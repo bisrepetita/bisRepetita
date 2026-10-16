@@ -1,110 +1,62 @@
 ---
 import WidgetWrapper from "./WidgetWrapper.astro";
-import Headline from "../ui/Headline.astro";
 import type { FAQProps } from "../../types/types";
 
-const {
-    items,
-    title,
-    subtitle,
-    tagline,
-    id,
-    isDark = false,
-    classes = {},
-    bg,
-} = Astro.props as FAQProps;
+// Accordéon natif <details> à filets. Le widget n'émet aucun JSON-LD : le FAQPage vient des pages (<Schema>).
+// tagline et isDark sont ignorés.
+const { items = [], title, subtitle, id, classes = {}, bg } = Astro.props as FAQProps;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} bg={bg} classes={classes}>
-    <Headline
-        title={title}
-        subtitle={subtitle}
-        tagline={tagline}
-        titleAs="h2"
-        align="center"
-        classes={{
-            container: "max-w-4xl mx-auto mb-12",
-            title: "text-4xl md:text-5xl font-medium tracking-tight font-display",
-            subtitle: "text-lg text-muted-foreground max-w-2xl mx-auto",
-        }}
-    />
-    <div class="max-w-4xl mx-auto divide-y divide-border/50">
-        {
-            items.map((item, i) => (
-                <div class="faq-item">
-                    <button
-                        class="faq-toggle w-full flex items-center justify-between py-6 text-left text-foreground font-medium hover:text-primary transition-colors group"
-                        aria-expanded="false"
-                        aria-controls={`faq-${i}`}
-                    >
-                        <span class="flex items-center gap-4">
-                            <span class="text-sm text-primary/40 font-mono shrink-0">{String(i + 1).padStart(2, "0")}</span>
-                            <span class="text-base">{item.question}</span>
-                        </span>
-                        {/* Chevron rotative */}
-                        <svg
-                            class="faq-chevron w-5 h-5 text-primary ml-4 shrink-0 transition-transform duration-300"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
-                    </button>
-                    <div
-                        id={`faq-${i}`}
-                        class="faq-content overflow-hidden"
-                        style="height: 0px;"
-                    >
-                        <div class="py-4 pl-10 border-l-2 border-primary ml-3 flex items-center">
-                            <p class="text-muted-foreground leading-relaxed">
-                                <Fragment set:html={item.answer} />
-                            </p>
-                        </div>
+<WidgetWrapper id={id} bg={bg} classes={classes}>
+    <div class="grid gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] md:gap-[clamp(40px,8vw,160px)]">
+        {(title || subtitle) && (
+            <div class="md:sticky md:top-[calc(var(--nav-h)+32px)] md:self-start">
+                {title && <h2 class="t-title" data-split set:html={title} />}
+                {subtitle && <p class="mt-5 max-w-[38ch] text-[17px] text-gray-1" set:html={subtitle} />}
+            </div>
+        )}
+        <div class:list={["faq border-t border-line", !(title || subtitle) && "md:col-start-2"]}>
+            {items.map((item) => (
+                <details class="border-b border-line">
+                    <summary class="flex cursor-pointer list-none items-start justify-between gap-6 py-6 text-[17px] font-medium leading-snug tracking-[-0.015em] md:text-[19px]">
+                        <span>{item.question}</span>
+                        <span class="faq-sign" aria-hidden="true"></span>
+                    </summary>
+                    <div class="faq-answer max-w-[62ch] pb-7 text-[16px] leading-relaxed text-gray-1">
+                        <Fragment set:html={item.answer} />
                     </div>
-                </div>
-            ))
-        }
+                </details>
+            ))}
+        </div>
     </div>
 </WidgetWrapper>
 
-<script>
-    function initFaq() {
-        document.querySelectorAll(".faq-toggle").forEach((btn) => {
-            // Avoid duplicate listeners
-            if (btn.hasAttribute("data-faq-init")) return;
-            btn.setAttribute("data-faq-init", "true");
-
-            btn.addEventListener("click", () => {
-                const expanded = btn.getAttribute("aria-expanded") === "true";
-                const content = btn.nextElementSibling as HTMLElement;
-                const inner = content.firstElementChild as HTMLElement;
-
-                btn.setAttribute("aria-expanded", String(!expanded));
-
-                if (!expanded) {
-                    content.style.height = inner.offsetHeight + "px";
-                } else {
-                    content.style.height = "0px";
-                }
-            });
-        });
-    }
-
-    initFaq();
-    document.addEventListener("astro:page-load", initFaq);
-</script>
-
 <style>
-    .faq-content {
-        transition: height 0.35s ease;
+    .faq { interpolate-size: allow-keywords; }
+    summary::-webkit-details-marker { display: none; }
+    summary:hover { color: var(--gray-1); }
+
+    /* Signe + / − en deux traits fins */
+    .faq-sign { position: relative; flex: none; width: 14px; height: 14px; margin-top: 0.4em; }
+    .faq-sign::before,
+    .faq-sign::after {
+        content: "";
+        position: absolute;
+        inset: 50% 0 auto 0;
+        height: 1px;
+        background: currentColor;
+        transition: transform 0.45s var(--ease-out-expo);
     }
-    .faq-toggle[aria-expanded="true"] .faq-chevron {
-        transform: rotate(180deg);
+    .faq-sign::after { transform: rotate(90deg); }
+    details[open] .faq-sign::after { transform: rotate(0deg); }
+
+    .faq-answer :global(a) { color: var(--ink); text-decoration: underline; }
+
+    /* Hauteur animée là où ::details-content existe ; ailleurs, ouverture instantanée. */
+    details::details-content {
+        block-size: 0;
+        overflow: hidden;
+        transition: block-size 0.45s var(--ease-out-expo), content-visibility 0.45s allow-discrete;
     }
+    details[open]::details-content { block-size: auto; }
 </style>

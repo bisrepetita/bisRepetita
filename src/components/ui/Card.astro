@@ -1,4 +1,5 @@
 ---
+// Bloc plat à filet, angles droits.
 interface Props {
     class?: string;
     href?: string;
@@ -11,10 +12,7 @@ const Tag = href ? "a" : "div";
 
 <Tag
     href={href}
-    class:list={[
-        "relative bg-card/60 backdrop-blur-sm p-8 rounded-3xl border border-border/50 transition-all duration-300 hover:border-primary/30 hover:shadow-[var(--shadow-gold-card)] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:w-1/3 before:h-[2px] before:bg-gradient-to-r before:from-transparent before:via-primary before:to-transparent before:rounded-full",
-        className,
-    ]}
+    class:list={["block border border-line bg-background p-8", href && "transition-colors duration-300 hover:bg-surface", className]}
     {...rest}
 >
     <slot />

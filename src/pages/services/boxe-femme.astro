@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Hero from "../../components/widgets/Hero.astro";
-import Stats from "../../components/widgets/Stats.astro";
 import Features from "../../components/widgets/Features.astro";
 import SplitShowcase from "../../components/widgets/SplitShowcase.astro";
 import ContentShowcase from "../../components/widgets/ContentShowcase.astro";
@@ -9,11 +8,10 @@ import PricingTable from "../../components/widgets/PricingTable.astro";
 import FAQ from "../../components/widgets/FAQ.astro";
 import CTABanner from "../../components/widgets/CTABanner.astro";
 import RelatedServices from "../../components/widgets/RelatedServices.astro";
-import GsapReveal from "../../components/widgets/GsapReveal.astro";
 import Schema from "../../components/seo/Schema.astro";
-import studioAtmosphere from "../../assets/studio-atmosphere.webp";
 import coursPortrait from "../../assets/cours-portrait.webp";
-import nicolasPortrait from "../../assets/nicolas-de-boccard.webp";
+import cours2Landscape from "../../assets/cours-2-landscape.webp";
+import ambianceBis from "../../assets/ambiance-bis-repetita.webp";
 
 const metadata = {
     title: "Cours de Boxe Femme à Genève — Studio Privé",
@@ -21,63 +19,71 @@ const metadata = {
         "Cours de boxe femme à Genève en studio privé. Coaching personnalisé, cadre bienveillant, sans contact obligatoire, toutes formules. Séance d'essai gratuite.",
 };
 
-const stats = [
-    { value: "65%", label: "De femmes", description: "Plus de la moitié de nos élèves sont des femmes — débutantes ou confirmées." },
-    { value: "1-3", label: "Participantes max", description: "En coaching privé, l'attention est totale. Pas de regard, pas de jugement." },
-    { value: "0", label: "Contact obligatoire", description: "La boxe sans contact est notre format par défaut. Vous choisissez votre intensité." },
+const facts = [
+    { k: "Cadre", v: "Studio privé" },
+    { k: "Coaching privé", v: "1 à 3 personnes" },
+    { k: "Contact", v: "Aucun contact imposé" },
+    { k: "Intensité", v: "Ajustée à chaque séance" },
+    { k: "Niveau requis", v: "Aucun" },
 ];
 
 const features = [
     {
-        title: "Confiance en soi",
+        title: "Se tonifier",
         description:
-            "Apprendre à se positionner, à frapper avec intention, à occuper l'espace. La boxe reconstruit la confiance depuis l'intérieur.",
+            "Bras, épaules, sangle abdominale, jambes : la boxe sollicite tout le corps. Le travail au sac et aux pattes tonifie sans charges lourdes.",
         icon: "lucide:flame",
     },
     {
-        title: "Forme physique complète",
+        title: "Cardio et énergie",
         description:
-            "Cardio, renforcement, souplesse, coordination. 60 minutes de boxe brûlent plus de calories qu'une heure de running — sans l'ennui.",
+            "Les rounds alternent effort et récupération. Le souffle s'améliore avec la régularité.",
         icon: "lucide:heart-pulse",
     },
     {
-        title: "Cadre respectueux & safe",
+        title: "Coordination",
         description:
-            "Un studio privé, un coach professionnel, zéro ambiance de vestiaire. Vous venez pour vous, dans un environnement pensé pour votre confort.",
-        icon: "lucide:shield-check",
-    },
-    {
-        title: "Sans contact par défaut",
-        description:
-            "Tout le travail se fait au sac et aux pattes d'ours. Aucun contact entre participantes, sauf demande explicite et progression validée.",
+            "Les poings, les appuis, la garde travaillent ensemble. Le geste devient plus précis, séance après séance.",
         icon: "lucide:hand",
     },
     {
-        title: "Progression mesurable",
+        title: "Confiance dans le geste",
         description:
-            "Technique, endurance, puissance : votre coach mesure vos progrès et ajuste le programme. Vous voyez la différence en quelques semaines.",
+            "Se placer, frapper avec intention, occuper l'espace. La confiance suit la technique.",
+        icon: "lucide:shield-check",
+    },
+    {
+        title: "À votre rythme",
+        description:
+            "Le coach suit vos progrès en technique et en endurance, et ajuste le programme.",
         icon: "lucide:trending-up",
     },
+];
+
+const phases = [
+    { k: "Règles", v: "Séance plus technique : précision, garde, déplacements. L'intensité reste à votre choix." },
+    { k: "Phase folliculaire", v: "L'énergie remonte souvent : enchaînements plus longs, cardio qui augmente progressivement." },
+    { k: "Ovulation", v: "Phase haute pour beaucoup : rounds plus explosifs, travail de vitesse et de cardio." },
+    { k: "Phase lutéale", v: "Retour vers la technique et une endurance modérée, selon vos sensations du jour." },
 ];
 
 const tiers = [
     {
         name: "Coaching Solo",
-        description: "Le format idéal pour débuter : 100% d'attention, 0% de regard.",
+        description: "Pour débuter avec toute l'attention du coach.",
         price: "CHF 120.-",
         priceNote: "/ séance",
         features: [
             "60 min de coaching individuel",
-            "Programme 100% personnalisé",
+            "Programme personnalisé",
             "Sans contact",
             "Matériel fourni",
-            "Séance d'essai gratuite",
         ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
+        cta: { text: "Réserver une séance", href: "/#planning" },
     },
     {
         name: "Coaching Duo",
-        description: "Venez avec une amie. Même qualité, plus de fun.",
+        description: "Venez avec une amie, le prix se partage.",
         price: "CHF 140.-",
         priceNote: "/ séance (pour 2)",
         features: [
@@ -85,32 +91,30 @@ const tiers = [
             "Programme adapté aux deux",
             "Sans contact",
             "Matériel fourni",
-            "Séance d'essai gratuite",
         ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
+        cta: { text: "Réserver une séance", href: "/#planning" },
         highlighted: true,
-        popularLabel: "Le plus choisi",
     },
     {
         name: "Round by Round",
-        description: "L'énergie du groupe, 8 personnes maximum.",
+        description: "Le cours collectif, 8 personnes au plus.",
         price: "CHF 40.-",
         priceNote: "/ séance",
         features: [
-            "50 min — technique + cardio",
-            "8 participantes maximum",
-            "1 coach dédié",
+            "50 min, technique et cardio",
+            "8 participants maximum",
+            "1 coach",
             "Sans contact",
             "Matériel fourni",
         ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
+        cta: { text: "Réserver une séance", href: "/#planning" },
     },
 ];
 
 const faqs = [
     {
         question: "Comment se passe la première séance pour une femme débutante ?",
-        answer: "On commence par un échauffement en douceur (corde, shadow boxing, mobilité), puis on passe aux fondamentaux : position de garde, déplacements, premiers coups sur les pattes d'ours tenues par Nicolas. Tout est adapté à votre rythme. Vous repartez fatiguée mais jamais blessée — et souvent surprise d'avoir autant aimé. Pour aller plus loin, lisez nos <a href='/blog/boxe-femme-geneve-guide-complet' class='text-primary hover:underline'>conseils pour bien débuter quand on n'a jamais boxé</a>.",
+        answer: "On commence par un échauffement en douceur (corde, shadow boxing, mobilité), puis on passe aux fondamentaux : position de garde, déplacements, premiers coups sur les pattes d'ours tenues par Nicolas. Tout est adapté à votre rythme. Vous repartez fatiguée, avec les bases en main. Pour aller plus loin, lisez nos <a href='/blog/boxe-femme-geneve-guide-complet' class='link-line'>conseils pour bien débuter quand on n'a jamais boxé</a>.",
     },
     {
         question: "Quel équipement apporter ?",
@@ -126,11 +130,11 @@ const faqs = [
     },
     {
         question: "À quelle fréquence s'entraîner pour voir des résultats ?",
-        answer: "Deux séances par semaine est le rythme idéal pour débuter. Vous verrez les premiers résultats (énergie, tonus, confiance) dès les 3-4 premières semaines. En 3 mois, la transformation physique et mentale est significative.",
+        answer: "Deux séances par semaine est un bon rythme pour débuter. Les progrès (énergie, tonus, aisance dans le geste) dépendent de chacune et de la régularité ; le coach les suit avec vous, séance après séance.",
     },
     {
         question: "Comment s'habiller pour un cours de boxe ?",
-        answer: "Un legging ou short confortable, un t-shirt ou brassière de sport, des baskets propres à semelle plate de préférence. Nous fournissons serviettes et vestiaires avec douches. Venez comme vous êtes — la seule tenue interdite, c'est les talons.",
+        answer: "Un legging ou short confortable, un t-shirt ou brassière de sport, des baskets propres à semelle plate de préférence. Nous fournissons serviettes et vestiaires avec douches. Une tenue dans laquelle vous bougez librement suffit.",
     },
 ];
 ---
@@ -174,150 +178,132 @@ const faqs = [
         />
     </Fragment>
 
-    <!-- 1. Hero (DARK) -->
     <Hero
-        title={`Boxe <span class="font-display text-primary">Femme</span> à Genève`}
-        description="Un coaching de boxe pensé pour les femmes. Cadre privé, sans contact, progression à votre rythme. Que vous n'ayez jamais mis de gants ou que vous cherchiez à franchir un palier."
-        image={studioAtmosphere}
-        imageAlt="Cours de boxe pour femmes à Genève — studio Bis Repetita"
+        title={`Boxe <span class="text-primary">Femme</span> à Genève`}
+        description="Un coaching de boxe pensé pour les femmes. Cadre privé, intensité ajustée, aucun contact imposé. Que vous n'ayez jamais mis de gants ou que vous boxiez déjà."
+        image={coursPortrait}
+        imageAlt="Nicolas de Boccard tient les pattes d'ours face à une élève au studio"
         locationBadge={{ text: "La Voie-Creuse 16, 1202 Genève" }}
         actions={[
+            { text: "Réserver une séance", href: "/#planning" },
+            { text: "Voir les tarifs", href: "#tarifs" },
+        ]}
+    />
+
+    <section class="section wrap intro">
+        <p class="t-lead intro-lead">
+            Se tonifier, gagner en souffle, apprendre un vrai geste technique.
+            <span class="soft">Dans un studio privé, avec un coach qui ajuste la séance à vous, et à votre forme du jour.</span>
+        </p>
+        <dl class="facts">
+            {facts.map((f) => (
+                <div><dt>{f.k}</dt><dd>{f.v}</dd></div>
+            ))}
+        </dl>
+    </section>
+
+    <Features
+        id="pourquoi"
+        title="Ce que la boxe apporte aux femmes"
+        features={features}
+        columns={3}
+        headlineAlign="left"
+        bento="2-3"
+    />
+
+    <SplitShowcase
+        title="60 minutes pensées pour vous"
+        image={cours2Landscape}
+        imageAlt="Cours de boxe au studio Bis Repetita, une élève au premier plan"
+        items={[
             {
-                text: "Réserver votre séance d'essai",
-                href: "/cours-gratuit",
-                variant: "primary",
-                icon: "lucide:arrow-right",
+                title: "Échauffement et mobilité",
+                description: "Corde, shadow boxing, mobilité. Le corps se prépare progressivement.",
             },
             {
-                text: "Voir les tarifs",
-                href: "#tarifs",
-                variant: "secondary",
+                title: "Technique aux pattes d'ours",
+                description: "Le cœur de la séance. Le coach tient les pattes et corrige chaque geste : jab, direct, crochet, les fondamentaux de la boxe anglaise.",
+            },
+            {
+                title: "Circuit et retour au calme",
+                description: "Tonification (abdos, bras, jambes), cardio, puis étirements et débrief.",
             },
         ]}
-        ctaStyle="outline-gold"
     />
 
-    <!-- 2. Stats (LIGHT — rupture visuelle) -->
-    <Stats
-        stats={stats}
-        badge="Boxe Femme"
-        badgeHref="#pourquoi"
-        variant="wide"
-        intro="Un cadre pensé pour les femmes qui veulent découvrir la boxe ou franchir un palier — sans les freins habituels des clubs traditionnels. Studio privé, coaching personnalisé, sans contact par défaut."
+    <section class="section wrap cycle" id="cycle">
+        <div class="cycle-head">
+            <h2 class="t-title" data-split>Selon les phases du cycle</h2>
+            <p>Si vous le souhaitez, le coach adapte la séance à la phase de votre cycle : plus explosive et cardio en phase haute, plus technique en phase basse. C'est une proposition, pas une règle. Votre ressenti du jour passe en premier.</p>
+            <a href="/blog/boxe-regles-cycle-menstruel" class="link-line">Boxer pendant ses règles : ce qu'il faut savoir</a>
+        </div>
+        <dl class="cycle-list">
+            {phases.map((ph) => (
+                <div><dt>{ph.k}</dt><dd>{ph.v}</dd></div>
+            ))}
+        </dl>
+    </section>
+
+    <ContentShowcase
+        title="Les questions qu'on se pose avant de commencer"
+        image={ambianceBis}
+        imageAlt="Échauffement à la corde à sauter au studio"
+        isReversed={true}
+        items={[
+            {
+                title: "Le contact",
+                description: "Aucun contact n'est imposé. Vous frappez le sac et les pattes d'ours, pas une autre personne. Le contact ne vient que si vous le demandez, après des mois de pratique.",
+            },
+            {
+                title: "Être observée",
+                description: "Studio privé, coaching de 1 à 3 personnes. Vous vous concentrez sur votre séance.",
+            },
+            {
+                title: "Prendre du volume",
+                description: "Le volume musculaire demande un entraînement de force et une alimentation spécifiques. La boxe travaille surtout l'endurance, la tonicité et la coordination.",
+            },
+            {
+                title: "La douleur",
+                description: "Les courbatures des premiers jours passent. Les gants et les bandes protègent mains et poignets. L'intensité monte progressivement, selon votre condition.",
+            },
+        ]}
     />
 
-    <!-- 3. Features bento (DARK) — Pourquoi la boxe -->
-    <GsapReveal animation="fadeUp">
-        <Features
-            id="pourquoi"
-            tagline="Pourquoi la boxe"
-            title="Ce que la boxe apporte aux femmes"
-            features={features}
-            columns={3}
-            headlineAlign="left"
-            bento="2-3"
-        />
-    </GsapReveal>
+    <PricingTable id="tarifs" title="Quelle formule choisir ?" tiers={tiers} />
 
-    <!-- 4. SplitShowcase — Une séance type -->
-    <GsapReveal animation="fadeUp">
-        <SplitShowcase
-            tagline="Une séance type"
-            title="60 minutes pensées pour vous"
-            image={coursPortrait}
-            imageAlt="Séance de boxe pour femmes au studio Bis Repetita Genève"
-            items={[
-                {
-                    title: "Échauffement & mobilité",
-                    description:
-                        "On commence en douceur : corde, shadow boxing, mobilité articulaire. Le corps se prépare sans stress, le mental se connecte.",
-                },
-                {
-                    title: "Technique sur pattes d'ours",
-                    description:
-                        "Le cœur de la séance. Votre coach tient les pattes, corrige chaque geste. Jab, direct, crochet — vous apprenez les vrais fondamentaux de la boxe anglaise.",
-                },
-                {
-                    title: "Circuit & retour au calme",
-                    description:
-                        "Renforcement ciblé (abdos, bras, cardio), puis étirements et débrief. Vous repartez vidée mais jamais cassée.",
-                },
-            ]}
-        />
-    </GsapReveal>
-
-    <!-- 5. ContentShowcase — Craintes levées -->
-    <GsapReveal animation="fadeUp">
-        <ContentShowcase
-            tagline="Vos questions, nos réponses"
-            title="Les craintes les plus courantes — et pourquoi elles ne tiennent pas"
-            items={[
-                {
-                    title: "Peur du contact",
-                    description:
-                        "Nos séances sont sans contact par défaut. Vous frappez le sac et les pattes d'ours, jamais une autre personne. Le contact n'arrive que si vous le demandez, après des mois de pratique.",
-                },
-                {
-                    title: "Peur du jugement",
-                    description:
-                        "Studio privé, groupes de 1 à 3 personnes maximum. Pas de miroirs géants, pas de regard. Un environnement pensé pour vous concentrer sur vous-même.",
-                },
-                {
-                    title: 'Peur de devenir "trop musclée"',
-                    description:
-                        "La boxe affine et tonifie. Le volume musculaire ne vient qu'avec un régime et un entraînement de force spécifique. La boxe fait le contraire : elle sèche, elle sculpte, elle allonge.",
-                },
-                {
-                    title: "Peur de la douleur",
-                    description:
-                        "Les courbatures des premiers jours passent vite. Les gants protègent vos mains. Les bandes protègent vos poignets. L'intensité est calibrée à votre condition — toujours progressive, jamais brutale.",
-                },
-            ]}
-        />
-    </GsapReveal>
-
-    <!-- 6. PricingTable -->
-    <GsapReveal animation="fadeUp">
-        <PricingTable
-            id="tarifs"
-            tagline="Nos formules"
-            title="Quelle formule choisir ?"
-            tiers={tiers}
-        />
-    </GsapReveal>
-
-    <!-- 7. Testimonials — TODO -->
-    {/* <GsapReveal animation="fadeUp">
-        <Testimonials
-            tagline="Elles témoignent"
-            title="Ce qu'elles disent de leur expérience"
-            testimonials={[
-                { quote: "TODO — Témoignage femme débutante", name: "À confirmer", role: "Débutante" },
-                { quote: "TODO — Témoignage femme confirmée", name: "À confirmer", role: "Pratiquante régulière" },
-                { quote: "TODO — Témoignage transformation", name: "À confirmer", role: "Objectif forme" },
-            ]}
-        />
-    </GsapReveal> */}
-
-    <!-- 8. RelatedServices -->
     <RelatedServices currentSlug="boxe-femme" />
 
-    <!-- 9. FAQ -->
-    <GsapReveal animation="fadeUp">
-        <FAQ
-            title="Questions fréquentes"
-            subtitle="Tout ce que vous devez savoir sur la boxe pour femmes à Genève."
-            items={faqs}
-        />
-    </GsapReveal>
+    <FAQ
+        title="Questions fréquentes"
+        subtitle="La boxe pour les femmes à Genève, en pratique."
+        items={faqs}
+    />
 
-    <!-- 10. CTABanner -->
-    <GsapReveal animation="fadeUp">
-        <CTABanner
-            variant="brushed-full"
-            title="Prête à essayer ?"
-            subtitle="Première séance offerte"
-            cta={{ text: "Réserver ma séance d'essai", href: "/cours-gratuit" }}
-        />
-    </GsapReveal>
+    <CTABanner
+        variant="brushed-full"
+        title="Prête à essayer ?"
+        cta={{ text: "Réserver une séance", href: "/#planning" }}
+    />
 </BaseLayout>
+
+<style>
+    .intro { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(40px, 8vw, 160px); align-items: start; }
+    .intro-lead { max-width: 24ch; }
+    .facts { border-top: 1px solid var(--line); }
+    .facts div { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+    .facts dt { color: var(--gray-2); }
+    .facts dd { text-align: right; }
+    @media (max-width: 860px) {
+        .intro { grid-template-columns: 1fr; }
+    }
+    .cycle { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 40px clamp(40px, 8vw, 160px); align-items: start; }
+    .cycle-head { display: grid; gap: 20px; justify-items: start; }
+    .cycle-head p { color: var(--gray-1); max-width: 42ch; }
+    .cycle-list { border-top: 1px solid var(--ink); }
+    .cycle-list div { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr); gap: 8px 24px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .cycle-list dt { font-weight: 500; }
+    .cycle-list dd { color: var(--gray-1); }
+    @media (max-width: 860px) {
+        .cycle, .cycle-list div { grid-template-columns: 1fr; }
+    }
+</style>

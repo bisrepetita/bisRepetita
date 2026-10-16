@@ -32,6 +32,8 @@ const finalCanonical = metadata?.canonical || canonical;
 const finalIgnoreTitleTemplate = metadata?.ignoreTitleTemplate || false;
 const finalOgType = metadata?.ogType || "website";
 const finalNoindex = metadata?.noindex || false;
+// Pas de statistiques sur les déploiements de preview Netlify (CONTEXT ≠ production).
+const trackVisits = !process.env.CONTEXT || process.env.CONTEXT === "production";
 ---
 
 <!doctype html>
@@ -52,16 +54,18 @@ const finalNoindex = metadata?.noindex || false;
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..600&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..600&display=swap"
             rel="stylesheet"
         />
         <slot name="fonts" />
 
         <!-- Plausible Analytics -->
-        <script
-            defer
-            data-domain="bisrepetita.ch"
-            src="https://plausible.io/js/script.js"></script>
+        {trackVisits && (
+            <script
+                defer
+                data-domain="bisrepetita.ch"
+                src="https://plausible.io/js/script.js"></script>
+        )}
 
     </head>
     <body>

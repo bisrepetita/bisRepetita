@@ -1,17 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import { Icon } from "astro-icon/components";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import Hero from "../../components/widgets/Hero.astro";
-import Stats from "../../components/widgets/Stats.astro";
-import ProfileShowcase from "../../components/widgets/ProfileShowcase.astro";
 import FAQ from "../../components/widgets/FAQ.astro";
 import RelatedArticles from "../../components/widgets/RelatedArticles.astro";
-import CTABanner from "../../components/widgets/CTABanner.astro";
-import GsapReveal from "../../components/widgets/GsapReveal.astro";
 import Schema from "../../components/seo/Schema.astro";
 import { getAuthor } from "../../config/authors";
-import nicolasAction from "../../assets/nicolas-portrait.jpg";
+import portrait from "../../assets/nicolas-de-boccard.webp";
+import coursPortrait from "../../assets/cours-portrait.webp";
 
 const nicolas = getAuthor("Nicolas de Boccard");
 if (!nicolas) {
@@ -26,29 +21,29 @@ const metadata = {
     ignoreTitleTemplate: true,
 };
 
-const stats = [
-    {
-        value: "20 ans",
-        label: "De pratique",
-        description: "Boxe anglaise comme discipline et école de rigueur.",
-    },
-    {
-        value: "5 ans",
-        label: "Aux commandes",
-        description: "Bis Repetita fondé à La Voie-Creuse, Genève.",
-    },
-    {
-        value: "100+",
-        label: "Élèves accompagnés",
-        description: "Du débutant complet au compétiteur amateur.",
-    },
+// Seules formulations autorisées pour les durées : « 20 ans de pratique », « 5 ans à la tête du studio ».
+const facts = [
+    { k: "Discipline", v: "Boxe anglaise" },
+    { k: "Pratique", v: "20 ans de pratique" },
+    { k: "Studio", v: "5 ans à la tête du studio" },
+    { k: "Rôle", v: "Head Coach et fondateur" },
+    { k: "Adresse", v: "La Voie-Creuse 16, Genève" },
+];
+
+// Bio écrite ici plutôt que authors.longBio, qui contient encore des formulations retirées
+// (« plus de 20 ans », « une centaine d'élèves »).
+const bio = [
+    "Genevois, Nicolas compte 20 ans de pratique de la boxe anglaise. Une discipline découverte jeune, qui a façonné sa rigueur, sa patience et sa lecture du corps en mouvement.",
+    "Il a fondé Bis Repetita à La Voie-Creuse, à Genève, pour offrir un studio à la hauteur de la discipline : exigeant sur la technique, attentif à la progression de chacun, soigné dans son cadre.",
+    "Sa méthode associe le travail technique de la boxe anglaise, une préparation physique adaptée à l'âge et au profil de chaque élève, et une attention au mental : la séance sert à reprendre la main sur son corps, son souffle et sa concentration.",
+    "Au studio, il accompagne des profils très différents : cadres et dirigeants qui cherchent un sport qui décompresse vraiment, femmes qui veulent reprendre confiance dans leur corps, débutants complets. Le cadre reste le même pour tous : net, exigeant et bienveillant.",
 ];
 
 const pillars = [
     {
-        title: "Technique avant intensité",
+        title: "La base technique",
         description:
-            "Posture, déplacements, lecture de la garde adverse — la base se travaille à chaque séance, à n'importe quel niveau.",
+            "Posture, déplacements, lecture de la garde adverse : la base se travaille à chaque séance, à n'importe quel niveau.",
     },
     {
         title: "Préparation physique adaptée",
@@ -61,7 +56,7 @@ const pillars = [
             "La séance sert à reprendre la main sur son corps, son souffle et sa concentration. La confiance suit, pas l'inverse.",
     },
     {
-        title: "Du débutant au compétiteur",
+        title: "Une progression suivie",
         description:
             "Le studio reçoit des profils très différents. Chaque progression est suivie individuellement, séance après séance.",
     },
@@ -89,6 +84,8 @@ const faqs = [
         answer: "Le plus simple : passer par le <a href='/contact' class='text-primary hover:underline'>formulaire de contact</a> ou directement par téléphone. La <a href='/tarifs' class='text-primary hover:underline'>première séance découverte</a> est l'entrée standard pour caler les objectifs et le format adapté.",
     },
 ];
+
+const arrow = `<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>`;
 
 const sameAs = [
     nicolas.socialLinks.linkedin,
@@ -121,123 +118,150 @@ const sameAs = [
         />
     </Fragment>
 
-    {/* 1. Hero */}
-    <Hero
-        variant="centered"
-        title={`Nicolas <span class="text-primary">de Boccard</span>`}
-        description="Head Coach & Fondateur de Bis Repetita. 20 ans de boxe anglaise, 5 ans à la tête du studio à Genève."
-        image={nicolas.image}
-        imageAlt={nicolas.imageAlt}
-        locationBadge={{ text: "La Voie-Creuse 16, 1202 Genève" }}
-        actions={[
-            {
-                text: "Réserver une séance",
-                href: "/cours-gratuit",
-            },
-        ]}
-    />
-
-    {/* 2. Bio narrative */}
-    <section class="bg-white text-neutral-900 py-20 md:py-32">
-        <div class="mx-auto max-w-7xl px-6 md:px-12 lg:px-20">
-            <div class="md:flex items-start gap-16 lg:gap-24">
-                <div class="md:basis-2/5 mb-12 md:mb-0">
-                    <Image
-                        src={nicolasAction}
-                        alt="Nicolas de Boccard en séance de coaching à Bis Repetita"
-                        widths={[400, 700]}
-                        sizes="(min-width: 768px) 40vw, 100vw"
-                        class="w-full rounded-3xl object-cover aspect-[4/5]"
-                    />
-                </div>
-                <div class="md:basis-3/5">
-                    <span class="inline-block text-xs font-semibold uppercase tracking-widest text-primary mb-4">
-                        Le coach
-                    </span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-                        Une boxe <span class="text-primary">technique, exigeante et accessible</span>
-                    </h2>
-                    <div class="space-y-5 text-lg text-neutral-600 leading-relaxed">
-                        {nicolas.longBio.map((p) => <p>{p}</p>)}
-                    </div>
-
-                    {/* Liens sociaux */}
-                    {(nicolas.socialLinks.linkedin || nicolas.socialLinks.instagram) && (
-                        <div class="mt-8 flex flex-wrap items-center gap-3">
-                            {nicolas.socialLinks.linkedin && (
-                                <a
-                                    href={nicolas.socialLinks.linkedin}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-white px-5 py-2.5 text-sm font-medium text-neutral-900 hover:border-primary hover:text-primary transition-colors"
-                                    aria-label={`LinkedIn de ${nicolas.name}`}
-                                >
-                                    <Icon name="lucide:linkedin" class="w-4 h-4" />
-                                    <span>LinkedIn</span>
-                                </a>
-                            )}
-                            {nicolas.socialLinks.instagram && (
-                                <a
-                                    href={nicolas.socialLinks.instagram}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-white px-5 py-2.5 text-sm font-medium text-neutral-900 hover:border-primary hover:text-primary transition-colors"
-                                    aria-label={`Instagram du studio Bis Repetita`}
-                                >
-                                    <Icon name="lucide:instagram" class="w-4 h-4" />
-                                    <span>Instagram du studio</span>
-                                </a>
-                            )}
-                        </div>
-                    )}
-                </div>
+    <section class="nb-hero">
+        <div class="wrap nb-head">
+            <h1 class="t-display nb-title" data-split>Nicolas <span class="text-primary">de Boccard</span></h1>
+            <div class="nb-side">
+                <p>Head Coach et fondateur de Bis Repetita, à Genève. 20 ans de pratique, 5 ans à la tête du studio.</p>
+                <a href="/#planning" class="btn btn-solid">Réserver une séance <Fragment set:html={arrow} /></a>
             </div>
         </div>
     </section>
 
-    {/* 3. Stats */}
-    <Stats
-        stats={stats}
-        badge="Parcours en chiffres"
-        intro="Bis Repetita est l'aboutissement d'un parcours de boxeur passionné devenu coach à plein temps. Les chiffres ne disent pas tout — mais ils cadrent la réalité du studio."
-    />
+    <section class="wrap nb-bio">
+        <div class="nb-photo nb" data-photo-reveal>
+            <Image
+                src={portrait}
+                alt="Portrait de Nicolas de Boccard, Head Coach et fondateur de Bis Repetita"
+                widths={[480, 800, 1024]}
+                sizes="(max-width: 860px) 100vw, 45vw"
+                loading="eager"
+                fetchpriority="high"
+            />
+        </div>
+        <div class="nb-text">
+            <h2 class="t-title" data-split>Une boxe <span class="text-primary">technique, exigeante et accessible</span></h2>
+            <div class="nb-prose">
+                {bio.map((p) => <p>{p}</p>)}
+            </div>
+            <dl class="nb-facts">
+                {facts.map((f) => (
+                    <div><dt>{f.k}</dt><dd>{f.v}</dd></div>
+                ))}
+            </dl>
+            {(nicolas.socialLinks.linkedin || nicolas.socialLinks.instagram) && (
+                <p class="nb-links">
+                    {nicolas.socialLinks.linkedin && (
+                        <a href={nicolas.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" class="link-line" aria-label={`LinkedIn de ${nicolas.name}`}>LinkedIn</a>
+                    )}
+                    {nicolas.socialLinks.instagram && (
+                        <a href={nicolas.socialLinks.instagram} target="_blank" rel="noopener noreferrer" class="link-line" aria-label="Instagram du studio Bis Repetita">Instagram du studio</a>
+                    )}
+                </p>
+            )}
+        </div>
+    </section>
 
-    {/* 4. Piliers de l'approche */}
-    <GsapReveal animation="fadeUp">
-        <ProfileShowcase
-            tagline="L'approche"
-            title="Quatre piliers, une méthode"
-            image={nicolas.image}
-            imageAlt={nicolas.imageAlt}
-            items={pillars}
-        />
-    </GsapReveal>
+    <section class="section wrap nb-approach">
+        <div>
+            <h2 class="t-title" data-split>Quatre piliers, une méthode</h2>
+            <div class="nb-photo-sm nb" data-photo-reveal>
+                <Image
+                    src={coursPortrait}
+                    alt="Nicolas de Boccard tient les pattes d'ours face à une élève au studio"
+                    widths={[480, 800]}
+                    sizes="(max-width: 860px) 100vw, 35vw"
+                    loading="lazy"
+                />
+            </div>
+        </div>
+        <ol class="nb-pillars">
+            {pillars.map((p) => (
+                <li><h3>{p.title}</h3><p>{p.description}</p></li>
+            ))}
+        </ol>
+    </section>
 
     {/* 5. Articles signés */}
-    <GsapReveal animation="fadeUp">
-        <RelatedArticles
-            title="Articles signés Nicolas"
-            badge="Lectures"
-            maxItems={3}
-        />
-    </GsapReveal>
+    <RelatedArticles title="Articles signés Nicolas" maxItems={3} />
 
     {/* 6. FAQ */}
-    <GsapReveal animation="fadeUp">
-        <FAQ
-            title="Questions fréquentes"
-            subtitle={`Tout ce qu'on demande le plus souvent à Nicolas avant de s'inscrire.`}
-            items={faqs}
-        />
-    </GsapReveal>
+    <FAQ
+        title="Questions fréquentes"
+        subtitle={`Tout ce qu'on demande le plus souvent à Nicolas avant de s'inscrire.`}
+        items={faqs}
+    />
 
-    {/* 7. CTA final */}
-    <GsapReveal animation="fadeUp">
-        <CTABanner
-            title="Prêt à mettre les gants avec Nicolas ?"
-            subtitle="Première séance"
-            cta={{ text: "Réserver", href: "/cours-gratuit" }}
-            variant="brushed-full"
-        />
-    </GsapReveal>
+    <section class="section wrap nb-end">
+        <h2 class="t-title" data-split>Boxer avec Nicolas</h2>
+        <div class="nb-end-side">
+            <p>Une première séance pour faire le point sur vos objectifs et choisir le format qui vous convient.</p>
+            <div class="nb-end-actions">
+                <a href="/#planning" class="btn btn-solid">Réserver une séance <Fragment set:html={arrow} /></a>
+                <a href="/contact" class="btn btn-line">Nous écrire</a>
+            </div>
+        </div>
+    </section>
 </BaseLayout>
+
+<style>
+    .nb-hero { padding-top: clamp(48px, 7vw, 112px); padding-bottom: clamp(48px, 6vw, 96px); }
+    .nb-head {
+        display: grid;
+        grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+        gap: 32px clamp(32px, 6vw, 120px);
+        align-items: end;
+    }
+    .nb-side { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; max-width: 440px; font-size: 17px; line-height: 1.5; color: var(--gray-1); }
+
+    .nb-bio {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 48px clamp(40px, 7vw, 128px);
+        align-items: start;
+    }
+    .nb-photo { aspect-ratio: 4 / 5; overflow: hidden; background: var(--surface); }
+    .nb-photo :global(img), .nb-photo-sm :global(img) { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .nb-text { padding-top: clamp(0px, 2vw, 32px); max-width: 66ch; }
+    .nb-text h2 { max-width: 16ch; }
+    .nb-prose { margin-top: clamp(32px, 4vw, 48px); font-size: 18px; line-height: 1.6; }
+    .nb-prose p + p { margin-top: 1.1em; }
+    .nb-facts { margin-top: 48px; border-top: 1px solid var(--line); }
+    .nb-facts div { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+    .nb-facts dt { color: var(--gray-2); }
+    .nb-facts dd { text-align: right; }
+    .nb-links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 24px; font-size: 15px; }
+
+    .nb-approach {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+        gap: 48px clamp(40px, 7vw, 128px);
+    }
+    .nb-approach h2 { max-width: 12ch; }
+    .nb-photo-sm { margin-top: 48px; aspect-ratio: 4 / 5; max-width: 420px; overflow: hidden; background: var(--surface); }
+    .nb-pillars { border-top: 1px solid var(--line); align-self: start; }
+    .nb-pillars li {
+        display: grid;
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        gap: 8px 32px;
+        padding: 24px 0;
+        border-bottom: 1px solid var(--line);
+    }
+    .nb-pillars h3 { font-size: 19px; line-height: 1.3; letter-spacing: -0.02em; }
+    .nb-pillars p { font-size: 16px; line-height: 1.55; color: var(--gray-1); }
+
+    .nb-end {
+        display: grid;
+        grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+        gap: 32px clamp(32px, 6vw, 120px);
+        align-items: end;
+    }
+    .nb-end-side { display: flex; flex-direction: column; gap: 24px; font-size: 17px; line-height: 1.5; color: var(--gray-1); max-width: 440px; }
+    .nb-end-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    @media (max-width: 860px) {
+        .nb-head, .nb-bio, .nb-approach, .nb-end { grid-template-columns: 1fr; }
+        .nb-head, .nb-end { align-items: start; }
+        .nb-pillars li { grid-template-columns: 1fr; }
+    }
+</style>

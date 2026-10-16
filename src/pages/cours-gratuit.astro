@@ -3,9 +3,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/widgets/Hero.astro";
 import ZenamuCalendar from "../components/widgets/ZenamuCalendar.astro";
 import FAQ from "../components/widgets/FAQ.astro";
-import CTABanner from "../components/widgets/CTABanner.astro";
-import GsapReveal from "../components/widgets/GsapReveal.astro";
-import Container from "../components/ui/Container.astro";
 
 const metadata = {
     title: "Séance de Boxe Gratuite à Genève | Bis Repetita",
@@ -13,71 +10,86 @@ const metadata = {
         "Votre première séance de boxe est offerte chez Bis Repetita à Genève. Choisissez un créneau, connectez-vous pour la première fois sur notre plateforme, et boxez gratuitement.",
 };
 
+const arrow = `<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>`;
+
 const faqs = [
     {
-        question: "La séance gratuite, comment ça marche exactement ?",
-        answer: "C'est simple : vous choisissez un créneau dans le planning ci-dessus, puis vous vous connectez (ou créez votre compte) sur notre plateforme de réservation. S'il s'agit de votre toute première connexion, votre première séance vous est automatiquement offerte.",
+        question: "La séance gratuite, comment ça marche exactement ?",
+        answer: "C'est simple : vous choisissez un créneau dans le planning ci-dessus, puis vous vous connectez (ou créez votre compte) sur notre plateforme de réservation. S'il s'agit de votre toute première connexion, votre première séance vous est automatiquement offerte.",
     },
     {
-        question: "Dois-je apporter mon propre équipement ?",
-        answer: "Non, tout est fourni sur place : gants et bandes pour votre séance d'essai. Venez simplement en tenue de sport avec une bouteille d'eau.",
+        question: "Dois-je apporter mon propre équipement ?",
+        answer: "Non, tout est fourni sur place : gants et bandes pour votre séance d'essai. Venez simplement en tenue de sport avec une bouteille d'eau.",
     },
     {
-        question: "Y a-t-il un engagement après la séance gratuite ?",
+        question: "Y a-t-il un engagement après la séance gratuite ?",
         answer: "Aucun. Vous testez, vous voyez si l'expérience vous plaît, et vous décidez ensuite librement du format qui vous convient (solo, duo, petit groupe ou cours collectif).",
     },
     {
-        question: "Faut-il un niveau minimum ?",
+        question: "Faut-il un niveau minimum ?",
         answer: "Aucun niveau n'est requis. Que vous soyez débutant complet ou déjà pratiquant, le coach adapte la séance à votre profil.",
     },
 ];
 ---
 
 <BaseLayout {metadata}>
+    <p class="wrap gift-line t-meta">
+        Vous cherchez un cadeau ? <a href="/offrir-un-cours" class="link-line">Offrir un cours</a>
+    </p>
+
     <Hero
-        variant="centered"
         title={`Votre première <br class="hidden md:block" /> <span class="text-primary">séance offerte</span>`}
         description="Choisissez un créneau, connectez-vous pour la première fois sur notre plateforme de réservation, et votre première séance de boxe est automatiquement gratuite."
-        classes={{ container: "min-h-[70vh]" }}
-        actions={[
-            {
-                text: "Voir les créneaux disponibles",
-                href: "#planning",
-            },
-        ]}
+        actions={[{ text: "Voir les créneaux disponibles", href: "#planning" }]}
     />
 
-    <GsapReveal animation="fadeUp">
-        <ZenamuCalendar
-            id="planning"
-            title="Choisissez votre créneau"
-            subtitle="Cliquez sur une séance pour la réserver — votre première séance est offerte dès votre première connexion."
-        />
-    </GsapReveal>
+    <ZenamuCalendar
+        id="planning"
+        title="Choisissez votre créneau"
+        subtitle="Cliquez sur une séance pour la réserver. Votre première séance est offerte dès votre première connexion."
+    />
 
-    <Container class="pb-16 md:pb-24 -mt-8 md:-mt-12">
-        <div class="max-w-2xl mx-auto text-center bg-card border border-border rounded-2xl px-6 py-6 md:px-8 md:py-7">
-            <p class="text-foreground">
-                Vous souhaitez un <span class="text-primary font-medium">coaching privé</span> et aucun créneau ne vous convient ?
-                <a href="/contact" class="text-primary font-medium hover:underline">Contactez-nous</a>,
-                nous trouverons une solution adaptée à votre emploi du temps.
-            </p>
-        </div>
-    </Container>
+    <section class="wrap cg-private">
+        <p>Vous souhaitez un coaching privé et aucun créneau ne vous convient ?</p>
+        <p class="cg-private-side">Nous trouvons ensemble un horaire adapté à votre emploi du temps. <a href="/contact" class="link-line">Contactez-nous</a></p>
+    </section>
 
-    <GsapReveal animation="fadeUp">
-        <FAQ
-            title="Questions fréquentes"
-            subtitle="Tout ce qu'il faut savoir avant votre séance gratuite."
-            items={faqs}
-        />
-    </GsapReveal>
+    <FAQ
+        title="Questions fréquentes"
+        subtitle="Ce qu'il faut savoir avant votre première séance."
+        items={faqs}
+    />
 
-    <GsapReveal animation="fadeUp">
-        <CTABanner
-            title="Prêt à monter sur le ring ?"
-            description="Votre première séance ne vous coûtera rien — seulement votre énergie."
-            cta={{ text: "Réserver ma séance gratuite", href: "#planning" }}
-        />
-    </GsapReveal>
+    <section class="wrap cg-end">
+        <h2 class="t-title" data-split>Prêt à monter sur le ring ?</h2>
+        <a href="#planning" class="btn btn-solid">Réserver une séance <Fragment set:html={arrow} /></a>
+    </section>
 </BaseLayout>
+
+<style>
+    .gift-line { padding-top: 20px; }
+    .gift-line a { color: var(--ink); margin-left: 4px; }
+    .cg-private {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 16px clamp(40px, 7vw, 140px);
+        padding-block: 28px;
+        border-block: 1px solid var(--line);
+        font-size: 17px;
+    }
+    .cg-private-side { color: var(--gray-1); }
+    .cg-private-side a { color: var(--ink); }
+    .cg-end {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: end;
+        gap: 28px;
+        padding-block: var(--section);
+        border-top: 1px solid var(--line);
+    }
+    .cg-end h2 { max-width: 14ch; }
+    @media (max-width: 860px) {
+        .cg-private { grid-template-columns: 1fr; }
+    }
+</style>

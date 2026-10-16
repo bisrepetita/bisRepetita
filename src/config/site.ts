@@ -26,7 +26,7 @@ export const servicePages: ServicePage[] = [
   {
     slug: "coaching-solo",
     title: "Coaching Solo",
-    shortDescription: "Séances individuelles 100% personnalisées avec Nicolas de Boccard.",
+    shortDescription: "Séances individuelles construites sur vos objectifs, avec Nicolas de Boccard.",
     href: "/services/coaching-solo",
     image: nicolasPortrait,
     category: "prive",
@@ -50,7 +50,7 @@ export const servicePages: ServicePage[] = [
   {
     slug: "coaching-boxe-domicile",
     title: "Coaching à Domicile",
-    shortDescription: "Votre coach de boxe à domicile à Genève. Matériel fourni, programme sur mesure.",
+    shortDescription: "Le coach et le matériel viennent chez vous, partout à Genève.",
     href: "/services/coaching-boxe-domicile",
     image: coursPortrait,
     category: "prive",
@@ -58,7 +58,7 @@ export const servicePages: ServicePage[] = [
   {
     slug: "round-by-round",
     title: "Round by Round",
-    shortDescription: "Cours collectifs intenses alliant technique de boxe et préparation physique.",
+    shortDescription: "Cours collectif structuré en rounds : technique de boxe et préparation physique.",
     href: "/services/round-by-round",
     image: cours2Landscape,
     category: "collectif",
@@ -74,7 +74,7 @@ export const servicePages: ServicePage[] = [
   {
     slug: "boxe-femme",
     title: "Boxe Femme",
-    shortDescription: "Coaching pour femmes : cadre privé, sans contact, toutes formules.",
+    shortDescription: "Cadre privé, intensité ajustée, aucun contact imposé.",
     href: "/services/boxe-femme",
     image: studioAtmosphere,
     category: "prive",

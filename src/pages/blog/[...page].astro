@@ -4,7 +4,6 @@ import { getCollection } from "astro:content";
 import BlogHero from "../../components/blog/BlogHero.astro";
 import PostFeatured from "../../components/blog/PostFeatured.astro";
 import PostItem from "../../components/blog/PostItem.astro";
-import Pagination from "../../components/ui/Pagination.astro";
 import { isPublished } from "../../utils/blog";
 import type { GetStaticPathsOptions } from "astro";
 
@@ -29,6 +28,9 @@ const allCategories = allBlogEntries
   .map((p) => p.data.category)
   .filter((c): c is string => !!c);
 
+const arrowLeft = `<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M13 7H1M6 2 1 7l5 5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>`;
+const arrowRight = `<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>`;
+
 const metadata = {
   title: "Blog Boxe et Coaching à Genève",
   description:
@@ -37,42 +39,68 @@ const metadata = {
 ---
 
 <BaseLayout metadata={metadata}>
-  <div class="theme-light">
-    <div class="min-h-screen bg-background">
-      <BlogHero categories={allCategories} />
+  <BlogHero categories={allCategories} />
 
-      <div class="mx-auto max-w-6xl px-4 pb-20 sm:px-6 lg:px-8">
-        {
-          allPosts.length === 0 ? (
-            <div class="py-20 text-center">
-              <p class="text-lg text-muted-foreground">
-                Aucun article pour le moment.
-              </p>
-              <p class="mt-2 text-sm text-muted-foreground">
-                Revenez bientot pour decouvrir nos premiers articles.
-              </p>
+  <div class="wrap blog-list">
+    {
+      allPosts.length === 0 ? (
+        <p class="py-20 text-gray-1">Aucun article pour le moment.</p>
+      ) : (
+        <>
+          {featuredPost && <PostFeatured post={featuredPost} />}
+
+          {gridPosts.length > 0 && (
+            <div class="post-grid">
+              {gridPosts.map((post) => (
+                <PostItem post={post} />
+              ))}
             </div>
-          ) : (
-            <>
-              {featuredPost && (
-                <div class="mb-12">
-                  <PostFeatured post={featuredPost} />
-                </div>
-              )}
+          )}
 
-              {gridPosts.length > 0 && (
-                <div class="grid gap-8 sm:grid-cols-2">
-                  {gridPosts.map((post) => (
-                    <PostItem post={post} />
-                  ))}
-                </div>
-              )}
-
-              <Pagination page={page} />
-            </>
-          )
-        }
-      </div>
-    </div>
+          {(page.url.prev || page.url.next) && (
+            <nav class="pager" aria-label="Pagination">
+              {page.url.prev ? (
+                <a href={page.url.prev} class="pager-link" rel="prev">
+                  <Fragment set:html={arrowLeft} /> Précédent
+                </a>
+              ) : <span />}
+              <span class="pager-count">Page {page.currentPage} sur {page.lastPage}</span>
+              {page.url.next ? (
+                <a href={page.url.next} class="pager-link" rel="next">
+                  Suivant <Fragment set:html={arrowRight} />
+                </a>
+              ) : <span />}
+            </nav>
+          )}
+        </>
+      )
+    }
   </div>
 </BaseLayout>
+
+<style>
+  .blog-list { padding-bottom: var(--section); }
+  .post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(48px, 5vw, 72px) clamp(24px, 2.4vw, 40px);
+    margin-top: clamp(64px, 7vw, 112px);
+    padding-top: clamp(40px, 4vw, 64px);
+    border-top: 1px solid var(--line);
+  }
+  .pager {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    margin-top: clamp(64px, 7vw, 112px);
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+  }
+  .pager-link { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); }
+  .pager-link:hover { color: var(--gray-1); }
+  .pager > :last-child { justify-self: end; }
+  .pager-count { color: var(--gray-2); }
+  @media (max-width: 1023px) { .post-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 640px) { .post-grid { grid-template-columns: 1fr; } }
+</style>

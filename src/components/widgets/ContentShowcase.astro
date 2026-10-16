@@ -1,127 +1,94 @@
 ---
 import WidgetWrapper from "./WidgetWrapper.astro";
 import { Image } from "astro:assets";
-import { Icon } from "astro-icon/components";
-import SectionTitle from "../ui/SectionTitle.astro";
-import Button from "../ui/Button.astro";
 import type { ContentProps } from "../../types/types";
 
+// Avec image : texte + lignes à filet d'un côté, grande photo N&B de l'autre.
+// Sans image : titre à gauche, lignes à droite. tagline, isDark et les icônes d'action sont ignorés.
 const {
     title,
     subtitle,
-    tagline,
     description = [],
     image,
     imageAlt = "",
     actions = [],
     isReversed = false,
     id,
-    isDark = false,
     classes = {},
     bg = await Astro.slots.render("bg"),
     items = [],
     isAfterContent = false,
 } = Astro.props as ContentProps;
 
-const { container: containerClassProp = "", ...otherClasses } = classes;
+const { container: containerClassProp = "" } = classes;
+const intro = subtitle || (Array.isArray(description) ? description.join(" ") : description);
+const hasSlot = Astro.slots.has("default");
+const list = Array.isArray(actions) ? actions : [];
 ---
 
-<WidgetWrapper
-    id={id}
-    isDark={isDark}
-    containerClass={`max-w-7xl mx-auto ${containerClassProp}`}
-    bg={bg}
-    classes={otherClasses}
->
+<WidgetWrapper id={id} containerClass={containerClassProp} bg={bg}>
     <div
-        class={`mx-auto max-w-7xl ${image ? `${isReversed ? "md:flex-row-reverse" : ""} md:flex items-center gap-12 lg:gap-20 xl:gap-24` : ""}`}
+        class:list={[
+            "grid gap-10 md:gap-[clamp(40px,7vw,128px)]",
+            image ? "md:grid-cols-2 md:items-start" : "md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]",
+        ]}
     >
-        <div class={image ? "md:basis-1/2 self-center text-left relative z-10" : "max-w-3xl mx-auto text-left"}>
-            <SectionTitle
-                badge={tagline}
-                title={title}
-                subtitle={subtitle ||
-                    (Array.isArray(description)
-                        ? description.join(" ")
-                        : description)}
-                align="left"
-                class="mb-8"
-            />
-
-            {/* Slot before items if not isAfterContent */}
-            {!isAfterContent && <slot />}
-
-            {
-                items && items.length > 0 && (
-                    <div class="space-y-6 my-8">
-                        {items.map(
-                            ({
-                                title: titleItem,
-                                description: descriptionItem,
-                            }, idx) => (
-                                <div class="flex items-start gap-4">
-                                    {/* Gold number */}
-                                    <span class="text-2xl font-extrabold text-primary/40 font-mono leading-none mt-1 shrink-0">
-                                        {String(idx + 1).padStart(2, "0")}
-                                    </span>
-                                    {/* Horizontal line + content */}
-                                    <div class="flex-1">
-                                        <div class="w-8 h-px bg-primary/30 mb-3"></div>
-                                        {titleItem && (
-                                            <h3 class="text-lg font-medium leading-6">
-                                                {titleItem}
-                                            </h3>
-                                        )}
-                                        {descriptionItem && (
-                                            <p class="mt-2 text-muted-foreground">
-                                                {descriptionItem}
-                                            </p>
-                                        )}
-                                    </div>
-                                </div>
-                            ),
-                        )}
-                    </div>
-                )
-            }
-            {/* Slot after items if isAfterContent */}
-            {isAfterContent && <slot />}
+        <div class:list={[image ? (isReversed ? "md:order-2" : "") : "md:sticky md:top-[calc(var(--nav-h)+32px)] md:self-start"]}>
+            {title && <h2 class="t-title" data-split set:html={title} />}
+            {intro && <p class="mt-5 max-w-[46ch] text-[17px] text-gray-1" set:html={intro} />}
+            {image && hasSlot && !isAfterContent && <div class="mt-10"><slot /></div>}
+            {image && items.length > 0 && (
+                <ul class="mt-10 border-t border-line">
+                    {items.map((it) => (
+                        <li class="border-b border-line py-5">
+                            {it.title && <h3 class="text-[19px] font-medium leading-snug tracking-[-0.02em]">{it.title}</h3>}
+                            {it.description && <p class="mt-1.5 text-[15px] text-gray-1" set:html={it.description} />}
+                        </li>
+                    ))}
+                </ul>
+            )}
+            {image && hasSlot && isAfterContent && <div class="mt-10"><slot /></div>}
+            {list.length > 0 && (
+                <div class="mt-10 flex flex-wrap gap-2.5">
+                    {list.map((a, i) => (
+                        <a
+                            href={a.href}
+                            class:list={["btn", a.variant === "secondary" || i > 0 ? "btn-line" : "btn-solid"]}
+                            aria-label={a.ariaLabel}
+                        >
+                            {a.text}
+                        </a>
+                    ))}
+                </div>
+            )}
         </div>
-        <div class="md:basis-1/2 self-center mt-10 md:mt-0 min-w-0" aria-hidden="true">
-            {
-                image && (
-                    <div class="relative m-auto max-w-full overflow-hidden">
-                        <Image
-                            src={image}
-                            alt={imageAlt}
-                            class="mx-auto w-full rounded-3xl shadow-lg object-cover"
-                        />
-                    </div>
-                )
-            }
-        </div>
-    </div>
-    {
-        Array.isArray(actions) && actions.length > 0 && (
-            <div class="mt-12 flex justify-center gap-4">
-                {actions.map((action) => (
-                    <Button
-                        href={action.href}
-                        variant={
-                            action.variant as "primary" | "secondary"
-                        }
-                        aria-label={action.ariaLabel}
-                    >
-                        {action.icon && (
-                            <Icon
-                                name={action.icon}
-                                class="w-5 h-5 mr-2 -ml-1"
-                            />
-                        )}
-                        {action.text}
-                    </Button>
-                ))}
+
+        {image ? (
+            <div class:list={["nb aspect-[4/5] overflow-hidden bg-surface", isReversed && "md:order-1"]} data-photo-reveal>
+                <Image
+                    src={image}
+                    alt={imageAlt}
+                    widths={[600, 900, 1300]}
+                    sizes="(max-width: 768px) 100vw, 48vw"
+                    class="h-full w-full object-cover"
+                    loading="lazy"
+                />
             </div>
-        )
-    }
+        ) : (
+            <div>
+                {!isAfterContent && <slot />}
+                {items.length > 0 && (
+                    <ul class="border-t border-line">
+                        {items.map((it) => (
+                            <li class="grid gap-x-8 gap-y-2 border-b border-line py-6 sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
+                                {it.title && <h3 class="text-[19px] font-medium leading-snug tracking-[-0.02em]">{it.title}</h3>}
+                                {it.description && <p class="text-[15px] text-gray-1" set:html={it.description} />}
+                            </li>
+                        ))}
+                    </ul>
+                )}
+                {isAfterContent && <slot />}
+            </div>
+        )}
+    </div>
 </WidgetWrapper>

@@ -1,27 +1,50 @@
 ---
 interface Props {
-  title: string;
+  title?: string;
   description?: string;
-  ctaText: string;
-  ctaHref: string;
+  ctaText?: string;
+  ctaHref?: string;
+  // Quelques articles utilisent text / href au lieu de ctaText / ctaHref.
+  text?: string;
+  href?: string;
 }
 
-const { title, description, ctaText, ctaHref } = Astro.props;
+const { title = "", description, ctaText = Astro.props.text ?? "", ctaHref = Astro.props.href ?? "/#planning" } = Astro.props;
+
+// L'essai gratuit n'existe plus : les appels « séance d'essai / gratuite » deviennent
+// « Réserver une séance » vers le planning. Les cibles pages (services, studio, tarifs, contact)
+// sont gardées : c'est le maillage interne des articles.
+const FREE = /gratuit|offert|essai/i;
+const booking = ctaHref.startsWith("/cours-gratuit");
+const href = booking ? "/#planning" : ctaHref;
+const text = booking || FREE.test(ctaText) ? "Réserver une séance" : ctaText;
+const heading = FREE.test(title) ? "Une séance au studio, à Genève" : title;
+const desc = description && !FREE.test(description) ? description : undefined;
+const arrow = `<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>`;
 ---
 
-<div class="not-prose my-10 rounded-xl px-6 py-8 sm:px-8" style="background-color: #0a0a0a;">
-  <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-    <div>
-      <p class="text-lg font-medium text-[#e8e4de]">{title}</p>
-      {description && (
-        <p class="mt-1 text-sm text-[#e8e4de]/70">{description}</p>
-      )}
-    </div>
-    <a
-      href={ctaHref}
-      class="inline-flex shrink-0 items-center justify-center rounded-full bg-[#B8A47E] px-6 py-2.5 text-sm font-medium text-[#0a0a0a] transition-colors hover:bg-[#c9b68f]"
-    >
-      {ctaText}
-    </a>
+<div class="not-prose cta">
+  <div>
+    {heading && <p class="cta-title">{heading}</p>}
+    {desc && <p class="cta-desc">{desc}</p>}
   </div>
+  <a href={href} class="btn btn-solid btn-sm">{text} <Fragment set:html={arrow} /></a>
 </div>
+
+<style>
+  .cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 32px;
+    margin: 48px 0;
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .cta-title { font-size: 19px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.3; }
+  .cta-desc { margin-top: 4px; font-size: 15px; line-height: 1.5; color: var(--gray-1); }
+  @media (max-width: 640px) {
+    .cta { flex-direction: column; align-items: flex-start; }
+  }
+</style>

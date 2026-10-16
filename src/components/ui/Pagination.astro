@@ -1,7 +1,6 @@
 ---
 import type { Page } from "astro";
 import type { CollectionEntry } from "astro:content";
-import { Icon } from "astro-icon/components";
 
 export interface Props {
     page: Page<CollectionEntry<"blog">>;
@@ -11,36 +10,30 @@ export interface Props {
 const { page, class: className } = Astro.props;
 const { currentPage, lastPage, url } = page;
 const { prev, next } = url;
+const arrow = (d: string) =>
+    `<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="${d}" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>`;
 ---
 
 {
     (prev || next) && (
-        <div class:list={["flex justify-between mt-12", className]}>
+        <nav aria-label="Pagination" class:list={["mt-12 grid grid-cols-3 items-center border-t border-line pt-6 text-[15px]", className]}>
             {prev ? (
-                <a
-                    href={prev}
-                    class="inline-flex items-center px-4 py-2 text-sm font-medium text-muted-foreground bg-card border border-border rounded-lg hover:bg-muted hover:text-foreground transition-colors"
-                >
-                    <Icon name="tabler:arrow-left" class="w-4 h-4 mr-2" />
-                    Precedent
+                <a href={prev} rel="prev" class="inline-flex items-center gap-2 justify-self-start hover:text-gray-1">
+                    <Fragment set:html={arrow("M13 7H1M6 2 1 7l5 5")} />
+                    Précédent
                 </a>
             ) : (
                 <span />
             )}
-            <div class="flex items-center text-sm text-muted-foreground">
-                Page {currentPage} sur {lastPage}
-            </div>
+            <span class="t-meta justify-self-center">Page {currentPage} sur {lastPage}</span>
             {next ? (
-                <a
-                    href={next}
-                    class="inline-flex items-center px-4 py-2 text-sm font-medium text-muted-foreground bg-card border border-border rounded-lg hover:bg-muted hover:text-foreground transition-colors"
-                >
+                <a href={next} rel="next" class="inline-flex items-center gap-2 justify-self-end hover:text-gray-1">
                     Suivant
-                    <Icon name="tabler:arrow-right" class="w-4 h-4 ml-2" />
+                    <Fragment set:html={arrow("M1 7h12M8 2l5 5-5 5")} />
                 </a>
             ) : (
                 <span />
             )}
-        </div>
+        </nav>
     )
 }

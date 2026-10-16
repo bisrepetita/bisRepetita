@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import { Icon } from "astro-icon/components";
 import { getAuthor } from "../../config/authors";
 
 interface Props {
@@ -13,69 +12,41 @@ const author = getAuthor(authorName);
 
 {
   author && (
-    <aside class="not-prose rounded-3xl border border-border/60 bg-card/60 backdrop-blur-sm p-6 sm:p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-[var(--shadow-gold-card)]">
-      <div class="flex flex-col sm:flex-row gap-6 sm:items-start">
-        {/* Photo */}
-        <div class="shrink-0 mx-auto sm:mx-0">
-          <Image
-            src={author.image}
-            alt={author.imageAlt}
-            widths={[96, 192]}
-            sizes="96px"
-            class="h-24 w-24 rounded-2xl object-cover"
-          />
-        </div>
-
-        {/* Texte + actions */}
-        <div class="flex-1 text-center sm:text-left">
-          <p class="text-xs font-semibold uppercase tracking-widest text-primary mb-2">
-            À propos de l'auteur
-          </p>
-          <h2 class="text-xl font-medium text-foreground mb-1">{author.name}</h2>
-          <p class="text-sm text-muted-foreground mb-3">
-            {author.jobTitle} · Bis Repetita, Genève
-          </p>
-          <p class="text-sm text-foreground/80 leading-relaxed mb-5">
-            {author.bio}
-          </p>
-
-          <div class="flex flex-wrap justify-center sm:justify-start items-center gap-2">
-            <a
-              href={author.pageUrl}
-              class="inline-flex items-center gap-1.5 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:bg-primary/90 transition-colors"
-            >
-              <span>Voir le profil</span>
-              <Icon name="lucide:arrow-right" class="w-4 h-4" />
-            </a>
-
-            {author.socialLinks.linkedin && (
-              <a
-                href={author.socialLinks.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-1.5 rounded-full border border-border bg-background/40 px-4 py-2 text-sm font-medium text-foreground hover:border-primary/40 hover:text-primary transition-colors"
-                aria-label={`LinkedIn de ${author.name}`}
-              >
-                <Icon name="lucide:linkedin" class="w-4 h-4" />
-                <span>LinkedIn</span>
-              </a>
-            )}
-
-            {author.socialLinks.instagram && (
-              <a
-                href={author.socialLinks.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-1.5 rounded-full border border-border bg-background/40 px-4 py-2 text-sm font-medium text-foreground hover:border-primary/40 hover:text-primary transition-colors"
-                aria-label={`Instagram de ${author.name}`}
-              >
-                <Icon name="lucide:instagram" class="w-4 h-4" />
-                <span>Instagram</span>
-              </a>
-            )}
-          </div>
-        </div>
+    <aside class="not-prose author" aria-label="À propos de l'auteur">
+      <div class="author-photo nb">
+        <Image src={author.image} alt={author.imageAlt} widths={[96, 192]} sizes="96px" />
+      </div>
+      <div>
+        <p class="author-name">{author.name}</p>
+        <p class="author-job">{author.jobTitle} · Bis Repetita, Genève</p>
+        <p class="author-bio">{author.shortBio}</p>
+        <p class="author-links">
+          <a href={author.pageUrl} class="link-line">Voir le profil</a>
+          {author.socialLinks.linkedin && (
+            <a href={author.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" class="link-line" aria-label={`LinkedIn de ${author.name}`}>LinkedIn</a>
+          )}
+          {author.socialLinks.instagram && (
+            <a href={author.socialLinks.instagram} target="_blank" rel="noopener noreferrer" class="link-line" aria-label="Instagram du studio Bis Repetita">Instagram</a>
+          )}
+        </p>
       </div>
     </aside>
   )
 }
+
+<style>
+  .author {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 24px;
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .author-photo { width: 96px; aspect-ratio: 4 / 5; overflow: hidden; background: var(--surface); }
+  .author-photo :global(img) { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .author-name { font-size: 19px; font-weight: 500; letter-spacing: -0.02em; }
+  .author-job { margin-top: 2px; font-size: 13px; color: var(--gray-2); }
+  .author-bio { margin-top: 12px; font-size: 15px; line-height: 1.55; color: var(--gray-1); }
+  .author-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 16px; font-size: 14px; }
+</style>

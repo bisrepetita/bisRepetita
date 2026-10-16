@@ -1,21 +1,17 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Hero from "../../components/widgets/Hero.astro";
-import Stats from "../../components/widgets/Stats.astro";
 import SplitShowcase from "../../components/widgets/SplitShowcase.astro";
 import ContentShowcase from "../../components/widgets/ContentShowcase.astro";
 import Features from "../../components/widgets/Features.astro";
 import PricingTable from "../../components/widgets/PricingTable.astro";
 import FAQ from "../../components/widgets/FAQ.astro";
-import CTABanner from "../../components/widgets/CTABanner.astro";
 import ZenamuCalendar from "../../components/widgets/ZenamuCalendar.astro";
 import RelatedServices from "../../components/widgets/RelatedServices.astro";
-import GsapReveal from "../../components/widgets/GsapReveal.astro";
 import Schema from "../../components/seo/Schema.astro";
-import { Image } from "astro:assets";
-import mapGeneve from "../../assets/map-geneve-boxe.webp";
 import coursPortrait from "../../assets/cours-portrait.webp";
-import cours2Landscape from "../../assets/cours-2-landscape.webp";
+import ambianceBis from "../../assets/ambiance-bis-repetita.webp";
+import imageCta from "../../assets/image-cta.webp";
 
 const metadata = {
     title: "Coaching Boxe à Domicile Genève",
@@ -23,83 +19,79 @@ const metadata = {
         "Coaching de boxe à domicile à Genève. Technique, cardio et mental, chez vous. Matériel professionnel fourni. Réservez votre séance.",
 };
 
-const stats = [
+const facts = [
+    { k: "Lieu", v: "Chez vous, dans le canton de Genève" },
+    { k: "Durée", v: "60 minutes" },
+    { k: "Participants", v: "1 à 3 personnes" },
+    { k: "Coach", v: "Nicolas de Boccard, 20 ans de pratique" },
+    { k: "Matériel", v: "Apporté par le coach" },
+];
+
+const zones = [
     {
-        value: "100%",
-        label: "Sur mesure",
-        description: "Programme construit autour de vos objectifs, adapté à votre espace et votre emploi du temps.",
+        title: "Eaux-Vives, Champel et Cologny",
+        description: "Rive gauche résidentielle.",
     },
     {
-        value: "Canton GE",
-        label: "Mobilité totale",
-        description: "Eaux-Vives, Champel, Cologny, Carouge, Plainpalais — nous nous déplaçons dans tout le canton.",
+        title: "Carouge et Plainpalais",
+        description: "Centre-ville et alentours, pour une séance tôt le matin ou à la pause de midi.",
     },
     {
-        value: "20+",
-        label: "Années d'expérience",
-        description: "Nicolas de Boccard, entraineur agréé Swiss Boxing, dans la boxe depuis 2002.",
+        title: "Sécheron, Nations et Pâquis",
+        description: "Rive droite et quartier international. Séances en français ou en anglais.",
+    },
+    {
+        title: "Grand Genève",
+        description: "Communes limitrophes : Versoix, Meyrin, Lancy, Onex. Sur devis.",
     },
 ];
 
 const features = [
     {
-        title: "Zéro temps perdu",
+        title: "Pas de trajet",
         description:
-            "Plus de trajet, plus d'attente. On s'installe chez vous en 5 minutes, vous gagnez une heure dans votre journée.",
+            "On s'installe chez vous en quelques minutes. L'heure de séance reste une heure.",
         icon: "lucide:clock",
     },
     {
-        title: "Confidentialité absolue",
+        title: "Discrétion",
         description:
-            "Pas de regard extérieur, pas de salle partagée. L'entraînement le plus discret qui existe.",
+            "Pas de salle partagée, pas de public. Vous vous entraînez chez vous.",
         icon: "lucide:lock",
     },
     {
-        title: "Flexibilité horaire",
+        title: "Horaires souples",
         description:
-            "Tôt le matin, pause déjeuner, tard le soir — le créneau s'adapte à votre agenda, pas l'inverse.",
+            "Tôt le matin, à midi, le soir : le créneau suit votre agenda.",
         icon: "lucide:calendar",
     },
     {
-        title: "Matériel professionnel fourni",
+        title: "Matériel fourni",
         description:
-            "Gants, pattes d'ours, tapis, corde — on apporte tout. Vous n'avez besoin que d'une tenue de sport et d'un peu d'espace.",
+            "Gants, pattes d'ours, tapis, corde : le coach apporte tout. Il vous faut une tenue de sport et un peu d'espace.",
         icon: "lucide:package",
     },
     {
         title: "Toute la famille",
         description:
-            "Enchaînez les séances : une pour vous, une pour votre conjoint, une pour vos ados. Le coaching reste à la maison.",
+            "Une séance pour vous, une pour votre conjoint, une pour vos ados. Les séances s'enchaînent à la maison.",
         icon: "lucide:users",
     },
 ];
 
 const tiers = [
     {
-        name: "Séance d'essai",
-        description: "Découvrez le coaching à domicile sans engagement.",
-        price: "Gratuit",
-        features: [
-            "60 minutes de coaching",
-            "À votre domicile",
-            "Matériel fourni",
-            "Sans engagement",
-        ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
-    },
-    {
         name: "Séance unité",
         description: "Une séance complète de coaching de boxe chez vous.",
         price: "dès CHF 150.-",
         priceNote: "/ séance",
-        highlighted: true,
         features: [
             "60 minutes de coaching individuel",
             "Programme personnalisé",
-            "Matériel professionnel fourni",
+            "Matériel fourni",
             "Déplacement inclus (canton GE)",
         ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
+        cta: { text: "Réserver une séance", href: "#planning" },
     },
 ];
 
@@ -114,7 +106,7 @@ const faqs = [
     },
     {
         question: "Quelle différence avec une séance au studio ?",
-        answer: "La qualité du coaching est identique. La différence : pas de ring ni de sacs de frappe, mais un travail technique aux pattes d'ours et une préparation physique tout aussi intense. Le format domicile est idéal pour le travail technique, le cardio et le renforcement. Pour l'expérience complète avec ring et équipements, découvrez nos <a href='/services/coaching-solo' class='text-primary hover:underline'>séances au studio</a>.",
+        answer: "La qualité du coaching est identique. La différence : pas de ring ni de sacs de frappe, mais un travail technique aux pattes d'ours et une préparation physique tout aussi intense. Le format domicile est idéal pour le travail technique, le cardio et le renforcement. Pour l'expérience complète avec ring et équipements, découvrez nos <a href='/services/coaching-solo' class='link-line'>séances au studio</a>.",
     },
     {
         question: "Quelles zones couvrez-vous à Genève ?",
@@ -122,15 +114,15 @@ const faqs = [
     },
     {
         question: "Peut-on être plusieurs pour une séance à domicile ?",
-        answer: "Oui, les séances à domicile accueillent jusqu'à 3 personnes — couple, amis, famille. Le programme est adapté au groupe. Pour plus de 3 personnes, consultez nos formats <a href='/services/small-group-training' class='text-primary hover:underline'>small group</a> ou <a href='/services/corporate' class='text-primary hover:underline'>corporate</a>.",
+        answer: "Oui, les séances à domicile accueillent jusqu'à 3 personnes — couple, amis, famille. Le programme est adapté au groupe. Pour plus de 3 personnes, consultez nos formats <a href='/services/small-group-training' class='link-line'>small group</a> ou <a href='/services/corporate' class='link-line'>corporate</a>.",
     },
     {
         question: "Quels sont les tarifs du coaching à domicile ?",
-        answer: "Le coaching à domicile est disponible à la séance ou en pack de 10 séances avec tarif préférentiel. Le déplacement dans le canton de Genève est inclus. Consultez nos <a href='/tarifs' class='text-primary hover:underline'>tarifs détaillés</a> ou <a href='/contact' class='text-primary hover:underline'>contactez-nous</a> pour un devis personnalisé.",
+        answer: "Le coaching à domicile est disponible à la séance ou en pack de 10 séances avec tarif préférentiel. Le déplacement dans le canton de Genève est inclus. Consultez nos <a href='/tarifs' class='link-line'>tarifs détaillés</a> ou <a href='/contact' class='link-line'>contactez-nous</a> pour un devis personnalisé.",
     },
     {
         question: "Comment réserver et annuler une séance ?",
-        answer: "La réservation se fait via notre <a href='/contact' class='text-primary hover:underline'>formulaire de contact</a> ou par téléphone. L'annulation est gratuite jusqu'à 24 heures avant la séance. Au-delà, la séance est due.",
+        answer: "La réservation se fait via notre <a href='/contact' class='link-line'>formulaire de contact</a> ou par téléphone. L'annulation est gratuite jusqu'à 24 heures avant la séance. Au-delà, la séance est due.",
     },
 ];
 ---
@@ -166,171 +158,115 @@ const faqs = [
             }}
         />
     </Fragment>
-
-    {/* S1 — Hero */}
     <Hero
-        title={`Votre Ring, Vos Règles : <span class="font-display text-primary">Coaching de Boxe à Domicile</span> à Genève`}
-        description="Plus de trajet, plus d'excuse. Nicolas de Boccard se déplace chez vous avec tout le matériel professionnel pour un coaching de boxe sur mesure — dans le confort de votre domicile."
+        title={`Votre Ring, Vos Règles : <span class="text-primary">Coaching de Boxe à Domicile</span> à Genève`}
+        description="Nicolas de Boccard se déplace chez vous avec le matériel. Un coaching de boxe sur mesure, sans trajet."
+        image={imageCta}
+        imageAlt="Travail aux pattes d'ours pendant une séance de coaching"
         actions={[
-            {
-                text: "Réserver une séance d'essai",
-                href: "/cours-gratuit",
-                variant: "primary",
-                icon: "lucide:arrow-right",
-            },
-            {
-                text: "Voir les tarifs",
-                href: "/tarifs",
-                variant: "secondary",
-            },
+            { text: "Réserver une séance", href: "#planning" },
+            { text: "Voir les tarifs", href: "/tarifs" },
         ]}
-        ctaStyle="outline-gold"
-        classes={{ container: "min-h-[80vh]" }}
     />
-
-    {/* S2 — Stats */}
-    <Stats
-        stats={stats}
-        badge="Coaching à domicile"
-        badgeHref="#pourquoi-domicile"
-        intro="Le coaching à domicile, c'est la même exigence qu'au studio — sans le temps de trajet. Un programme 100% dédié à vous, livré chez vous."
-    />
-
-    {/* S3 — SplitShowcase — Pourquoi le domicile */}
-    <GsapReveal animation="fadeUp">
+    <section class="section wrap intro">
+        <p class="t-lead intro-lead">
+            La même exigence qu'au studio, sans le trajet.
+            <span class="soft">Un programme construit pour vous, chez vous.</span>
+        </p>
+        <dl class="facts">
+            {facts.map((f) => (
+                <div><dt>{f.k}</dt><dd>{f.v}</dd></div>
+            ))}
+        </dl>
+    </section>
         <SplitShowcase
             id="pourquoi-domicile"
-            tagline="Pourquoi choisir le domicile"
             title="Le studio vient à vous"
             image={coursPortrait}
-            imageAlt="Coaching de boxe à domicile à Genève — Nicolas de Boccard"
+            imageAlt="Nicolas de Boccard tient les pattes d'ours face à une élève"
             items={[
                 {
-                    title: "Programme 100% sur mesure",
-                    description: "Chaque séance est construite autour de vos objectifs, votre niveau et votre espace disponible. Perte de poids, technique, cardio, mental — le programme s'adapte à vous, pas l'inverse.",
+                    title: "Un programme sur mesure",
+                    description: "Chaque séance part de vos objectifs, de votre niveau et de l'espace disponible : technique, cardio, tonification, concentration.",
                 },
                 {
-                    title: "Matériel professionnel livré",
-                    description: "Gants, pattes d'ours, tapis, corde à sauter, bandes — Nicolas apporte tout le matériel nécessaire. Vous n'avez rien à acheter ni à stocker.",
+                    title: "Le matériel est apporté",
+                    description: "Gants, pattes d'ours, tapis, corde à sauter, bandes. Vous n'avez rien à acheter ni à ranger.",
                 },
                 {
-                    title: "L'expertise Bis Repetita, chez vous",
-                    description: "20+ ans de boxe, entraineur agréé Swiss Boxing, des centaines d'élèves accompagnés. La même qualité de coaching qu'au studio, dans votre salon.",
+                    title: "Le coaching Bis Repetita, chez vous",
+                    description: "20 ans de pratique, entraîneur agréé Swiss Boxing. Le même coaching qu'au studio, dans votre salon.",
                 },
             ]}
         />
-    </GsapReveal>
-
-    {/* S4 — ContentShowcase — Déroulé d'une séance */}
-    <GsapReveal animation="fadeUp">
         <ContentShowcase
-            tagline="Déroulé d'une séance"
             title="60 minutes, quatre phases"
-            image={cours2Landscape}
-            imageAlt="Séance de coaching boxe à domicile Genève"
+            image={ambianceBis}
+            imageAlt="Échauffement à la corde à sauter"
             items={[
                 {
-                    title: "Échauffement — 10 min",
-                    description: "Mobilité articulaire, corde à sauter, shadow boxing. On prépare le corps et on active le cardio progressivement, adapté à votre espace.",
+                    title: "Échauffement, 10 min",
+                    description: "Mobilité, corde à sauter, shadow boxing, adaptés à votre espace.",
                 },
                 {
-                    title: "Technique pattes d'ours — 20-25 min",
-                    description: "Travail technique au cœur de la séance. Enchaînements, esquives, contre-attaques — 100% de l'attention du coach sur vos gestes. Les pattes d'ours remplacent le sac, avec la même intensité.",
+                    title: "Technique aux pattes d'ours, 20 à 25 min",
+                    description: "Enchaînements, esquives, contre-attaques, avec le coach sur chacun de vos gestes. Les pattes d'ours remplacent le sac.",
                 },
                 {
-                    title: "Renforcement & cardio — 15-20 min",
-                    description: "Circuit training adapté à votre domicile : renforcement musculaire, explosivité, cardio haute intensité. Aucun équipement volumineux nécessaire.",
+                    title: "Renforcement et cardio, 15 à 20 min",
+                    description: "Un circuit adapté à votre domicile : renforcement, explosivité, cardio. Aucun équipement encombrant.",
                 },
                 {
-                    title: "Retour au calme — 5 min",
-                    description: "Étirements, respiration et débrief. On fait le point sur les progrès et on prépare la prochaine séance.",
+                    title: "Retour au calme, 5 min",
+                    description: "Étirements, respiration, débrief. On prépare la séance suivante.",
                 },
             ]}
         />
-    </GsapReveal>
-
-    {/* S5 — Features — Vos avantages */}
-    <GsapReveal animation="fadeUp">
         <Features
-            tagline="Vos avantages"
-            title="Pourquoi s'entraîner chez soi change tout"
+            title="Pourquoi s'entraîner chez soi"
             features={features}
             columns={3}
             headlineAlign="left"
             bento="2-3"
         />
-    </GsapReveal>
-
-    {/* S6 — Zones d'intervention */}
-    <div class="relative overflow-hidden py-12 md:py-20">
-        <Image
-            src={mapGeneve}
-            alt=""
-            class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none mix-blend-lighten"
-            widths={[800, 1400]}
-            sizes="100vw"
-        />
-        <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0) 30%, rgba(10,10,10,0) 70%, rgba(10,10,10,0.95) 100%)"></div>
-        <GsapReveal animation="fadeUp">
-            <ContentShowcase
-                tagline="Zones d'intervention"
-                title="Coaching à domicile dans tout le canton de Genève"
-                items={[
-                    {
-                        title: "Eaux-Vives, Champel & Cologny",
-                        description: "Rive gauche résidentielle. Déplacement rapide dans les quartiers les plus prisés de Genève.",
-                    },
-                    {
-                        title: "Carouge & Plainpalais",
-                        description: "Centre-ville et alentours. Accès facile pour des séances matinales ou sur la pause déjeuner.",
-                    },
-                    {
-                        title: "Sécheron, Nations & Pâquis",
-                        description: "Rive droite et quartier international. Séances en français ou anglais.",
-                    },
-                    {
-                        title: "Grand Genève",
-                        description: "Communes limitrophes et rive droite élargie — Versoix, Meyrin, Lancy, Onex. Disponible sur devis.",
-                    },
-                ]}
-            />
-        </GsapReveal>
-    </div>
-
-    {/* S7 — Pricing */}
-    <GsapReveal animation="fadeUp">
+    <section class="section wrap zones" id="zones">
+        <h2 class="t-title" data-split>Coaching à domicile dans tout le canton de Genève</h2>
+        <dl class="zone-list">
+            {zones.map((z) => (
+                <div><dt>{z.title}</dt><dd>{z.description}</dd></div>
+            ))}
+        </dl>
+    </section>
         <PricingTable
-            tagline="Tarifs"
             title="Formules coaching à domicile"
             tiers={tiers}
         />
-    </GsapReveal>
-
-    {/* S8 — RelatedServices */}
     <RelatedServices currentSlug="coaching-boxe-domicile" />
-
-    {/* S9 — FAQ */}
-    <GsapReveal animation="fadeUp">
         <FAQ
             id="faq"
             title="Questions fréquentes"
-            subtitle="Tout ce que vous devez savoir sur le coaching de boxe à domicile à Genève."
+            subtitle="Le coaching de boxe à domicile à Genève, en pratique."
             items={faqs}
         />
-    </GsapReveal>
-
-    {/* Calendrier Zenamu */}
-    <GsapReveal animation="fadeUp">
-        <ZenamuCalendar />
-    </GsapReveal>
-
-    {/* S10 — CTA */}
-    <GsapReveal animation="fadeUp">
-        <CTABanner
-            variant="brushed-full"
-            title="Prêt à transformer votre salon en ring ?"
-            subtitle="Coaching à domicile"
-            cta={{ text: "Réserver", href: "/cours-gratuit" }}
-        />
-    </GsapReveal>
+        <ZenamuCalendar id="planning" title="Réserver une séance à domicile" />
 </BaseLayout>
+
+<style>
+    .intro { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(40px, 8vw, 160px); align-items: start; }
+    .intro-lead { max-width: 24ch; }
+    .facts { border-top: 1px solid var(--line); }
+    .facts div { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+    .facts dt { color: var(--gray-2); }
+    .facts dd { text-align: right; }
+    @media (max-width: 860px) {
+        .intro { grid-template-columns: 1fr; }
+    }
+    .zones { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 32px clamp(40px, 8vw, 160px); }
+    .zone-list { border-top: 1px solid var(--ink); }
+    .zone-list div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 8px 24px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .zone-list dt { font-weight: 500; }
+    .zone-list dd { color: var(--gray-1); }
+    @media (max-width: 860px) {
+        .zones, .zone-list div { grid-template-columns: 1fr; }
+    }
+</style>

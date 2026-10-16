@@ -1,85 +1,105 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/widgets/Hero.astro";
-import Stats from "../components/widgets/Stats.astro";
-import Features from "../components/widgets/Features.astro";
 import EquipmentPanels from "../components/widgets/EquipmentPanels.astro";
 import FAQ from "../components/widgets/FAQ.astro";
 import CTABanner from "../components/widgets/CTABanner.astro";
 import RelatedArticles from "../components/widgets/RelatedArticles.astro";
-import GsapReveal from "../components/widgets/GsapReveal.astro";
-import Container from "../components/ui/Container.astro";
-import SectionTitle from "../components/ui/SectionTitle.astro";
 import Schema from "../components/seo/Schema.astro";
 import coursPortrait from "../assets/cours-portrait.webp";
-import nicolasPortrait from "../assets/nicolas-portrait.webp";
-import studioAtmosphere from "../assets/studio-atmosphere.webp";
 import cours2Landscape from "../assets/cours-2-landscape.webp";
+import ambianceBis from "../assets/ambiance-bis-repetita.webp";
+import imageCta from "../assets/image-cta.webp";
+import homepage from "../assets/homepage.webp";
 
 const metadata = {
     title: "Cours de Boxe à Genève | Guide Complet 2026",
     description: "Tout savoir sur les cours de boxe à Genève : formats, tarifs, profils, premiers pas. Guide complet par Bis Repetita, studio de boxe sur mesure.",
 };
 
-const stats = [
-    { value: "15+", label: "Clubs à Genève", description: "Des clubs associatifs historiques aux studios privés — mais peu offrent un coaching véritablement personnalisé." },
-    { value: "4", label: "Formats de pratique", description: "Solo, duo, petit groupe, collectif : trouvez celui qui correspond à vos objectifs et votre budget." },
-    { value: "25-65", label: "Ans — tous les âges", description: "La boxe se pratique à tout âge. L'important, c'est l'encadrement et la progressivité." },
+const facts = [
+    { k: "Formats", v: "Solo, duo, petit groupe, collectif" },
+    { k: "Âge", v: "Aucune limite pour débuter" },
+    { k: "Niveau requis", v: "Aucun" },
+    { k: "Matériel", v: "Gants et bandes fournis" },
+    { k: "Studio", v: "La Voie-Creuse 16, Genève" },
 ];
 
 const profilPanels = [
     {
         title: "Le débutant curieux",
-        description: "Vous n'avez jamais mis les gants ? C'est le profil le plus fréquent chez nous. On part de zéro, sans jugement, avec un programme adapté.",
+        description: "Vous n'avez jamais mis les gants ? C'est le profil le plus fréquent chez nous. On part de zéro, sans jugement, à votre rythme.",
         image: coursPortrait,
-        alt: "Débutant en cours de boxe à Genève",
+        alt: "Nicolas de Boccard aux pattes d'ours face à une élève débutante",
         ctaText: "Voir une première séance",
         ctaHref: "#premiere-seance",
     },
     {
-        title: "La femme qui ose",
-        description: "Cadre privé, sans contact, coaching bienveillant. La boxe au féminin chez Bis Repetita, c'est un espace pensé pour vous.",
-        image: studioAtmosphere,
-        alt: "Cours de boxe pour femme à Genève",
+        title: "Les femmes qui débutent",
+        description: "Cadre privé, intensité ajustée, aucun contact imposé. Pour se tonifier, gagner en cardio et prendre confiance dans le geste.",
+        image: cours2Landscape,
+        alt: "Cours de boxe au studio Bis Repetita à Genève",
         ctaText: "Lire le guide boxe femme",
         ctaHref: "/blog/boxe-femme-geneve-guide-complet",
     },
     {
         title: "Le sportif en reconversion",
-        description: "Runner, crossfiteur, nageur — vous cherchez un sport technique et cérébral pour compléter votre pratique. La boxe est le complément idéal.",
-        image: cours2Landscape,
-        alt: "Sportif en cours de boxe technique à Genève",
+        description: "Coureur, crossfiteur, nageur : vous cherchez un sport technique pour compléter votre pratique. La boxe travaille la coordination, le cardio et la lecture de l'adversaire.",
+        image: ambianceBis,
+        alt: "Échauffement à la corde à sauter au studio",
     },
     {
         title: "Le compétiteur amateur",
-        description: "Vous voulez préparer un combat, obtenir votre licence SwissBoxing, progresser en sparring encadré. Nicolas connaît le chemin.",
-        image: nicolasPortrait,
-        alt: "Préparation combat amateur boxe Genève",
+        description: "Vous voulez progresser en sparring encadré, viser la licence SwissBoxing, préparer un combat. Parlons-en avant de commencer.",
+        image: imageCta,
+        alt: "Travail aux pattes d'ours entre deux boxeurs",
     },
 ];
 
 const typesDePratique = [
     {
-        title: "Boxe fitness & cardio",
-        description: "Brûler des calories, se défouler, sculpter son corps. Le travail au sac et aux pattes d'ours offre un entraînement complet sans aucun contact. Le format idéal pour commencer.",
-        icon: "lucide:heart-pulse",
+        title: "Boxe fitness et cardio",
+        description: "Se dépenser, se tonifier, gagner en cardio. Le travail au sac et aux pattes d'ours, sans aucun contact. Le format le plus simple pour commencer.",
     },
     {
-        title: "Boxe technique & progression",
-        description: "Apprendre les vrais fondamentaux : garde, déplacements, jab, direct, crochet, esquives. Progresser séance après séance avec un coach qui corrige chaque geste.",
-        icon: "lucide:target",
+        title: "Boxe technique et progression",
+        description: "Les fondamentaux : garde, déplacements, jab, direct, crochet, esquives. Un coach corrige chaque geste, séance après séance.",
     },
     {
-        title: "Boxe compétition & sparring",
-        description: "Pour ceux qui veulent aller sur le ring. Sparring encadré, préparation physique et mentale, suivi nutritionnel. Le chemin vers le combat amateur, avec un coach de coin expérimenté.",
-        icon: "lucide:swords",
+        title: "Boxe compétition et sparring",
+        description: "Pour ceux qui veulent monter sur le ring. Sparring encadré, préparation physique et mentale, en vue d'un combat amateur.",
     },
+];
+
+const firstSession = [
+    { t: "Échauffement", m: "10 à 15 min", d: "Corde à sauter, mobilité, shadow boxing léger. Le coach observe votre posture, votre coordination et votre souffle." },
+    { t: "Technique de base", m: "20 min", d: "La garde, le jab, le direct arrière, le déplacement latéral. Le coach décompose chaque geste et corrige : appuis, rotation du buste, retour de la main." },
+    { t: "Travail aux pattes d'ours", m: "15 min", d: "Le coach tient les pattes, vous enchaînez les combinaisons. Vous dosez la puissance et coordonnez bras et jambes." },
+    { t: "Retour au calme", m: "5 à 10 min", d: "Étirements, gainage léger, bilan. Le coach vous donne un ou deux points à travailler la prochaine fois." },
+];
+
+const objections = [
+    { t: "« Je vais prendre des coups »", d: "Non, et jamais sans votre accord. Un cours débutant se concentre sur la technique : posture, garde, déplacements, frappes au sac et aux pattes d'ours. Le sparring vient après plusieurs mois, uniquement si vous le souhaitez." },
+    { t: "« J'ai 35 ans, c'est trop tard »", d: "Commencer à 30, 35 ou 40 ans est courant. Vous n'êtes pas là pour devenir champion, mais pour progresser et vous sentir bien. Le coach adapte la séance à votre corps." },
+    { t: "« Je n'ai pas le physique »", d: "Personne ne l'a en arrivant. La condition physique se construit avec la pratique. Les premières séances partent de votre niveau réel." },
+    { t: "« L'ambiance des clubs me fait peur »", d: "Les clubs associatifs ont parfois une atmosphère compétitive qui ne convient pas à tout le monde. C'est une des raisons d'être du {link} : un espace fermé, un coaching individualisé." },
+];
+
+const formats = [
+    { t: "Coaching Privé", d: "Le format historique de Bis Repetita : un coach, votre rythme, votre programme. Regroupe le solo, le duo, le trio et le petit groupe.", href: "/services/coaching-prive" },
+    { t: "Coaching Solo", d: "Séance individuelle avec Nicolas de Boccard. 60 minutes, toute l'attention du coach sur votre technique.", href: "/services/coaching-solo" },
+    { t: "Coaching Duo & Trio", d: "Le coaching privé à deux ou trois : même encadrement, coût partagé. Pour les couples, amis ou collègues.", href: "/services/coaching-duo-trio" },
+    { t: "Small Group Training", d: "De 4 à 8 personnes. Entre coaching privé et cours collectif : l'énergie du groupe, un suivi technique précis.", href: "/services/small-group-training" },
+    { t: "Coaching à Domicile", d: "Le coach vient chez vous, partout dans le canton de Genève, avec le matériel (gants, pattes d'ours, tapis, corde). À Cologny, Versoix, Champel ou Carouge.", href: "/services/coaching-boxe-domicile" },
+    { t: "Round by Round", d: "Cours collectif structuré en rounds chronométrés. 8 personnes au plus, un coach, 50 minutes, CHF 40 la séance.", href: "/services/round-by-round" },
+    { t: "Corporate & Team Building", d: "Pour les entreprises genevoises : team building, séances bien-être, masterclass technique. Au studio ou dans vos locaux, sur devis.", href: "/services/corporate" },
+    { t: "Boxe Femme", d: "Cadre privé, intensité ajustée, aucun contact imposé. Pour débuter la boxe à Genève en solo, en duo ou en petit groupe.", href: "/services/boxe-femme" },
 ];
 
 const faqs = [
     {
         question: "Combien coûte un cours de boxe à Genève ?",
-        answer: "Les tarifs varient selon le format. Chez Bis Repetita : CHF 40.- pour un cours collectif Round by Round (8 pers. max), CHF 120.- pour un coaching solo, CHF 140.- pour un duo. La première séance d'essai est gratuite. <a href='/tarifs' class='text-primary hover:underline'>Voir tous les tarifs</a>.",
+        answer: "Les tarifs varient selon le format. Chez Bis Repetita : CHF 40.- pour un cours collectif Round by Round (8 pers. max), CHF 120.- pour un coaching solo, CHF 140.- pour un duo. <a href='/tarifs' class='link-line'>Voir tous les tarifs</a>.",
     },
     {
         question: "À quel âge peut-on commencer la boxe ?",
@@ -91,15 +111,15 @@ const faqs = [
     },
     {
         question: "La boxe est-elle dangereuse pour un débutant ?",
-        answer: "Non. La boxe éducative se pratique sans contact entre participants. Tout le travail se fait au sac et aux pattes d'ours tenues par le coach. Il n'y a aucun sparring tant que vous ne le demandez pas — et même là, c'est progressif et encadré. <a href='/services/corporate#faq' class='text-primary hover:underline'>En savoir plus sur la sécurité</a>.",
+        answer: "Non. La boxe éducative se pratique sans contact entre participants. Tout le travail se fait au sac et aux pattes d'ours tenues par le coach. Il n'y a aucun sparring tant que vous ne le demandez pas — et même là, c'est progressif et encadré. <a href='/services/corporate#faq' class='link-line'>En savoir plus sur la sécurité</a>.",
     },
     {
         question: "Combien de séances par semaine pour progresser ?",
-        answer: "Deux séances par semaine est le rythme idéal pour un débutant : assez pour progresser, pas assez pour s'épuiser. Vous verrez des résultats techniques et physiques dès les 4 premières semaines.",
+        answer: "Deux séances par semaine est le rythme idéal pour un débutant : assez pour progresser, pas assez pour s'épuiser.",
     },
     {
         question: "Comment se passe un premier cours de boxe ?",
-        answer: "On commence par un échauffement doux (corde, mobilité), puis on passe aux fondamentaux : position de garde, déplacements, premiers coups sur les pattes d'ours. Le coach ajuste tout en temps réel à votre niveau. Vous repartez fatigué mais jamais blessé. <a href='/cours-gratuit' class='text-primary hover:underline'>Réserver votre séance d'essai gratuite</a>.",
+        answer: "On commence par un échauffement doux (corde, mobilité), puis on passe aux fondamentaux : position de garde, déplacements, premiers coups sur les pattes d'ours. Le coach ajuste tout en temps réel à votre niveau. <a href='/#planning' class='link-line'>Réserver une séance</a>.",
     },
     {
         question: "Y a-t-il du contact dès le premier cours ?",
@@ -107,7 +127,7 @@ const faqs = [
     },
     {
         question: "La boxe fait-elle maigrir ?",
-        answer: "Une séance de boxe de 60 minutes brûle entre 500 et 800 calories selon l'intensité — plus que la course à pied ou le vélo elliptique. Combinée à une alimentation équilibrée, la boxe est l'un des sports les plus efficaces pour la perte de poids et le raffermissement.",
+        answer: "La boxe sollicite tout le corps et le cardio. Combinée à une alimentation équilibrée, elle peut accompagner une perte de poids et aider à se tonifier. La dépense varie selon l'intensité et la personne.",
     },
 ];
 ---
@@ -134,247 +154,161 @@ const faqs = [
         />
     </Fragment>
 
-    <!-- 1. Hero (DARK, centered, informationnel) -->
     <Hero
-        variant="centered"
-        title={`Cours de Boxe à <span class="font-display text-primary">Genève</span>`}
-        description="Le guide complet pour choisir votre cours de boxe à Genève : formats, profils, tarifs, premiers pas. Par les coachs de Bis Repetita."
+        title={`Cours de Boxe à <span class="text-primary">Genève</span>`}
+        description="Le guide pour choisir votre cours de boxe à Genève : formats, profils, tarifs, premiers pas. Par les coachs de Bis Repetita."
+        image={homepage}
+        imageAlt="Travail aux pattes d'ours au studio Bis Repetita à Genève"
         actions={[
-            {
-                text: "Découvrir nos formules",
-                href: "/services",
-                variant: "primary",
-                icon: "lucide:arrow-right",
-            },
-            {
-                text: "Lire le guide",
-                href: "#profils",
-                variant: "secondary",
-            },
+            { text: "Découvrir nos formules", href: "/services" },
+            { text: "Lire le guide", href: "#profils" },
         ]}
-        classes={{ container: "min-h-[60vh]" }}
     />
 
-    <!-- 2. Stats (LIGHT) -->
-    <Stats
-        stats={stats}
-        badge="Boxe à Genève"
-        badgeHref="#profils"
-        variant="wide"
-        intro="Genève compte plus d'une quinzaine de clubs et studios de boxe — du club associatif historique au studio privé haut de gamme. Comment s'y retrouver ? Ce guide vous aide à choisir en fonction de votre profil, vos objectifs et votre budget."
+    <section class="section wrap intro">
+        <p class="t-lead intro-lead">
+            Genève compte de nombreux clubs et studios de boxe.
+            <span class="soft">Du club associatif au studio privé : ce guide vous aide à choisir selon votre profil, vos objectifs et votre budget.</span>
+        </p>
+        <dl class="rows">
+            {facts.map((f) => (
+                <div><dt>{f.k}</dt><dd>{f.v}</dd></div>
+            ))}
+        </dl>
+    </section>
+
+    <EquipmentPanels
+        id="profils"
+        title="4 profils, 4 parcours de boxe à Genève"
+        panels={profilPanels}
     />
 
-    <!-- 3. EquipmentPanels — Pour quel profil ? -->
-    <GsapReveal animation="fadeUp">
-        <EquipmentPanels
-            id="profils"
-            tagline="Pour quel profil ?"
-            title="4 profils, 4 parcours de boxe à Genève"
-            panels={profilPanels}
-        />
-    </GsapReveal>
+    <section class="section wrap split">
+        <h2 class="t-title" data-split>Trois manières de pratiquer la boxe à Genève</h2>
+        <ul class="list">
+            {typesDePratique.map((f) => (
+                <li>
+                    <h3 class="t-subtitle">{f.title}</h3>
+                    <p>{f.description}</p>
+                </li>
+            ))}
+        </ul>
+    </section>
 
-    <!-- 4. Features — Types de pratique -->
-    <GsapReveal animation="fadeUp">
-        <Features
-            tagline="Types de pratique"
-            title="Trois manières de pratiquer la boxe à Genève"
-            features={typesDePratique}
-            columns={3}
-        />
-    </GsapReveal>
-
-    <!-- 4a. Première séance — absorbe le longtail "première séance / débuter" -->
-    <GsapReveal animation="fadeUp">
-        <Container class="py-16 md:py-24" id="premiere-seance">
-            <SectionTitle
-                badge="Premiers pas"
-                title={`Votre première séance de boxe, <span class='text-primary'>minute par minute</span>`}
-                class="mb-12"
-            />
-            <p class="text-lg text-foreground/70 max-w-3xl mx-auto -mt-6 mb-12 text-center">
-                Vous arrivez au studio, La Voie-Creuse 16. Vestiaire privé, douche et serviettes fournis — vous enfilez une tenue de sport, le reste est sur place. Voici comment se déroulent les 60 minutes, sans aucun sparring ni mise en situation de combat.
-            </p>
-            <div class="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
-                <article class="border border-border rounded-2xl p-6">
-                    <h3 class="text-xl font-display font-medium mb-3">Échauffement <span class="text-primary text-base">· 10-15 min</span></h3>
-                    <p class="text-foreground/70">
-                        Corde à sauter, mobilité articulaire, shadow boxing léger. Le coach observe votre posture, votre coordination, votre souffle. C'est déjà du travail technique, même si ça n'en a pas l'air.
-                    </p>
-                </article>
-                <article class="border border-border rounded-2xl p-6">
-                    <h3 class="text-xl font-display font-medium mb-3">Technique de base <span class="text-primary text-base">· 20 min</span></h3>
-                    <p class="text-foreground/70">
-                        La garde, le jab, le direct arrière, le déplacement latéral. Le coach décompose chaque geste, vous le répétez, il corrige en temps réel : position des pieds, rotation du buste, retour de la main. C'est précis, pas brutal.
-                    </p>
-                </article>
-                <article class="border border-border rounded-2xl p-6">
-                    <h3 class="text-xl font-display font-medium mb-3">Travail aux pattes d'ours <span class="text-primary text-base">· 15 min</span></h3>
-                    <p class="text-foreground/70">
-                        Le coach enfile les pattes d'ours et vous enchaînez les combinaisons. Vous frappez une cible mouvante, vous dosez votre puissance, vous coordonnez bras et jambes. La partie que la plupart des débutants trouvent la plus addictive.
-                    </p>
-                </article>
-                <article class="border border-border rounded-2xl p-6">
-                    <h3 class="text-xl font-display font-medium mb-3">Retour au calme <span class="text-primary text-base">· 5-10 min</span></h3>
-                    <p class="text-foreground/70">
-                        Étirements, abdominaux légers, bilan de séance. Le coach vous donne un ou deux points à travailler pour la prochaine fois. Vous repartez fatigué mais jamais blessé, les bases posées et l'envie de revenir.
-                    </p>
-                </article>
+    <section id="premiere-seance" class="section method">
+        <div class="wrap split">
+            <div class="split-head">
+                <h2 class="t-title" data-split>Votre première séance de boxe, minute par minute</h2>
+                <p>Vous arrivez au studio, La Voie-Creuse 16. Vestiaire privé, douche et serviettes fournis : vous venez en tenue de sport, le reste est sur place. Voici les 60 minutes, sans sparring ni mise en situation de combat.</p>
             </div>
-        </Container>
-    </GsapReveal>
+            <ol class="list steps">
+                {firstSession.map((s, i) => (
+                    <li>
+                        <span class="step-n">{i + 1}</span>
+                        <h3 class="t-subtitle">{s.t} <span class="step-m">{s.m}</span></h3>
+                        <p>{s.d}</p>
+                    </li>
+                ))}
+            </ol>
+        </div>
+    </section>
 
-    <!-- 4a-bis. Les freins les plus courants — objection-handling débutant -->
-    <GsapReveal animation="fadeUp">
-        <Container class="py-16 md:py-24" id="freins">
-            <SectionTitle
-                badge="Lever les doutes"
-                title={`Les freins les plus courants <span class='text-primary'>(et pourquoi ils ne tiennent pas)</span>`}
-                class="mb-12"
-            />
-            <div class="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
-                <article class="border border-border rounded-2xl p-6">
-                    <h3 class="text-xl font-display font-medium mb-3">« Je vais prendre des coups »</h3>
-                    <p class="text-foreground/70">
-                        Non. Pas au début, et jamais sans votre accord. Un cours débutant se concentre sur la technique : posture, garde, déplacements, frappes sur sac et pattes d'ours. Le sparring n'intervient qu'après plusieurs mois, uniquement si vous le souhaitez.
-                    </p>
-                </article>
-                <article class="border border-border rounded-2xl p-6">
-                    <h3 class="text-xl font-display font-medium mb-3">« J'ai 35 ans, c'est trop tard »</h3>
-                    <p class="text-foreground/70">
-                        C'est l'âge moyen de nos débutants. Commencer à 30, 35 ou 40 ans est tout à fait courant. Vous n'êtes pas là pour devenir champion du monde, mais pour vous sentir bien et progresser. Le corps s'adapte, le coach aussi.
-                    </p>
-                </article>
-                <article class="border border-border rounded-2xl p-6">
-                    <h3 class="text-xl font-display font-medium mb-3">« Je n'ai pas le physique »</h3>
-                    <p class="text-foreground/70">
-                        Personne ne l'a en arrivant. La condition physique se construit avec la pratique. Les premières séances sont calibrées pour votre niveau réel, pas pour celui que vous imaginez ne pas avoir. Au bout d'un mois, vous sentirez déjà la différence.
-                    </p>
-                </article>
-                <article class="border border-border rounded-2xl p-6">
-                    <h3 class="text-xl font-display font-medium mb-3">« L'ambiance des clubs me fait peur »</h3>
-                    <p class="text-foreground/70">
-                        Un frein réel. Les clubs d'association ont parfois une atmosphère compétitive qui ne convient pas à tout le monde. C'est une des raisons d'être du <a href="/blog/studio-boxe-prive-vs-salle-classique-geneve" class="text-primary hover:underline">studio privé</a> : un espace fermé, un coaching individualisé, aucun regard extérieur.
-                    </p>
-                </article>
-            </div>
-        </Container>
-    </GsapReveal>
+    <section id="freins" class="section wrap split">
+        <h2 class="t-title" data-split>Les freins les plus courants, et pourquoi ils ne tiennent pas</h2>
+        <ul class="list">
+            {objections.map((o) => {
+                const [before, after] = o.d.split("{link}");
+                return (
+                    <li>
+                        <h3 class="t-subtitle">{o.t}</h3>
+                        <p>{before}{after !== undefined && <><a href="/blog/studio-boxe-prive-vs-salle-classique-geneve" class="link-line">studio privé</a>{after}</>}</p>
+                    </li>
+                );
+            })}
+        </ul>
+    </section>
 
-    <!-- 4b. Choisir votre format — maillage interne pillar → 7 services -->
-    <GsapReveal animation="fadeUp">
-        <Container class="py-16 md:py-24" id="formats">
-            <SectionTitle
-                badge="Choisir votre format"
-                title={`7 formats pour pratiquer la boxe à <span class='text-primary'>Genève</span>`}
-                class="mb-12"
-            />
-            <p class="text-lg text-foreground/70 max-w-3xl mx-auto -mt-6 mb-12 text-center">
-                Solo, duo, petit groupe, collectif, à domicile, en entreprise ou cadre 100 % féminin — chaque format répond à un besoin précis. Voici comment choisir.
-            </p>
-            <div class="grid gap-8 md:grid-cols-2">
-                <article class="border border-border rounded-2xl p-6 hover:border-primary transition-colors">
-                    <h3 class="text-2xl font-display font-medium mb-3">Coaching Privé</h3>
-                    <p class="text-foreground/70 mb-4">
-                        Le format historique de Bis Repetita : un coach, votre rythme, votre programme. Hub qui regroupe les déclinaisons solo, duo, trio et petit groupe. Idéal si vous cherchez une progression rapide et mesurable.
-                    </p>
-                    <a href="/services/coaching-prive" class="text-primary hover:underline font-medium">
-                        Découvrir le coaching privé →
+    <section id="formats" class="section wrap rule-t">
+        <div class="formats-head">
+            <h2 class="t-title" data-split>7 formats pour pratiquer la boxe à Genève</h2>
+            <p>Solo, duo, petit groupe, collectif, à domicile, en entreprise ou pensé pour les femmes : chaque format répond à un besoin précis.</p>
+        </div>
+        <ul class="formats">
+            {formats.map((f) => (
+                <li>
+                    <a href={f.href} class="format-row">
+                        <h3 class="fr-t">{f.t}</h3>
+                        <p class="fr-d">{f.d}</p>
+                        <span class="fr-a" aria-hidden="true">
+                            <svg width="14" height="14" viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+                        </span>
                     </a>
-                </article>
-                <article class="border border-border rounded-2xl p-6 hover:border-primary transition-colors">
-                    <h3 class="text-2xl font-display font-medium mb-3">Coaching Solo</h3>
-                    <p class="text-foreground/70 mb-4">
-                        Séance 1-on-1 avec Nicolas de Boccard. Le format le plus exigeant et le plus rapide pour transformer votre technique de boxe à Genève. 60 minutes 100 % pour vous.
-                    </p>
-                    <a href="/services/coaching-solo" class="text-primary hover:underline font-medium">
-                        Découvrir le coaching solo →
-                    </a>
-                </article>
-                <article class="border border-border rounded-2xl p-6 hover:border-primary transition-colors">
-                    <h3 class="text-2xl font-display font-medium mb-3">Coaching Duo & Trio</h3>
-                    <p class="text-foreground/70 mb-4">
-                        Le coaching privé à deux ou trois — même qualité d'encadrement, coût partagé. Format apprécié des couples, amis ou collègues qui veulent progresser ensemble.
-                    </p>
-                    <a href="/services/coaching-duo-trio" class="text-primary hover:underline font-medium">
-                        Découvrir le coaching duo / trio →
-                    </a>
-                </article>
-                <article class="border border-border rounded-2xl p-6 hover:border-primary transition-colors">
-                    <h3 class="text-2xl font-display font-medium mb-3">Small Group Training</h3>
-                    <p class="text-foreground/70 mb-4">
-                        6 personnes maximum, ratio coach/élèves favorable. Le format intermédiaire entre coaching privé et cours collectif, pour ceux qui veulent l'énergie du groupe sans diluer le suivi technique.
-                    </p>
-                    <a href="/services/small-group-training" class="text-primary hover:underline font-medium">
-                        Découvrir le small group training →
-                    </a>
-                </article>
-                <article class="border border-border rounded-2xl p-6 hover:border-primary transition-colors">
-                    <h3 class="text-2xl font-display font-medium mb-3">Coaching à Domicile</h3>
-                    <p class="text-foreground/70 mb-4">
-                        Le studio se déplace chez vous, partout dans le canton de Genève. Matériel professionnel inclus (gants, pattes d'ours, tapis, corde). Pour les agendas saturés ou les expats à Cologny, Versoix, Champel ou Carouge.
-                    </p>
-                    <a href="/services/coaching-boxe-domicile" class="text-primary hover:underline font-medium">
-                        Découvrir le coaching à domicile →
-                    </a>
-                </article>
-                <article class="border border-border rounded-2xl p-6 hover:border-primary transition-colors">
-                    <h3 class="text-2xl font-display font-medium mb-3">Round by Round</h3>
-                    <p class="text-foreground/70 mb-4">
-                        Cours collectif structuré en rounds chronométrés, 8 participants maximum, 2 coachs sur le ring. Le format le plus accessible (40 CHF la séance) pour découvrir la boxe anglaise dans un cadre exigeant.
-                    </p>
-                    <a href="/services/round-by-round" class="text-primary hover:underline font-medium">
-                        Découvrir Round by Round →
-                    </a>
-                </article>
-                <article class="border border-border rounded-2xl p-6 hover:border-primary transition-colors">
-                    <h3 class="text-2xl font-display font-medium mb-3">Corporate & Team Building</h3>
-                    <p class="text-foreground/70 mb-4">
-                        Programmes pour entreprises genevoises : team building, séances bien-être au travail, masterclass technique. Intervention au studio La Voie-Creuse 16 ou dans vos locaux. Devis sous 48 h.
-                    </p>
-                    <a href="/services/corporate" class="text-primary hover:underline font-medium">
-                        Découvrir les programmes corporate →
-                    </a>
-                </article>
-                <article class="border border-border rounded-2xl p-6 hover:border-primary transition-colors">
-                    <h3 class="text-2xl font-display font-medium mb-3">Boxe Femme</h3>
-                    <p class="text-foreground/70 mb-4">
-                        Cadre privé, sans contact, sans regard masculin. Format dédié aux femmes qui veulent débuter la boxe à Genève sereinement, en solo, en duo ou en petit groupe 100 % féminin.
-                    </p>
-                    <a href="/services/boxe-femme" class="text-primary hover:underline font-medium">
-                        Découvrir la boxe femme →
-                    </a>
-                </article>
-            </div>
-        </Container>
-    </GsapReveal>
+                </li>
+            ))}
+        </ul>
+    </section>
 
-    <!-- 5. RelatedArticles — Articles du blog -->
-    <GsapReveal animation="fadeUp">
-        <RelatedArticles
-            title="Nos articles sur la boxe à Genève"
-            badge="Ressources"
-            maxItems={6}
-            excludePostIds={["boxe-femme-geneve-guide-complet"]}
-        />
-    </GsapReveal>
+    <RelatedArticles
+        title="Nos articles sur la boxe à Genève"
+        maxItems={6}
+        excludePostIds={["boxe-femme-geneve-guide-complet"]}
+    />
 
-    <!-- 6. FAQ -->
-    <GsapReveal animation="fadeUp">
-        <FAQ
-            title="Questions fréquentes sur les cours de boxe à Genève"
-            subtitle="Les réponses aux questions les plus posées par les débutants."
-            items={faqs}
-        />
-    </GsapReveal>
+    <FAQ
+        title="Questions fréquentes sur les cours de boxe à Genève"
+        subtitle="Les réponses aux questions les plus posées par les débutants."
+        items={faqs}
+    />
 
-    <!-- 7. CTABanner (informationnel → vers /services) -->
-    <GsapReveal animation="fadeUp">
-        <CTABanner
-            variant="brushed-full"
-            title="Prêt à commencer ?"
-            subtitle="Découvrez nos programmes"
-            cta={{ text: "Voir les formules", href: "/services" }}
-        />
-    </GsapReveal>
+    <CTABanner
+        variant="brushed-full"
+        title="Prêt à commencer ?"
+        cta={{ text: "Voir les formules", href: "/services" }}
+    />
 </BaseLayout>
+
+<style>
+    .intro { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(40px, 8vw, 160px); align-items: start; }
+    .intro-lead { max-width: 24ch; }
+    .rows { border-top: 1px solid var(--line); font-size: 14px; }
+    .rows div { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .rows dt { color: var(--gray-2); }
+    .rows dd { text-align: right; }
+
+    .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 40px clamp(40px, 8vw, 160px); align-items: start; }
+    .split-head { display: grid; gap: 20px; align-self: start; position: sticky; top: calc(var(--nav-h) + 32px); }
+    .split-head p { color: var(--gray-1); max-width: 44ch; }
+    .list { border-top: 1px solid var(--line); }
+    .list li { display: grid; gap: 8px; padding: clamp(24px, 3vw, 40px) 0; border-bottom: 1px solid var(--line); }
+    .list p { color: var(--gray-1); max-width: 52ch; }
+
+    .method { background: var(--surface); }
+    .steps li { grid-template-columns: 48px minmax(0, 1fr); column-gap: 16px; }
+    .steps p { grid-column: 2; }
+    .step-n { grid-row: span 2; font-size: 14px; color: var(--gray-2); font-variant-numeric: tabular-nums; padding-top: 6px; }
+    .step-m { font-size: 14px; font-weight: 400; letter-spacing: 0; color: var(--gray-2); margin-left: 8px; }
+
+    .formats-head { display: grid; gap: 16px; max-width: 760px; margin-bottom: clamp(32px, 4vw, 56px); }
+    .formats-head p { color: var(--gray-1); }
+    .formats { border-top: 1px solid var(--ink); }
+    .format-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr) 20px;
+        gap: 8px 24px;
+        align-items: baseline;
+        padding: 22px 0;
+        border-bottom: 1px solid var(--line);
+        transition: padding 0.6s var(--ease-out-expo);
+    }
+    .format-row:hover, .format-row:focus-visible { padding-left: 14px; }
+    .fr-t { font-size: clamp(1.25rem, 2vw, 1.75rem); font-weight: 500; letter-spacing: var(--track-title); line-height: 1.1; }
+    .fr-d { color: var(--gray-1); font-size: 15px; }
+    .fr-a { justify-self: end; }
+
+    @media (max-width: 860px) {
+        .intro, .split { grid-template-columns: 1fr; }
+        .split-head { position: static; }
+        .format-row { grid-template-columns: 1fr; }
+        .fr-a { display: none; }
+    }
+</style>

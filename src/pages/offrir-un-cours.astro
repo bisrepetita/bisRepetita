@@ -1,0 +1,87 @@
+---
+// Page de test : le format et le prix du cours offert restent à décider. Aucun prix affiché.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/widgets/Hero.astro";
+import Schema from "../components/seo/Schema.astro";
+import { siteConfig } from "../config/site";
+import coursPortrait from "../assets/cours-portrait.webp";
+
+const metadata = {
+    title: "Offrir un cours de boxe à Genève",
+    description:
+        "Offrez un cours de boxe avec Nicolas de Boccard à Genève : une séance préparée selon le niveau de la personne. Débutants bienvenus, matériel fourni.",
+};
+
+const { phone, address } = siteConfig.contact;
+const tel = `tel:${phone.replace(/\s/g, "")}`;
+
+const steps = [
+    ["Pour qui", "La personne de votre choix. Débutant bienvenu, aucun niveau requis."],
+    ["La séance", "Un cours avec Nicolas, préparé selon le niveau et les envies de la personne."],
+    ["Matériel", "Gants et bandes fournis. Une tenue de sport suffit."],
+    ["Lieu", `Au studio, ${address}.`],
+    ["Comment faire", "Écrivez-nous ou appelez-nous. Nous convenons ensemble du format et de la date."],
+];
+const arrow = `<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>`;
+---
+
+<BaseLayout {metadata}>
+    <Fragment slot="head">
+        <Schema
+            type="Service"
+            data={{
+                title: "Offrir un cours de boxe à Genève",
+                description: metadata.description,
+                url: "https://bisrepetita.ch/offrir-un-cours",
+                serviceType: "Cours de boxe offert",
+            }}
+        />
+    </Fragment>
+
+    <Hero
+        title="Offrir un cours de boxe"
+        description="Un cours de boxe avec Nicolas, à offrir à quelqu'un. Vous choisissez la personne, nous préparons la séance selon son niveau."
+        actions={[
+            { text: "Nous écrire", href: "/contact?sujet=offrir" },
+            { text: phone, href: tel, ariaLabel: `Appeler le ${phone}` },
+        ]}
+        image={coursPortrait}
+        imageAlt="Nicolas de Boccard tient les pattes d'ours face à une élève au studio"
+    />
+
+    <section class="wrap gc">
+        <div class="gc-head">
+            <h2 class="t-title" data-split>Comment ça se passe</h2>
+            <p>Le principe est simple : un cours particulier, au studio, pensé pour la personne qui le reçoit.</p>
+        </div>
+        <div>
+            <dl class="gc-rows">
+                {steps.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
+            </dl>
+            <div class="gc-actions">
+                <a href="/contact?sujet=offrir" class="btn btn-solid">Nous écrire <Fragment set:html={arrow} /></a>
+                <a href={tel} class="btn btn-line">{phone}</a>
+            </div>
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    .gc {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+        gap: 40px clamp(40px, 7vw, 140px);
+        align-items: start;
+        padding-block: var(--section);
+    }
+    .gc-head { display: grid; gap: 18px; max-width: 30rem; }
+    .gc-head p { color: var(--gray-1); font-size: 17px; }
+    .gc-rows { border-top: 1px solid var(--ink); font-size: 16px; }
+    .gc-rows div { display: grid; grid-template-columns: minmax(0, 10rem) minmax(0, 1fr); gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+    .gc-rows dt { color: var(--gray-2); }
+    .gc-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+    @media (max-width: 860px) {
+        .gc { grid-template-columns: 1fr; }
+        .gc-rows div { grid-template-columns: 1fr; gap: 4px; }
+    }
+</style>

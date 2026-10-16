@@ -1,19 +1,17 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Hero from "../../components/widgets/Hero.astro";
-import Stats from "../../components/widgets/Stats.astro";
 import SplitShowcase from "../../components/widgets/SplitShowcase.astro";
 import ContentShowcase from "../../components/widgets/ContentShowcase.astro";
 import Features from "../../components/widgets/Features.astro";
 import PricingTable from "../../components/widgets/PricingTable.astro";
 import FAQ from "../../components/widgets/FAQ.astro";
-import CTABanner from "../../components/widgets/CTABanner.astro";
 import ZenamuCalendar from "../../components/widgets/ZenamuCalendar.astro";
 import RelatedServices from "../../components/widgets/RelatedServices.astro";
-import GsapReveal from "../../components/widgets/GsapReveal.astro";
 import Schema from "../../components/seo/Schema.astro";
 import cours2Landscape from "../../assets/cours-2-landscape.webp";
-import salle1 from "../../assets/salle-1.webp";
+import coursPortrait from "../../assets/cours-portrait.webp";
+import ambianceBis from "../../assets/ambiance-bis-repetita.webp";
 
 const metadata = {
     title: "Cours Boxe Petit Groupe Genève",
@@ -21,53 +19,43 @@ const metadata = {
         "Cours de boxe en petit groupe à Genève, 6 personnes maximum. Encadrement sur mesure par Nicolas de Boccard dans un studio privé. Essai gratuit.",
 };
 
-const stats = [
-    {
-        value: "6",
-        label: "Personnes maximum",
-        description: "Jamais plus de 6 — pour un encadrement individualisé au sein du groupe.",
-    },
-    {
-        value: "60",
-        label: "Minutes par séance",
-        description: "Un entraînement complet en format rounds : technique, physique, cardio, récupération.",
-    },
-    {
-        value: "20+",
-        label: "Années d'expérience",
-        description: "Un ratio coach/élèves inégalé à Genève pour un coaching collectif de qualité privée.",
-    },
+const facts = [
+    { k: "Effectif", v: "4 à 8 personnes" },
+    { k: "Durée", v: "60 minutes" },
+    { k: "Coach", v: "Nicolas de Boccard" },
+    { k: "Niveau requis", v: "Aucun" },
+    { k: "Matériel", v: "Gants et bandes fournis" },
 ];
 
 const features = [
     {
-        title: "L'anti-salle de sport",
+        title: "Un petit groupe",
         description:
-            "Pas de files d'attente, pas de machines, pas de 50 personnes anonymes. Ici, c'est un club privé : 6 personnes max, un coach qui connaît chacun.",
+            "Pas de file d'attente, pas de machines. De 4 à 8 personnes, avec un coach qui connaît chacun.",
         icon: "lucide:shield",
     },
     {
-        title: "Énergie collective",
+        title: "L'énergie du groupe",
         description:
-            "La dynamique du groupe pousse chacun à se dépasser. L'émulation naturelle remplace la motivation artificielle — round après round.",
+            "Le groupe porte l'effort, round après round.",
         icon: "lucide:flame",
     },
     {
         title: "Corrections individuelles",
         description:
-            "6 maximum, c'est le ratio qui permet à Nicolas de corriger chaque geste, d'adapter l'intensité à chaque profil. Pas de coaching générique.",
+            "Le coach corrige les gestes de chacun et adapte l'intensité à chaque profil.",
         icon: "lucide:eye",
     },
     {
-        title: "Communauté soudée",
+        title: "Des visages connus",
         description:
-            "On se retrouve, on se connaît, on se motive. Le small group crée des liens que les grandes salles ne peuvent pas offrir.",
+            "On se retrouve d'une séance à l'autre, on se connaît, on se motive.",
         icon: "lucide:heart-handshake",
     },
     {
-        title: "Tarif accessible",
+        title: "Tarif partagé",
         description:
-            "Le coaching sur mesure à un prix par personne imbattable. Tout le savoir-faire du privé, partagé intelligemment.",
+            "Le coaching sur mesure, à un prix par personne plus bas qu'en solo.",
         icon: "lucide:wallet",
     },
 ];
@@ -80,38 +68,37 @@ const tiers = [
         priceNote: "/ séance",
         features: [
             "60 minutes de coaching",
-            "4 participants",
+            "Tarif de base pour 4 participants",
             "Programme structuré",
             "Matériel fourni",
         ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
+        cta: { text: "Réserver une séance", href: "#planning" },
     },
     {
         name: "Pack 10 séances",
-        description: "L'engagement qui fait la différence.",
+        description: "Pour un suivi régulier.",
         price: "CHF 1'800.-",
         priceNote: "/ 10 séances",
         highlighted: true,
-        popularLabel: "Recommandé",
         features: [
             "10 × 60 minutes",
-            "4 participants",
+            "Tarif de base pour 4 participants",
             "Suivi de progression",
             "Matériel fourni",
             "Tarif préférentiel",
         ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
+        cta: { text: "Réserver une séance", href: "#planning" },
     },
 ];
 
 const faqs = [
     {
-        question: "Pourquoi 6 personnes maximum ?",
-        answer: "C'est le seuil au-delà duquel la qualité du coaching se dégrade. À 6, Nicolas peut encore corriger chaque geste, adapter l'intensité à chacun et maintenir une ambiance de club privé.",
+        question: "Pourquoi 8 personnes maximum ?",
+        answer: "C'est le seuil au-delà duquel la qualité du coaching se dégrade. De 4 à 8, Nicolas peut corriger chaque geste, adapter l'intensité à chacun et garder une ambiance de club privé.",
     },
     {
         question: "Quelle est la différence avec les cours Round by Round ?",
-        answer: "Le <a href='/services/round-by-round' class='text-primary hover:underline'>Round by Round</a> accueille jusqu'à 8 participants avec 2 coachs et suit un format très structuré en rounds chronométrés. Le small group training offre plus de flexibilité dans le programme et un ratio coach/élèves encore plus favorable.",
+        answer: "Le <a href='/services/round-by-round' class='link-line'>Round by Round</a> accueille jusqu'à 8 participants avec 1 coach et suit un format très structuré en rounds chronométrés. Le small group training offre plus de flexibilité dans le programme.",
     },
     {
         question: "Faut-il venir avec son propre groupe ?",
@@ -119,11 +106,11 @@ const faqs = [
     },
     {
         question: "Le small group convient-il aux débutants ?",
-        answer: "Oui. Nicolas adapte les exercices au niveau de chacun au sein du même groupe. Si vous préférez commencer dans un format plus intimiste, <a href='/services/coaching-prive' class='text-primary hover:underline'>découvrez nos autres formats de coaching privé</a> (solo ou duo).",
+        answer: "Oui. Nicolas adapte les exercices au niveau de chacun au sein du même groupe. Si vous préférez commencer dans un format plus intimiste, <a href='/services/coaching-prive' class='link-line'>découvrez nos autres formats de coaching privé</a> (solo ou duo).",
     },
     {
         question: "Quels sont les tarifs du small group training ?",
-        answer: "Le small group est notre format le plus accessible par personne : séances à l'unité ou en pack de 10 avec tarif préférentiel. Le prix par personne est nettement inférieur au coaching solo. Consultez nos <a href='/tarifs' class='text-primary hover:underline'>tarifs détaillés</a> ou <a href='/contact' class='text-primary hover:underline'>contactez-nous</a>.",
+        answer: "Le small group est notre format le plus accessible par personne : séances à l'unité ou en pack de 10 avec tarif préférentiel. Le prix par personne est nettement inférieur au coaching solo. Consultez nos <a href='/tarifs' class='link-line'>tarifs détaillés</a> ou <a href='/contact' class='link-line'>contactez-nous</a>.",
     },
 ];
 ---
@@ -160,51 +147,37 @@ const faqs = [
             }}
         />
     </Fragment>
-
-    {/* S1 — Hero */}
     <Hero
-        title={`<span class="font-display text-primary">Small Group</span> Training à Genève`}
-        description="L'énergie du collectif, la précision du privé. 6 personnes maximum, un coach dédié, un programme structuré — dans un studio privé au cœur de Genève."
+        title={`<span class="text-primary">Small Group</span> Training à Genève`}
+        description="L'énergie d'un groupe, la précision d'un cours privé. De 4 à 8 personnes, un coach, un programme structuré, dans un studio privé au cœur de Genève."
         image={cours2Landscape}
-        imageAlt="Small group training boxe Genève — entraînement petit groupe Bis Repetita"
+        imageAlt="Cours de boxe en petit groupe au studio Bis Repetita"
         locationBadge={{ text: "La Voie-Creuse 16, 1202 Genève" }}
         actions={[
-            {
-                text: "Réserver une séance d'essai",
-                href: "/cours-gratuit",
-                variant: "primary",
-                icon: "lucide:arrow-right",
-            },
-            {
-                text: "Voir les tarifs",
-                href: "/tarifs",
-                variant: "secondary",
-            },
+            { text: "Réserver une séance", href: "#planning" },
+            { text: "Voir les tarifs", href: "/tarifs" },
         ]}
-        ctaStyle="outline-gold"
-        classes={{ container: "min-h-[80vh]" }}
     />
-
-    {/* S2 — Stats */}
-    <Stats
-        stats={stats}
-        badge="Small Group Training"
-        badgeHref="#pourquoi-6"
-        intro="Le small group, c'est le coaching privé démultiplié par l'énergie du collectif — dans un groupe volontairement réduit à 6 personnes."
-    />
-
-    {/* S3 — SplitShowcase — Pourquoi 6 maximum ? */}
-    <GsapReveal animation="fadeUp">
+    <section class="section wrap intro">
+        <p class="t-lead intro-lead">
+            Le coaching privé, avec l'énergie d'un groupe.
+            <span class="soft">Un groupe volontairement réduit, de 4 à 8 personnes.</span>
+        </p>
+        <dl class="facts">
+            {facts.map((f) => (
+                <div><dt>{f.k}</dt><dd>{f.v}</dd></div>
+            ))}
+        </dl>
+    </section>
         <SplitShowcase
             id="pourquoi-6"
-            tagline="Notre engagement"
-            title="Pourquoi 6 maximum ? Parce que la qualité ne se divise pas"
-            image={salle1}
-            imageAlt="Studio de boxe privé Genève — Bis Repetita"
+            title="Pourquoi un petit groupe"
+            image={coursPortrait}
+            imageAlt="Nicolas de Boccard corrige une élève aux pattes d'ours"
             items={[
                 {
                     title: "Corrections individuelles",
-                    description: "À 6, Nicolas peut encore observer, corriger et ajuster chaque geste technique en temps réel. Au-delà, c'est du coaching générique.",
+                    description: "Dans un petit groupe, Nicolas observe et corrige les gestes de chacun pendant la séance.",
                 },
                 {
                     title: "Intensité adaptée",
@@ -212,60 +185,38 @@ const faqs = [
                 },
                 {
                     title: "Ambiance de club privé",
-                    description: "On se connaît, on se retrouve, on se motive. Le petit groupe crée une communauté soudée — l'antithèse de la salle de sport anonyme.",
+                    description: "On se connaît, on se retrouve, on se motive d'une séance à l'autre.",
                 },
             ]}
         />
-    </GsapReveal>
-
-    {/* S4 — PricingTable (REMONTÉ) */}
-    <GsapReveal animation="fadeUp">
         <PricingTable
-            tagline="Tarifs"
             title="Formules small group training"
             tiers={tiers}
             columns={2}
         />
-        <div class="text-center -mt-8 mb-8 max-w-xl mx-auto px-6">
-            <p class="text-primary font-medium mb-1">🎁 Votre première séance est offerte</p>
-            <p class="text-muted-foreground text-sm mb-3">Découvrez notre approche sans engagement. Si l'expérience vous plaît, un partage de votre ressenti sur Google aide d'autres sportifs à nous trouver.</p>
-            <a href="/cours-gratuit" class="text-primary hover:underline text-sm font-medium">
-                Réserver mon essai &rarr;
-            </a>
-        </div>
-    </GsapReveal>
-
-    {/* S5 — Features — Le club privé */}
-    <GsapReveal animation="fadeUp">
         <Features
             id="avantages"
-            tagline="Le club privé"
-            title="Tout ce qui fait la différence du small group"
+            title="Ce que change le small group"
             features={features}
             bento="2-3"
         />
-    </GsapReveal>
-
-    {/* S6 — ContentShowcase — Méthode Round by Round appliquée */}
-    <GsapReveal animation="fadeUp">
         <ContentShowcase
-            tagline="La méthode"
             title="Méthode Round by Round appliquée au petit groupe"
-            image={cours2Landscape}
-            imageAlt="Small group training boxe Genève — méthode Round by Round"
+            image={ambianceBis}
+            imageAlt="Échauffement à la corde à sauter pendant un cours"
             isReversed={true}
             items={[
                 {
                     title: "Structure en rounds",
-                    description: "Chaque séance suit le format éprouvé du Round by Round : rounds chronométrés, récupération active, montée en intensité progressive.",
+                    description: "Chaque séance suit le format Round by Round : rounds chronométrés, récupération active, intensité qui monte progressivement.",
                 },
                 {
                     title: "Technique et physique fusionnés",
-                    description: "Pas de séparation entre cardio et technique. Chaque round mêle séquences de boxe anglaise et préparation physique pour un entraînement complet.",
+                    description: "Chaque round mêle boxe anglaise et préparation physique.",
                 },
                 {
                     title: "L'énergie du groupe en plus",
-                    description: "La dynamique collective amplifie l'effort. On se pousse mutuellement, round après round, dans un esprit de dépassement partagé.",
+                    description: "Le groupe porte l'effort. On se pousse mutuellement, round après round.",
                 },
             ]}
             actions={[
@@ -273,37 +224,27 @@ const faqs = [
                     text: "Découvrir le Round by Round",
                     href: "/services/round-by-round",
                     variant: "secondary",
-                    icon: "lucide:arrow-right",
                 },
             ]}
         />
-    </GsapReveal>
-
-    {/* S7 — RelatedServices */}
     <RelatedServices currentSlug="small-group-training" />
-
-    {/* S8 — FAQ */}
-    <GsapReveal animation="fadeUp">
         <FAQ
             id="faq"
             title="Questions fréquentes"
-            subtitle="Tout ce que vous devez savoir sur le small group training à Genève."
+            subtitle="Le small group training à Genève, en pratique."
             items={faqs}
         />
-    </GsapReveal>
-
-    {/* Calendrier Zenamu */}
-    <GsapReveal animation="fadeUp">
-        <ZenamuCalendar />
-    </GsapReveal>
-
-    {/* S9 — CTABanner */}
-    <GsapReveal animation="fadeUp">
-        <CTABanner
-            variant="brushed-full"
-            title="Prêt à rejoindre le groupe ?"
-            subtitle="Small Group Training"
-            cta={{ text: "Réserver", href: "/cours-gratuit" }}
-        />
-    </GsapReveal>
+        <ZenamuCalendar id="planning" title="Réserver une séance en petit groupe" />
 </BaseLayout>
+
+<style>
+    .intro { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(40px, 8vw, 160px); align-items: start; }
+    .intro-lead { max-width: 24ch; }
+    .facts { border-top: 1px solid var(--line); }
+    .facts div { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+    .facts dt { color: var(--gray-2); }
+    .facts dd { text-align: right; }
+    @media (max-width: 860px) {
+        .intro { grid-template-columns: 1fr; }
+    }
+</style>
