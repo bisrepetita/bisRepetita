@@ -1,21 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { siteConfig } from "../config/site";
-import Hero from "../components/widgets/Hero.astro";
-import Stats from "../components/widgets/Stats.astro";
-import ServiceCard from "../components/widgets/ServiceCard.astro";
-import ContentShowcase from "../components/widgets/ContentShowcase.astro";
-import Testimonials from "../components/widgets/Testimonials.astro";
-import CTABanner from "../components/widgets/CTABanner.astro";
-import GsapReveal from "../components/widgets/GsapReveal.astro";
-import SectionTitle from "../components/ui/SectionTitle.astro";
-import Container from "../components/ui/Container.astro";
-
+import { Image } from "astro:assets";
 import ZenamuCalendar from "../components/widgets/ZenamuCalendar.astro";
 import RelatedArticles from "../components/widgets/RelatedArticles.astro";
 import Schema from "../components/seo/Schema.astro";
+
 import coursPortrait from "../assets/cours-portrait.webp";
-import coursLandscape from "../assets/cours-2-landscape.webp";
+import imageCta from "../assets/image-cta.webp";
+import homepage from "../assets/homepage.webp";
+import lionelNicolas from "../assets/lionel-nicolas-boxe.webp";
+import cours2Landscape from "../assets/cours-2-landscape.webp";
+import ambianceBis from "../assets/ambiance-bis-repetita.webp";
 
 const metadata = {
     title: "Bis Repetita — Coaching de boxe sur mesure à Genève",
@@ -24,95 +19,66 @@ const metadata = {
     ignoreTitleTemplate: true,
 };
 
-const services = [
+const arrow = `<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>`;
+const arrowUp = `<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>`;
+
+const facts = [
+    { k: "Studio", v: "La Voie-Creuse 16, Genève" },
+    { k: "Niveau requis", v: "Aucun" },
+    { k: "Matériel", v: "Gants et bandes fournis" },
+    { k: "Head Coach", v: "Nicolas de Boccard" },
+];
+
+const doors = [
     {
-        title: "Coaching Privé",
-        description:
-            "Séances individuelles ou en petit groupe (jusqu'à 6 personnes). Un accompagnement sur mesure adapté à vos objectifs.",
+        title: "Cours privé",
         href: "/services/coaching-prive",
         image: coursPortrait,
-        index: 1,
+        alt: "Nicolas de Boccard tient les pattes d'ours face à une élève au studio",
+        text: "Seul, à deux, à trois ou en petit groupe. Un coach pour vous, une séance construite sur vos objectifs.",
+        rows: [
+            ["Effectif", "1 à 8 personnes"],
+            ["Durée", "60 minutes"],
+            ["Séance solo", "CHF 120"],
+        ],
     },
     {
-        title: "Round by Round",
-        description:
-            "Cours collectifs structurés en rounds. Une méthode unique qui allie technique de boxe, cardio et renforcement.",
+        title: "Cours collectif",
         href: "/services/round-by-round",
-        index: 2,
-    },
-    {
-        title: "Corporate",
-        description:
-            "Team building, séances bien-être et programmes sur mesure pour les entreprises. Renforcez la cohésion de vos équipes.",
-        href: "/services/corporate",
-        index: 3,
-    },
-];
-
-const stats = [
-    {
-        value: "100+",
-        label: "Athlètes entraînés",
-        description: "Nous accompagnons des athlètes de tous niveaux vers l'excellence.",
-    },
-    {
-        value: "98%",
-        label: "Taux de satisfaction",
-        description: "La quasi-totalité de nos clients constatent des progrès significatifs, physiques et mentaux.",
-    },
-    {
-        value: "20+",
-        label: "Années d'expérience",
-        description: "Une équipe de professionnels aguerris avec une expertise approfondie de la boxe.",
+        image: imageCta,
+        alt: "Deux boxeurs travaillent aux pattes dans la salle du studio",
+        text: "Round by Round : un cours structuré en rounds, technique et cardio, encadré par un coach.",
+        rows: [
+            ["Effectif", "8 personnes au plus"],
+            ["Durée", "50 minutes"],
+            ["La séance", "CHF 40"],
+        ],
     },
 ];
 
-const testimonials = [
-    {
-        quote: "Nicolas a transformé ma vision de la boxe. Bien plus qu'un sport, c'est devenu une discipline de vie. Les séances sont exigeantes mais toujours bienveillantes.",
-        name: "Laurent M.",
-        role: "Dirigeant d'entreprise",
-    },
-    {
-        quote: "Le studio Bis Repetita est un écrin. L'ambiance, les équipements, l'encadrement — tout est pensé pour vous pousser à donner le meilleur de vous-même.",
-        name: "Sophie D.",
-        role: "Avocate",
-    },
-    {
-        quote: "Les séances corporate ont eu un impact énorme sur la cohésion de notre équipe. Un format original et ultra-efficace.",
-        name: "Marc T.",
-        role: "CEO, startup tech",
-    },
-    {
-        quote: "Un cadre exceptionnel et un coach hors pair. Je recommande à 100%.",
-        name: "Claire B.",
-        role: "Médecin",
-    },
-    {
-        quote: "La méthode Round by Round est addictive. On progresse sans s'en rendre compte.",
-        name: "Thomas R.",
-        role: "Entrepreneur",
-    },
-    {
-        quote: "Après 6 mois chez Bis Repetita, j'ai gagné en confiance, en posture et en énergie. Le coaching privé est d'une qualité rare.",
-        name: "Julie F.",
-        role: "Architecte",
-    },
-    {
-        quote: "Je cherchais un sport exigeant mais accessible. La boxe avec Nicolas, c'est exactement ça. On se dépasse à chaque séance.",
-        name: "Antoine G.",
-        role: "Consultant",
-    },
-    {
-        quote: "Mes enfants adorent les cours juniors. Nicolas sait transmettre les valeurs du ring avec pédagogie et bienveillance.",
-        name: "Nathalie P.",
-        role: "Mère de famille",
-    },
-    {
-        quote: "L'approche est unique : technique, mental, physique. Tout est lié. On ressort de chaque séance transformé.",
-        name: "David K.",
-        role: "Banquier",
-    },
+const formats = [
+    { t: "Coaching solo", d: "Un coach, une personne. Le contenu suit vos objectifs.", m: "1 pers. · CHF 120", href: "/services/coaching-solo", img: "portrait" },
+    { t: "Duo & Trio", d: "À deux ou trois : le coût se partage, le suivi reste individuel.", m: "2–3 pers. · dès CHF 140", href: "/services/coaching-duo-trio", img: "duo" },
+    { t: "Small Group", d: "L'énergie d'un groupe, la précision d'un cours privé.", m: "4–8 pers.", href: "/services/small-group-training", img: "groupe" },
+    { t: "Round by Round", d: "Le cours collectif, structuré en rounds.", m: "8 max · CHF 40", href: "/services/round-by-round", img: "pattes" },
+    { t: "À domicile", d: "Le coach et le matériel viennent chez vous, partout à Genève.", m: "dès CHF 150", href: "/services/coaching-boxe-domicile", img: "ambiance" },
+    { t: "Boxe femme", d: "Cadre privé, intensité ajustée, aucun contact imposé.", m: "Tous formats", href: "/services/boxe-femme", img: "portrait" },
+    { t: "Corporate", d: "Team building et programmes réguliers pour les entreprises.", m: "Sur devis", href: "/services/corporate", img: "groupe" },
+    { t: "Coaching privé", d: "Comparer les formats privés et choisir le vôtre.", m: "Guide", href: "/services/coaching-prive", img: "duo" },
+];
+const followImages = [
+    { key: "portrait", src: coursPortrait },
+    { key: "duo", src: lionelNicolas },
+    { key: "groupe", src: cours2Landscape },
+    { key: "pattes", src: imageCta },
+    { key: "ambiance", src: ambianceBis },
+];
+
+const steps = [
+    { t: "L'échange", d: "Vos objectifs, votre passé sportif, vos limites. Avant de boxer, on vous écoute." },
+    { t: "L'échauffement", d: "Le coach observe le souffle, les appuis et la coordination du jour." },
+    { t: "Le contenu", d: "Technique, rounds au sac ou aux pattes, travail physique : dosés selon ce qu'il a vu." },
+    { t: "Le retour", d: "Un feedback précis, et ce que vous répéterez la prochaine fois." },
 ];
 ---
 
@@ -121,183 +87,325 @@ const testimonials = [
         <Schema type="WebSite" />
         <Schema type="Organization" />
         <Schema type="SportsActivityLocation" />
+        <link rel="preload" as="image" href="/images/studio-nb-poster.jpg" />
     </Fragment>
-    <Hero
-        title={`Coaching de <br class="hidden md:block" /> <span class="text-primary">boxe sur mesure</span> à Genève`}
-        description="Studio de boxe sur mesure à Genève — coaching privé, cours collectifs et programmes corporate. Méthode éprouvée, résultats mesurables."
-        videoSrc="/videos/video-bg.mp4"
-        lightOverlay={true}
-        actions={[
-            {
-                text: "Réserver une séance",
-                href: "#planning",
-                variant: "primary",
-                icon: "lucide:arrow-right",
-            },
-            {
-                text: "Découvrir le studio",
-                href: "/studio",
-                variant: "secondary",
-                icon: "lucide:play",
-                ariaLabel: "En savoir plus sur le studio",
-            },
-        ]}
-        socialProof={{
-            avatars: [
-                "https://i.pravatar.cc/80?img=12",
-                "https://i.pravatar.cc/80?img=32",
-                "https://i.pravatar.cc/80?img=47",
-            ],
-            badge: "10K+",
-            text: "99% de nos clients ont atteint leurs objectifs",
-        }}
-    />
 
-    <Stats
-        stats={stats}
-        badge="Notre expertise"
-        intro="Chez Bis Repetita, nous sommes une équipe de passionnés qui accompagnent plus de 100 athlètes à révéler leur potentiel, atteindre leurs objectifs et élever leur performance."
-    />
-
-    <Container class="py-16 md:py-24">
-        <SectionTitle
-            badge="Nos services"
-            title="Une approche <span class='text-primary'>complète</span>"
-            class="mb-12"
-        />
-        <div class="grid gap-8 md:grid-cols-3 gsap-stagger-cards">
-            {services.map((service, i) => (
-                <ServiceCard service={service} index={i + 1} />
-            ))}
+    <!-- Premier écran -->
+    <section class="home-hero">
+        <div class="wrap hh-top">
+            <h1 class="t-display hh-title" data-split>
+                Coaching de boxe <span class="text-primary">sur mesure</span> à Genève
+            </h1>
+            <div class="hh-side">
+                <p>Studio privé à Genève. Cours privés, cours collectifs Round by Round et programmes pour les entreprises.</p>
+                <div class="hh-actions">
+                    <a href="#planning" class="btn btn-solid">Réserver une séance <Fragment set:html={arrow} /></a>
+                    <a href="/services" class="btn btn-line">Les cours</a>
+                </div>
+            </div>
         </div>
-        <div class="text-center mt-10">
-            <a
-                href="/services"
-                class="inline-flex items-center gap-2 text-primary font-medium hover:underline transition-colors"
+        <div class="wrap hh-mark" aria-hidden="true">
+            <img src="/logo-black.svg" alt="" width="1600" height="234" />
+        </div>
+        <div class="hh-media" data-clip-grow>
+            <video
+                class="photo"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="/images/studio-nb-poster.jpg"
+                aria-label="Séance de boxe au studio Bis Repetita"
             >
-                Voir tous nos programmes
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-            </a>
+                <source src="/videos/studio-nb.mp4" type="video/mp4" />
+            </video>
+            <button type="button" class="hh-play" aria-label="Mettre la vidéo en pause" data-video-toggle>Pause</button>
         </div>
-    </Container>
+    </section>
 
-    {/* Tous nos formats — maillage interne home → 7 services */}
-    <Container class="pb-16 md:pb-24" id="tous-formats">
-        <SectionTitle
-            badge="Tous nos formats"
-            title="Solo, duo, petit groupe, à domicile, ou en entreprise"
-            class="mb-12"
-        />
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <a href="/services/coaching-solo" class="block p-6 rounded-2xl border border-border hover:border-primary transition-colors">
-                <h3 class="text-lg font-display font-medium mb-2">Coaching Solo</h3>
-                <p class="text-sm text-foreground/70">Séances 1-on-1 avec Nicolas, 100 % personnalisées.</p>
+    <!-- Promesse -->
+    <section class="section wrap promise">
+        <p class="t-lead promise-lead gsap-reveal">
+            Nous mettons la boxe au service de vos objectifs.
+            <span class="soft">Le format, le contenu et l'intensité s'adaptent à votre niveau et à votre état du jour. Pas de programme générique recyclé.</span>
+        </p>
+        <dl class="facts gsap-stagger-cards">
+            {facts.map((f) => (
+                <div class="fact"><dt>{f.k}</dt><dd>{f.v}</dd></div>
+            ))}
+        </dl>
+    </section>
+
+    <!-- Deux portes -->
+    <section class="wrap doors" aria-labelledby="doors-title">
+        <h2 id="doors-title" class="sr-only">Deux façons de boxer</h2>
+        {doors.map((d) => (
+            <a href={d.href} class="door">
+                <div class="door-img nb" data-photo-reveal>
+                    <Image src={d.image} alt={d.alt} widths={[600, 900, 1300]} sizes="(max-width: 760px) 100vw, 48vw" loading="lazy" />
+                </div>
+                <div class="door-head">
+                    <h3 class="t-title">{d.title}</h3>
+                    <span class="door-arrow" set:html={arrowUp} />
+                </div>
+                <p class="door-text">{d.text}</p>
+                <dl class="door-rows">
+                    {d.rows.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
+                </dl>
             </a>
-            <a href="/services/coaching-duo-trio" class="block p-6 rounded-2xl border border-border hover:border-primary transition-colors">
-                <h3 class="text-lg font-display font-medium mb-2">Duo & Trio</h3>
-                <p class="text-sm text-foreground/70">Coaching privé à deux ou trois, coût partagé.</p>
-            </a>
-            <a href="/services/small-group-training" class="block p-6 rounded-2xl border border-border hover:border-primary transition-colors">
-                <h3 class="text-lg font-display font-medium mb-2">Small Group</h3>
-                <p class="text-sm text-foreground/70">6 personnes max, format intermédiaire entre privé et collectif.</p>
-            </a>
-            <a href="/services/coaching-boxe-domicile" class="block p-6 rounded-2xl border border-border hover:border-primary transition-colors">
-                <h3 class="text-lg font-display font-medium mb-2">À Domicile</h3>
-                <p class="text-sm text-foreground/70">Le coach et le matériel viennent chez vous, dans tout Genève.</p>
-            </a>
-            <a href="/services/boxe-femme" class="block p-6 rounded-2xl border border-border hover:border-primary transition-colors">
-                <h3 class="text-lg font-display font-medium mb-2">Boxe Femme</h3>
-                <p class="text-sm text-foreground/70">Cadre privé, sans contact, sans regard masculin.</p>
-            </a>
-            <a href="/services/round-by-round" class="block p-6 rounded-2xl border border-border hover:border-primary transition-colors">
-                <h3 class="text-lg font-display font-medium mb-2">Round by Round</h3>
-                <p class="text-sm text-foreground/70">Cours collectif 8 max, 1 coach, 40 CHF la séance.</p>
-            </a>
-            <a href="/services/corporate" class="block p-6 rounded-2xl border border-border hover:border-primary transition-colors">
-                <h3 class="text-lg font-display font-medium mb-2">Corporate</h3>
-                <p class="text-sm text-foreground/70">Team building et programmes bien-être en entreprise.</p>
-            </a>
-            <a href="/services/coaching-prive" class="block p-6 rounded-2xl border border-border hover:border-primary transition-colors bg-card">
-                <h3 class="text-lg font-display font-medium mb-2">Coaching Privé — hub</h3>
-                <p class="text-sm text-foreground/70">Comparatif et guide pour choisir le bon format.</p>
-            </a>
+        ))}
+    </section>
+
+    <!-- Index des formats -->
+    <section class="section wrap index" id="tous-formats">
+        <div class="index-head">
+            <h2 class="t-title" data-split>Tous les formats</h2>
+            <a href="/tarifs" class="link-line t-meta-ink">Voir les tarifs</a>
         </div>
-    </Container>
+        <div class="index-list-wrap" data-follow>
+        <ul class="index-list">
+            {formats.map((f) => (
+                <li>
+                    <a href={f.href} class="index-row" data-preview={f.img}>
+                        <span class="ir-t">{f.t}</span>
+                        <span class="ir-d">{f.d}</span>
+                        <span class="ir-m">{f.m}</span>
+                        <span class="ir-a" set:html={arrow} />
+                    </a>
+                </li>
+            ))}
+        </ul>
+            <div class="follow-box nb" aria-hidden="true">
+                {followImages.map((im) => (
+                    <Image src={im.src} alt="" widths={[360, 540]} sizes="260px" data-key={im.key} loading="lazy" />
+                ))}
+            </div>
+        </div>
+    </section>
 
-    <!-- Fixed background image window -->
-    <div
-        class="h-[50vh] md:h-[60vh] bg-fixed bg-cover bg-center mt-16 md:mt-24"
-        style={`background-image: url('${coursLandscape.src}')`}
-        role="img"
-        aria-label="Studio Bis Repetita"
-    >
-        <div class="w-full h-full bg-black/40"></div>
-    </div>
+    <!-- Déroulé d'une séance -->
+    <section class="section method">
+        <div class="wrap method-grid">
+            <div class="method-head">
+                <h2 class="t-title" data-split>Comment se déroule une séance</h2>
+                <p>Le même fil pour un débutant et pour une pratiquante confirmée. Seul le contenu change.</p>
+                <a href="/cours-de-boxe-geneve" class="link-line">Débuter la boxe à Genève</a>
+            </div>
+            <ol class="steps">
+                {steps.map((s, i) => (
+                    <li class="step gsap-reveal">
+                        <span class="step-n">{i + 1}</span>
+                        <h3 class="t-subtitle">{s.t}</h3>
+                        <p>{s.d}</p>
+                    </li>
+                ))}
+            </ol>
+        </div>
+    </section>
 
-    <div class="py-16 md:py-24">
-    <GsapReveal animation="fadeUp">
-        <ContentShowcase
-            tagline="Philosophie"
-            title="La répétition mène à la maîtrise"
-            items={[
-                {
-                    title: "Discipline & Rigueur",
-                    description:
-                        "Chaque séance est construite autour de fondamentaux techniques répétés jusqu'à l'excellence.",
-                    icon: "lucide:shield",
-                },
-                {
-                    title: "Encadrement Sur Mesure",
-                    description:
-                        "Un suivi personnalisé dans un studio privé, par une équipe formée aux plus hauts standards de la boxe anglaise.",
-                    icon: "lucide:crown",
-                },
-                {
-                    title: "Résultats Mesurables",
-                    description:
-                        "Condition physique, confiance en soi, gestion du stress — des bénéfices concrets dès les premières séances.",
-                    icon: "lucide:trending-up",
-                },
-            ]}
-        >
-            <Fragment>
-                <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2 font-display">
-                    Bis Repetita — <span class="text-primary">la voie de l'excellence</span>
-                </h3>
-                La boxe est bien plus qu'un sport de combat. C'est une école de vie qui enseigne la discipline, le respect et le dépassement de soi. Au studio Bis Repetita, nous cultivons cette philosophie dans un cadre d'exception.
-            </Fragment>
-        </ContentShowcase>
-    </GsapReveal>
-    </div>
+    <!-- Le studio, en photo -->
+    <section class="studio-band nb" data-parallax>
+        <Image src={homepage} alt="Travail aux pattes d'ours dans la salle du studio Bis Repetita" widths={[1024, 1600, 2400]} sizes="100vw" loading="lazy" />
+        <div class="wrap studio-caption">
+            <p class="t-subtitle">Un studio privé, au calme,<br />au cœur de Genève.</p>
+            <a href="/studio" class="btn btn-light">Visiter le studio</a>
+        </div>
+    </section>
 
-    {/* <GsapReveal animation="fadeUp">
-        <Testimonials
-            tagline="Témoignages"
-            title="Ce que disent nos clients"
-            testimonials={testimonials}
-            rating={{ score: "4.8", stars: 5, count: "500+", source: "Google" }}
-        />
-    </GsapReveal> */}
+    <!-- Planning -->
+    <ZenamuCalendar
+        id="planning"
+        title="Réservez votre créneau"
+        subtitle="Choisissez une séance dans la semaine. La réservation se fait sur notre plateforme."
+    />
 
-    <GsapReveal animation="fadeUp">
-        <ZenamuCalendar id="planning" />
-    </GsapReveal>
+    <!-- Offrir -->
+    <section class="wrap gift-wrap">
+        <div class="gift">
+            <div class="gift-copy">
+                <h2 class="t-title" data-split>Offrir un cours</h2>
+                <p>Un cours de boxe avec Nicolas, à offrir à quelqu'un. Écrivez-nous : nous préparons la séance avec vous.</p>
+                <a href="/offrir-un-cours" class="btn btn-solid">Offrir un cours <Fragment set:html={arrow} /></a>
+            </div>
+            <div class="gift-img nb" data-photo-reveal>
+                <Image src={lionelNicolas} alt="Deux coachs échangent au bord du ring" widths={[600, 900]} sizes="(max-width: 760px) 100vw, 40vw" loading="lazy" />
+            </div>
+        </div>
+    </section>
 
-    <GsapReveal animation="fadeUp">
-        <RelatedArticles
-            title="Nos derniers articles"
-            badge="Blog"
-        />
-    </GsapReveal>
-
-    <GsapReveal animation="fadeUp">
-        <CTABanner
-            title="Prêt à enfiler les gants et vous dépasser ?"
-            subtitle="Votre premier round"
-            cta={{ text: "Réserver", href: "#planning" }}
-            variant="brushed-full"
-        />
-    </GsapReveal>
+    <RelatedArticles title="Journal" badge="Blog" />
 </BaseLayout>
+
+<style>
+    /* Premier écran */
+    .home-hero { padding-top: clamp(40px, 6vw, 96px); }
+    .hh-top {
+        display: grid;
+        grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+        gap: 28px clamp(32px, 6vw, 120px);
+        align-items: end;
+    }
+    .hh-title { max-width: 12ch; }
+    .hh-side { max-width: 420px; display: grid; gap: 24px; font-size: 17px; color: var(--gray-1); }
+    .hh-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .hh-mark { margin-top: clamp(40px, 6vw, 96px); }
+    .hh-mark img { width: 100%; height: auto; display: block; }
+    .hh-media {
+        position: relative;
+        margin-top: clamp(20px, 2.4vw, 36px);
+        height: min(86vh, 56vw);
+        overflow: hidden;
+        background: var(--ink);
+    }
+    .hh-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hh-play {
+        position: absolute;
+        right: calc(var(--gutter) + 16px);
+        bottom: 16px;
+        color: #fff;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        padding: 6px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 999px;
+        transition: background 0.3s;
+    }
+    .hh-play:hover { background: rgba(255, 255, 255, 0.15); }
+
+    /* Promesse */
+    .promise { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(40px, 8vw, 160px); align-items: start; }
+    .promise-lead { max-width: 24ch; }
+    .facts { border-top: 1px solid var(--line); }
+    .fact { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+    .fact dt { color: var(--gray-2); }
+    .fact dd { text-align: right; }
+
+    /* Deux portes */
+    .doors { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 2vw, 32px); }
+    .door { display: block; }
+    .door-img { aspect-ratio: 4 / 5; overflow: hidden; background: var(--surface); }
+    .door-img :global(img) { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--ease-out-expo); }
+    .door:hover .door-img :global(img) { transform: scale(1.035); }
+    .door-head { display: flex; justify-content: space-between; align-items: center; margin-top: 24px; }
+    .door-arrow { transition: transform 0.5s var(--ease-out-expo); }
+    .door:hover .door-arrow { transform: translate(3px, -3px); }
+    .door-text { margin-top: 12px; max-width: 46ch; color: var(--gray-1); font-size: 16px; }
+    .door-rows { margin-top: 24px; border-top: 1px solid var(--line); font-size: 14px; }
+    .door-rows div { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .door-rows dt { color: var(--gray-2); }
+
+    /* Index */
+    .index-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: clamp(32px, 4vw, 56px); }
+    .t-meta-ink { font-size: 14px; }
+    .index-list-wrap { position: relative; }
+    .index-list { border-top: 1px solid var(--ink); }
+    .index-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) minmax(0, 0.7fr) 20px;
+        gap: 24px;
+        align-items: baseline;
+        padding: 22px 0;
+        border-bottom: 1px solid var(--line);
+        transition: padding 0.6s var(--ease-out-expo), color 0.4s;
+    }
+    .ir-t { font-size: clamp(1.375rem, 2.2vw, 2rem); font-weight: 500; letter-spacing: var(--track-title); line-height: 1.1; }
+    .ir-d { color: var(--gray-1); font-size: 15px; }
+    .ir-m { color: var(--gray-2); font-size: 14px; text-align: right; font-variant-numeric: tabular-nums; }
+    .ir-a { justify-self: end; opacity: 0; transform: translateX(-6px); transition: opacity 0.4s, transform 0.5s var(--ease-out-expo); }
+    .index-row:hover, .index-row:focus-visible { padding-left: 14px; }
+    .index-row:hover .ir-a, .index-row:focus-visible .ir-a { opacity: 1; transform: none; }
+    .index-list:has(.index-row:hover) .index-row:not(:hover) { color: var(--gray-3); }
+    .index-list:has(.index-row:hover) .index-row:not(:hover) .ir-d,
+    .index-list:has(.index-row:hover) .index-row:not(:hover) .ir-m { color: var(--gray-3); }
+
+    .follow-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 240px;
+        aspect-ratio: 4 / 5;
+        margin: -150px 0 0 -120px;
+        overflow: hidden;
+        pointer-events: none;
+        opacity: 0;
+        scale: 0.92;
+        transition: opacity 0.4s, scale 0.6s var(--ease-out-expo);
+        z-index: 2;
+    }
+    .follow-box.is-on { opacity: 1; scale: 1; }
+    .follow-box :global(img) { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.35s; }
+    .follow-box :global(img.is-on) { opacity: 1; }
+
+    /* Méthode */
+    .method { background: var(--surface); }
+    .method-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: clamp(40px, 8vw, 160px); }
+    .method-head { position: sticky; top: calc(var(--nav-h) + 32px); align-self: start; display: grid; gap: 20px; justify-items: start; }
+    .method-head p { color: var(--gray-1); max-width: 38ch; }
+    .steps { border-top: 1px solid var(--line); }
+    .step {
+        display: grid;
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 6px 16px;
+        padding: clamp(28px, 3vw, 44px) 0;
+        border-bottom: 1px solid #e2e2e2;
+    }
+    .step-n { grid-row: span 2; font-size: 14px; color: var(--gray-2); font-variant-numeric: tabular-nums; padding-top: 6px; }
+    .step p { color: var(--gray-1); max-width: 46ch; }
+
+    /* Bande studio */
+    .studio-band { position: relative; height: min(92vh, 62vw); min-height: 460px; overflow: hidden; color: #fff; background: var(--ink); }
+    .studio-band :global(img) { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .studio-band::after { content: ""; position: absolute; inset: 50% 0 0 0; background: linear-gradient(transparent, rgba(0, 0, 0, 0.55)); }
+    .studio-caption {
+        position: absolute;
+        inset: auto 0 clamp(24px, 4vw, 56px) 0;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 24px;
+    }
+
+    /* Offrir */
+    .gift-wrap { padding-bottom: var(--section); }
+    .gift { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 120px); align-items: center; border-top: 1px solid var(--line); padding-top: var(--section); }
+    .gift-copy { display: grid; gap: 22px; justify-items: start; max-width: 460px; }
+    .gift-copy p { color: var(--gray-1); font-size: 17px; }
+    .gift-img { aspect-ratio: 5 / 4; overflow: hidden; }
+    .gift-img :global(img) { width: 100%; height: 100%; object-fit: cover; }
+
+    @media (max-width: 860px) {
+        .hh-top, .promise, .method-grid, .gift { grid-template-columns: 1fr; }
+        .hh-media { height: 72vh; }
+        .doors { grid-template-columns: 1fr; gap: 56px; }
+        .index-row { grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; }
+        .ir-d { grid-column: 1 / -1; grid-row: 2; }
+        .ir-a { display: none; }
+        .method-head { position: static; }
+        .studio-caption { flex-direction: column; align-items: flex-start; }
+    }
+</style>
+
+<script>
+    function setupHomeVideo() {
+        const btn = document.querySelector<HTMLButtonElement>("[data-video-toggle]");
+        const video = btn?.parentElement?.querySelector("video");
+        if (!btn || !video || btn.dataset.ready) return;
+        btn.dataset.ready = "1";
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            video.pause();
+            video.removeAttribute("autoplay");
+        }
+        const sync = () => {
+            btn.textContent = video.paused ? "Lecture" : "Pause";
+            btn.setAttribute("aria-label", video.paused ? "Lire la vidéo" : "Mettre la vidéo en pause");
+        };
+        btn.addEventListener("click", () => (video.paused ? video.play() : video.pause()));
+        video.addEventListener("play", sync);
+        video.addEventListener("pause", sync);
+        sync();
+    }
+    setupHomeVideo();
+    document.addEventListener("astro:page-load", setupHomeVideo);
+</script>
