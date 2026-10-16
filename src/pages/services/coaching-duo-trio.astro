@@ -1,19 +1,17 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Hero from "../../components/widgets/Hero.astro";
-import Stats from "../../components/widgets/Stats.astro";
 import SplitShowcase from "../../components/widgets/SplitShowcase.astro";
 import ContentShowcase from "../../components/widgets/ContentShowcase.astro";
 import Features from "../../components/widgets/Features.astro";
 import PricingTable from "../../components/widgets/PricingTable.astro";
 import FAQ from "../../components/widgets/FAQ.astro";
-import CTABanner from "../../components/widgets/CTABanner.astro";
 import ZenamuCalendar from "../../components/widgets/ZenamuCalendar.astro";
 import RelatedServices from "../../components/widgets/RelatedServices.astro";
-import GsapReveal from "../../components/widgets/GsapReveal.astro";
 import Schema from "../../components/seo/Schema.astro";
 import ambianceBis from "../../assets/ambiance-bis-repetita.webp";
-import coursPortrait from "../../assets/cours-portrait.webp";
+import imageCta from "../../assets/image-cta.webp";
+import lionelNicolas from "../../assets/lionel-nicolas-boxe.webp";
 
 const metadata = {
     title: "Boxe en Duo & Trio à Genève",
@@ -21,47 +19,37 @@ const metadata = {
         "Boxe en duo ou trio à Genève. Entre amis, en couple ou entre collègues. Tarif partagé, coaching intact.",
 };
 
-const stats = [
-    {
-        value: "2–3",
-        label: "Participants",
-        description: "Le format idéal pour se motiver mutuellement tout en bénéficiant d'un coaching personnalisé.",
-    },
-    {
-        value: "60",
-        label: "Minutes par séance",
-        description: "Un entraînement complet partagé : échauffement, technique à deux, physique, bilan collectif.",
-    },
-    {
-        value: "20+",
-        label: "Années d'expérience",
-        description: "Des centaines de duos et trios coachés, de tous niveaux et de tous profils.",
-    },
+const facts = [
+    { k: "Participants", v: "2 ou 3 personnes" },
+    { k: "Durée", v: "60 minutes" },
+    { k: "Tarif", v: "Prix par séance, partagé" },
+    { k: "Niveau requis", v: "Aucun, niveaux mélangés possibles" },
+    { k: "Matériel", v: "Gants et bandes fournis" },
 ];
 
 const features = [
     {
         title: "Émulation naturelle",
         description:
-            "S'entraîner à deux ou trois crée une dynamique de dépassement. Vous vous tirez vers le haut mutuellement, round après round.",
+            "À deux ou trois, on se motive l'un l'autre, round après round.",
         icon: "lucide:flame",
     },
     {
         title: "Coaching toujours personnalisé",
         description:
-            "Même à deux ou trois, les exercices sont adaptés au niveau de chacun. Personne n'est laissé de côté, personne ne s'ennuie.",
+            "Même à deux ou trois, les exercices sont adaptés au niveau de chacun.",
         icon: "lucide:settings",
     },
     {
-        title: "Tarif partagé, qualité intacte",
+        title: "Tarif partagé",
         description:
-            "Le prix par personne diminue, mais l'exigence du coaching reste identique. Un excellent rapport qualité-investissement.",
+            "Le prix de la séance se partage. L'exigence du coaching reste la même.",
         icon: "lucide:wallet",
     },
     {
-        title: "Convivialité garantie",
+        title: "Un moment partagé",
         description:
-            "On partage l'effort, on partage les progrès. Le duo & trio transforme l'entraînement en moment de complicité.",
+            "On partage l'effort et les progrès. L'entraînement devient un rendez-vous commun.",
         icon: "lucide:smile",
     },
 ];
@@ -78,23 +66,21 @@ const tiers = [
             "Programme adapté à chacun",
             "Matériel fourni",
         ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
+        cta: { text: "Réserver une séance", href: "#planning" },
     },
     {
         name: "Séance trio",
-        description: "L'émulation à trois, le coaching en plus.",
+        description: "S'entraîner à trois avec un coaching personnalisé.",
         price: "CHF 160.-",
         priceNote: "/ séance (prix total)",
         highlighted: true,
-        popularLabel: "Populaire",
         features: [
             "60 minutes de coaching",
             "3 participants",
             "Programme adapté au groupe",
             "Matériel fourni",
-            "Dynamique de groupe optimale",
         ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
+        cta: { text: "Réserver une séance", href: "#planning" },
     },
 ];
 
@@ -109,7 +95,7 @@ const faqs = [
     },
     {
         question: "Quelle est la différence avec les autres formats de coaching privé ?",
-        answer: "Le duo & trio offre une dimension d'émulation et de partage, avec un tarif par personne plus accessible que le solo. D'autres formats existent selon vos besoins. <a href='/services/coaching-prive' class='text-primary hover:underline'>Comparez les 3 formats de coaching privé</a> pour choisir le vôtre.",
+        answer: "Le duo & trio offre une dimension d'émulation et de partage, avec un tarif par personne plus accessible que le solo. D'autres formats existent selon vos besoins. <a href='/services/coaching-prive' class='link-line'>Comparez les 3 formats de coaching privé</a> pour choisir le vôtre.",
     },
     {
         question: "Comment se déroule une séance duo ou trio ?",
@@ -117,7 +103,7 @@ const faqs = [
     },
     {
         question: "Quels sont les tarifs du coaching duo & trio ?",
-        answer: "Le duo est facturé par séance (prix global, pas par personne), ce qui rend le coaching partagé très accessible. Packs de séances disponibles avec tarif dégressif. Consultez nos <a href='/tarifs' class='text-primary hover:underline'>tarifs détaillés</a> ou <a href='/contact' class='text-primary hover:underline'>contactez-nous</a>.",
+        answer: "Le duo est facturé par séance (prix global, pas par personne), ce qui rend le coaching partagé très accessible. Packs de séances disponibles avec tarif dégressif. Consultez nos <a href='/tarifs' class='link-line'>tarifs détaillés</a> ou <a href='/contact' class='link-line'>contactez-nous</a>.",
     },
 ];
 ---
@@ -154,140 +140,97 @@ const faqs = [
             }}
         />
     </Fragment>
-
-    {/* S1 — Hero */}
     <Hero
-        title={`Coaching <span class="font-display text-primary">Duo & Trio</span> à Genève`}
-        description="Progressez ensemble. La boxe anglaise à deux ou trois, avec un coaching sur mesure au studio Bis Repetita — dans un cadre privé au cœur de Genève."
+        title={`Coaching <span class="text-primary">Duo & Trio</span> à Genève`}
+        description="La boxe anglaise à deux ou trois, avec un coaching sur mesure. Dans un studio privé au cœur de Genève."
         locationBadge={{ text: "La Voie-Creuse 16, 1202 Genève" }}
+        image={imageCta}
+        imageAlt="Deux boxeurs travaillent aux pattes d'ours au studio"
         actions={[
-            {
-                text: "Réserver une séance d'essai",
-                href: "/cours-gratuit",
-                variant: "primary",
-                icon: "lucide:arrow-right",
-            },
-            {
-                text: "Voir les tarifs",
-                href: "/tarifs",
-                variant: "secondary",
-            },
+            { text: "Réserver une séance", href: "#planning" },
+            { text: "Voir les tarifs", href: "/tarifs" },
         ]}
-        ctaStyle="outline-gold"
-        classes={{ container: "min-h-[80vh]" }}
     />
-
-    {/* S2 — Stats */}
-    <Stats
-        stats={stats}
-        badge="Coaching partagé"
-        badgeHref="#deroulement"
-        intro="Le duo & trio, c'est l'équilibre parfait entre personnalisation et émulation — un coaching sur mesure partagé avec votre partenaire d'entraînement."
-    />
-
-    {/* S3 — SplitShowcase — Comment ça se passe ? */}
-    <GsapReveal animation="fadeUp">
+    <section class="section wrap intro">
+        <p class="t-lead intro-lead">
+            Un coaching sur mesure, partagé avec votre partenaire d'entraînement.
+            <span class="soft">Le suivi reste individuel, le prix de la séance se partage.</span>
+        </p>
+        <dl class="facts">
+            {facts.map((f) => (
+                <div><dt>{f.k}</dt><dd>{f.v}</dd></div>
+            ))}
+        </dl>
+    </section>
         <SplitShowcase
             id="deroulement"
-            tagline="Comment ça se passe ?"
             title="Une séance structurée, enrichie par le groupe"
             image={ambianceBis}
-            imageAlt="Coaching duo boxe anglaise Genève — Bis Repetita"
+            imageAlt="Échauffement à la corde à sauter au studio Bis Repetita"
             items={[
                 {
                     title: "Échauffement collectif",
-                    description: "On démarre ensemble : mobilité, corde à sauter, shadow boxing. Le groupe se met en condition physique et mentale pour la séance.",
+                    description: "Mobilité, corde à sauter, shadow boxing. On démarre ensemble.",
                 },
                 {
                     title: "Technique à deux",
-                    description: "Travail de réaction, enchaînements croisés, exercices en miroir. Le partenaire ajoute une dimension que le solo ne peut pas offrir.",
+                    description: "Travail de réaction, enchaînements croisés, exercices en miroir. Le partenaire apporte ce que le solo n'a pas.",
                 },
                 {
                     title: "Challenge physique partagé",
-                    description: "Circuit training en binôme, défis chronométrés. L'émulation naturelle pousse chacun à se dépasser — sans esprit de compétition toxique.",
+                    description: "Circuit en binôme, défis chronométrés. Chacun à son niveau, sans esprit de compétition.",
                 },
             ]}
         />
-    </GsapReveal>
-
-    {/* S4 — PricingTable (REMONTÉ) */}
-    <GsapReveal animation="fadeUp">
         <PricingTable
-            tagline="Tarifs"
             title="Formules duo & trio"
             tiers={tiers}
             columns={2}
         />
-        <div class="text-center -mt-8 mb-8 max-w-xl mx-auto px-6">
-            <p class="text-primary font-medium mb-1">🎁 Votre première séance est offerte</p>
-            <p class="text-muted-foreground text-sm mb-3">Découvrez notre approche sans engagement. Si l'expérience vous plaît, un partage de votre ressenti sur Google aide d'autres sportifs à nous trouver.</p>
-            <a href="/cours-gratuit" class="text-primary hover:underline text-sm font-medium">
-                Réserver mon essai &rarr;
-            </a>
-        </div>
-    </GsapReveal>
-
-    {/* S5 — Features — Pourquoi à deux ? */}
-    <GsapReveal animation="fadeUp">
         <Features
             id="avantages"
-            tagline="Pourquoi à deux ?"
-            title="Les avantages du coaching partagé"
+            title="Pourquoi à deux ou à trois ?"
             features={features}
             columns={3}
         />
-    </GsapReveal>
-
-    {/* S6 — ContentShowcase — Ni collectif, ni solo */}
-    <GsapReveal animation="fadeUp">
         <ContentShowcase
-            tagline="Le juste milieu"
-            title="Ni collectif, ni solo : le meilleur des deux"
-            image={coursPortrait}
-            imageAlt="Coaching duo boxe Genève — entraînement partagé"
+            title="Entre le cours collectif et le solo"
+            image={lionelNicolas}
+            imageAlt="Deux coachs échangent au bord du ring"
             isReversed={true}
             items={[
                 {
                     title: "Plus qu'un cours collectif",
-                    description: "Pas de groupes anonymes, pas de coach partagé entre 15 personnes. Ici, votre coach connaît chacun par son nom, ses forces, ses axes de progrès.",
+                    description: "Le coach connaît chacun : son niveau, ses points forts, ce qu'il doit travailler.",
                 },
                 {
                     title: "Plus accessible que le solo",
-                    description: "Le tarif par personne est plus bas qu'en coaching individuel, pour une qualité d'encadrement qui reste sur mesure. Un investissement intelligent.",
+                    description: "Le tarif par personne est plus bas qu'en coaching individuel. L'encadrement reste sur mesure.",
                 },
                 {
                     title: "L'engagement mutuel",
-                    description: "Quand on s'engage à deux, on annule moins. Le partenaire d'entraînement est le meilleur garant de votre régularité.",
+                    description: "À deux, on annule moins. Le partenaire aide à tenir le rythme.",
                 },
             ]}
         />
-    </GsapReveal>
-
-    {/* S7 — RelatedServices */}
     <RelatedServices currentSlug="coaching-duo-trio" />
-
-    {/* S8 — FAQ */}
-    <GsapReveal animation="fadeUp">
         <FAQ
             id="faq"
             title="Questions fréquentes"
-            subtitle="Tout ce que vous devez savoir sur le coaching duo & trio à Genève."
+            subtitle="Le coaching duo & trio à Genève, en pratique."
             items={faqs}
         />
-    </GsapReveal>
-
-    {/* Calendrier Zenamu */}
-    <GsapReveal animation="fadeUp">
-        <ZenamuCalendar />
-    </GsapReveal>
-
-    {/* S9 — CTABanner */}
-    <GsapReveal animation="fadeUp">
-        <CTABanner
-            variant="brushed-full"
-            title="Prêts à vous entraîner ensemble ?"
-            subtitle="Coaching duo & trio"
-            cta={{ text: "Réserver", href: "/cours-gratuit" }}
-        />
-    </GsapReveal>
+        <ZenamuCalendar id="planning" title="Réserver une séance duo ou trio" />
 </BaseLayout>
+
+<style>
+    .intro { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(40px, 8vw, 160px); align-items: start; }
+    .intro-lead { max-width: 24ch; }
+    .facts { border-top: 1px solid var(--line); }
+    .facts div { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+    .facts dt { color: var(--gray-2); }
+    .facts dd { text-align: right; }
+    @media (max-width: 860px) {
+        .intro { grid-template-columns: 1fr; }
+    }
+</style>

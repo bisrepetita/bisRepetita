@@ -3,16 +3,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/widgets/Hero.astro";
 import PricingNav from "../components/widgets/PricingNav.astro";
 import QuizFormule from "../components/widgets/QuizFormule.astro";
-import PricingTable from "../components/widgets/PricingTable.astro";
-import Features from "../components/widgets/Features.astro";
 import FAQ from "../components/widgets/FAQ.astro";
-import CTABanner from "../components/widgets/CTABanner.astro";
-import GsapReveal from "../components/widgets/GsapReveal.astro";
-import WidgetWrapper from "../components/widgets/WidgetWrapper.astro";
-import Headline from "../components/ui/Headline.astro";
-import Button from "../components/ui/Button.astro";
 import Schema from "../components/seo/Schema.astro";
-import { Icon } from "astro-icon/components";
 import heroImage from "../assets/studio-interior.webp";
 
 const metadata = {
@@ -27,203 +19,82 @@ const navItems = [
     { label: "Duo & Trio", anchorId: "duo-trio" },
     { label: "Small Group", anchorId: "small-group" },
     { label: "Round by Round", anchorId: "boxe-groupe" },
+    { label: "À domicile", anchorId: "domicile" },
     { label: "Corporate", anchorId: "corporate" },
 ];
 
-// --- Coaching Privé 1:1 ---
-const soloTiers = [
+const arrow = `<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>`;
+
+// --- Carte des prix (source : docs/tarifs-reference.md) ---
+// pack: null = pas de pack 10 pour cette formule.
+const sections = [
     {
-        name: "Séance unité",
-        description: "Premier contact avec le coaching individuel.",
-        price: "CHF 120.-",
-        priceNote: "/ séance",
-        features: [
-            "60 minutes de coaching",
-            "1 participant",
-            "Bilan personnalisé",
-            "Matériel fourni",
-            "Sans engagement",
-        ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
+        id: "solo",
+        title: "Coaching privé : tarifs des séances individuelles à Genève",
+        text: "Chaque séance inclut un suivi personnalisé et s'adapte à votre état du jour.",
+        link: { href: "/services/coaching-solo", text: "Le coaching solo" },
+        rows: [{ f: "Solo", d: "1 personne · 60 min", s: "CHF 120", p: "CHF 1’100" }],
     },
     {
-        name: "Pack 10 séances",
-        description: "La formule pour progresser durablement.",
-        price: "CHF 1'100.-",
-        priceNote: "/ 10 séances",
-        highlighted: true,
-        popularLabel: "Recommandé",
-        features: [
-            "10 × 60 minutes",
-            "Programme personnalisé",
-            "Suivi de progression",
-            "Matériel fourni",
-            "Tarif préférentiel",
+        id: "duo-trio",
+        title: "Duo & Trio : tarifs du coaching partagé",
+        text: "La qualité du privé, à deux ou à trois. Prix total de la séance, à partager.",
+        link: { href: "/services/coaching-duo-trio", text: "Le coaching duo & trio" },
+        rows: [
+            { f: "Duo", d: "2 personnes · 60 min", s: "CHF 140", p: "CHF 1’300" },
+            { f: "Trio", d: "3 personnes · 60 min", s: "CHF 160", p: "CHF 1’500" },
         ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
+    },
+    {
+        id: "small-group",
+        title: "Small Group Training : tarifs petit groupe",
+        text: "De 4 à 8 personnes, pour que Nicolas puisse corriger chaque mouvement.",
+        link: { href: "/services/small-group-training", text: "Le small group training" },
+        // TODO prix par personne à confirmer par Nicolas (CHF 200 / 1’800 = tarif pour un groupe de 4).
+        rows: [{ f: "Small Group", d: "à partir de 4 personnes · 60 min", s: "CHF 200", p: "CHF 1’800" }],
+    },
+    {
+        id: "boxe-groupe",
+        title: "Cours collectifs Round by Round : tarifs boxe Genève",
+        text: "Ouvert à tous les niveaux, sans combat. Un coach, 8 personnes au plus.",
+        link: { href: "/services/round-by-round", text: "Le cours Round by Round" },
+        rows: [{ f: "Round by Round", d: "1 coach · 50 min · 8 personnes au plus", s: "CHF 40", p: null }],
+    },
+    {
+        id: "domicile",
+        title: "Coaching de boxe à domicile",
+        text: "Le coach et le matériel viennent chez vous, partout à Genève.",
+        link: { href: "/services/coaching-boxe-domicile", text: "Le coaching à domicile" },
+        rows: [{ f: "À domicile", d: "selon le lieu et le nombre de personnes", s: "dès CHF 150", p: null }],
     },
 ];
 
-// --- Duo & Trio ---
-const duoTiers = [
-    {
-        name: "Séance duo",
-        description: "Un coaching privé à deux.",
-        price: "CHF 140.-",
-        priceNote: "/ séance (prix total)",
-        features: [
-            "60 minutes de coaching",
-            "2 participants",
-            "Programme adapté au duo",
-            "Matériel fourni",
-            "Sans engagement",
-        ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
-    },
-    {
-        name: "Pack 10 duo",
-        description: "L'engagement partagé pour progresser ensemble.",
-        price: "CHF 1'300.-",
-        priceNote: "/ 10 séances",
-        highlighted: true,
-        popularLabel: "Recommandé",
-        features: [
-            "10 × 60 minutes",
-            "Programme personnalisé duo",
-            "Suivi de progression",
-            "Matériel fourni",
-            "Tarif préférentiel",
-        ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
-    },
-    {
-        name: "Séance trio",
-        description: "Trois complices, un coach dédié.",
-        price: "CHF 160.-",
-        priceNote: "/ séance (prix total)",
-        features: [
-            "60 minutes de coaching",
-            "3 participants",
-            "Programme adapté au groupe",
-            "Matériel fourni",
-            "Sans engagement",
-        ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
-    },
-    {
-        name: "Pack 10 trio",
-        description: "L'engagement partagé pour progresser à trois.",
-        price: "CHF 1'500.-",
-        priceNote: "/ 10 séances",
-        highlighted: true,
-        popularLabel: "Recommandé",
-        features: [
-            "10 × 60 minutes",
-            "Programme personnalisé trio",
-            "Suivi de progression",
-            "Matériel fourni",
-            "Tarif préférentiel",
-        ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
-    },
+const corporate = [
+    ["Pour", "Team building, bien-être, cohésion d'équipe"],
+    ["Lieu", "Au studio ou dans vos locaux, à Genève et environs"],
+    ["Formats", "Séance unique, programme récurrent ou événement"],
+    ["Matériel", "Fourni pour tous les participants"],
+    ["Tarif", "Sur devis"],
+    ["Facturation", "Entreprise, paiement à 30 jours"],
 ];
 
-// --- Small Group ---
-const smallGroupTiers = [
-    {
-        name: "Séance unité",
-        description: "Un cours small group à la carte.",
-        price: "CHF 200.-",
-        priceNote: "/ séance",
-        features: [
-            "60 minutes de coaching",
-            "4 participants",
-            "Programme structuré",
-            "Matériel fourni",
-        ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
-    },
-    {
-        name: "Pack 10 séances",
-        description: "L'engagement qui fait la différence.",
-        price: "CHF 1'800.-",
-        priceNote: "/ 10 séances",
-        highlighted: true,
-        popularLabel: "Recommandé",
-        features: [
-            "10 × 60 minutes",
-            "4 participants",
-            "Suivi de progression",
-            "Matériel fourni",
-            "Tarif préférentiel",
-        ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
-    },
-];
-
-// --- Round by Round ---
-const rbrTiers = [
-    {
-        name: "Séance unité",
-        description: "Un cours collectif Round by Round à la carte.",
-        price: "CHF 40.-",
-        priceNote: "/ séance",
-        features: [
-            "60 minutes de coaching",
-            "8 participants max",
-            "2 coachs",
-            "Matériel fourni",
-            "Sans engagement",
-        ],
-        cta: { text: "Réserver", href: "/cours-gratuit" },
-    },
-];
-
-// --- Features "Inclus" ---
-const features = [
-    {
-        title: "Matériel fourni",
-        description:
-            "Gants, bandes, protections — tout est inclus dans chaque séance. Venez simplement en tenue de sport.",
-        icon: "lucide:shield-check",
-    },
-    {
-        title: "Vestiaires & douches",
-        description:
-            "Le studio dispose de vestiaires et douches pour que vous puissiez vous entraîner avant ou après le travail.",
-        icon: "lucide:droplets",
-    },
-    {
-        title: "Séance d'essai offerte",
-        description:
-            "Testez gratuitement les cours Round by Round ou demandez un bilan initial pour le coaching privé.",
-        icon: "lucide:gift",
-    },
-    {
-        title: "Suivi personnalisé",
-        description:
-            "Chaque client bénéficie d'un programme adapté à ses objectifs, son niveau et ses contraintes.",
-        icon: "lucide:chart-line",
-    },
-    {
-        title: "Studio d'exception aux Pâquis",
-        description:
-            "Un espace exclusif au cœur de Genève, équipé de matériel professionnel haut de gamme.",
-        icon: "lucide:map-pin",
-    },
-    {
-        title: "Flexibilité totale",
-        description:
-            "Packs sans abonnement obligatoire, valables 6 mois. Annulation gratuite 24h à l'avance.",
-        icon: "lucide:calendar-check",
-    },
+// Conditions (la « première séance d'essai offerte » est retirée : l'offre n'existe plus).
+const conditions = [
+    ["Matériel", "Gants, bandes et protections fournis. Venez en tenue de sport."],
+    ["Vestiaires", "Vestiaires et douches sur place, avant ou après le travail."],
+    ["Suivi", "Un programme adapté à vos objectifs, à votre niveau et à vos contraintes."],
+    ["Packs", "Valables 6 mois dès la date d'achat. Sans abonnement."],
+    ["Annulation", "Gratuite jusqu'à 24 h avant la séance."],
+    ["Paiement", "Virement bancaire, Twint ou espèces."],
+    ["Prix", "En CHF, TTC."],
+    ["Studio", "La Voie-Creuse 16, 1202 Genève."],
 ];
 
 // --- FAQ enrichie ---
 const faqs = [
     {
         question: "Proposez-vous une séance d'essai ?",
-        answer: "Oui ! Les cours collectifs Round by Round incluent une première séance d'essai gratuite. Pour le coaching privé, nous proposons un bilan initial pour définir vos objectifs. <a href='/cours-gratuit' class='text-primary hover:underline'>Réservez votre séance d'essai</a>.",
+        answer: "Pour le coaching privé, la première séance commence par un bilan : vos objectifs, votre passé sportif, vos limites. Pour Round by Round, vous réservez directement un créneau. <a href='/#planning' class='link-line'>Voir le planning</a>.",
     },
     {
         question: "Les packs ont-ils une date d'expiration ?",
@@ -251,7 +122,7 @@ const faqs = [
     },
     {
         question: "Où se situe le studio ? Est-il facile d'accès depuis les Eaux-Vives, Plainpalais ou Cologny ?",
-        answer: "Le studio Bis Repetita est situé à La Voie-Creuse 16, 1202 Genève, dans le quartier des Pâquis. Facilement accessible en transports publics depuis les Eaux-Vives, Plainpalais, Cologny et Carouge (arrêt à proximité). Parking disponible à quelques minutes à pied. <a href='/contact#map' class='text-primary hover:underline'>Voir le plan d'accès</a>.",
+        answer: "Le studio Bis Repetita est situé à La Voie-Creuse 16, 1202 Genève. Facilement accessible en transports publics depuis les Eaux-Vives, Plainpalais, Cologny et Carouge (arrêt à proximité). Parking disponible à quelques minutes à pied. <a href='/contact#map' class='text-primary hover:underline'>Voir le plan d'accès</a>.",
     },
 ];
 
@@ -272,243 +143,139 @@ const offers = [
         <Schema type="BreadcrumbList" data={{ breadcrumbs: [{ name: "Accueil", href: "/" }, { name: "Tarifs", href: "/tarifs" }] }} />
     </Fragment>
 
-    <div class="theme-light">
-
-    {/* 1. Hero */}
     <Hero
-        title={`Tarifs et <span class="font-display text-primary">Formules</span>`}
-        description="Des formules transparentes et flexibles pour chaque objectif. Coaching privé, duo, petit groupe, cours collectifs ou programme corporate."
+        title={`Tarifs et <span class="text-primary">Formules</span>`}
+        description="Des prix clairs pour chaque format : coaching privé, duo, petit groupe, cours collectif, à domicile ou en entreprise."
         actions={[
-            {
-                text: "Réserver mon bilan initial",
-                href: "/cours-gratuit",
-                variant: "primary",
-                icon: "lucide:arrow-right",
-            },
+            { text: "Réserver une séance", href: "/#planning" },
+            { text: "Trouver ma formule", href: "#quiz" },
         ]}
         image={heroImage}
-        imageAlt="Studio de boxe Bis Repetita à Genève"
-        lightOverlay={true}
-        ctaStyle="dark"
-        classes={{ container: "min-h-[70vh]" }}
+        imageAlt="La salle du studio Bis Repetita à Genève"
     />
 
-    {/* 2. PricingNav (sticky) */}
     <PricingNav items={navItems} />
 
-    {/* 3. Quiz */}
-    <GsapReveal animation="fadeUp">
-        <QuizFormule />
-    </GsapReveal>
+    <QuizFormule />
 
-    {/* 4. Coaching Privé 1:1 — #solo */}
-    <GsapReveal animation="fadeUp">
-        <PricingTable
-            id="solo"
-            tagline="Coaching Privé"
-            title="Coaching Privé — Tarifs Séances Individuelles à Genève"
-            subtitle="Chaque séance inclut un suivi personnalisé et une adaptation constante."
-            tiers={soloTiers}
-        />
-        <div class="text-center -mt-8 mb-16">
-            <p class="text-primary font-medium mb-1">🎁 Votre première séance est offerte</p>
-            <p class="text-muted-foreground text-sm mb-3">Découvrez notre approche sans engagement. Si l'expérience vous plaît, un partage de votre ressenti sur Google aide d'autres sportifs à nous trouver.</p>
-            <a href="/cours-gratuit" class="text-primary hover:underline text-sm font-medium mb-4 inline-block">
-                Réserver mon essai &rarr;
-            </a>
-            <p class="text-muted-foreground italic mb-4">L'investissement ultime pour des résultats sans compromis.</p>
-            <a href="/services/coaching-solo" class="text-primary hover:underline text-sm font-medium">
-                En savoir plus sur le coaching solo &rarr;
-            </a>
-        </div>
-    </GsapReveal>
-
-    {/* 5. Duo & Trio — #duo-trio */}
-    <GsapReveal animation="fadeUp">
-        <PricingTable
-            id="duo-trio"
-            tagline="Duo & Trio"
-            title="Duo & Trio — Tarifs Coaching Partagé"
-            subtitle="La qualité du privé avec le plaisir du partage."
-            tiers={duoTiers}
-            columns={2}
-        />
-        <div class="text-center -mt-8 mb-16">
-            <p class="text-primary font-medium mb-1">🎁 Votre première séance est offerte</p>
-            <p class="text-muted-foreground text-sm mb-3">Découvrez notre approche sans engagement. Si l'expérience vous plaît, un partage de votre ressenti sur Google aide d'autres sportifs à nous trouver.</p>
-            <a href="/cours-gratuit" class="text-primary hover:underline text-sm font-medium mb-4 inline-block">
-                Réserver mon essai &rarr;
-            </a>
-            <p class="text-muted-foreground italic mb-4">Divisez les coûts, multipliez la motivation.</p>
-            <a href="/services/coaching-duo-trio" class="text-primary hover:underline text-sm font-medium">
-                En savoir plus sur le coaching duo & trio &rarr;
-            </a>
-        </div>
-    </GsapReveal>
-
-    {/* 6. Small Group — #small-group */}
-    <GsapReveal animation="fadeUp">
-        <PricingTable
-            id="small-group"
-            tagline="Small Group Training"
-            title="Small Group Training — Abonnements Petit Groupe"
-            subtitle="6 personnes max pour que Nicolas corrige chaque mouvement."
-            tiers={smallGroupTiers}
-            columns={2}
-        />
-        <div class="text-center -mt-8 mb-16">
-            <p class="text-primary font-medium mb-1">🎁 Votre première séance est offerte</p>
-            <p class="text-muted-foreground text-sm mb-3">Découvrez notre approche sans engagement. Si l'expérience vous plaît, un partage de votre ressenti sur Google aide d'autres sportifs à nous trouver.</p>
-            <a href="/cours-gratuit" class="text-primary hover:underline text-sm font-medium mb-4 inline-block">
-                Réserver mon essai &rarr;
-            </a>
-            <p class="text-muted-foreground italic mb-4">Le compromis parfait entre prix et attention personnalisée.</p>
-            <a href="/services/small-group-training" class="text-primary hover:underline text-sm font-medium">
-                En savoir plus sur le small group training &rarr;
-            </a>
-        </div>
-    </GsapReveal>
-
-    {/* 7. Round by Round — #boxe-groupe */}
-    <GsapReveal animation="fadeUp">
-        <WidgetWrapper id="boxe-groupe">
-            <Headline
-                title="Cours Collectifs Round by Round — Tarifs Boxe Genève"
-                subtitle="Accessible à tous, sans combat. 2 coachs par session."
-                tagline="Round by Round"
-                titleAs="h2"
-                align="center"
-                classes={{
-                    container: "max-w-3xl mx-auto mb-12 text-center",
-                    title: "text-4xl md:text-5xl font-medium tracking-tight font-display",
-                }}
-            />
-            <div class="bg-card/60 backdrop-blur-sm rounded-3xl border border-border/50 p-8 md:p-12 max-w-4xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-10 items-center">
-                    <div class="text-center md:text-left">
-                        <span class="text-6xl md:text-7xl font-extrabold text-gradient-gold">CHF 40.-</span>
-                        <p class="text-muted-foreground mt-2">/ séance</p>
-                        <p class="text-foreground font-medium mt-4 text-lg">Un cours collectif Round by Round à la carte.</p>
-                        <div class="mt-6">
-                            <Button href="/cours-gratuit" variant="primary" class="w-full md:w-auto">
-                                Réserver une séance
-                            </Button>
-                        </div>
-                    </div>
-                    <div>
-                        <ul class="space-y-4">
-                            {rbrTiers[0].features.map((feature) => (
-                                <li class="flex items-start gap-3 text-foreground/80">
-                                    <Icon name="lucide:check" class="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                                    <span>{feature}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-                <div class="mt-10 pt-8 border-t border-border/50 text-center">
-                    <p class="text-primary font-medium mb-1">Votre première séance est offerte</p>
-                    <p class="text-muted-foreground text-sm">Découvrez notre approche sans engagement. Si l'expérience vous plaît, un partage de votre ressenti sur Google aide d'autres sportifs à nous trouver.</p>
-                </div>
+    {sections.map((sec) => (
+        <section id={sec.id} class="wrap tf-sec">
+            <div class="tf-head">
+                <h2 class="t-subtitle" data-split>{sec.title}</h2>
+                <p>{sec.text}</p>
+                <a href={sec.link.href} class="link-line tf-more">{sec.link.text}</a>
             </div>
-            <div class="text-center mt-6">
-                <p class="text-muted-foreground italic mb-4">Rejoignez le mouvement. 12 rounds pour se dépasser.</p>
-                <a href="/services/round-by-round" class="text-primary hover:underline text-sm font-medium">
-                    En savoir plus sur Round by Round &rarr;
-                </a>
+            <table class="tf-table">
+                <thead>
+                    <tr><th scope="col">Formule</th><th scope="col">Séance</th><th scope="col">Pack 10</th></tr>
+                </thead>
+                <tbody>
+                    {sec.rows.map((r) => (
+                        <tr>
+                            <th scope="row"><span class="tf-f">{r.f}</span><span class="tf-d">{r.d}</span></th>
+                            <td>{r.s}</td>
+                            <td>{r.p ?? <><span aria-hidden="true">—</span><span class="sr-only">Pas de pack</span></>}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </section>
+    ))}
+
+    <section id="corporate" class="wrap tf-sec">
+        <div class="tf-head">
+            <h2 class="t-subtitle" data-split>Programme corporate : boxe en entreprise à Genève</h2>
+            <p>Des cours de boxe construits pour vos collaborateurs.</p>
+            <a href="/services/corporate" class="link-line tf-more">Les programmes corporate</a>
+        </div>
+        <div>
+            <dl class="tf-rows">
+                {corporate.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
+            </dl>
+            <a href="/contact?sujet=devis-corporate" class="btn btn-solid tf-btn">Demander un devis <Fragment set:html={arrow} /></a>
+        </div>
+    </section>
+
+    <section class="wrap tf-sec">
+        <div class="tf-head">
+            <h2 class="t-subtitle" data-split>Inclus dans chaque formule</h2>
+            <p>Et les conditions, pour tous les formats.</p>
+        </div>
+        <dl class="tf-rows">
+            {conditions.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
+        </dl>
+    </section>
+
+    <FAQ
+        title="Questions fréquentes sur les tarifs"
+        subtitle="Formules, packs, paiement et conditions."
+        items={faqs}
+    />
+
+    <section class="wrap tf-end">
+        <h2 class="t-title" data-split>Prêt à commencer ?</h2>
+        <div class="tf-end-side">
+            <p>Choisissez un créneau dans le planning, ou écrivez-nous pour trouver le bon format.</p>
+            <div class="tf-actions">
+                <a href="/#planning" class="btn btn-solid">Réserver une séance <Fragment set:html={arrow} /></a>
+                <a href="/contact" class="btn btn-line">Nous écrire</a>
             </div>
-        </WidgetWrapper>
-    </GsapReveal>
-
-    {/* 8. Corporate — #corporate */}
-    <GsapReveal animation="fadeUp">
-        <WidgetWrapper id="corporate">
-            <Headline
-                title="Programme Corporate — Boxe en Entreprise à Genève"
-                subtitle="Plus qu'un cours, un levier de performance pour vos équipes."
-                tagline="Corporate"
-                titleAs="h2"
-                align="center"
-                classes={{
-                    container: "max-w-3xl mx-auto mb-12 text-center",
-                    title: "text-4xl md:text-5xl font-medium tracking-tight font-display",
-                }}
-            />
-            <div class="max-w-3xl mx-auto">
-                <div class="relative bg-card/60 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-border/50 overflow-hidden">
-                    <div class="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" aria-hidden="true"></div>
-                    <div class="relative z-10">
-                        <ul class="space-y-4 mb-10">
-                            <li class="flex items-start gap-3 text-foreground/80">
-                                <span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" aria-hidden="true"></span>
-                                <span>Cours de boxe sur mesure pour vos collaborateurs — team building, bien-être, cohésion d'équipe</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-foreground/80">
-                                <span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" aria-hidden="true"></span>
-                                <span>Sessions au studio ou dans vos locaux à Genève et environs</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-foreground/80">
-                                <span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" aria-hidden="true"></span>
-                                <span>Formats flexibles : séance unique, programme récurrent, événement ponctuel</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-foreground/80">
-                                <span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" aria-hidden="true"></span>
-                                <span>Matériel professionnel fourni pour tous les participants</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-foreground/80">
-                                <span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" aria-hidden="true"></span>
-                                <span>Facturation entreprise avec délai de 30 jours</span>
-                            </li>
-                        </ul>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button href="/contact" variant="primary" size="lg">
-                                Obtenir un devis sur-mesure
-                            </Button>
-                            <Button href="/plaquette-corporate.pdf" variant="secondary" size="lg">
-                                Télécharger la plaquette
-                            </Button>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-6">
-                    <a href="/services/corporate" class="text-primary hover:underline text-sm font-medium">
-                        En savoir plus sur nos programmes corporate &rarr;
-                    </a>
-                </div>
-            </div>
-        </WidgetWrapper>
-    </GsapReveal>
-
-    {/* 9. Inclus dans chaque formule */}
-    <GsapReveal animation="fadeUp">
-        <Features
-            tagline="Inclus"
-            title="Inclus dans chaque formule"
-            features={features}
-            columns={3}
-            isDark={true}
-        />
-    </GsapReveal>
-
-    {/* 10. FAQ enrichie */}
-    <GsapReveal animation="fadeUp">
-        <FAQ
-            title="Questions fréquentes — Tarifs"
-            subtitle="Tout ce que vous devez savoir sur nos tarifs, formules et conditions."
-            items={faqs}
-        />
-    </GsapReveal>
-
-    {/* 11. CTABanner final */}
-    <GsapReveal animation="fadeUp">
-        <CTABanner
-            variant="brushed-full"
-            title="Prêt à commencer ?"
-            subtitle="Tarifs & formules"
-            description="Réservez votre séance d'essai gratuite ou demandez un bilan initial personnalisé."
-            cta={{ text: "Réserver mon bilan initial", href: "/cours-gratuit" }}
-        />
-    </GsapReveal>
-
-    </div>{/* .theme-light */}
+        </div>
+    </section>
 </BaseLayout>
+
+<style>
+    .tf-sec {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+        gap: 40px clamp(40px, 7vw, 140px);
+        align-items: start;
+        padding-block: clamp(48px, 6vw, 88px);
+        border-top: 1px solid var(--line);
+        scroll-margin-top: calc(var(--nav-h) + 48px);
+    }
+    .tf-head { display: grid; gap: 14px; justify-items: start; max-width: 30rem; }
+    .tf-head p { color: var(--gray-1); font-size: 16px; }
+    .tf-more { font-size: 14px; }
+
+    .tf-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+    .tf-table thead th {
+        font-size: 13px;
+        font-weight: 400;
+        color: var(--gray-2);
+        text-align: right;
+        padding: 0 0 12px 16px;
+        white-space: nowrap;
+        border-bottom: 1px solid var(--ink);
+    }
+    .tf-table thead th:first-child { text-align: left; padding-left: 0; }
+    .tf-table tbody th, .tf-table td { padding: 22px 0 22px 16px; border-bottom: 1px solid var(--line); vertical-align: baseline; }
+    .tf-table tbody th { text-align: left; font-weight: 400; padding-left: 0; }
+    .tf-table td { text-align: right; white-space: nowrap; font-size: clamp(1.125rem, 1.6vw, 1.375rem); font-weight: 500; letter-spacing: -0.02em; width: 9.5em; }
+    .tf-f { display: block; font-size: clamp(1.125rem, 1.6vw, 1.375rem); font-weight: 500; letter-spacing: -0.02em; }
+    .tf-d { display: block; margin-top: 4px; font-size: 14px; color: var(--gray-2); }
+
+    .tf-rows { border-top: 1px solid var(--ink); font-size: 15px; }
+    .tf-rows div { display: grid; grid-template-columns: minmax(0, 10rem) minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .tf-rows dt { color: var(--gray-2); }
+    .tf-btn { margin-top: 32px; }
+
+    .tf-end {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 32px clamp(40px, 7vw, 140px);
+        align-items: end;
+        padding-block: var(--section);
+        border-top: 1px solid var(--line);
+    }
+    .tf-end-side { display: grid; gap: 22px; max-width: 30rem; }
+    .tf-end-side p { color: var(--gray-1); font-size: 17px; }
+    .tf-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    @media (max-width: 860px) {
+        .tf-sec, .tf-end { grid-template-columns: 1fr; }
+        .tf-table td { width: auto; }
+        .tf-rows div { grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); }
+    }
+</style>
+

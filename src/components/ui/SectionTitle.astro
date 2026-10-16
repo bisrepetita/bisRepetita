@@ -1,4 +1,5 @@
 ---
+// `badge` est accepté pour compatibilité mais jamais affiché (pas de surtitre).
 interface Props {
     title: string;
     badge?: string;
@@ -9,37 +10,14 @@ interface Props {
     titleClass?: string;
 }
 
-const {
-    title,
-    badge,
-    subtitle,
-    align = "center",
-    as: Tag = "h2",
-    class: className = "",
-    titleClass = "",
-} = Astro.props;
-
-const alignClass = align === "center" ? "text-center" : "text-left";
-const defaultTitleClass = "text-5xl md:text-[3.75rem] font-medium font-display tracking-tight text-foreground";
-const resolvedTitleClass = titleClass || defaultTitleClass;
+const { title, subtitle, align = "left", as: Tag = "h2", class: className = "", titleClass = "" } = Astro.props;
 ---
 
-<div class:list={[alignClass, className]}>
-    {badge && (
-        <div class="text-muted-foreground section-label mb-4">
-            {badge}
-        </div>
-    )}
-    <Tag
-        class={resolvedTitleClass}
-        set:html={title}
-    />
+<div class:list={["section-title", align === "center" ? "text-center mx-auto max-w-4xl" : "max-w-5xl", className]}>
+    <Tag class:list={["t-title", titleClass]} data-split set:html={title} />
     {subtitle && (
         <p
-            class:list={[
-                "text-lg text-muted-foreground mt-4 max-w-2xl",
-                align === "center" && "mx-auto",
-            ]}
+            class:list={["mt-5 text-[17px] leading-relaxed text-gray-1 max-w-[560px]", align === "center" && "mx-auto"]}
             set:html={subtitle}
         />
     )}

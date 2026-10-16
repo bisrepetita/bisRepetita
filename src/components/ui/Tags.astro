@@ -13,12 +13,12 @@ const { tags, class: className = "text-sm" } = Astro.props;
     tags && Array.isArray(tags) && (
         <ul class:list={["flex flex-wrap gap-2", className]}>
             {tags.map((tag) => (
-                <li class="inline-block relative">
+                <li>
                     <a
                         href={`/blog/tags/${slugify(tag)}`}
-                        class="inline-block bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground px-3 py-1 rounded-full border border-border transition-colors duration-200"
+                        class="inline-block rounded-full border border-line px-3 py-1 text-gray-1 transition-colors duration-200 hover:border-ink hover:text-ink"
                     >
-                        #{tag}
+                        {tag}
                     </a>
                 </li>
             ))}

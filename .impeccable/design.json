@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-16T19:10:00Z",
+  "title": "Design System: Bis Repetita",
+  "extensions": {
+    "colorMeta": {
+      "paper": { "role": "neutral", "displayName": "Papier", "canonical": "#ffffff", "tonalRamp": ["#262626", "#404040", "#5c5c5c", "#7a7a7a", "#999999", "#bdbdbd", "#e0e0e0", "#ffffff"] },
+      "ink": { "role": "primary", "displayName": "Encre", "canonical": "#0a0a0a", "tonalRamp": ["#0a0a0a", "#262626", "#404040", "#5c5c5c", "#7a7a7a", "#999999", "#c2c2c2", "#ebebeb"] },
+      "graphite": { "role": "neutral", "displayName": "Graphite", "canonical": "#4d4d4d", "tonalRamp": ["#1a1a1a", "#333333", "#4d4d4d", "#666666", "#808080", "#a6a6a6", "#cccccc", "#f2f2f2"] },
+      "ash": { "role": "neutral", "displayName": "Cendre", "canonical": "#6b6b6b", "tonalRamp": ["#1a1a1a", "#333333", "#4d4d4d", "#6b6b6b", "#8a8a8a", "#a8a8a8", "#cccccc", "#f2f2f2"] },
+      "soft": { "role": "neutral", "displayName": "Gris doux", "canonical": "#8a8a8a", "tonalRamp": ["#1a1a1a", "#333333", "#4d4d4d", "#6b6b6b", "#8a8a8a", "#a8a8a8", "#cccccc", "#f2f2f2"] },
+      "mist": { "role": "neutral", "displayName": "Brume", "canonical": "#a8a8a8", "tonalRamp": ["#1a1a1a", "#333333", "#4d4d4d", "#6b6b6b", "#8a8a8a", "#a8a8a8", "#cccccc", "#f2f2f2"] },
+      "field-line": { "role": "neutral", "displayName": "Filet de champ", "canonical": "#c9c9c9", "tonalRamp": ["#262626", "#404040", "#5c5c5c", "#7a7a7a", "#999999", "#c9c9c9", "#e0e0e0", "#f5f5f5"] },
+      "hairline": { "role": "neutral", "displayName": "Filet", "canonical": "#ebebeb", "tonalRamp": ["#262626", "#404040", "#5c5c5c", "#7a7a7a", "#999999", "#c2c2c2", "#ebebeb", "#fafafa"] },
+      "surface": { "role": "neutral", "displayName": "Surface", "canonical": "#f5f5f5", "tonalRamp": ["#262626", "#404040", "#5c5c5c", "#7a7a7a", "#999999", "#c2c2c2", "#e0e0e0", "#f5f5f5"] },
+      "error": { "role": "tertiary", "displayName": "Rouge erreur", "canonical": "#b42318", "tonalRamp": ["#3d0b07", "#5e110b", "#80170f", "#b42318", "#d9493d", "#e8786f", "#f3aca6", "#fbe3e1"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "H1 du premier écran, 12ch au plus." },
+      "headline": { "displayName": "Headline", "purpose": "Titres de section et titres des deux portes." },
+      "title": { "displayName": "Title", "purpose": "Étapes, légende sur photo, phrase d'intro du pied de page." },
+      "lead": { "displayName": "Lead", "purpose": "Promesse en grand, seconde phrase en gris doux." },
+      "index-row": { "displayName": "Ligne d'index", "purpose": "Intitulé d'une ligne de l'index des formats." },
+      "body": { "displayName": "Body", "purpose": "Texte courant." },
+      "body-large": { "displayName": "Body large", "purpose": "Intros, réponses FAQ, texte des portes." },
+      "label": { "displayName": "Label", "purpose": "Métadonnées, libellés de champs et de colonnes, en cendre." }
+    },
+    "shadows": [
+      { "name": "hairline-under", "value": "0 1px 0 var(--line)", "purpose": "Filet sous la barre de navigation une fois la page défilée ; pas une élévation." },
+      { "name": "field-focus", "value": "0 1px 0 var(--ink)", "purpose": "Double le filet bas d'un champ en focus." }
+    ],
+    "motion": [
+      { "name": "ease-out-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Courbe unique des transitions CSS (survols, panneau, FAQ, liens, pilules)." },
+      { "name": "gsap-ease", "value": "expo.out", "purpose": "Courbe des apparitions GSAP ; expo.inOut pour le dévoilement photo." },
+      { "name": "reveal-block", "value": "y 24px + opacity, 1.2s, stagger 0.08s", "purpose": "Apparition d'un bloc ou d'une liste, une fois." },
+      { "name": "reveal-line", "value": "yPercent 105 dans un masque, 1.3s, stagger 0.07s", "purpose": "Titres data-split, ligne par ligne." },
+      { "name": "reveal-photo", "value": "clip-path inset(100% 0 0 0) 1.5s + scale 1.15 → 1 2s", "purpose": "Photos data-photo-reveal." },
+      { "name": "clip-grow", "value": "clip-path inset(0 gutter) → inset(0), scrub 0.6", "purpose": "Signature : bande vidéo qui passe au plein écran au scroll." },
+      { "name": "parallax", "value": "yPercent -6 → 6, scale 1.12, scrub", "purpose": "Photos larges data-parallax." },
+      { "name": "follow", "value": "quickTo 0.7s power3.out", "purpose": "Vignette qui suit le curseur sur l'index, pointeur fin seulement." },
+      { "name": "panel", "value": "clip-path 0.7s ease-out-expo", "purpose": "Déroulé du panneau Cours." },
+      { "name": "reduced-motion", "value": "gsap.matchMedia (prefers-reduced-motion: no-preference) ; transitions CSS à 0.01ms sinon", "purpose": "Rien ne s'anime en mouvement réduit, la vidéo est en pause, le contenu est visible par défaut." }
+    ],
+    "breakpoints": [
+      { "name": "nav-cta-hidden", "value": "420px" },
+      { "name": "single-column", "value": "860px" },
+      { "name": "mobile-nav", "value": "960px" },
+      { "name": "container", "value": "1600px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Pilule pleine",
+      "kind": "button",
+      "refersTo": "button-solid",
+      "description": "Action principale, une par écran.",
+      "html": "<a class=\"ds-btn ds-btn-solid\" href=\"#\">Réserver une séance <svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" aria-hidden=\"true\"><path d=\"M1 7h12M8 2l5 5-5 5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/></svg></a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 10px; height: 46px; padding: 0 24px; border-radius: 999px; font: 500 15px/1 Inter, system-ui, sans-serif; letter-spacing: -0.01em; border: 1px solid #0a0a0a; text-decoration: none; transition: background-color .35s cubic-bezier(.16,1,.3,1), color .35s cubic-bezier(.16,1,.3,1), border-color .35s; } .ds-btn svg { transition: transform .45s cubic-bezier(.16,1,.3,1); } .ds-btn:hover svg { transform: translateX(3px); } .ds-btn:focus-visible { outline: 1.5px solid #0a0a0a; outline-offset: 3px; } .ds-btn-solid { background: #0a0a0a; color: #fff; } .ds-btn-solid:hover { background: #4d4d4d; border-color: #4d4d4d; }"
+    },
+    {
+      "name": "Pilule filet",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Action secondaire à côté d'une pilule pleine.",
+      "html": "<a class=\"ds-btn-line\" href=\"#\">Les cours</a>",
+      "css": ".ds-btn-line { display: inline-flex; align-items: center; height: 46px; padding: 0 24px; border-radius: 999px; font: 500 15px/1 Inter, system-ui, sans-serif; letter-spacing: -0.01em; border: 1px solid #0a0a0a; background: transparent; color: #0a0a0a; text-decoration: none; transition: background-color .35s cubic-bezier(.16,1,.3,1), color .35s cubic-bezier(.16,1,.3,1); } .ds-btn-line:hover { background: #0a0a0a; color: #fff; } .ds-btn-line:focus-visible { outline: 1.5px solid #0a0a0a; outline-offset: 3px; }"
+    },
+    {
+      "name": "Lignes à filet",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Liste clé/valeur, structure de base des informations.",
+      "html": "<dl class=\"ds-rows\"><div><dt>Effectif</dt><dd>1 à 8 personnes</dd></div><div><dt>Durée</dt><dd>60 minutes</dd></div><div><dt>Séance solo</dt><dd>CHF 120</dd></div></dl>",
+      "css": ".ds-rows { margin: 0; border-top: 1px solid #ebebeb; font: 400 14px/1.5 Inter, system-ui, sans-serif; color: #0a0a0a; max-width: 420px; } .ds-rows div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #ebebeb; } .ds-rows dt { color: #6b6b6b; } .ds-rows dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Index des formats",
+      "kind": "custom",
+      "refersTo": "index-row",
+      "description": "Liste éditoriale des offres ; la ligne survolée s'avance, les autres pâlissent.",
+      "html": "<ul class=\"ds-index\"><li><a href=\"#\" class=\"ds-index-row\"><span class=\"t\">Coaching solo</span><span class=\"d\">Un coach, une personne.</span><span class=\"m\">CHF 120</span></a></li><li><a href=\"#\" class=\"ds-index-row\"><span class=\"t\">Duo &amp; Trio</span><span class=\"d\">Le coût se partage, le suivi reste individuel.</span><span class=\"m\">dès CHF 140</span></a></li><li><a href=\"#\" class=\"ds-index-row\"><span class=\"t\">Round by Round</span><span class=\"d\">Le cours collectif, structuré en rounds.</span><span class=\"m\">CHF 40</span></a></li></ul>",
+      "css": ".ds-index { list-style: none; margin: 0; padding: 0; border-top: 1px solid #0a0a0a; font-family: Inter, system-ui, sans-serif; } .ds-index-row { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.3fr) minmax(0,.7fr); gap: 24px; align-items: baseline; padding: 22px 0; border-bottom: 1px solid #ebebeb; color: #0a0a0a; text-decoration: none; transition: padding .6s cubic-bezier(.16,1,.3,1), color .4s; } .ds-index-row .t { font-size: 28px; font-weight: 500; letter-spacing: -0.035em; line-height: 1.1; } .ds-index-row .d { color: #4d4d4d; font-size: 15px; } .ds-index-row .m { color: #6b6b6b; font-size: 14px; text-align: right; font-variant-numeric: tabular-nums; } .ds-index-row:hover, .ds-index-row:focus-visible { padding-left: 14px; outline: none; } .ds-index:has(.ds-index-row:hover) .ds-index-row:not(:hover), .ds-index:has(.ds-index-row:hover) .ds-index-row:not(:hover) .d, .ds-index:has(.ds-index-row:hover) .ds-index-row:not(:hover) .m { color: #a8a8a8; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Barre fine sur papier, trait qui se trace au survol, pilule de réservation.",
+      "html": "<header class=\"ds-nav\"><span class=\"ds-nav-logo\">bis repetita</span><nav class=\"ds-nav-links\"><a href=\"#\">Cours</a><a href=\"#\" aria-current=\"page\">Studio</a><a href=\"#\">Tarifs</a><a href=\"#\">Planning</a><a href=\"#\">Journal</a></nav><a class=\"ds-nav-cta\" href=\"#\">Réserver</a></header>",
+      "css": ".ds-nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; height: 64px; padding: 0 32px; background: #fff; box-shadow: 0 1px 0 #ebebeb; font-family: Inter, system-ui, sans-serif; } .ds-nav-logo { font-weight: 500; letter-spacing: -0.04em; } .ds-nav-links { display: flex; gap: 30px; } .ds-nav-links a { position: relative; font-size: 14px; color: #0a0a0a; text-decoration: none; padding: 8px 0; } .ds-nav-links a::after { content: \"\"; position: absolute; left: 0; right: 0; bottom: 2px; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform .5s cubic-bezier(.16,1,.3,1); } .ds-nav-links a:hover::after, .ds-nav-links a[aria-current=page]::after { transform: scaleX(1); transform-origin: left; } .ds-nav-links a:focus-visible { outline: 1.5px solid #0a0a0a; outline-offset: 3px; } .ds-nav-cta { justify-self: end; display: inline-flex; align-items: center; height: 38px; padding: 0 18px; border-radius: 999px; background: #0a0a0a; color: #fff; font-size: 14px; font-weight: 500; text-decoration: none; transition: background-color .35s cubic-bezier(.16,1,.3,1); } .ds-nav-cta:hover { background: #4d4d4d; }"
+    },
+    {
+      "name": "FAQ",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Accordéon natif à filets, signe plus/moins en deux traits.",
+      "html": "<div class=\"ds-faq\"><details><summary>Faut-il un niveau pour commencer ?<span class=\"s\"></span></summary><p>Aucun. La séance est construite sur votre niveau du jour.</p></details><details><summary>Le matériel est-il fourni ?<span class=\"s\"></span></summary><p>Gants et bandes sont fournis au studio.</p></details></div>",
+      "css": ".ds-faq { border-top: 1px solid #ebebeb; font-family: Inter, system-ui, sans-serif; max-width: 640px; } .ds-faq details { border-bottom: 1px solid #ebebeb; } .ds-faq summary { display: flex; justify-content: space-between; gap: 24px; padding: 24px 0; list-style: none; cursor: pointer; font-size: 17px; font-weight: 500; letter-spacing: -0.015em; color: #0a0a0a; } .ds-faq summary::-webkit-details-marker { display: none; } .ds-faq summary:hover { color: #4d4d4d; } .ds-faq summary:focus-visible { outline: 1.5px solid #0a0a0a; outline-offset: 3px; } .ds-faq .s { position: relative; flex: none; width: 14px; height: 14px; margin-top: .4em; } .ds-faq .s::before, .ds-faq .s::after { content: \"\"; position: absolute; inset: 50% 0 auto 0; height: 1px; background: currentColor; transition: transform .45s cubic-bezier(.16,1,.3,1); } .ds-faq .s::after { transform: rotate(90deg); } .ds-faq details[open] .s::after { transform: rotate(0); } .ds-faq p { margin: 0; padding-bottom: 28px; color: #4d4d4d; font-size: 16px; line-height: 1.6; max-width: 62ch; }"
+    },
+    {
+      "name": "Champ à filet",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Champ sans fond ni rayon, filet bas qui passe à l'encre au focus.",
+      "html": "<label class=\"ds-field\"><span>Votre e-mail</span><input type=\"email\" placeholder=\"vous@exemple.ch\"></label>",
+      "css": ".ds-field { display: grid; gap: 6px; font-family: Inter, system-ui, sans-serif; max-width: 360px; } .ds-field span { font-size: 13px; color: #4d4d4d; } .ds-field input { padding: 10px 0; font-size: 17px; color: #0a0a0a; background: transparent; border: 0; border-bottom: 1px solid #c9c9c9; border-radius: 0; outline: none; transition: border-color .3s; } .ds-field input:focus-visible { border-bottom-color: #0a0a0a; box-shadow: 0 1px 0 #0a0a0a; } .ds-field input:user-invalid { border-bottom-color: #b42318; box-shadow: 0 1px 0 #b42318; }"
+    },
+    {
+      "name": "Lien filet",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Lien secondaire souligné qui se retire au survol.",
+      "html": "<a class=\"ds-link-line\" href=\"#\">Voir les tarifs</a>",
+      "css": ".ds-link-line { font: 400 14px Inter, system-ui, sans-serif; color: #0a0a0a; text-decoration: none; background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat; padding-bottom: 2px; transition: background-size .5s cubic-bezier(.16,1,.3,1); } .ds-link-line:hover { background-size: 0% 1px; background-position: 100% 100%; } .ds-link-line:focus-visible { outline: 1.5px solid #0a0a0a; outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Le lookbook suisse",
+    "overview": "Un studio de boxe qui se lit comme une maison de mode : papier blanc, encre presque noire, photographie noir et blanc, et une typographie qui s'efface derrière l'image. La répétition est traitée comme un luxe : la même grille, les mêmes filets d'un pixel, les mêmes lignes d'index reviennent de page en page, et c'est cette constance qui fait le haut de gamme, pas l'ornement.\n\nLa densité est éditoriale : beaucoup de blanc entre les sections, des listes en lignes à filet plutôt que des cartes, une seule action forte par écran (la pilule noire). La couleur n'existe pas : toute la hiérarchie passe par la taille, la graisse 500, l'interlettrage serré et quatre gris. L'image porte l'émotion ; elle arrive en N&B, à angles droits, souvent bord à bord.\n\nLe monde refuse explicitement le gabarit « salle de boxe » : fonds noirs, or, cartes à icônes, gros chiffres, halos.",
+    "keyCharacteristics": [
+      "Blanc, encre, gris ; aucune teinte.",
+      "Inter seule, titres en 500 serrés (-0.045em à -0.025em).",
+      "Filets de 1px (#ebebeb) comme seule structure ; aucune ombre.",
+      "Photo et vidéo N&B (`grayscale(1) contrast(1.06)`), angles droits.",
+      "Pilule noire pour l'action, unique objet arrondi.",
+      "Mouvement lent à sortie exponentielle, faible amplitude, contenu visible par défaut."
+    ],
+    "rules": [
+      { "name": "The Noir sous photo Rule", "body": "Le noir en aplat n'existe que sous une photo ou une vidéo (fond d'attente de la bande vidéo et de la bande studio, dégradé de lisibilité sur l'image). Une section ne prend jamais un fond noir ; la pilule pleine reste le seul autre noir rempli.", "section": "colors" },
+      { "name": "The Gris pour l'emphase Rule", "body": "Une emphase dans un titre passe en cendre, jamais en couleur ni en dégradé.", "section": "colors" },
+      { "name": "The Zéro surtitre Rule", "body": "Aucun eyebrow, surtitre ou badge au-dessus d'un titre, sauf demande explicite de Jon. Les props historiques `badge` et `tagline` des widgets sont acceptées mais jamais rendues.", "section": "typography" },
+      { "name": "The Chiffres alignés Rule", "body": "Prix, effectifs, numéros d'étapes et tableaux utilisent `tabular-nums`.", "section": "typography" },
+      { "name": "The Wordmark pleine largeur Rule", "body": "Le logotype « bis repetita » s'étale sur toute la largeur du conteneur sous le premier écran et en bas du pied de page ; il encadre le site, il ne se répète pas ailleurs.", "section": "layout" },
+      { "name": "The Filet seul Rule", "body": "Une séparation se fait par un filet de 1px ou par un changement de surface, jamais par une ombre, une carte ou un fond teinté.", "section": "elevation" },
+      { "name": "The Photo à angle droit Rule", "body": "Une photo ou une vidéo n'a jamais de rayon, de bordure ni d'ombre ; elle est toujours en N&B.", "section": "shapes" }
+    ],
+    "dos": [
+      "**Do** garder une seule pilule pleine par écran pour l'action principale.",
+      "**Do** passer toute photo et toute vidéo en N&B (`grayscale(1) contrast(1.06)`) et à angle droit.",
+      "**Do** présenter une liste d'offres, de faits ou de prix en lignes à filet de 1px, clé en cendre, valeur en encre.",
+      "**Do** écrire les titres en Inter 500 serré et mettre l'emphase en cendre.",
+      "**Do** coder une animation en CSS d'abord ; un mouvement lié au scroll passe par GSAP + ScrollTrigger dans `matchMedia` avec `prefers-reduced-motion`, contenu visible sans JS.",
+      "**Do** réserver la photo qui suit le curseur aux pointeurs fins."
+    ],
+    "donts": [
+      "**Don't** poser un fond de section noir : le noir en aplat vit sous une photo.",
+      "**Don't** ajouter un eyebrow, surtitre ou badge au-dessus d'un titre sans demande de Jon.",
+      "**Don't** introduire une teinte, de l'or, un dégradé décoratif, un halo ou une ombre portée.",
+      "**Don't** construire avec des cartes à icônes ou des gros chiffres statistiques.",
+      "**Don't** arrondir une photo, un cadre ou un champ ; seule la pilule est ronde.",
+      "**Don't** charger une autre famille que Inter en production tant que Jon n'a pas tranché entre les options A à D."
+    ]
+  }
+}

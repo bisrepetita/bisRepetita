@@ -1,8 +1,7 @@
 ---
-import SectionTitle from "../ui/SectionTitle.astro";
 import Form from "../ui/Form.astro";
-import Container from "../ui/Container.astro";
 
+// badge est accepté pour compatibilité mais n'est jamais affiché.
 interface Props {
     id?: string;
     badge?: string;
@@ -11,16 +10,23 @@ interface Props {
     formName?: string;
 }
 
-const { id, badge, title, subtitle, formName } = Astro.props;
+const { id, title, subtitle, formName } = Astro.props;
 ---
 
-<Container id={id} class="py-12 md:py-16">
-    {(badge || title || subtitle) && (
-        <div class="text-center mb-12">
-            <SectionTitle badge={badge} title={title} subtitle={subtitle} />
-        </div>
-    )}
-    <div class="mx-auto max-w-xl bg-card border border-border rounded-3xl p-8">
+<section id={id} class="wrap section fs">
+    <div class="fs-head">
+        {title && <h2 class="t-title" data-split>{title}</h2>}
+        {subtitle && <p>{subtitle}</p>}
+    </div>
+    <div class="fs-form">
         <Form formName={formName} />
     </div>
-</Container>
+</section>
+
+<style>
+    .fs { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 40px clamp(40px, 8vw, 160px); align-items: start; }
+    .fs-head { display: grid; gap: 18px; max-width: 30rem; }
+    .fs-head p { color: var(--gray-1); font-size: 17px; }
+    .fs-form { border-top: 1px solid var(--ink); padding-top: 32px; }
+    @media (max-width: 860px) { .fs { grid-template-columns: 1fr; } }
+</style>

@@ -2,462 +2,395 @@
 import { siteConfig } from "../../config/site";
 import { Image } from "astro:assets";
 
-import coursPortrait from "../../assets/cours-portrait.webp";
-import cours2Landscape from "../../assets/cours-2-landscape.webp";
-import homepage from "../../assets/homepage.webp";
 import nicolasPortrait from "../../assets/nicolas-portrait.webp";
+import lionelNicolas from "../../assets/lionel-nicolas-boxe.webp";
+import cours2Landscape from "../../assets/cours-2-landscape.webp";
 import ambianceBis from "../../assets/ambiance-bis-repetita.webp";
+import imageCta from "../../assets/image-cta.webp";
 
-const megaMenuImages: Record<string, ImageMetadata> = {
-    "cours-portrait.webp": coursPortrait,
-    "cours-2-landscape.webp": cours2Landscape,
-    "homepage.webp": homepage,
+const panelImages: Record<string, ImageMetadata> = {
     "nicolas-portrait.webp": nicolasPortrait,
+    "lionel-nicolas-boxe.webp": lionelNicolas,
+    "cours-2-landscape.webp": cours2Landscape,
     "ambiance-bis-repetita.webp": ambianceBis,
+    "image-cta.webp": imageCta,
 };
 
-const isLight = ["/tarifs", "/contact"].some(p => Astro.url.pathname.startsWith(p));
-
-let linkIndex = 0;
-function getNavIndex() {
-    linkIndex++;
-    return String(linkIndex).padStart(2, "0");
-}
+const { navCours, navLinks, navCta } = siteConfig;
+const allItems = navCours.doors.flatMap((d) => d.items);
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+const isCurrent = (href: string) => href !== "/#planning" && (path === href || (href !== "/" && path.startsWith(href + "/")));
+const coursActive = path.startsWith("/services");
 ---
 
-<nav
-    id="main-nav"
-    class="fixed top-0 z-50 w-full transition-all duration-500"
-    data-theme={isLight ? "light" : "dark"}
->
-    <div
-        id="nav-inner"
-        class="relative flex w-full items-center justify-between px-8 py-5 lg:px-12 transition-all duration-500"
-    >
-        <!-- LEFT: Desktop Nav Links -->
-        <div class="hidden lg:flex items-center gap-6 xl:gap-10">
-            {
-                (() => {
-                    let globalIdx = 0;
-                    return siteConfig.navLinks.map((link) =>
-                        link.groups ? (
-                            <div class="relative group" id="mega-menu-trigger">
-                                <button class="nav-link relative text-sm font-medium text-foreground transition-colors hover:text-primary flex items-center gap-1 py-1 whitespace-nowrap">
-                                    {link.text}
-                                    <svg
-                                        class="w-3.5 h-3.5 shrink-0 transition-transform group-hover:rotate-180"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M19 9l-7 7-7-7"
-                                        />
-                                    </svg>
-                                </button>
-                                {/* Mega Menu */}
-                                <div
-                                    id="mega-menu-panel"
-                                    class="absolute left-0 top-full pt-2 opacity-0 invisible translate-y-[-8px] group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out z-50"
-                                >
-                                    <div class="bg-black border border-white/10 rounded-2xl w-[720px] overflow-hidden">
-                                        <div class="grid grid-cols-5 gap-3 p-4">
-                                            {/* Left: grouped links */}
-                                            <div class="col-span-3 flex flex-col">
-                                                <div class="flex gap-6">
-                                                    {link.groups.map((group) => (
-                                                        <div class="flex-1">
-                                                            <span class="text-[11px] uppercase tracking-widest text-white/30 px-3 mb-1 block">{group.label}</span>
-                                                            {group.items.map((child) => {
-                                                                const idx = globalIdx++;
-                                                                return (
-                                                                    <a
-                                                                        href={child.href}
-                                                                        class="mega-menu-link group/link flex flex-col gap-0.5 rounded-lg px-3 py-2 transition-colors hover:bg-white/5"
-                                                                        data-service={idx}
-                                                                    >
-                                                                        <span class="text-sm font-medium text-foreground transition-colors group-hover/link:text-primary">
-                                                                            {child.text}
-                                                                        </span>
-                                                                        {child.description && (
-                                                                            <span class="text-xs text-muted-foreground leading-tight">
-                                                                                {child.description}
-                                                                            </span>
-                                                                        )}
-                                                                    </a>
-                                                                );
-                                                            })}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                                <a
-                                                    href="/services"
-                                                    class="flex items-center gap-1 text-xs text-white/40 hover:text-primary transition-colors px-3 pt-2 mt-auto"
-                                                >
-                                                    Tous nos programmes
-                                                    <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                                                </a>
-                                            </div>
-                                            {/* Right: image */}
-                                            <div class="col-span-2 relative aspect-[4/5] overflow-hidden rounded-xl">
-                                                {(() => {
-                                                    let imgIdx = 0;
-                                                    return link.groups.flatMap((group) =>
-                                                        group.items.map((child) => {
-                                                            const idx = imgIdx++;
-                                                            const imgSrc = child.image && megaMenuImages[child.image];
-                                                            return imgSrc ? (
-                                                                <div
-                                                                    class:list={[
-                                                                        "mega-menu-image absolute inset-0 transition-opacity duration-300",
-                                                                        idx === 0 ? "opacity-100" : "opacity-0",
-                                                                    ]}
-                                                                    data-image-index={idx}
-                                                                >
-                                                                    <Image
-                                                                        src={imgSrc}
-                                                                        alt={child.text}
-                                                                        class="w-full h-full object-cover"
-                                                                        widths={[600, 900]}
-                                                                        sizes="(max-width: 1280px) 60vw, 540px"
-                                                                    />
-                                                                </div>
-                                                            ) : null;
-                                                        }),
-                                                    );
-                                                })()}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ) : (
-                            <a
-                                href={link.href}
-                                class="nav-link relative text-sm font-medium text-foreground transition-colors hover:text-primary py-1"
-                            >
-                                {link.text}
-                            </a>
-                        ),
-                    );
-                })()
-            }
-        </div>
-
-        <!-- CENTER: Logo (absolute centered) -->
-        <a
-            href="/"
-            class="absolute left-1/2 -translate-x-1/2 transition-opacity hover:opacity-80"
-        >
-            <img src="/logo-black.svg" alt={siteConfig.name} class:list={["h-8 w-auto", !isLight && "invert brightness-200"]} />
+<header id="site-nav" class="nav" data-open="false">
+    <div class="nav-bar wrap">
+        <a href="/" class="nav-logo" aria-label="Bis Repetita — accueil">
+            <img src="/logo-black.svg" alt="" width="140" height="20" />
         </a>
 
-        <!-- RIGHT: CTA (desktop) -->
-        <div class="hidden lg:flex items-center gap-4">
-            <a
-                href={siteConfig.navCta.href}
-                class:list={[
-                    "nav-cta rounded-full backdrop-blur-sm px-6 py-2.5 text-sm font-bold text-foreground transition-all flex items-center gap-2",
-                    isLight
-                        ? "bg-black/6 border border-black/12 hover:shadow-[0_0_20px_rgba(0,0,0,0.08)]"
-                        : "bg-white/10 border border-white/20 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]",
-                ]}
-            >
-                {siteConfig.navCta.text}
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-            </a>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <div class="lg:hidden flex items-center">
+        <nav class="nav-links" aria-label="Navigation principale">
             <button
-                id="mobile-menu-button"
                 type="button"
-                class="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primary focus:outline-none transition-colors"
-                aria-controls="mobile-menu"
+                class="nav-link nav-cours-btn"
                 aria-expanded="false"
+                aria-controls="cours-panel"
+                aria-current={coursActive ? "page" : undefined}
             >
-                <span class="sr-only">Ouvrir le menu</span>
-                <svg
-                    id="menu-icon-closed"
-                    class="block h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-                <svg
-                    id="menu-icon-open"
-                    class="hidden h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
+                Cours
+                <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.2" /></svg>
+            </button>
+            {navLinks.map((l) => (
+                <a href={l.href} class="nav-link" aria-current={isCurrent(l.href) ? "page" : undefined}>{l.text}</a>
+            ))}
+        </nav>
+
+        <div class="nav-actions">
+            <a href={navCta.href} class="btn btn-solid btn-sm nav-cta">{navCta.text}</a>
+            <button type="button" class="nav-menu-btn" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="nav-menu-label">Menu</span>
             </button>
         </div>
     </div>
 
-    <!-- Mobile Menu Overlay -->
-    <div
-        class="hidden fixed inset-0 z-50 bg-background/98 backdrop-blur-sm"
-        id="mobile-menu"
-    >
-        <div class="flex flex-col h-full">
-            <!-- Header -->
-            <div class="flex items-center justify-between px-4 py-4 sm:px-6 shrink-0">
-                <a href="/" class="transition-opacity hover:opacity-80">
-                    <img src="/logo-black.svg" alt={siteConfig.name} class:list={["h-8 w-auto", !isLight && "invert brightness-200"]} />
-                </a>
-                <button
-                    id="mobile-menu-close"
-                    class="p-2 text-foreground hover:text-primary transition-colors"
-                >
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
+    <!-- Panneau Cours (desktop) -->
+    <div id="cours-panel" class="cours-panel" hidden>
+        <div class="wrap cours-grid">
+            {navCours.doors.map((door) => (
+                <div class="cours-col">
+                    <a href={door.href} class="cours-door" data-preview={door.items[0].image}>
+                        {door.label}
+                        <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.2" /></svg>
+                    </a>
+                    <ul>
+                        {door.items.map((item) => (
+                            <li>
+                                <a href={item.href} class="cours-item" data-preview={item.image}>
+                                    <span>{item.text}</span>
+                                    <span class="t-meta">{item.meta}</span>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+            <div class="cours-preview nb" aria-hidden="true">
+                {[...new Set(allItems.map((i) => i.image))].map((key, i) => (
+                    <Image
+                        src={panelImages[key]}
+                        alt=""
+                        widths={[480, 720]}
+                        sizes="24vw"
+                        data-key={key}
+                        class:list={[{ "is-on": i === 0 }]}
+                        loading="lazy"
+                    />
+                ))}
             </div>
-
-            <!-- Nav links (scrollable) -->
-            <div id="mobile-nav-links" class="flex flex-col items-start flex-1 overflow-y-auto gap-3 px-8 py-4">
-                {
-                    (() => {
-                        let i = 0;
-                        return siteConfig.navLinks.map((link) =>
-                            link.groups ? (
-                                (() => {
-                                    i++;
-                                    return (
-                                        <div class="w-full">
-                                            <button
-                                                id="mobile-submenu-trigger"
-                                                class="mobile-nav-item flex items-center justify-between w-full gap-4 text-2xl font-medium text-foreground transition-colors hover:text-primary opacity-0"
-                                            >
-                                                <span class="flex items-center gap-4">
-                                                    <span class="text-sm text-primary/50 font-mono">{String(i).padStart(2, "0")}</span>
-                                                    {link.text}
-                                                </span>
-                                                <svg class="chevron h-5 w-5 text-primary/50 transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                                </svg>
-                                            </button>
-                                            <div id="mobile-submenu-programmes" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease">
-                                                <div class="flex flex-col gap-1 pl-10 pt-2 pb-1">
-                                                    {link.groups.flatMap((group) =>
-                                                        group.items.map((child) => (
-                                                            <a
-                                                                href={child.href}
-                                                                class="flex items-center gap-3 text-lg text-foreground/75 transition-colors hover:text-primary py-1"
-                                                            >
-                                                                <span class="w-1 h-1 rounded-full bg-primary/50 shrink-0"></span>
-                                                                {child.text}
-                                                            </a>
-                                                        ))
-                                                    )}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    );
-                                })()
-                            ) : (
-                                (() => {
-                                    i++;
-                                    return (
-                                        <a
-                                            href={link.href}
-                                            class="mobile-nav-item flex items-center gap-4 text-2xl font-medium text-foreground transition-colors hover:text-primary opacity-0"
-                                        >
-                                            <span class="text-sm text-primary/50 font-mono">{String(i).padStart(2, "0")}</span>
-                                            {link.text}
-                                        </a>
-                                    );
-                                })()
-                            ),
-                        );
-                    })()
-                }
+        </div>
+        <div class="wrap cours-foot">
+            <div class="cours-more">
+                {navCours.more.map((m) => <a href={m.href} class="link-line">{m.text}</a>)}
             </div>
+            <a href={navCours.href} class="t-meta cours-all">Tous les cours</a>
+        </div>
+    </div>
 
-            <!-- CTA — toujours visible en bas -->
-            <div class="px-8 pb-8 pt-3 shrink-0">
-                <a
-                    href={siteConfig.navCta.href}
-                    class="mobile-nav-item flex items-center justify-center gap-2 w-full rounded-full bg-primary px-8 py-3.5 text-lg font-bold text-background transition-all hover:bg-primary-light opacity-0"
-                >
-                    {siteConfig.navCta.text}
-                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                    </svg>
-                </a>
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="mobile-menu" hidden>
+        <div class="wrap mobile-inner">
+            <p class="t-meta">Cours</p>
+            <ul class="mobile-cours">
+                {navCours.doors.map((door) => (
+                    <li>
+                        <a href={door.href} class="mobile-door">{door.label}</a>
+                        <ul>
+                            {door.items.map((item) => (
+                                <li><a href={item.href}>{item.text}</a></li>
+                            ))}
+                        </ul>
+                    </li>
+                ))}
+            </ul>
+            <ul class="mobile-main">
+                {navLinks.map((l) => <li><a href={l.href}>{l.text}</a></li>)}
+                {navCours.more.map((m) => <li><a href={m.href} class="mobile-small">{m.text}</a></li>)}
+            </ul>
+            <div class="mobile-foot">
+                <a href={navCta.href} class="btn btn-solid">{navCta.text}</a>
+                <a href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`} class="t-meta">{siteConfig.contact.phone}</a>
             </div>
         </div>
     </div>
-</nav>
+</header>
+<div class="nav-scrim" aria-hidden="true"></div>
 
-<style is:global>
+<style>
+    .nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: var(--bg);
+        transition: transform 0.6s var(--ease-out-expo), box-shadow 0.3s;
+    }
+    .nav[data-scrolled="true"] { box-shadow: 0 1px 0 var(--line); }
+    .nav[data-hidden="true"]:not([data-open="true"]) { transform: translateY(-100%); }
+
+    .nav-bar {
+        height: var(--nav-h);
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 24px;
+    }
+    .nav-logo img { height: 19px; width: auto; display: block; }
+
+    .nav-links { display: flex; align-items: center; gap: 30px; }
     .nav-link {
-        transition: color 0.3s ease;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        color: var(--ink);
+        padding: 8px 0;
+        cursor: pointer;
     }
-    /* État par défaut : glass subtil */
-    #nav-inner {
-        background: rgba(10, 10, 10, 0.6);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 2px;
+        height: 1px;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s var(--ease-out-expo);
     }
-    /* Au scroll : plus opaque, blur renforcé */
-    #main-nav.scrolled #nav-inner {
-        background: rgba(10, 10, 10, 0.85);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    .nav-link:hover::after,
+    .nav-link[aria-current="page"]::after,
+    .nav-cours-btn[aria-expanded="true"]::after { transform: scaleX(1); transform-origin: left; }
+    .nav-cours-btn svg { transition: transform 0.4s var(--ease-out-expo); }
+    .nav-cours-btn[aria-expanded="true"] svg { transform: rotate(180deg); }
+
+    .nav-actions { display: flex; justify-content: flex-end; align-items: center; gap: 16px; }
+    .nav-menu-btn { display: none; font-size: 14px; padding: 8px 0; }
+
+    /* Panneau */
+    .cours-panel {
+        position: absolute;
+        inset: 100% 0 auto 0;
+        background: var(--bg);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        clip-path: inset(0 0 100% 0);
+        transition: clip-path 0.7s var(--ease-out-expo);
+    }
+    .cours-panel[data-shown="true"] { clip-path: inset(0 0 0 0); }
+    .cours-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr minmax(220px, 0.8fr);
+        gap: var(--gutter);
+        padding-block: 40px 32px;
+    }
+    .cours-door {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: clamp(1.75rem, 2.6vw, 2.5rem);
+        font-weight: 500;
+        letter-spacing: var(--track-title);
+        line-height: 1;
+        margin-bottom: 28px;
+    }
+    .cours-door svg { transition: transform 0.5s var(--ease-out-expo); }
+    .cours-door:hover svg { transform: translate(3px, -3px); }
+    .cours-col ul { border-top: 1px solid var(--line); }
+    .cours-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 16px;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 17px;
+        letter-spacing: -0.02em;
+        transition: padding 0.5s var(--ease-out-expo), color 0.3s;
+    }
+    .cours-item:hover, .cours-item:focus-visible { padding-left: 10px; }
+    .cours-col:has(.cours-item:hover) .cours-item:not(:hover) { color: var(--gray-3); }
+
+    .cours-preview { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--surface); }
+    .cours-preview :global(img) {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transform: scale(1.04);
+        transition: opacity 0.6s var(--ease-out-expo), transform 1.2s var(--ease-out-expo);
+    }
+    .cours-preview :global(img.is-on) { opacity: 1; transform: scale(1); }
+
+    .cours-foot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 18px 22px;
+        border-top: 1px solid var(--line);
+        font-size: 14px;
+    }
+    .cours-more { display: flex; gap: 28px; }
+    .cours-all:hover { color: var(--ink); }
+
+    .nav-scrim {
+        position: fixed;
+        inset: 0;
+        z-index: 40;
+        background: rgba(10, 10, 10, 0.18);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.5s var(--ease-out-expo);
+    }
+    :global(body[data-nav-open="true"]) .nav-scrim { opacity: 1; pointer-events: auto; }
+
+    /* Mobile */
+    .mobile-menu {
+        position: fixed;
+        inset: var(--nav-h) 0 0 0;
+        background: var(--bg);
+        overflow-y: auto;
+        border-top: 1px solid var(--line);
+    }
+    .mobile-inner { padding-block: 28px 40px; display: flex; flex-direction: column; gap: 32px; min-height: 100%; }
+    .mobile-cours { display: grid; gap: 22px; margin-top: -18px; }
+    .mobile-door { font-size: 34px; font-weight: 500; letter-spacing: var(--track-title); line-height: 1.1; }
+    .mobile-cours ul { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 8px; color: var(--gray-1); font-size: 15px; }
+    .mobile-main { border-top: 1px solid var(--line); }
+    .mobile-main a { display: block; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 20px; letter-spacing: -0.02em; }
+    .mobile-main a.mobile-small { font-size: 16px; color: var(--gray-1); }
+    .mobile-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+
+    @media (max-width: 960px) {
+        .nav-bar { grid-template-columns: 1fr auto; }
+        .nav-links, .cours-panel { display: none; }
+        .nav-menu-btn { display: inline-flex; }
+    }
+    @media (max-width: 420px) {
+        .nav-cta { display: none; }
     }
 </style>
 
 <script>
-    import { gsap } from "gsap";
+    function setupNav() {
+        const nav = document.getElementById("site-nav");
+        if (!nav || nav.dataset.ready) return;
+        nav.dataset.ready = "1";
 
-    function initNavbar() {
-        const button = document.getElementById("mobile-menu-button");
+        const coursBtn = nav.querySelector<HTMLButtonElement>(".nav-cours-btn");
+        const panel = document.getElementById("cours-panel");
+        const menuBtn = nav.querySelector<HTMLButtonElement>(".nav-menu-btn");
         const menu = document.getElementById("mobile-menu");
-        const closeBtn = document.getElementById("mobile-menu-close");
-        const iconClosed = document.getElementById("menu-icon-closed");
-        const iconOpen = document.getElementById("menu-icon-open");
-        const nav = document.getElementById("main-nav");
+        const menuLabel = nav.querySelector(".nav-menu-label");
+        const scrim = document.querySelector<HTMLElement>(".nav-scrim");
+        let closeTimer: number | undefined;
 
-        // Avoid duplicate listeners
-        if (nav?.hasAttribute("data-nav-init")) return;
-        nav?.setAttribute("data-nav-init", "true");
+        const setOpen = (open: boolean) => {
+            nav.dataset.open = String(open);
+            document.body.dataset.navOpen = String(open);
+        };
 
-        // Mobile menu toggle
-        function openMenu() {
-            menu?.classList.remove("hidden");
-            iconClosed?.classList.add("hidden");
-            iconOpen?.classList.remove("hidden");
-            button?.setAttribute("aria-expanded", "true");
-            document.body.style.overflow = "hidden";
+        const openPanel = () => {
+            if (!panel || !coursBtn) return;
+            window.clearTimeout(closeTimer);
+            panel.hidden = false;
+            requestAnimationFrame(() => (panel.dataset.shown = "true"));
+            coursBtn.setAttribute("aria-expanded", "true");
+            setOpen(true);
+        };
+        const closePanel = () => {
+            if (!panel || !coursBtn || coursBtn.getAttribute("aria-expanded") === "false") return;
+            panel.dataset.shown = "false";
+            coursBtn.setAttribute("aria-expanded", "false");
+            setOpen(false);
+            closeTimer = window.setTimeout(() => (panel.hidden = true), 500);
+        };
 
-            const items = document.querySelectorAll(".mobile-nav-item");
-            gsap.fromTo(items, {
-                opacity: 0,
-                x: -20,
-            }, {
-                opacity: 1,
-                x: 0,
-                duration: 0.4,
-                stagger: 0.08,
-                ease: "power2.out",
+        coursBtn?.addEventListener("click", () =>
+            coursBtn.getAttribute("aria-expanded") === "true" ? closePanel() : openPanel(),
+        );
+        // Survol souris : ouverture directe, fermeture avec un court délai.
+        const fine = window.matchMedia("(hover: hover) and (pointer: fine)");
+        if (fine.matches) {
+            coursBtn?.addEventListener("mouseenter", openPanel);
+            nav.addEventListener("mouseleave", () => {
+                closeTimer = window.setTimeout(closePanel, 180);
             });
+            panel?.addEventListener("mouseenter", () => window.clearTimeout(closeTimer));
         }
+        scrim?.addEventListener("click", () => {
+            closePanel();
+            closeMenu();
+        });
 
-        const subTrigger = document.getElementById("mobile-submenu-trigger");
-        const subPanel = document.getElementById("mobile-submenu-programmes");
-        const chevron = subTrigger?.querySelector(".chevron") as HTMLElement | null;
+        // Photo de prévisualisation
+        const imgs = panel?.querySelectorAll<HTMLImageElement>(".cours-preview img") ?? [];
+        panel?.querySelectorAll<HTMLElement>("[data-preview]").forEach((a) => {
+            const show = () => imgs.forEach((img) => img.classList.toggle("is-on", img.dataset.key === a.dataset.preview));
+            a.addEventListener("mouseenter", show);
+            a.addEventListener("focus", show);
+        });
 
-        function closeSubmenu() {
-            if (subPanel) subPanel.style.maxHeight = "0px";
-            chevron?.classList.remove("rotate-180");
-        }
-
+        // Mobile
+        const openMenu = () => {
+            if (!menu || !menuBtn) return;
+            menu.hidden = false;
+            menuBtn.setAttribute("aria-expanded", "true");
+            if (menuLabel) menuLabel.textContent = "Fermer";
+            document.documentElement.style.overflow = "hidden";
+            nav.dataset.open = "true";
+        };
         function closeMenu() {
-            menu?.classList.add("hidden");
-            iconClosed?.classList.remove("hidden");
-            iconOpen?.classList.add("hidden");
-            button?.setAttribute("aria-expanded", "false");
-            document.body.style.overflow = "";
-
-            document.querySelectorAll(".mobile-nav-item").forEach((item) => {
-                (item as HTMLElement).style.opacity = "0";
-            });
-
-            closeSubmenu();
+            if (!menu || !menuBtn) return;
+            menu.hidden = true;
+            menuBtn.setAttribute("aria-expanded", "false");
+            if (menuLabel) menuLabel.textContent = "Menu";
+            document.documentElement.style.overflow = "";
+            nav!.dataset.open = "false";
         }
+        menuBtn?.addEventListener("click", () => (menu?.hidden ? openMenu() : closeMenu()));
+        menu?.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
 
-        button?.addEventListener("click", openMenu);
-        closeBtn?.addEventListener("click", closeMenu);
-
-        menu?.querySelectorAll("a").forEach((link) => {
-            link.addEventListener("click", closeMenu);
-        });
-
-        // Accordion toggle
-        subTrigger?.addEventListener("click", () => {
-            const isOpen = subPanel?.style.maxHeight && subPanel.style.maxHeight !== "0px";
-            if (isOpen) {
-                closeSubmenu();
-            } else {
-                if (subPanel) subPanel.style.maxHeight = subPanel.scrollHeight + "px";
-                chevron?.classList.add("rotate-180");
+        document.addEventListener("keydown", (e) => {
+            if (e.key !== "Escape") return;
+            if (coursBtn?.getAttribute("aria-expanded") === "true") {
+                closePanel();
+                coursBtn.focus();
+            }
+            if (menu && !menu.hidden) {
+                closeMenu();
+                menuBtn?.focus();
             }
         });
 
-        // Navbar scroll effect
-        let isScrolled = false;
-
-        function handleScroll() {
-            const scrolled = window.scrollY > 50;
-            if (scrolled === isScrolled) return;
-            isScrolled = scrolled;
-
-            if (scrolled) {
-                nav?.classList.add("scrolled");
-            } else {
-                nav?.classList.remove("scrolled");
-            }
-        }
-
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        handleScroll();
-
-        // Mega menu: dynamic image switching
-        const megaLinks = document.querySelectorAll(".mega-menu-link");
-        const megaImages = document.querySelectorAll(".mega-menu-image");
-
-        megaLinks.forEach((link) => {
-            link.addEventListener("mouseenter", () => {
-                const idx = (link as HTMLElement).dataset.service;
-                megaImages.forEach((img) => {
-                    const imgIdx = (img as HTMLElement).dataset.imageIndex;
-                    if (imgIdx === idx) {
-                        img.classList.remove("opacity-0");
-                        img.classList.add("opacity-100");
-                    } else {
-                        img.classList.remove("opacity-100");
-                        img.classList.add("opacity-0");
-                    }
-                });
-            });
-        });
-
-        // Set --nav-height CSS variable
-        function updateNavHeight() {
-            const navInner = document.getElementById("nav-inner");
-            if (navInner) {
-                document.documentElement.style.setProperty("--nav-height", navInner.offsetHeight + "px");
-            }
-        }
-        updateNavHeight();
-        window.addEventListener("resize", updateNavHeight);
+        // Se cache en descendant, revient en remontant.
+        let lastY = window.scrollY;
+        window.addEventListener(
+            "scroll",
+            () => {
+                const y = window.scrollY;
+                nav.dataset.scrolled = String(y > 8);
+                if (Math.abs(y - lastY) > 6) {
+                    nav.dataset.hidden = String(y > lastY && y > 240);
+                    if (y > lastY) closePanel();
+                    lastY = y;
+                }
+            },
+            { passive: true },
+        );
     }
-
-    initNavbar();
-    document.addEventListener("astro:page-load", initNavbar);
+    setupNav();
+    document.addEventListener("astro:page-load", setupNav);
 </script>

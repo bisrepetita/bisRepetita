@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 
+// Grandes photos N&B côte à côte, texte dessous. tagline ignoré.
 interface Panel {
     title: string;
     description: string;
@@ -19,131 +20,29 @@ interface Props {
     id?: string;
 }
 
-const { tagline, title, subtitle, panels, id } = Astro.props;
+const { title, subtitle, panels = [], id } = Astro.props;
+const cols = panels.length >= 4 ? "lg:grid-cols-4" : panels.length === 3 ? "lg:grid-cols-3" : "";
 ---
 
-<section class="bg-background" id={id}>
-    {/* Header */}
-    {(tagline || title || subtitle) && (
-        <div class="mx-auto max-w-7xl px-6 md:px-12 lg:px-20 pt-20 md:pt-32 pb-10 md:pb-14">
-            {tagline && (
-                <p class="text-sm font-semibold uppercase tracking-wider text-primary mb-3">{tagline}</p>
-            )}
-            {title && (
-                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-3">{title}</h2>
-            )}
-            {subtitle && (
-                <p class="text-lg text-muted-foreground max-w-2xl">{subtitle}</p>
-            )}
+<section id={id} class="section wrap scroll-mt-[72px]">
+    {(title || subtitle) && (
+        <div class="mb-[clamp(32px,4vw,56px)] grid gap-5 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] md:items-end md:gap-[clamp(40px,6vw,120px)]">
+            {title && <h2 class="t-title" data-split set:html={title} />}
+            {subtitle && <p class="max-w-[42ch] text-[17px] text-gray-1" set:html={subtitle} />}
         </div>
     )}
-
-    {/* Panels — Desktop */}
-    <div class="hidden md:flex h-[550px] w-full">
-        {panels.map((panel) => (
-            <div class="equipment-panel group relative flex-1 overflow-hidden cursor-pointer">
-                <Image
-                    src={panel.image}
-                    alt={panel.alt}
-                    class="absolute inset-0 w-full h-full object-cover grayscale transition-[filter] duration-700 group-hover:grayscale-0"
-                    widths={[400, 800]}
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                />
-                {/* Overlay gradient */}
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-
-                {/* Content */}
-                <div class="equipment-content absolute bottom-0 left-0 right-0 p-6 lg:p-8 z-10">
-                    <h3 class="text-2xl lg:text-3xl font-bold text-white leading-tight">{panel.title}</h3>
-                    <p class="equipment-desc text-sm text-white/80 max-w-xs leading-relaxed mt-3">
-                        {panel.description}
-                    </p>
-                    {panel.ctaHref && panel.ctaText && (
-                        <a
-                            href={panel.ctaHref}
-                            class="equipment-cta inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-white transition-colors mt-3"
-                        >
-                            {panel.ctaText}
-                            <span aria-hidden="true">→</span>
-                        </a>
-                    )}
+    <ul class:list={["grid gap-x-[clamp(16px,2vw,32px)] gap-y-12 sm:grid-cols-2", cols]}>
+        {panels.map((p) => (
+            <li>
+                <div class="nb aspect-[4/5] overflow-hidden bg-surface" data-photo-reveal>
+                    <Image src={p.image} alt={p.alt} widths={[400, 700, 1000]} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" class="h-full w-full object-cover" loading="lazy" />
                 </div>
-            </div>
+                <h3 class="mt-5 text-[19px] font-medium leading-snug tracking-[-0.02em]">{p.title}</h3>
+                <p class="mt-2 max-w-[42ch] text-[15px] text-gray-1">{p.description}</p>
+                {p.ctaHref && p.ctaText && (
+                    <a href={p.ctaHref} class="link-line mt-4 inline-block text-[15px]">{p.ctaText}</a>
+                )}
+            </li>
         ))}
-    </div>
-
-    {/* Panels — Mobile (stacked) */}
-    <div class="md:hidden flex flex-col gap-4 px-4 pb-8">
-        {panels.map((panel) => (
-            <div class="relative rounded-2xl overflow-hidden h-56">
-                <Image
-                    src={panel.image}
-                    alt={panel.alt}
-                    class="absolute inset-0 w-full h-full object-cover"
-                    widths={[400, 600]}
-                    sizes="100vw"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                <div class="absolute bottom-0 left-0 right-0 p-5 z-10">
-                    <h3 class="text-xl font-bold text-white mb-1">{panel.title}</h3>
-                    <p class="text-sm text-white/80 leading-relaxed">{panel.description}</p>
-                    {panel.ctaHref && panel.ctaText && (
-                        <a
-                            href={panel.ctaHref}
-                            class="inline-flex items-center gap-1 text-sm font-semibold text-primary mt-2"
-                        >
-                            {panel.ctaText}
-                            <span aria-hidden="true">→</span>
-                        </a>
-                    )}
-                </div>
-            </div>
-        ))}
-    </div>
+    </ul>
 </section>
-
-<style>
-    .equipment-panel {
-        transition: flex 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .equipment-panel:hover {
-        flex: 2.5;
-    }
-
-    .equipment-content {
-        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .equipment-panel:hover .equipment-content {
-        transform: translateY(-0.5rem);
-    }
-
-    .equipment-desc {
-        opacity: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition:
-            opacity 0.4s ease 0.15s,
-            max-height 0.4s ease 0.15s;
-    }
-
-    .equipment-panel:hover .equipment-desc {
-        opacity: 1;
-        max-height: 6rem;
-    }
-
-    .equipment-cta {
-        opacity: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition:
-            opacity 0.4s ease 0.2s,
-            max-height 0.4s ease 0.2s;
-    }
-
-    .equipment-panel:hover .equipment-cta {
-        opacity: 1;
-        max-height: 2rem;
-    }
-</style>

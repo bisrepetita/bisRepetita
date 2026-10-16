@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Schema from "../../components/seo/Schema.astro";
-import Tags from "../../components/ui/Tags.astro";
 import TableOfContents from "../../components/blog/TableOfContents.astro";
 import AuthorByline from "../../components/blog/AuthorByline.astro";
 import AuthorBox from "../../components/blog/AuthorBox.astro";
@@ -34,6 +33,8 @@ const readingTime = remarkPluginFrontmatter?.minutesRead
   ? `${Math.ceil(remarkPluginFrontmatter.minutesRead)} min de lecture`
   : "";
 
+const categoryLabel = category ? category.charAt(0).toUpperCase() + category.slice(1) : "";
+
 const metadata = {
   title: title,
   description: description,
@@ -55,129 +56,202 @@ const metadata = {
     }}
   />
 
-  <div class="theme-light">
-    <div class="min-h-screen bg-background">
-      <section class="pt-32 pb-16 md:pt-40">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <!-- Breadcrumb -->
-          <nav class="mb-8 text-sm text-muted-foreground" aria-label="Fil d'Ariane">
-            <ol class="flex items-center gap-1.5">
-              <li>
-                <a href="/blog" class="transition-colors hover:text-foreground">
-                  Blog
-                </a>
-              </li>
-              {
-                category && (
-                  <>
-                    <li aria-hidden="true">/</li>
-                    <li>
-                      <a
-                        href={`/blog/category/${slugify(category)}`}
-                        class="transition-colors hover:text-foreground"
-                      >
-                        {category.charAt(0).toUpperCase() + category.slice(1)}
-                      </a>
-                    </li>
-                  </>
-                )
-              }
-              <li aria-hidden="true">/</li>
-              <li class="text-foreground font-medium">
-                {title}
-              </li>
-            </ol>
-          </nav>
+  <article>
+    <header class="wrap art-head">
+      <nav class="art-crumbs" aria-label="Fil d'Ariane">
+        <ol>
+          <li><a href="/blog">Blog</a></li>
+          {category && (
+            <li><a href={`/blog/category/${slugify(category)}`}>{categoryLabel}</a></li>
+          )}
+          <li aria-current="page">{title}</li>
+        </ol>
+      </nav>
 
-          <!-- Header -->
-          <div class="max-w-4xl">
-            <h1
-              class="font-heading text-5xl font-medium tracking-tight text-foreground sm:text-6xl md:text-7xl"
-            >
-              {title}
-            </h1>
+      <h1 class="art-title">{title}</h1>
+      <p class="art-desc">{description}</p>
 
-            <p class="mt-4 text-lg text-muted-foreground">
-              {description}
-            </p>
+      <dl class="art-meta">
+        <div><dt>Par</dt><dd><AuthorByline authorName={author} /></dd></div>
+        <div><dt>Publié le</dt><dd><time datetime={pubDate.toISOString()}>{formattedDate}</time></dd></div>
+        {readingTime && <div><dt>Lecture</dt><dd>{readingTime}</dd></div>}
+        {category && (
+          <div><dt>Catégorie</dt><dd><a href={`/blog/category/${slugify(category)}`} class="link-line">{categoryLabel}</a></dd></div>
+        )}
+      </dl>
+    </header>
 
-            <div
-              class="mt-4 flex flex-wrap items-center gap-2 text-sm text-muted-foreground"
-            >
-              {
-                category && (
-                  <a
-                    href={`/blog/category/${slugify(category)}`}
-                    class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary transition-colors hover:bg-primary/20"
-                  >
-                    {category.charAt(0).toUpperCase() + category.slice(1)}
-                  </a>
-                )
-              }
-              <time datetime={pubDate.toISOString()}>
-                {formattedDate}
-              </time>
-              <span aria-hidden="true">&middot;</span>
-              <AuthorByline authorName={author} />
-              {readingTime && <span aria-hidden="true">&middot;</span>}
-              {readingTime && <span>{readingTime}</span>}
-            </div>
-          </div>
+    {image && (
+      <div class="wrap">
+        <figure class="art-cover nb">
+          <img src={image} alt="" width="1376" height="768" loading="eager" fetchpriority="high" />
+        </figure>
+      </div>
+    )}
 
+    <div class="wrap art-grid">
+      <aside class="art-toc">
+        <TableOfContents headings={headings} />
+      </aside>
+
+      <div class="art-main">
+        <div class="prose art-body">
+          <Content />
         </div>
-      </section>
 
-      <!-- Content -->
-      <section class="pb-20">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div class="lg:grid lg:grid-cols-[1fr_20rem] lg:gap-10">
-            <!-- Colonne article -->
-            <div class="min-w-0">
-              <div
-                class="prose prose-lg max-w-3xl prose-headings:font-heading prose-headings:font-medium prose-headings:tracking-tight prose-headings:mb-3 prose-h2:text-3xl prose-h3:text-2xl prose-a:text-primary hover:prose-a:underline prose-img:rounded-xl"
-              >
-                <Content />
-              </div>
+        <div class="art-after">
+          <AuthorBox authorName={author} />
 
-              <!-- Author box -->
-              <div class="mt-12 max-w-3xl">
-                <AuthorBox authorName={author} />
-              </div>
-
-              <!-- Tags + back link -->
-              <div class="mt-8 max-w-3xl border-t border-border pt-8">
-                {tags && tags.length > 0 && <Tags tags={tags} class="mb-6" />}
-
-                <a
-                  href="/blog"
-                  class="inline-flex items-center text-sm font-medium text-primary transition-colors hover:text-primary/80"
-                >
-                  <svg
-                    class="mr-1 h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
-                  </svg>
-                  Retour au blog
-                </a>
-              </div>
+          {tags && tags.length > 0 && (
+            <div class="art-tags">
+              <p>Mots-clés</p>
+              <ul>
+                {tags.map((tag) => (
+                  <li><a href={`/blog/tags/${slugify(tag)}`}>#{tag}</a></li>
+                ))}
+              </ul>
             </div>
+          )}
 
-            <!-- Colonne TOC (desktop only) -->
-            <aside class="hidden lg:block">
-              <nav class="sticky top-32">
-                <TableOfContents headings={headings} />
-              </nav>
-            </aside>
-          </div>
+          <a href="/blog" class="link-line art-back">Retour au blog</a>
         </div>
-      </section>
+      </div>
     </div>
-  </div>
+  </article>
 </BaseLayout>
+
+<style>
+  .art-head { padding-top: clamp(40px, 6vw, 96px); padding-bottom: clamp(40px, 5vw, 64px); }
+  .art-crumbs ol { display: flex; flex-wrap: wrap; gap: 4px 0; font-size: 13px; color: var(--gray-2); }
+  .art-crumbs li { display: inline; }
+  .art-crumbs li + li::before { content: "/"; margin: 0 8px; color: var(--gray-3); }
+  .art-crumbs a:hover { color: var(--ink); }
+  .art-crumbs [aria-current] { color: var(--gray-1); }
+  @media (max-width: 640px) { .art-crumbs [aria-current] { display: none; } }
+  .art-title {
+    margin-top: clamp(32px, 4vw, 56px);
+    max-width: 22ch;
+    font-size: clamp(2.25rem, 4.6vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: var(--track-title);
+  }
+  .art-desc { margin-top: 24px; max-width: 56ch; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.5; color: var(--gray-1); }
+  .art-meta {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: clamp(40px, 5vw, 64px);
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+  }
+  .art-meta > div { padding: 14px 16px 0 0; }
+  .art-meta dt { font-size: 13px; color: var(--gray-2); }
+  .art-meta dd { margin-top: 2px; }
+
+  .art-cover { margin: 0; max-width: 1200px; background: var(--surface); }
+  .art-cover img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
+
+  .art-grid {
+    display: grid;
+    grid-template-columns: minmax(200px, 280px) minmax(0, 1fr);
+    gap: 0 clamp(40px, 7vw, 128px);
+    padding-top: clamp(56px, 6vw, 96px);
+    padding-bottom: var(--section);
+  }
+  .art-toc :global(.toc-desktop) { position: sticky; top: calc(var(--nav-h) + 32px); }
+  .art-main { min-width: 0; max-width: 66ch; font-size: 18px; }
+  .art-after { margin-top: 64px; display: flex; flex-direction: column; gap: 32px; align-items: flex-start; }
+  .art-after > :global(aside) { align-self: stretch; }
+  .art-tags { font-size: 14px; }
+  .art-tags p { font-size: 13px; color: var(--gray-2); margin-bottom: 8px; }
+  .art-tags ul { display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--gray-1); }
+  .art-tags a:hover { color: var(--ink); }
+  .art-back { font-size: 15px; }
+
+  @media (max-width: 1023px) {
+    .art-grid { grid-template-columns: minmax(0, 1fr); }
+    .art-main { max-width: none; }
+    .art-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .art-meta > div { padding-bottom: 14px; }
+  }
+
+  /* Lecture article : corps 18px / 1.6, titres Inter 500 serrés, filets fins, rien de coloré. */
+  .art-body {
+    --tw-prose-body: var(--ink);
+    --tw-prose-headings: var(--ink);
+    --tw-prose-links: var(--ink);
+    --tw-prose-bold: var(--ink);
+    --tw-prose-counters: var(--gray-2);
+    --tw-prose-bullets: var(--gray-3);
+    --tw-prose-hr: var(--line);
+    --tw-prose-quotes: var(--ink);
+    --tw-prose-quote-borders: var(--ink);
+    --tw-prose-th-borders: var(--ink);
+    --tw-prose-td-borders: var(--line);
+    --tw-prose-captions: var(--gray-2);
+    max-width: none;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  .art-body :global(p) { margin: 0 0 1.25em; }
+  .art-body :global(h1),
+  .art-body :global(h2) {
+    font-size: clamp(1.625rem, 2.4vw, 2.125rem);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    margin: 2.4em 0 0.7em;
+    scroll-margin-top: calc(var(--nav-h) + 24px);
+  }
+  .art-body :global(h3) {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin: 1.9em 0 0.5em;
+    scroll-margin-top: calc(var(--nav-h) + 24px);
+  }
+  .art-body :global(h4) { font-size: 1.05rem; font-weight: 500; margin: 1.6em 0 0.4em; }
+  .art-body :global(:is(h2, h3, h4) + *) { margin-top: 0; }
+  .art-body > :global(:first-child) { margin-top: 0; }
+  .art-body :global(strong) { font-weight: 500; }
+  .art-body :global(a:not(.btn)) {
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.22em;
+    text-decoration-color: var(--gray-3);
+    transition: text-decoration-color 0.3s;
+  }
+  .art-body :global(a:not(.btn):hover) { text-decoration-color: var(--ink); }
+  .art-body :global(:is(ul, ol)) { margin: 0 0 1.4em; padding-left: 1.2em; }
+  .art-body :global(li) { margin: 0.35em 0; padding-left: 0.2em; }
+  .art-body :global(blockquote) {
+    margin: 2em 0;
+    padding: 0 0 0 1.2em;
+    border-left: 1px solid var(--ink);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.1em;
+    line-height: 1.5;
+    letter-spacing: -0.015em;
+  }
+  .art-body :global(blockquote p::before),
+  .art-body :global(blockquote p::after) { content: none; }
+  .art-body :global(table) {
+    width: 100%;
+    margin: 2em 0;
+    font-size: 15px;
+    line-height: 1.45;
+    font-variant-numeric: tabular-nums;
+    border-collapse: collapse;
+  }
+  .art-body :global(thead th) { font-weight: 500; text-align: left; padding: 0 12px 10px 0; vertical-align: bottom; }
+  .art-body :global(tbody td) { padding: 12px 12px 12px 0; vertical-align: top; }
+  .art-body :global(hr) { margin: 3em 0; }
+  .art-body :global(img) { width: 100%; height: auto; }
+  .art-body :global(code) { font-size: 0.9em; font-weight: 400; }
+  .art-body :global(code::before), .art-body :global(code::after) { content: none; }
+  @media (max-width: 640px) {
+    .art-body :global(table) { display: block; overflow-x: auto; }
+  }
+</style>

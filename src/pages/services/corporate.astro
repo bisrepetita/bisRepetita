@@ -1,24 +1,18 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Hero from "../../components/widgets/Hero.astro";
-import Stats from "../../components/widgets/Stats.astro";
 import Features from "../../components/widgets/Features.astro";
 import ContentShowcase from "../../components/widgets/ContentShowcase.astro";
 import SplitShowcase from "../../components/widgets/SplitShowcase.astro";
 import PricingTable from "../../components/widgets/PricingTable.astro";
-import Testimonials from "../../components/widgets/Testimonials.astro";
 import FAQ from "../../components/widgets/FAQ.astro";
 import CTABanner from "../../components/widgets/CTABanner.astro";
 import ProfileShowcase from "../../components/widgets/ProfileShowcase.astro";
 import RelatedServices from "../../components/widgets/RelatedServices.astro";
-import GsapReveal from "../../components/widgets/GsapReveal.astro";
-import { Icon } from "astro-icon/components";
-import { Image } from "astro:assets";
 import Schema from "../../components/seo/Schema.astro";
-import studioAtmosphere from "../../assets/studio-atmosphere.webp";
 import coursLandscape from "../../assets/cours-2-landscape.webp";
+import imageCta from "../../assets/image-cta.webp";
 import nicolasPortrait from "../../assets/nicolas-de-boccard.webp";
-import mapGeneve from "../../assets/map-geneve-boxe.webp";
 
 const metadata = {
     title: "Boxe Corporate & Team Building Genève",
@@ -26,35 +20,37 @@ const metadata = {
         "Boxe corporate à Genève : team building, gestion du stress, cohésion d'équipe. Coachs certifiés, déplacement dans le canton.",
 };
 
-const stats = [
-    { value: "100%", label: "Sur mesure", description: "Chaque programme est conçu autour de vos objectifs d'équipe, votre secteur et vos contraintes logistiques." },
-    { value: "2", label: "Coachs certifiés", description: "Nicolas et Lionel de Boccard, entraineurs agréés Swiss Boxing, formés à l'encadrement sportif professionnel." },
-    { value: "30km", label: "Rayon d'intervention", description: "Au studio ou dans vos locaux — nous nous déplaçons dans tout le canton de Genève." },
+const facts = [
+    { k: "Lieu", v: "Dans vos locaux ou au studio" },
+    { k: "Zone", v: "Canton de Genève" },
+    { k: "Participants", v: "Jusqu'à 20 en entreprise, 12 au studio" },
+    { k: "Contact", v: "Aucun par défaut" },
+    { k: "Tarif", v: "Sur devis" },
 ];
 
 const features = [
     {
-        title: "Gestion du stress & prévention du burnout",
+        title: "Gestion du stress",
         description:
-            "La boxe éducative est l'un des outils les plus efficaces contre le stress chronique. L'effort physique intense, cadré et progressif, libère les tensions accumulées et améliore la qualité du sommeil.",
+            "Un effort physique cadré et progressif, une heure où l'on pense au geste plutôt qu'aux dossiers. Beaucoup de participants disent repartir plus détendus.",
         icon: "lucide:shield-check",
     },
     {
         title: "Leadership & prise de décision",
         description:
-            "Sur le ring comme en réunion : garder son calme sous pression, lire une situation, prendre une décision. La boxe développe des compétences de leadership transférables au quotidien professionnel.",
+            "Garder son calme sous l'effort, lire une situation, décider vite. Des réflexes que la boxe fait travailler et qui parlent à chacun au bureau.",
         icon: "lucide:target",
     },
     {
         title: "Cohésion d'équipe",
         description:
-            "Rien ne soude un groupe comme un effort partagé. La boxe crée des liens authentiques entre collaborateurs, au-delà des hiérarchies.",
+            "Un effort partagé rapproche. La boxe crée un moment commun entre collaborateurs, au-delà des hiérarchies.",
         icon: "lucide:users",
     },
     {
         title: "Marque employeur",
         description:
-            "Proposer la boxe en entreprise envoie un signal fort : une culture d'entreprise dynamique, un engagement concret pour le bien-être au travail.",
+            "Proposer la boxe en entreprise montre un engagement concret pour le bien-être au travail.",
         icon: "lucide:award",
     },
 ];
@@ -62,35 +58,29 @@ const features = [
 const teamBuildingFormats = [
     {
         title: "Atelier découverte (1h)",
-        description: "Initiation à la boxe sans contact pour 10 à 20 collaborateurs. Idéal pour un afterwork, une journée d'intégration ou un team building ponctuel.",
-        icon: "lucide:sparkles",
+        description: "Initiation à la boxe sans contact pour 10 à 20 collaborateurs. Pour un afterwork, une journée d'intégration ou un team building ponctuel.",
     },
     {
         title: "Séminaire leadership (demi-journée)",
-        description: "Atelier pratique + conférence interactive sur la prise de décision sous pression, la gestion du stress et la résilience. Le parallèle entre le ring et le management.",
-        icon: "lucide:presentation",
+        description: "Atelier pratique et conférence interactive sur la prise de décision sous pression. Le parallèle entre le ring et le management.",
     },
     {
         title: "Programme récurrent (hebdomadaire)",
-        description: "Sessions boxe fitness intégrées au programme bien-être de votre entreprise. Tarifs dégressifs, suivi collectif, rapport trimestriel de progression.",
-        icon: "lucide:calendar-check",
+        description: "Des séances de boxe fitness intégrées au programme bien-être de votre entreprise. Tarifs dégressifs, suivi collectif.",
     },
     {
         title: "Défi d'équipe (compétition interne)",
-        description: "Tournoi de shadow boxing ou circuit training par équipes. 100% sans contact, 100% compétitif. Le format qui crée les souvenirs les plus forts.",
-        icon: "lucide:trophy",
+        description: "Tournoi de shadow boxing ou circuit training par équipes. Sans contact, avec un classement à la clé.",
     },
 ];
 
 const approches = [
     {
         title: "Boxe sans contact",
-        icon: "lucide:shield",
-        highlight: "Accessible à tous",
-        description: "Le format le plus demandé en entreprise. Zéro opposition entre participants : tout le travail se fait au sac et aux pattes d'ours. Technique, cardio, renforcement — l'intensité de la boxe sans aucun risque.",
+        description: "Le format le plus demandé en entreprise. Aucune opposition entre participants : tout le travail se fait au sac et aux pattes d'ours. Technique, cardio, renforcement.",
         items: [
             "Travail au sac de frappe et pattes d'ours",
-            "Circuit training haute intensité",
+            "Circuit training",
             "Shadow boxing et déplacements",
             "Aucun prérequis sportif",
         ],
@@ -98,16 +88,14 @@ const approches = [
     },
     {
         title: "Boxe avec contact",
-        icon: "lucide:swords",
-        highlight: "Pour aller plus loin",
-        description: "Pour les équipes qui veulent l'expérience complète. Sparring contrôlé et encadré, avec protections intégrales. Une montée en intensité qui forge le mental et pousse les limites — dans un cadre 100% sécurisé.",
+        description: "En option, pour les équipes qui le souhaitent. Un contact léger, contrôlé et consenti, avec protections complètes et sous la supervision du coach. Personne n'y est obligé.",
         items: [
-            "Sparring contrôlé avec protections complètes",
+            "Exercices d'opposition légère avec protections",
             "Assauts éducatifs encadrés par le coach",
-            "Exercices d'opposition progressive",
+            "Progression par étapes",
             "Niveau intermédiaire recommandé",
         ],
-        ideal: "Cohésion avancée, dépassement de soi, séminaires leadership",
+        ideal: "Équipes déjà initiées, séminaires leadership",
     },
 ];
 
@@ -126,7 +114,7 @@ const tiers = [
     },
     {
         name: "Team Building",
-        description: "Atelier ponctuel pour souder vos équipes.",
+        description: "Un atelier ponctuel pour réunir vos équipes.",
         price: "Sur devis",
         priceNote: "",
         features: [
@@ -140,7 +128,7 @@ const tiers = [
     },
     {
         name: "Coaching Régulier",
-        description: "Sessions hebdomadaires sur votre lieu de travail.",
+        description: "Des séances hebdomadaires sur votre lieu de travail.",
         price: "Sur devis",
         priceNote: "",
         features: [
@@ -152,38 +140,19 @@ const tiers = [
         ],
         cta: { text: "Demander un devis", href: "/contact" },
         highlighted: true,
-        popularLabel: "Le plus demandé",
     },
     {
         name: "Séminaires & Keynotes",
-        description: "Le parallèle entre le ring et le business.",
+        description: "Le parallèle entre le ring et l'entreprise.",
         price: "Sur devis",
         priceNote: "",
         features: [
             "Conférence interactive",
             "Atelier pratique inclus",
-            "Thèmes : leadership, résilience, dépassement",
+            "Thèmes : leadership, prise de décision, effort",
             "Adapté aux séminaires d'entreprise",
         ],
         cta: { text: "Demander un devis", href: "/contact" },
-    },
-];
-
-const testimonials = [
-    {
-        quote: "TODO — Témoignage DRH à obtenir",
-        name: "À confirmer",
-        role: "DRH — Entreprise genevoise",
-    },
-    {
-        quote: "TODO — Témoignage CEO/Manager à obtenir",
-        name: "À confirmer",
-        role: "CEO — Entreprise genevoise",
-    },
-    {
-        quote: "TODO — Témoignage Office Manager à obtenir",
-        name: "À confirmer",
-        role: "Office Manager — Entreprise genevoise",
     },
 ];
 
@@ -194,11 +163,11 @@ const faqs = [
     },
     {
         question: "Est-ce dangereux ? Y a-t-il des contacts physiques ?",
-        answer: "Par défaut, nos séances corporate reposent sur la boxe sans contact : zéro opposition directe, tout le travail se fait au sac et aux pattes d'ours, dans un cadre 100% sécurisé. Pour les équipes qui souhaitent aller plus loin, nous proposons aussi un format avec contact — du sparring encadré avec protections intégrales, toujours sous la supervision du coach.",
+        answer: "Par défaut, nos séances corporate reposent sur la boxe sans contact : zéro opposition directe, tout le travail se fait au sac et aux pattes d'ours, sous la supervision du coach. Pour les équipes qui le souhaitent, un format avec contact est possible en option : un contact léger, contrôlé et consenti, avec protections, toujours sous la supervision du coach.",
     },
     {
         question: "Quelle différence entre boxe sans contact et boxe avec contact ?",
-        answer: "La boxe sans contact est accessible à tous : technique au sac, pattes d'ours, shadow boxing et circuit training. Aucune opposition entre participants. La boxe avec contact introduit du sparring éducatif et contrôlé, avec protections complètes, pour les équipes qui cherchent une expérience plus immersive et un dépassement de soi collectif. Les deux approches sont combinables dans un même programme.",
+        answer: "La boxe sans contact est accessible à tous : technique au sac, pattes d'ours, shadow boxing et circuit training. Aucune opposition entre participants. La boxe avec contact, en option, introduit un contact léger, contrôlé et consenti, avec protections complètes, pour les équipes qui cherchent une expérience plus immersive. Les deux approches sont combinables dans un même programme.",
     },
     {
         question: "Quel espace prévoir dans nos bureaux ?",
@@ -210,7 +179,7 @@ const faqs = [
     },
     {
         question: "Quels sont les tarifs corporate ?",
-        answer: "Les séances corporate sont facturées entre 400 et 600 CHF selon le format, la durée et le nombre de participants. Les formules mensuelles bénéficient de tarifs dégressifs. <a href='/contact' class='text-primary hover:underline'>Demandez un devis personnalisé</a> pour un tarif précis.",
+        answer: "Les séances corporate sont facturées entre 400 et 600 CHF selon le format, la durée et le nombre de participants. Les formules mensuelles bénéficient de tarifs dégressifs. <a href='/contact' class='link-line'>Demandez un devis personnalisé</a> pour un tarif précis.",
     },
     {
         question: "Proposez-vous des contrats récurrents ?",
@@ -218,7 +187,7 @@ const faqs = [
     },
     {
         question: "Comment fonctionne la facturation ?",
-        answer: "Nous émettons une facture avec un délai de paiement de 30 jours. Le règlement par virement bancaire est privilégié pour les entreprises. <a href='/contact' class='text-primary hover:underline'>Contactez-nous</a> pour discuter des modalités.",
+        answer: "Nous émettons une facture avec un délai de paiement de 30 jours. Le règlement par virement bancaire est privilégié pour les entreprises. <a href='/contact' class='link-line'>Contactez-nous</a> pour discuter des modalités.",
     },
 ];
 ---
@@ -262,278 +231,188 @@ const faqs = [
         />
     </Fragment>
 
-    <!-- 1. Hero (DARK) -->
     <Hero
-        title={`Boxe <span class="font-display text-primary">Corporate</span> à Genève`}
-        description="Performance, bien-être et cohésion d'équipe. Programmes de boxe sur mesure pour les entreprises genevoises — en déplacement ou au studio."
-        image={studioAtmosphere}
-        imageAlt="Séance de boxe corporate au studio Bis Repetita Genève"
-        actions={[
+        title={`Boxe <span class="text-primary">Corporate</span> à Genève`}
+        description="Bien-être et cohésion d'équipe. Des programmes de boxe sur mesure pour les entreprises genevoises, dans vos locaux ou au studio."
+        image={coursLandscape}
+        imageAlt="Séance de boxe en groupe au studio Bis Repetita à Genève"
+        actions={[{ text: "Demander un devis", href: "/contact" }]}
+    />
+
+    <section class="section wrap intro">
+        <p class="t-lead intro-lead">
+            La boxe en entreprise, encadrée par des coachs formés en compétition.
+            <span class="soft">Sans contact par défaut, avec un contact léger en option. Le programme suit vos objectifs d'équipe.</span>
+        </p>
+        <dl class="rows">
+            {facts.map((f) => (
+                <div><dt>{f.k}</dt><dd>{f.v}</dd></div>
+            ))}
+        </dl>
+    </section>
+
+    <Features
+        id="pourquoi"
+        title="Ce que la boxe apporte à vos équipes"
+        features={features}
+    />
+
+    <section id="team-building" class="section wrap split">
+        <div class="split-head">
+            <h2 class="t-title" data-split>Team Building Boxe à Genève</h2>
+            <p>
+                De l'atelier découverte au programme annuel, la boxe réunit vos équipes autour d'un effort partagé, <a href="#faq" class="link-line">dans un cadre encadré</a>.
+            </p>
+            <p>Tous les formats sont combinables. <a href="/contact" class="link-line">Demandez un devis sur mesure</a>.</p>
+        </div>
+        <ul class="list">
+            {teamBuildingFormats.map((f) => (
+                <li>
+                    <h3 class="t-subtitle">{f.title}</h3>
+                    <p>{f.description}</p>
+                </li>
+            ))}
+        </ul>
+    </section>
+
+    <SplitShowcase
+        title="Une méthode, deux intensités"
+        image={imageCta}
+        imageAlt="Travail aux pattes d'ours entre un coach et un participant"
+        items={[
             {
-                text: "Demander un devis",
-                href: "/contact",
-                variant: "primary",
-                icon: "lucide:arrow-right",
+                title: "Sécurité d'abord",
+                description:
+                    "Sans contact ou avec un contact léger, la sécurité de vos collaborateurs passe d'abord : protections, supervision continue, intensité progressive.",
+            },
+            {
+                title: "Adapté à tous les niveaux",
+                description:
+                    "Aucun prérequis sportif. Les exercices sont ajustés en temps réel selon la condition de chacun, du débutant au sportif confirmé.",
+            },
+            {
+                title: "Méthode structurée",
+                description:
+                    "Chaque séance suit le même fil : échauffement, technique, circuit training, retour au calme.",
             },
         ]}
-        ctaStyle="outline-gold"
-        classes={{ container: "min-h-[72vh]" }}
     />
 
-    <!-- 2. Stats (LIGHT — rupture visuelle) -->
-    <Stats
-        stats={stats}
-        badge="Boxe Corporate"
-        badgeHref="#pourquoi"
-        variant="wide"
-        intro="La boxe en entreprise : un levier de performance collective piloté par des professionnels de compétition. Sans contact ou avec sparring encadré — une méthode qui s'adapte à vos objectifs et transforme les dynamiques d'équipe."
+    <section id="approches" class="section wrap">
+        <div class="split-head approches-head">
+            <h2 class="t-title" data-split>Avec ou sans contact : vous choisissez</h2>
+            <p>Selon vos objectifs et le profil de vos équipes, nous ajustons l'intensité, de la découverte au contact léger encadré.</p>
+        </div>
+        <div class="approches">
+            {approches.map((a) => (
+                <div>
+                    <h3 class="t-subtitle">{a.title}</h3>
+                    <p class="approche-desc">{a.description}</p>
+                    <ul class="rows">
+                        {a.items.map((item) => <li>{item}</li>)}
+                        <li><span class="soft">Pour</span> <span>{a.ideal}</span></li>
+                    </ul>
+                </div>
+            ))}
+        </div>
+        <p class="approches-foot">
+            Les deux formats se combinent dans un même programme. <a href="/contact" class="link-line">Discutons de vos besoins</a>.
+        </p>
+    </section>
+
+    <PricingTable
+        title="Quatre formats pour répondre à vos besoins"
+        tiers={tiers}
     />
 
-    <!-- 3. Features bento (DARK) — Le "Pourquoi" -->
-    <GsapReveal animation="fadeUp">
-        <Features
-            id="pourquoi"
-            tagline="Pourquoi la boxe en entreprise"
-            title="Des bénéfices mesurables pour vos équipes"
-            features={features}
-            columns={3}
-            headlineAlign="left"
-            bento="2-3"
-        >
-            <div class="group relative bg-white p-8 rounded-3xl border border-border/50 transition-all duration-300 hover:border-primary/30 hover:shadow-[var(--shadow-gold-card)] overflow-hidden flex items-center justify-center">
-                <img src="/logo-black.svg" alt="Bis Repetita" class="w-48 h-auto opacity-90 transition-opacity duration-300 group-hover:opacity-100" />
-            </div>
-        </Features>
-    </GsapReveal>
+    <ProfileShowcase
+        title="Nicolas de Boccard"
+        image={nicolasPortrait}
+        imageAlt="Portrait de Nicolas de Boccard, coach de boxe à Genève"
+        items={[
+            {
+                title: "Compétiteur et formateur",
+                description:
+                    "Licencié SwissBoxing #102860, formé dans les clubs genevois historiques. Nicolas a adapté la rigueur de la compétition au monde de l'entreprise.",
+            },
+            {
+                title: "Entraîneur agréé Swiss Boxing",
+                description:
+                    "Habitué à encadrer des publics non sportifs, avec une progression adaptée à chaque profil.",
+            },
+            {
+                title: "20 ans de pratique",
+                description:
+                    "Nicolas connaît les contraintes logistiques et les attentes des entreprises.",
+            },
+            {
+                title: "Ancré à Genève",
+                description:
+                    "Formé dans le tissu sportif genevois, Nicolas connaît les entreprises, les espaces et les rythmes du canton.",
+            },
+        ]}
+    />
 
-    <!-- 4. Team Building Formats (DARK) -->
-    <GsapReveal animation="fadeUp">
-        <section id="team-building" class="py-16 md:py-28">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                <div class="text-center mb-12">
-                    <span class="section-label text-primary">Formats</span>
-                    <h2 class="text-4xl md:text-5xl font-medium tracking-tight font-display mt-3">
-                        Team Building Boxe à Genève
-                    </h2>
-                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
-                        De l'atelier découverte au programme annuel, la boxe fédère vos équipes autour d'un effort partagé — toujours <a href="#faq" class="text-primary hover:underline">dans un cadre 100% sécurisé</a>.
-                    </p>
-                </div>
-                <div class="grid gap-8 md:grid-cols-2">
-                    {teamBuildingFormats.map((format) => (
-                        <div class="group relative glass-card rounded-2xl p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-[var(--shadow-gold-card)] flex flex-col">
-                            <div class="flex items-center gap-3 mb-5">
-                                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center transition-all duration-300 group-hover:shadow-[var(--shadow-gold-icon)]">
-                                    <Icon name={format.icon} class="w-6 h-6 text-primary" />
-                                </div>
-                            </div>
-                            <h3 class="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                                {format.title}
-                            </h3>
-                            <p class="text-sm text-muted-foreground">
-                                {format.description}
-                            </p>
-                        </div>
-                    ))}
-                </div>
-                <div class="mt-8 text-center">
-                    <p class="text-sm text-muted-foreground">
-                        Tous les formats sont combinables. <a href="/contact" class="text-primary hover:underline">Demandez un devis sur mesure</a>.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </GsapReveal>
+    <ContentShowcase
+        title="La boxe vient à vous, partout dans le canton"
+        items={[
+            {
+                title: "Genève centre & Plainpalais",
+                description:
+                    "Bureaux, espaces de coworking, salles de réunion : on s'adapte à votre espace.",
+            },
+            {
+                title: "Organisations internationales & Nations",
+                description:
+                    "Habitués aux environnements internationaux. Séances en français ou en anglais.",
+            },
+            {
+                title: "Plan-les-Ouates & zone industrielle",
+                description:
+                    "Intervention dans les zones d'activité du canton. Parking, accès livraison : on gère la logistique.",
+            },
+            {
+                title: "Au studio, La Voie-Creuse 16",
+                description:
+                    "Accueillez vos équipes au studio : un ring, des sacs, des vestiaires et des douches.",
+            },
+        ]}
+    />
 
-    <!-- 5. SplitShowcase — Méthodologie (DARK) -->
-    <GsapReveal animation="fadeUp">
-        <SplitShowcase
-            tagline="Notre approche"
-            title="Une méthode, deux intensités"
-            image={coursLandscape}
-            imageAlt="Entraînement de boxe éducative en groupe au studio Bis Repetita"
-            items={[
-                {
-                    title: "Sécurité avant tout",
-                    description:
-                        "Que ce soit en mode sans contact ou avec sparring encadré, la sécurité de vos collaborateurs est notre priorité absolue. Protections, supervision continue, intensité progressive.",
-                },
-                {
-                    title: "Adapté à tous les niveaux",
-                    description:
-                        "Aucun prérequis sportif. Les exercices sont modulés en temps réel selon la condition physique de chaque participant, du débutant complet au sportif confirmé.",
-                },
-                {
-                    title: "Méthode structurée",
-                    description:
-                        "Chaque séance suit un protocole éprouvé : échauffement, technique, circuit training, retour au calme. Un format calibré pour l'intensité optimale sans surcharge.",
-                },
-            ]}
-        />
-    </GsapReveal>
-
-    <!-- 6. Deux approches : avec et sans contact -->
-    <GsapReveal animation="fadeUp">
-        <section id="approches" class="py-16 md:py-28">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                <div class="text-center mb-12">
-                    <span class="section-label text-primary">Deux approches</span>
-                    <h2 class="text-4xl md:text-5xl font-medium tracking-tight font-display mt-3">
-                        Avec ou sans contact : vous choisissez
-                    </h2>
-                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
-                        La boxe en entreprise ne se résume pas à un seul format. Selon vos objectifs et le profil de vos équipes, nous adaptons l'intensité — de la découverte au sparring encadré.
-                    </p>
-                </div>
-                <div class="grid gap-8 md:grid-cols-2">
-                    {approches.map((approche) => (
-                        <div class="group relative glass-card rounded-2xl p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-[var(--shadow-gold-card)] flex flex-col">
-                            <div class="flex items-center gap-3 mb-5">
-                                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center transition-all duration-300 group-hover:shadow-[var(--shadow-gold-icon)]">
-                                    <Icon name={approche.icon} class="w-6 h-6 text-primary" />
-                                </div>
-                                <span class="text-xs font-semibold uppercase tracking-wider text-primary/70">{approche.highlight}</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                                {approche.title}
-                            </h3>
-                            <p class="text-sm text-muted-foreground mb-6">
-                                {approche.description}
-                            </p>
-                            <ul class="space-y-2 mb-6 flex-1">
-                                {approche.items.map((item) => (
-                                    <li class="flex items-start gap-2 text-sm text-muted-foreground">
-                                        <Icon name="lucide:check" class="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                                        <span>{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                            <div class="pt-4 border-t border-border/50">
-                                <p class="text-xs text-muted-foreground">
-                                    <span class="font-medium text-foreground">Idéal pour :</span> {approche.ideal}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <div class="mt-8 text-center">
-                    <p class="text-sm text-muted-foreground">
-                        Les deux formats sont combinables au sein d'un même programme. <a href="/contact" class="text-primary hover:underline">Discutons de vos besoins</a>.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </GsapReveal>
-
-    <!-- 7. PricingTable — 3 formules (DARK) -->
-    <GsapReveal animation="fadeUp">
-        <PricingTable
-            tagline="Nos formules"
-            title="Trois formats pour répondre à vos besoins"
-            tiers={tiers}
-        />
-    </GsapReveal>
-
-    <!-- 8. ProfileShowcase — Coach Nicolas (DARK) -->
-    <GsapReveal animation="fadeUp">
-        <ProfileShowcase
-            tagline="Votre coach"
-            title="Nicolas de Boccard"
-            image={nicolasPortrait}
-            imageAlt="Nicolas de Boccard, coach de boxe corporate à Genève"
-            items={[
-                {
-                    title: "Compétiteur et formateur",
-                    description:
-                        "Licencié SwissBoxing #102860, formé dans les clubs genevois historiques. Nicolas a transposé la rigueur de la compétition en une méthode pédagogique adaptée au monde de l'entreprise.",
-                },
-                {
-                    title: "Entraineur agréé Swiss Boxing",
-                    description:
-                        "Certification Swiss Boxing, spécialisé dans l'encadrement de publics non-sportifs. Une expertise qui garantit sécurité et progression pour tous les profils.",
-                },
-                {
-                    title: "20+ ans dans la boxe",
-                    description:
-                        "Des centaines de séances corporate délivrées auprès d'entreprises genevoises. Nicolas comprend les contraintes logistiques et les attentes du monde professionnel.",
-                },
-                {
-                    title: "Ancré à Genève",
-                    description:
-                        "Formé et enraciné dans le tissu sportif genevois depuis plus de 20 ans. Nicolas connaît les entreprises, les espaces et les rythmes du canton — un coach local qui comprend vos réalités.",
-                },
-            ]}
-        />
-    </GsapReveal>
-
-    <!-- 9. ContentShowcase centré — Ancrage local (DARK) -->
-    <div class="relative overflow-hidden py-12 md:py-20">
-        <Image
-            src={mapGeneve}
-            alt=""
-            class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none mix-blend-lighten"
-            widths={[800, 1400]}
-            sizes="100vw"
-        />
-        <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0) 30%, rgba(10,10,10,0) 70%, rgba(10,10,10,0.95) 100%)"></div>
-        <GsapReveal animation="fadeUp">
-            <ContentShowcase
-                tagline="Zones d'intervention"
-                title="La boxe vient à vous, partout dans le canton"
-                items={[
-                    {
-                        title: "Genève centre & Plainpalais",
-                        description:
-                            "Déplacement rapide dans tout l'hypercentre. Bureaux, espaces de coworking, salles de réunion — on s'adapte à votre espace.",
-                    },
-                    {
-                        title: "Organisations internationales & Nations",
-                        description:
-                            "Expérience avec les environnements internationaux. Séances en français ou anglais.",
-                    },
-                    {
-                        title: "Plan-les-Ouates & zone industrielle",
-                        description:
-                            "Intervention dans les zones d'activité du canton. Parking, accès livraison — on gère la logistique.",
-                    },
-                    {
-                        title: "Au studio — La Voie-Creuse 16",
-                        description:
-                            "Accueillez vos équipes dans notre studio d'exception : ring professionnel, équipements haut de gamme, vestiaires et douches.",
-                    },
-                ]}
-            />
-        </GsapReveal>
-    </div>
-
-    <!-- 10. Testimonials (DARK) — TODO placeholders -->
-    {/* <GsapReveal animation="fadeUp">
-        <Testimonials
-            tagline="Ils nous font confiance"
-            title="Ce qu'en disent les entreprises"
-            testimonials={testimonials}
-        />
-    </GsapReveal> */}
-
-    <!-- 11. RelatedServices -->
     <RelatedServices currentSlug="corporate" />
 
-    <!-- 12. FAQ (DARK) -->
-    <GsapReveal animation="fadeUp">
-        <FAQ
-            title="Questions fréquentes"
-            subtitle="Tout ce que vous devez savoir sur la boxe corporate à Genève."
-            items={faqs}
-        />
-    </GsapReveal>
+    <FAQ
+        id="faq"
+        title="Questions fréquentes"
+        subtitle="La boxe corporate à Genève, en pratique."
+        items={faqs}
+    />
 
-    <!-- 13. CTABanner brushed-full (DARK) -->
-    <GsapReveal animation="fadeUp">
-        <CTABanner
-            variant="brushed-full"
-            title="Prêt à transformer vos équipes ?"
-            subtitle="Devis sous 24h"
-            cta={{ text: "Demander un devis", href: "/contact" }}
-        />
-    </GsapReveal>
+    <CTABanner
+        title="Un projet pour votre équipe ?"
+        subtitle="Boxe corporate"
+        cta={{ text: "Demander un devis", href: "/contact" }}
+    />
 </BaseLayout>
+
+<style>
+    .intro, .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: clamp(40px, 8vw, 160px); align-items: start; }
+    .intro { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
+    .intro-lead { max-width: 24ch; }
+    .split-head { display: grid; gap: 20px; align-content: start; }
+    .split-head p { color: var(--gray-1); max-width: 42ch; }
+    .list { border-top: 1px solid var(--line); }
+    .list li { display: grid; gap: 8px; padding: clamp(24px, 3vw, 36px) 0; border-bottom: 1px solid var(--line); }
+    .list p { color: var(--gray-1); max-width: 52ch; }
+    .rows { border-top: 1px solid var(--line); font-size: 14px; }
+    .rows > div, .rows > li { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .rows dt, .rows .soft { color: var(--gray-2); }
+    .rows dd, .rows li span:last-child { text-align: right; }
+    .approches-head { margin-bottom: clamp(32px, 4vw, 56px); }
+    .approches { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 4vw, 64px); }
+    .approche-desc { margin: 12px 0 24px; color: var(--gray-1); max-width: 46ch; }
+    .approches-foot { margin-top: 32px; color: var(--gray-1); font-size: 15px; }
+    @media (max-width: 860px) {
+        .intro, .split, .approches { grid-template-columns: 1fr; }
+    }
+</style>
