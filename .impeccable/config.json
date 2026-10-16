@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font",
+        "value": "bodoni moda",
+        "createdAt": "2026-10-16T19:09:17.264Z",
+        "reason": "Claude: option C de la page interne /styleguide-test (comparaison typo demandée par Jon, noindex) ; pas une police du système"
+      }
+    ]
+  }
+}

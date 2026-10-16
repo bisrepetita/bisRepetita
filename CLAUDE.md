@@ -27,7 +27,7 @@ npm run test         # Vitest
 - **Tailwind CSS v4** via Vite plugin (`@tailwindcss/vite`) — no `tailwind.config.js`, all config in `src/styles/global.css` using `@theme` directive
 - **GSAP 3 + ScrollTrigger** for animations
 - **TypeScript strict** (extends `astro/tsconfigs/strict`)
-- **Netlify** deployment with security headers and redirects (`netlify.toml`)
+- **Vercel** deployment (prod + previews par branche) ; `api/contact.js` = fonction Vercel. `netlify.toml` est un reste : Vercel l'ignore (redirects et en-têtes inactifs)
 - **Plausible Analytics** (privacy-first, loaded in BaseLayout)
 
 ## Site Map
@@ -97,7 +97,7 @@ Garde-fou SEO : `node scripts/seo-snapshot.mjs dist > design/seo-after.json && n
 - Blog posts in `src/content/blog/` as Markdown/MDX with frontmatter: title, description, pubDate, author, image?, tags?, category?
 - Schema.org structured data per page type via `<Schema type="..." data={...} />`
 - Site URL: `https://bisrepetita.ch`
-- Netlify redirect: `/about` → `/studio` (301)
+- Redirect `/about` → `/studio` déclaré seulement dans `netlify.toml`, donc inactif sur Vercel (404 en prod)
 
 ## Conventions
 
