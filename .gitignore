@@ -30,3 +30,6 @@ pnpm-debug.log*
 # moodboard backups (les générations sont versionnées, pas les backups)
 moodboard/.backup-*.md
 .vercel
+
+# Exports Framer de référence (templates tiers, lourds) — local uniquement
+docs/design/refs/framer/
