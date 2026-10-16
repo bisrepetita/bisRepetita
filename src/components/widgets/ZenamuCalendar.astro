@@ -15,8 +15,12 @@ const {
     title = "Réservez votre créneau",
     subtitle = "Consultez les disponibilités et réservez directement votre séance.",
     tagline = "Réservation",
-    isDark = false,
+    isDark = true,
 } = Astro.props;
+
+const iframeSrc = isDark
+    ? "https://app.bisrepetita.ch/embed/planning?theme=dark"
+    : "https://app.bisrepetita.ch/embed/planning";
 ---
 
 <WidgetWrapper id={id} isDark={isDark}>
@@ -32,8 +36,24 @@ const {
         }}
     />
     <div class="zenamu-calendar-wrapper">
-        <div id="zenamu-calendar" calendar-id="468b71a7480a5332d2d1b5187f627b96"></div>
+        <iframe
+            id="br-planning-iframe"
+            src={iframeSrc}
+            style="width:100%; border:none; min-height:400px; display:block;"
+            scrolling="no"
+        ></iframe>
     </div>
 </WidgetWrapper>
 
-<script is:inline src="https://zenamu.com/calendar/list.js" crossorigin></script>
+<script>
+    window.addEventListener("message", (event) => {
+        if (event.origin !== "https://app.bisrepetita.ch") return;
+        const data = event.data;
+        if (data && data.type === "br-embed-resize" && typeof data.height === "number") {
+            const iframe = document.getElementById("br-planning-iframe");
+            if (iframe instanceof HTMLIFrameElement) {
+                iframe.style.height = `${data.height}px`;
+            }
+        }
+    });
+</script>

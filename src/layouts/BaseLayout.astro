@@ -108,6 +108,18 @@ const finalNoindex = metadata?.noindex || false;
             import { initGsapReveal } from "../utils/gsap";
             document.addEventListener("DOMContentLoaded", initGsapReveal);
             document.addEventListener("astro:page-load", initGsapReveal);
+
+            // Corrige le lien d'ancre (ex: /#planning) atterrissant au mauvais endroit :
+            // au chargement initial, polices web et images décalent encore la mise en page
+            // au moment où le navigateur fait son saut natif vers le fragment. On refait le
+            // saut une fois que tout (y compris les images) a fini de charger.
+            function scrollToHashOnLoad() {
+                if (!location.hash) return;
+                const target = document.querySelector(location.hash);
+                target?.scrollIntoView({ block: "start" });
+            }
+            window.addEventListener("load", scrollToHashOnLoad);
+            document.addEventListener("astro:page-load", scrollToHashOnLoad);
         </script>
     </body>
 </html>

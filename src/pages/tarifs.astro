@@ -18,7 +18,7 @@ import heroImage from "../assets/studio-interior.webp";
 const metadata = {
     title: "Tarifs Coaching Boxe Genève",
     description:
-        "Transparence et flexibilité. Découvrez les tarifs des coachings solo, duo et cours collectifs à Genève. Séance d'essai offerte. Studio premium aux Pâquis.",
+        "Transparence et flexibilité. Découvrez les tarifs des coachings solo, duo et cours collectifs à Genève. Séance d'essai offerte. Studio d'exception aux Pâquis.",
 };
 
 // --- Nav items ---
@@ -44,7 +44,7 @@ const soloTiers = [
             "Matériel fourni",
             "Sans engagement",
         ],
-        cta: { text: "Réserver", href: "/contact" },
+        cta: { text: "Réserver", href: "/cours-gratuit" },
     },
     {
         name: "Pack 10 séances",
@@ -60,7 +60,7 @@ const soloTiers = [
             "Matériel fourni",
             "Tarif préférentiel",
         ],
-        cta: { text: "Réserver", href: "/contact" },
+        cta: { text: "Réserver", href: "/cours-gratuit" },
     },
 ];
 
@@ -78,7 +78,7 @@ const duoTiers = [
             "Matériel fourni",
             "Sans engagement",
         ],
-        cta: { text: "Réserver", href: "/contact" },
+        cta: { text: "Réserver", href: "/cours-gratuit" },
     },
     {
         name: "Pack 10 duo",
@@ -94,7 +94,7 @@ const duoTiers = [
             "Matériel fourni",
             "Tarif préférentiel",
         ],
-        cta: { text: "Réserver", href: "/contact" },
+        cta: { text: "Réserver", href: "/cours-gratuit" },
     },
     {
         name: "Séance trio",
@@ -108,7 +108,7 @@ const duoTiers = [
             "Matériel fourni",
             "Sans engagement",
         ],
-        cta: { text: "Réserver", href: "/contact" },
+        cta: { text: "Réserver", href: "/cours-gratuit" },
     },
     {
         name: "Pack 10 trio",
@@ -124,7 +124,7 @@ const duoTiers = [
             "Matériel fourni",
             "Tarif préférentiel",
         ],
-        cta: { text: "Réserver", href: "/contact" },
+        cta: { text: "Réserver", href: "/cours-gratuit" },
     },
 ];
 
@@ -141,7 +141,7 @@ const smallGroupTiers = [
             "Programme structuré",
             "Matériel fourni",
         ],
-        cta: { text: "Réserver", href: "/contact" },
+        cta: { text: "Réserver", href: "/cours-gratuit" },
     },
     {
         name: "Pack 10 séances",
@@ -157,7 +157,7 @@ const smallGroupTiers = [
             "Matériel fourni",
             "Tarif préférentiel",
         ],
-        cta: { text: "Réserver", href: "/contact" },
+        cta: { text: "Réserver", href: "/cours-gratuit" },
     },
 ];
 
@@ -175,7 +175,7 @@ const rbrTiers = [
             "Matériel fourni",
             "Sans engagement",
         ],
-        cta: { text: "Réserver", href: "/contact" },
+        cta: { text: "Réserver", href: "/cours-gratuit" },
     },
 ];
 
@@ -206,7 +206,7 @@ const features = [
         icon: "lucide:chart-line",
     },
     {
-        title: "Studio premium aux Pâquis",
+        title: "Studio d'exception aux Pâquis",
         description:
             "Un espace exclusif au cœur de Genève, équipé de matériel professionnel haut de gamme.",
         icon: "lucide:map-pin",
@@ -223,7 +223,7 @@ const features = [
 const faqs = [
     {
         question: "Proposez-vous une séance d'essai ?",
-        answer: "Oui ! Les cours collectifs Round by Round incluent une première séance d'essai gratuite. Pour le coaching privé, nous proposons un bilan initial pour définir vos objectifs. <a href='/contact' class='text-primary hover:underline'>Réservez votre séance d'essai</a>.",
+        answer: "Oui ! Les cours collectifs Round by Round incluent une première séance d'essai gratuite. Pour le coaching privé, nous proposons un bilan initial pour définir vos objectifs. <a href='/cours-gratuit' class='text-primary hover:underline'>Réservez votre séance d'essai</a>.",
     },
     {
         question: "Les packs ont-ils une date d'expiration ?",
@@ -281,7 +281,7 @@ const offers = [
         actions={[
             {
                 text: "Réserver mon bilan initial",
-                href: "/contact",
+                href: "/cours-gratuit",
                 variant: "primary",
                 icon: "lucide:arrow-right",
             },
@@ -313,7 +313,7 @@ const offers = [
         <div class="text-center -mt-8 mb-16">
             <p class="text-primary font-medium mb-1">🎁 Votre première séance est offerte</p>
             <p class="text-muted-foreground text-sm mb-3">Découvrez notre approche sans engagement. Si l'expérience vous plaît, un partage de votre ressenti sur Google aide d'autres sportifs à nous trouver.</p>
-            <a href="/contact" class="text-primary hover:underline text-sm font-medium mb-4 inline-block">
+            <a href="/cours-gratuit" class="text-primary hover:underline text-sm font-medium mb-4 inline-block">
                 Réserver mon essai &rarr;
             </a>
             <p class="text-muted-foreground italic mb-4">L'investissement ultime pour des résultats sans compromis.</p>
@@ -336,7 +336,7 @@ const offers = [
         <div class="text-center -mt-8 mb-16">
             <p class="text-primary font-medium mb-1">🎁 Votre première séance est offerte</p>
             <p class="text-muted-foreground text-sm mb-3">Découvrez notre approche sans engagement. Si l'expérience vous plaît, un partage de votre ressenti sur Google aide d'autres sportifs à nous trouver.</p>
-            <a href="/contact" class="text-primary hover:underline text-sm font-medium mb-4 inline-block">
+            <a href="/cours-gratuit" class="text-primary hover:underline text-sm font-medium mb-4 inline-block">
                 Réserver mon essai &rarr;
             </a>
             <p class="text-muted-foreground italic mb-4">Divisez les coûts, multipliez la motivation.</p>
@@ -359,7 +359,7 @@ const offers = [
         <div class="text-center -mt-8 mb-16">
             <p class="text-primary font-medium mb-1">🎁 Votre première séance est offerte</p>
             <p class="text-muted-foreground text-sm mb-3">Découvrez notre approche sans engagement. Si l'expérience vous plaît, un partage de votre ressenti sur Google aide d'autres sportifs à nous trouver.</p>
-            <a href="/contact" class="text-primary hover:underline text-sm font-medium mb-4 inline-block">
+            <a href="/cours-gratuit" class="text-primary hover:underline text-sm font-medium mb-4 inline-block">
                 Réserver mon essai &rarr;
             </a>
             <p class="text-muted-foreground italic mb-4">Le compromis parfait entre prix et attention personnalisée.</p>
@@ -390,7 +390,7 @@ const offers = [
                         <p class="text-muted-foreground mt-2">/ séance</p>
                         <p class="text-foreground font-medium mt-4 text-lg">Un cours collectif Round by Round à la carte.</p>
                         <div class="mt-6">
-                            <Button href="/contact" variant="primary" class="w-full md:w-auto">
+                            <Button href="/cours-gratuit" variant="primary" class="w-full md:w-auto">
                                 Réserver une séance
                             </Button>
                         </div>
@@ -506,7 +506,7 @@ const offers = [
             title="Prêt à commencer ?"
             subtitle="Tarifs & formules"
             description="Réservez votre séance d'essai gratuite ou demandez un bilan initial personnalisé."
-            cta={{ text: "Réserver mon bilan initial", href: "/contact" }}
+            cta={{ text: "Réserver mon bilan initial", href: "/cours-gratuit" }}
         />
     </GsapReveal>
 

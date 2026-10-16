@@ -84,7 +84,7 @@ export const servicePages: ServicePage[] = [
 export const siteConfig = {
   name: "Bis Repetita",
   description:
-    "Studio de boxe premium à Genève. Coaching privé, cours collectifs et programmes corporate avec Nicolas de Boccard.",
+    "Studio de boxe sur mesure à Genève. Coaching privé, cours collectifs et programmes corporate avec Nicolas de Boccard.",
   url: "https://bisrepetita.ch",
   lang: "fr",
   locale: "fr_CH",
@@ -101,14 +101,13 @@ export const siteConfig = {
   },
   navCta: {
     text: "Séance d'essai gratuite",
-    href: "/contact",
+    href: "/cours-gratuit",
   },
   maps: {
     embedUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2760.8!2d6.14!3d46.22!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDbCsDEzJzEyLjAiTiA2wrAwOCcyNC4wIkU!5e0!3m2!1sfr!2sch!4v1",
   },
   navLinks: [
-    { text: "Accueil", href: "/" },
     { text: "Studio", href: "/studio" },
     {
       text: "Programmes",
@@ -135,6 +134,7 @@ export const siteConfig = {
       ],
     },
     { text: "Tarifs", href: "/tarifs" },
+    { text: "Planning", href: "/#planning" },
     { text: "Blog", href: "/blog" },
   ],
   footerLinks: {
