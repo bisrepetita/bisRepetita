@@ -109,13 +109,11 @@ function initFollowPreview() {
     list.dataset.followReady = "1";
     const box = list.querySelector<HTMLElement>(".follow-box");
     if (!box) return;
-    const xTo = gsap.quickTo(box, "x", { duration: 0.7, ease: "power3.out" });
     const yTo = gsap.quickTo(box, "y", { duration: 0.7, ease: "power3.out" });
     const imgs = box.querySelectorAll<HTMLElement>("[data-key]");
 
     list.addEventListener("pointermove", (e) => {
       const r = list.getBoundingClientRect();
-      xTo(e.clientX - r.left);
       yTo(e.clientY - r.top);
     });
     list.querySelectorAll<HTMLElement>("[data-preview]").forEach((row) => {

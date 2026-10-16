@@ -170,12 +170,6 @@
     letter-spacing: 0;
     color: var(--gray-2);
   }
-  .t-small-caps {
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
 
   .rule-t { border-top: 1px solid var(--line); }
   .rule-b { border-bottom: 1px solid var(--line); }

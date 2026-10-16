@@ -118,6 +118,7 @@ const steps = [
                 poster="/images/studio-nb-poster.jpg"
                 aria-label="Séance de boxe au studio Bis Repetita"
             >
+                <source src="/videos/studio-nb.webm" type="video/webm" />
                 <source src="/videos/studio-nb.mp4" type="video/mp4" />
             </video>
             <button type="button" class="hh-play" aria-label="Mettre la vidéo en pause" data-video-toggle>Pause</button>
@@ -323,9 +324,11 @@ const steps = [
         position: absolute;
         top: 0;
         left: 0;
-        width: 240px;
+        /* Posée dans le blanc entre la description et le prix : ne couvre jamais le texte de la ligne. */
+        left: 71%;
+        width: 180px;
         aspect-ratio: 4 / 5;
-        margin: -150px 0 0 -120px;
+        margin-top: -112px;
         overflow: hidden;
         pointer-events: none;
         opacity: 0;
