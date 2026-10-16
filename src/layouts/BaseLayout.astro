@@ -32,8 +32,9 @@ const finalCanonical = metadata?.canonical || canonical;
 const finalIgnoreTitleTemplate = metadata?.ignoreTitleTemplate || false;
 const finalOgType = metadata?.ogType || "website";
 const finalNoindex = metadata?.noindex || false;
-// Pas de statistiques sur les déploiements de preview Netlify (CONTEXT ≠ production).
-const trackVisits = !process.env.CONTEXT || process.env.CONTEXT === "production";
+// Pas de statistiques sur les déploiements de preview (Vercel : VERCEL_ENV, Netlify : CONTEXT).
+const deployEnv = process.env.VERCEL_ENV ?? process.env.CONTEXT;
+const trackVisits = !deployEnv || deployEnv === "production";
 ---
 
 <!doctype html>

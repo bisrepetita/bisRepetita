@@ -1,7 +1,7 @@
 # Handoff — refonte de test (branche `refonte-2026`)
 
 ## État
-Site de test complet dans la nouvelle DA (blanc, encre, photo N&B, Inter), worktree `../bisRepetita-refonte`, preview Netlify via PR brouillon. Toutes les pages refaites ; `/offrir-un-cours` (sans prix) et `/styleguide-test` (4 options typo, noindex) ajoutées. Build OK. SEO : title/meta/H1/canonical identiques à `main` sur les 137 pages (`design/seo-before.json` vs `seo-after.json`) ; seules les réponses FAQPage de 8 pages ont changé (alignées sur la FAQ visible, claims retirés). Revue finale impeccable : corrections appliquées, signature (vidéo qui s'élargit au scroll) prouvée par enregistrement.
+Site de test complet dans la nouvelle DA (blanc, encre, photo N&B, Inter), worktree `../bisRepetita-refonte`, preview Vercel via PR brouillon #1. Toutes les pages refaites ; `/offrir-un-cours` (sans prix) et `/styleguide-test` (4 options typo, noindex) ajoutées. Build OK. SEO : title/meta/H1/canonical identiques à `main` sur les 137 pages (`design/seo-before.json` vs `seo-after.json`) ; seules les réponses FAQPage de 8 pages ont changé (alignées sur la FAQ visible, claims retirés). Revue finale impeccable : corrections appliquées, signature (vidéo qui s'élargit au scroll) prouvée par enregistrement.
 
 ## À trancher (Jon / Nicolas)
 - Typo : A/B/C/D sur `/styleguide-test` (Black Mango : fichiers + licence).

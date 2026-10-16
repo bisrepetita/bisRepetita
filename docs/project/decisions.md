@@ -12,5 +12,5 @@ Inter (Display pour les titres), tracking serré, petits corps. Les variantes (a
 ## 2026-10-16 — Navbar : panneau « Cours »
 Méga-menu blanc deux colonnes : Cours privé (Solo, Duo/Trio, Small Group, Domicile) · Cours collectif (Round by Round) ; ligne secondaire Corporate · Boxe femme · Offrir un cours ; photo N&B au survol.
 
-## 2026-10-16 — Preview Netlify
-La branche `refonte-2026` est poussée (jamais `main`) pour obtenir un deploy preview.
+## 2026-10-16 — Preview Vercel
+La branche `refonte-2026` est poussée (jamais `main`) ; le site est déployé par Vercel, la PR brouillon #1 donne la preview.
