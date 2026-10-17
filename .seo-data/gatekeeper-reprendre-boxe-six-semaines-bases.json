@@ -1,0 +1,23 @@
+{
+  "topic": "reprendre la boxe en janvier",
+  "slug": "reprendre-boxe-six-semaines-bases",
+  "generated_at": "2026-10-17T18:23:02.530550+00:00",
+  "source": "docs/seo/plan-editorial-2026-10-11.md §5 (réserve)",
+  "candidates": [
+    {
+      "keyword": "reprendre la boxe en janvier",
+      "verdict": "PASS",
+      "gates": {
+        "surprise_gap": "pass",
+        "grounding": "pass"
+      },
+      "signals": {
+        "intent": "do",
+        "pseo_scalable": false
+      },
+      "failed_pillar": null,
+      "rationale": "Surprise Gap : un LLM produit un plan générique de reprise ; le gap tient au plan de paliers du coach avec repères observables et à l'honnêteté sur les limites (Lally 2010 : 18 à 254 jours). Cela exige que Nicolas valide le plan (D1) : c'est la matière first-party. Grounding : 20 ans de pratique, protocole d'adaptation, formats et prix publics. Saisonnalité de janvier = hypothèse, SERP non observée. Intention Do (réservation en janvier). Volumes : Non vérifié.",
+      "priority": "haute"
+    }
+  ]
+}

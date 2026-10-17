@@ -1,0 +1,23 @@
+{
+  "topic": "boxe après grossesse",
+  "slug": "reprendre-boxe-apres-grossesse",
+  "generated_at": "2026-10-17T18:23:02.530550+00:00",
+  "source": "docs/seo/plan-editorial-2026-10-11.md §5 (réserve)",
+  "candidates": [
+    {
+      "keyword": "boxe après grossesse",
+      "verdict": "PASS",
+      "gates": {
+        "surprise_gap": "pass",
+        "grounding": "pass"
+      },
+      "signals": {
+        "intent": "know",
+        "pseo_scalable": false
+      },
+      "failed_pillar": null,
+      "rationale": "Surprise Gap : un LLM répond « attendez la visite des 6 semaines » ; le gap exploitable est la séparation gestes sans impact / avec impact, les lignes directrices de reprise (Goom 2019, Delphi 2024) transposées honnêtement et l'aveu qu'aucune étude ne porte sur la boxe. Grounding LIMITÉ : protocole d'adaptation générique (br2-05) et formats sans contact seulement ; aucune compétence médicale ni cas client. Verdict PASS conditionnel : relecture sage-femme/physio (D1) obligatoire avant publication, D2/D3 pour le H2 studio. Sans relecteur, ne pas publier. Volumes : Non vérifié.",
+      "priority": "moyenne"
+    }
+  ]
+}

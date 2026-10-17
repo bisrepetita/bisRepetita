@@ -1,0 +1,23 @@
+{
+  "topic": "boxe anglaise ou boxe thaï",
+  "slug": "choisir-boxe-anglaise-thai-kickboxing",
+  "generated_at": "2026-10-17T18:23:02.530550+00:00",
+  "source": "docs/seo/plan-editorial-2026-10-11.md §5 (réserve)",
+  "candidates": [
+    {
+      "keyword": "boxe anglaise ou boxe thaï",
+      "verdict": "PASS",
+      "gates": {
+        "surprise_gap": "pass",
+        "grounding": "pass"
+      },
+      "signals": {
+        "intent": "know",
+        "pseo_scalable": false
+      },
+      "failed_pillar": null,
+      "rationale": "Surprise Gap : l'analyse SERP du 2026-10-17 relève qu'un comparatif général, non genré, ancré à Genève reste à faire ; un LLM répond aux règles de base mais pas au contact réel, au cadre suisse (J+S) ni à l'aveu d'un studio qui n'enseigne qu'une des trois disciplines. Grounding : 20 ans de boxe anglaise de Nicolas et fiches J+S lues ; AUCUNE expérience revendiquable en thaï/kickboxing (proofs.md), l'article est donc limité à ce périmètre. Cannibalisation avec quelle-boxe-choisir-femme-geneve (H1 voisin) : risque MOYEN, recentrage appliqué (non genré, outils/contact/parcours) ; D1 (GSC frais) peut annuler l'article. Volumes : Non vérifié.",
+      "priority": "moyenne"
+    }
+  ]
+}
