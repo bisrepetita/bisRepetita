@@ -3,7 +3,7 @@
 ## État
 Site de test complet dans la nouvelle DA (blanc, encre, photo N&B, Inter), preview Vercel via PR brouillon #1. Build OK (139 pages). SEO : title/canonical identiques à `main` ; meta changées consciemment (essai gratuit retiré) ; diff `design/seo-before.json` vs `seo-after.json`.
 
-Blog (2026-10-17) : 22 articles mis à jour (`updatedDate: 2026-10-17`), sidecars `content/_history/{slug}.json` avec la liste `needs_validation` de chacun. Plan oct.–nov. : `docs/seo/plan-editorial-2026-10-11.md` (12 articles, mini-briefs). Recherches : `docs/_research/2026-10-17-*.md`. Skills SEO RC13 triés dans `~/skills-src/seo-pipeline-v3-rc13/` (rapport `RAPPORT-2026-10-17.md`), **non installés** (commande dans le rapport).
+Blog (2026-10-17) : 22 articles mis à jour (`updatedDate: 2026-10-17`), sidecars `content/_history/{slug}.json` avec la liste `needs_validation` de chacun. Plan oct.–nov. : `docs/seo/plan-editorial-2026-10-11.md` ; les 12 briefs sont dans `content/_drafts/blog/` (validés par brief-critic, 5 bloqués par des décisions listées en tête de chaque brief). Recherches : `docs/_research/2026-10-17-*.md`. Skills SEO RC13 triés dans `~/skills-src/seo-pipeline-v3-rc13/` (rapport `RAPPORT-2026-10-17.md`), installés le 2026-10-17 (`~/.claude/skills`, agents content-creator, brief-critic, article-producer).
 
 ## À trancher (Jon / Nicolas)
 - Validation des blocs « Notre avis » et des faits listés dans `needs_validation` ; signature Nicolas sur les textes modifiés (`docs/brand/voice.md`).
@@ -18,4 +18,4 @@ Blog (2026-10-17) : 22 articles mis à jour (`updatedDate: 2026-10-17`), sidecar
 - Articles programmés : pas de rebuild automatique à la `pubDate` (deploy hook planifié à créer).
 
 ## Prochaine étape
-Export GSC frais (`/seo-gsc`) → validation Nicolas des avis → brief complet du 1er article du plan (20 oct.).
+Décisions de Nicolas (page de validation + « Décisions requises » des briefs) → `/seo-write` du 1er article (20 oct., `cours-boxe-prive-petit-groupe-collectif`). En parallèle : retirer « Essai gratuit » des meta de 7 pages service/tarifs et décider du sort de `/cours-gratuit` (changement SEO conscient, à valider par Jon).

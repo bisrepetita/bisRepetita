@@ -1,5 +1,5 @@
 ---
-status: draft — à valider par Jon et Nicolas
+status: briefs écrits et validés par brief-critic le 2026-10-17 (content/_drafts/blog/) — décisions à prendre par Jon et Nicolas
 created_on: 2026-10-17
 period: 2026-10-20 → 2026-11-26
 sources:
@@ -38,18 +38,18 @@ Douze articles, deux par semaine (mardi, jeudi). Fil rouge : **comparer des form
 
 | Date | Slug proposé | Article | Type | Cluster / hub | Statut |
 |---|---|---|---|---|---|
-| mar. 20 oct. | `cours-boxe-prive-petit-groupe-ou-collectif` | Cours de boxe privé, petit groupe ou collectif : lequel choisir | Comparatif + avis | Débutant → `/cours-de-boxe-geneve` | Prêt à briefer |
-| jeu. 22 oct. | `seance-boxe-femme-specificites` | Séance de boxe pour femme : ce qui change vraiment | Guide + séance type | Femme → `/services/boxe-femme` | Prêt à briefer |
-| mar. 27 oct. | `boxe-ou-pilates-se-tonifier` | Boxe ou Pilates pour se tonifier : notre avis | Comparatif + avis | Femme | Prêt à briefer |
-| jeu. 29 oct. | `cardio-boxe-ou-boxe-technique` | Cardio-boxe sur musique ou boxe technique : qu'est-ce qui fait progresser | Comparatif + avis | Débutant / sportif | Prêt à briefer |
-| mar. 3 nov. | `team-building-fin-annee-geneve-boxe` | Team building de fin d'année à Genève : une session boxe en décembre | Saisonnier B2B | Corporate → `/services/corporate` | Faits corporate à valider |
-| jeu. 5 nov. | `boxe-preparation-course-escalade` | Course de l'Escalade : la boxe en renfort du coureur | Saisonnier local | Sportif en reconversion | Prêt à briefer |
-| mar. 10 nov. | `boxe-parent-enfant-seance` | Boxe parent-enfant : âge, déroulé d'une séance, règles de sécurité | Guide + offre | Nouvelle offre | **Bloqué : format de l'offre** |
-| jeu. 12 nov. | `boxe-ou-crossfit-hyrox` | Boxe ou CrossFit / HYROX : l'avis d'un coach de boxe | Comparatif + avis | Sportif en reconversion | Prêt à briefer |
-| mar. 17 nov. | `offrir-cours-boxe-noel-geneve` | Offrir un cours de boxe à Noël : le cadeau sport qui sera utilisé | Saisonnier commercial | `/offrir-un-cours` | **Bloqué : format et prix du bon** |
-| jeu. 19 nov. | `round-by-round-deroule-seance` | Round by Round : le déroulé d'une séance collective de 50 minutes | Produit / BOFU | `/services/round-by-round` | Prêt à briefer |
-| mar. 24 nov. | `ce-que-nous-refusons-studio-boxe` | Ce que nous refusons de faire au studio | Manifeste, avis de marque | Marque → pillar | Avis de Nicolas requis |
-| jeu. 26 nov. | `boxe-menopause` | Boxe et ménopause : os, impacts, énergie | Guide YMYL | Femme | Relecture santé requise |
+| mar. 20 oct. | `cours-boxe-prive-petit-groupe-collectif` | Cours de boxe privé, petit groupe ou collectif : lequel choisir | Comparatif + avis | Débutant → `/cours-de-boxe-geneve` | Brief validé (prix Small Group à trancher) |
+| jeu. 22 oct. | `seance-boxe-femme-specificites` | Séance de boxe pour femme : ce qui change vraiment | Guide + séance type | Femme → `/services/boxe-femme` | Brief validé, relecture santé avant publication |
+| mar. 27 oct. | `boxe-ou-pilates-se-tonifier` | Boxe ou Pilates pour se tonifier : notre avis | Comparatif + avis | Femme | Brief validé (2e passage), relecture santé |
+| jeu. 29 oct. | `cardio-boxe-ou-boxe-technique` | Cardio-boxe sur musique ou boxe technique : qu'est-ce qui fait progresser | Comparatif + avis | Débutant / sportif | Brief validé |
+| mar. 3 nov. | `team-building-fin-annee-geneve-boxe` | Team building de fin d'année à Genève : une session boxe en décembre | Saisonnier B2B | Corporate → `/services/corporate` | Brief validé, **bloqué : faits corporate** |
+| jeu. 5 nov. | `boxe-preparation-course-escalade` | Course de l'Escalade : la boxe en renfort du coureur | Saisonnier local | Sportif en reconversion | Brief validé (date et distance à revérifier) |
+| mar. 10 nov. | `boxe-parent-enfant-seance` | Boxe parent-enfant : âge, déroulé d'une séance, règles de sécurité | Guide + offre | Nouvelle offre | Brief validé, **bloqué : offre (avant 3 nov.)** |
+| jeu. 12 nov. | `boxe-ou-crossfit-hyrox` | Boxe ou CrossFit / HYROX : l'avis d'un coach de boxe | Comparatif + avis | Sportif en reconversion | Brief validé |
+| mar. 17 nov. | `offrir-cours-boxe-noel-geneve` | Offrir un cours de boxe à Noël : le cadeau sport qui sera utilisé | Saisonnier commercial | `/offrir-un-cours` | Brief validé, **bloqué : bon cadeau (avant 10 nov.)** |
+| jeu. 19 nov. | `round-by-round-deroule-seance` | Round by Round : le déroulé d'une séance collective de 50 minutes | Produit / BOFU | `/services/round-by-round` | Brief validé, **bloqué : minutage (repli 9 nov.)** |
+| mar. 24 nov. | `ce-que-nous-refusons-studio-boxe` | Ce que nous refusons de faire au studio | Manifeste, avis de marque | Marque → pillar | Brief validé, **bloqué : entretien Nicolas (avant 13 nov.)** |
+| jeu. 26 nov. | `boxe-menopause-os-equilibre` | Boxe et ménopause : os, impacts, énergie | Guide YMYL | Femme | Brief validé, relecture santé requise |
 
 Règle de repli : un article bloqué glisse à la place suivante ; jamais de publication d'une offre non décidée. Remplaçants prêts (§5) : « Boxe anglaise, thaï ou kickboxing » (version non genrée), « Coaching à domicile ou au studio ».
 

@@ -39,7 +39,7 @@ Devis sur demande. Facturation entreprise avec délai de 30 jours.
 
 ## Conditions générales
 
-- Première séance d'essai offerte (tous formats)
+- Première séance au tarif du format choisi (plus de séance d'essai gratuite depuis octobre 2026 ; pour offrir : /offrir-un-cours)
 - Packs valables 6 mois à compter de la date d'achat
 - Annulation gratuite 24h à l'avance
 - Paiement : virement bancaire, Twint, espèces
