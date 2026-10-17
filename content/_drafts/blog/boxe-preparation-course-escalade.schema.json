@@ -1,0 +1,19 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://bisrepetita.ch/blog/boxe-preparation-course-escalade#article",
+      "mainEntityOfPage": "https://bisrepetita.ch/blog/boxe-preparation-course-escalade",
+      "headline": "Préparer la Course de l'Escalade : la boxe en renfort",
+      "description": "Un mois avant la Course de l'Escalade, une séance de boxe par semaine en plus de vos sorties : gainage, haut du corps, intensité courte. Semaine type.",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "author": {
+        "@type": "Person",
+        "name": "Équipe Bis Repetita"
+      },
+      "image": "https://bisrepetita.ch/images/blog/boxe-preparation-course-escalade.webp"
+    }
+  ]
+}

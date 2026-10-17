@@ -1,0 +1,335 @@
+<title>Questions pour Nicolas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,800&display=swap">
+<style>
+/* Layout : une colonne de lecture, sommaire des échéances en tête, une fiche par question ; noir et blanc du studio */
+:root{
+  --bg:#ffffff; --fg:#111111; --muted:#5f5f5f; --line:#e3e3e3; --soft:#f4f4f4;
+  --ink:#111111; --on-ink:#ffffff; --done:#1f6b3a; --warn:#9a5b00;
+  --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f0f0f; --fg:#f2f2f2; --muted:#a3a3a3; --line:#2a2a2a; --soft:#191919;
+  --ink:#f2f2f2; --on-ink:#0f0f0f; --done:#6cc58a; --warn:#e0a54a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f0f0f; --fg:#f2f2f2; --muted:#a3a3a3; --line:#2a2a2a; --soft:#191919;
+  --ink:#f2f2f2; --on-ink:#0f0f0f; --done:#6cc58a; --warn:#e0a54a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:16px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:46rem;margin:0 auto;padding-block:40px 96px}
+h1{font-size:clamp(2rem,6vw,3rem);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin:0 0 16px;text-wrap:balance}
+h2{font-size:1.5rem;font-weight:800;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.lede{color:var(--muted);max-width:38rem;margin:0}
+.lede p{margin:0 0 10px}
+.status{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin:24px 0 8px;font-size:.875rem;color:var(--muted)}
+.bar{flex:1 1 200px;height:6px;background:var(--soft);border-radius:3px;overflow:hidden;min-width:0}
+.bar i{display:block;height:100%;background:var(--ink);width:0;transition:width .3s}
+.save{font-variant-numeric:tabular-nums}
+.save.err{color:var(--warn)}
+nav.toc{margin:32px 0 48px;border-top:1px solid var(--line)}
+nav.toc a{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
+nav.toc a:hover .t,nav.toc a:focus-visible .t{text-decoration:underline}
+nav.toc .d{font-size:.8125rem;color:var(--muted);white-space:nowrap}
+nav.toc .n{font-size:.8125rem;font-variant-numeric:tabular-nums;min-width:3.5em;text-align:right}
+nav.toc .n.full{color:var(--done);font-weight:600}
+section{margin-top:56px;scroll-margin-top:16px}
+.shead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px;padding-bottom:12px;border-bottom:2px solid var(--ink)}
+.due{font-size:.8125rem;font-weight:600;letter-spacing:.02em}
+.sintro{color:var(--muted);margin:12px 0 0;font-size:.9375rem}
+.q{padding:24px 0;border-bottom:1px solid var(--line);display:grid;gap:10px}
+.qh{display:grid;grid-template-columns:2.25rem 1fr;gap:4px}
+.qn{font-size:.8125rem;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px}
+.qt{font-weight:600;min-width:0}
+.qb{display:grid;gap:10px;margin-left:2.25rem;min-width:0}
+.ctx{font-size:.875rem;color:var(--muted);margin:0}
+blockquote{margin:0;padding:12px 14px;background:var(--soft);border-radius:4px;font-size:.9375rem}
+.ch{display:flex;flex-wrap:wrap;gap:8px}
+.ch label{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;font-size:.875rem;cursor:pointer;user-select:none}
+.ch input{position:absolute;opacity:0;pointer-events:none}
+.ch label:has(input:checked){background:var(--ink);color:var(--on-ink);border-color:var(--ink)}
+.ch label:has(input:focus-visible){outline:2px solid var(--ink);outline-offset:2px}
+textarea{width:100%;min-height:3.2rem;resize:vertical;font:inherit;font-size:.9375rem;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:10px 12px}
+textarea:focus-visible{outline:2px solid var(--ink);outline-offset:1px;border-color:var(--ink)}
+.done-mark{font-size:.75rem;color:var(--done);font-weight:600;visibility:hidden}
+.q.answered .done-mark{visibility:visible}
+.who{display:inline-block;font-size:.6875rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);border-radius:3px;padding:1px 6px;margin-left:6px;vertical-align:2px;color:var(--muted)}
+.foot{margin-top:64px;padding-top:24px;border-top:2px solid var(--ink);display:grid;gap:12px}
+button{font:inherit;font-weight:600;font-size:.9375rem;padding:10px 18px;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:var(--on-ink);cursor:pointer;justify-self:start}
+button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+#copyOut{display:none;width:100%;min-height:12rem;font-size:.8125rem}
+.note{font-size:.875rem;color:var(--muted);margin:0}
+@media (max-width:480px){.qb{margin-left:0}.qh{grid-template-columns:1.75rem 1fr}}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
+</style>
+
+<div class="wrap">
+  <h1>Questions pour Nicolas</h1>
+  <div class="lede">
+    <p>Les articles du blog d'octobre et novembre sont prêts à écrire, mais certains faits ne peuvent venir que de toi. Tant qu'un point n'est pas confirmé, les textes restent prudents ou l'article attend.</p>
+    <p>Réponds dans l'ordre des échéances, à ton rythme : chaque réponse s'enregistre toute seule. Un clic sur une option suffit souvent ; le champ texte sert à corriger ou préciser. « Je ne sais pas » est une réponse utile.</p>
+  </div>
+  <div class="status" aria-live="polite">
+    <span id="count">0 réponse</span>
+    <span class="bar" aria-hidden="true"><i id="barFill"></i></span>
+    <span class="save" id="saveState">Connexion…</span>
+  </div>
+  <nav class="toc" id="toc" aria-label="Sommaire"></nav>
+  <div id="sections"></div>
+  <div class="foot">
+    <h2>Fini pour aujourd'hui ?</h2>
+    <p class="note">Rien d'autre à faire, tout est enregistré. Si l'enregistrement indique un problème, copie tes réponses et envoie-les à Jon par message.</p>
+    <button type="button" id="copyBtn">Copier mes réponses</button>
+    <textarea id="copyOut" readonly aria-label="Réponses à copier"></textarea>
+  </div>
+</div>
+
+<script>
+const AVIS = [{"slug": "a-quel-age-commencer-la-boxe", "titre": "À quel âge commencer la boxe ? La vraie réponse", "texte": "après 40 ans, commencez par quelques séances en coaching privé, solo ou duo : l'échauffement et la charge se calent sur votre corps du jour. Le cours collectif Round by Round vient ensuite, une fois la garde et les appuis posés. Ce départ en privé n'est pas nécessaire si vous avez déjà une pratique sportive régulière : Round by Round peut alors convenir dès le début."}, {"slug": "activites-sportives-entreprise-geneve-comparatif", "titre": "Activités sportives entreprise Genève : 6 formats comparés", "texte": "pour une équipe qui veut de la cohésion sur plusieurs mois, nous recommandons par défaut un format récurrent qui impose des interactions : la boxe en petit groupe ou l'escalade. Si votre objectif est surtout la détente individuelle, le yoga ou le pilates répondent mieux, et pour moins cher. Si vous voulez réunir 40 personnes en une seule fois, ni la boxe ni l'escalade ne sont le bon choix : un événement outdoor ou un escape game s'organise plus simplement."}, {"slug": "bienfaits-boxe-cadres-managers-geneve", "titre": "Les bienfaits de la boxe pour les cadres à Genève", "texte": "pour un cadre à l'agenda imprévisible, nous recommandons par défaut le coaching solo : le créneau se cale sur votre semaine et la séance s'adapte à votre état du jour. Le duo ou Round by Round conviennent mieux si la régularité vous vient plus facilement à plusieurs. Si vous cherchez seulement à vous dépenser sans apprendre de technique, une salle de fitness suffit et coûte moins cher."}, {"slug": "boxe-confiance-en-soi-femme-geneve", "titre": "Boxe et confiance en soi : pourquoi les femmes s'y mettent", "texte": "pour reprendre confiance en débutant, commencez en solo ou en duo. Le coach adapte la séance à ce qu'il observe à l'échauffement et corrige chaque geste : les repères de progression arrivent vite, et c'est d'eux que vient l'assurance. Un club associatif vous conviendra mieux si vous visez la compétition ou cherchez beaucoup de séances à petit budget. Et si vous traversez une période difficile, la boxe peut accompagner un suivi, pas le remplacer."}, {"slug": "boxe-femme-geneve-guide-complet", "titre": "Boxe femme débutante : peurs, format, première séance", "texte": "pour débuter, choisissez le coaching solo. Chaque correction est immédiate et la séance suit votre énergie du jour. Si venir seule est le vrai frein, le duo avec une amie est le bon compromis. Le petit groupe convient mieux une fois les bases acquises, ou quand le budget compte plus que la précision du suivi."}, {"slug": "boxe-femme-massive-epaules-geneve", "titre": "La boxe rend-elle les femmes massives ? La réponse", "texte": "si la peur de « devenir massive » vous retient, commencez par deux séances par semaine en solo ou en duo pendant trois mois, puis jugez sur pièce : posture, fermeté, souffle. Si votre objectif est au contraire de prendre du volume musculaire, la boxe n'est pas le bon outil ; un programme de musculation dédié l'est."}, {"slug": "boxe-perte-de-poids-femme-geneve", "titre": "La boxe fait-elle maigrir ? Calories, résultats, silhouette", "texte": "si votre objectif principal est de perdre du poids, l'alimentation pèse au moins autant que le sport, et la meilleure activité est celle que vous ferez encore dans six mois. La boxe prend l'avantage quand la course vous lasse : la technique donne une raison de revenir, et le coach adapte la charge à votre état du jour. Si vous courez déjà avec plaisir et régularité, ne remplacez pas tout : ajoutez plutôt une séance de boxe par semaine."}, {"slug": "boxe-regles-cycle-menstruel", "titre": "Boxe et règles : peut-on s'entraîner pendant son cycle ?", "texte": "suivez votre ressenti avant votre application de suivi du cycle. Si vous connaissez bien vos phases, servez-vous-en pour anticiper, mais une séance technique un jour de basse énergie n'est pas une séance perdue : la garde et la précision travaillées ce jour-là servent tous les autres. Ce repère ne convient pas en cas de douleurs invalidantes ou de cycle très irrégulier : l'avis d'un médecin passe alors avant."}, {"slug": "boxe-self-defense-femme-geneve", "titre": "Se sentir capable de se défendre grâce à la boxe ?", "texte": "si votre priorité est de savoir réagir à une agression, commencez par un stage de self-défense dédié : il traite le sol, les saisies et les armes, que la boxe n'aborde pas. Si vous cherchez une pratique régulière qui construit le souffle, les appuis et une posture plus assurée, la boxe est un bon point de départ, et un stage ponctuel la complète ensuite. Chez Bis Repetita, la boxe femme est sans contact par défaut : sac et pattes d'ours, pas d'échange de coups."}, {"slug": "burn-out-prevention-sport-cadres-geneve", "titre": "Burn-out et sport : pourquoi le footing ne suffit pas", "texte": "si vous courez ou pratiquez le yoga et que cela vous fait du bien, continuez. Si vos séances ne vous font plus décrocher, nous recommandons d'ajouter une séance technique par semaine, en solo ou en petit groupe, plutôt que d'augmenter le volume de course. Ce n'est pas le bon choix si vous êtes déjà épuisé ou en arrêt : la priorité est alors un avis médical, et la reprise d'un sport se décide avec votre médecin."}, {"slug": "combien-seances-boxe-par-semaine-debutant", "titre": "Combien de séances de boxe par semaine pour débuter", "texte": "par défaut, deux séances par semaine pendant les trois premiers mois, avec au moins un jour de repos entre les deux. Si votre agenda ne le permet pas, une séance hebdomadaire tenue sans interruption vaut mieux que deux séances irrégulières. Ce rythme ne convient pas tel quel si vous reprenez après une blessure ou partez d'une condition physique très basse : commencez alors à une séance par semaine, le coach ajuste ensuite."}, {"slug": "effet-boxe-corps-femme-geneve", "titre": "Effet de la boxe sur le corps d'une femme : le vrai bilan", "texte": "visez deux séances par semaine pendant trois mois avant de juger. Pour la posture, la séance individuelle ou en duo convient mieux, parce que la garde est corrigée à chaque round ; le cours collectif Round by Round complète bien une fois les bases posées. Si vous ne pouvez venir qu'une fois tous les quinze jours, la boxe restera un bon moment, mais ne comptez pas sur un changement net du corps."}, {"slug": "equipement-boxe-debutant-geneve", "titre": "Équipement boxe débutant Genève : quoi acheter (et où)", "texte": "le premier achat, ce sont vos bandes, pour 15 à 25 CHF : elles maintiennent le poignet et règlent la question de l'hygiène. Les gants viennent ensuite, après deux ou trois séances et un avis du coach sur la taille. Achetez des gants tout de suite seulement si vous savez déjà que vous boxerez au moins une fois par semaine ; dans le doute, ceux du studio suffisent."}, {"slug": "gants-de-boxe-femme-debutante", "titre": "Gants de boxe femme débutante : comment choisir", "texte": "n'achetez rien avant la première séance. Ensuite, le choix par défaut pour une débutante est une paire de 12 oz en synthétique de qualité, entre 40 et 70 CHF, avec des bandes de 4,5 m : c'est la taille la plus polyvalente entre pattes d'ours et sac. Prenez du 10 oz si vous êtes de petit gabarit et que le 12 oz vous paraît lourd après deux ou trois séances. Le cuir et les gants au-delà de 120 CHF ne se justifient qu'après plusieurs mois de pratique régulière."}, {"slug": "prix-cours-boxe-geneve-2026", "titre": "Prix cours de boxe à Genève 2026 : tous les tarifs", "texte": "pour un débutant qui veut apprendre la technique, nous conseillons de commencer par quelques séances en solo, ou en duo si vous venez à deux : la garde, les appuis et le direct se posent plus vite avec un feedback individuel. Round by Round devient ensuite un bon complément pour ajouter du volume à 40 CHF la séance. Si votre objectif est surtout de bouger une à deux fois par semaine avec un budget serré, Round by Round seul suffit. Le solo n'est pas le bon choix si vous cherchez avant tout l'énergie d'un groupe."}, {"slug": "prix-programme-sport-entreprise-geneve", "titre": "Prix programme sport entreprise Genève : devis en 48h", "texte": "pour un premier contact, nous conseillons une séance découverte au studio, avant tout engagement sur un programme. Si l'équipe accroche, le coaching technique en petit groupe donne plus de matière à progresser qu'une série d'événements isolés. Si votre projet consiste à occuper 30 personnes ou plus en une seule fois, la boxe n'est pas le format le plus simple : un escape game ou une activité outdoor s'y prête mieux."}, {"slug": "quelle-boxe-choisir-femme-geneve", "titre": "Quelle boxe choisir pour une femme : l'avis d'un coach", "texte": "pour une débutante, commencez par la boxe anglaise en séance solo ou en duo, avec un coach qui corrige chaque geste et ajuste la séance à votre énergie du jour (y compris selon votre cycle, si vous le souhaitez). La boxe thaï ou le kickboxing viendront plus tard si l'envie se présente : les bases de garde et d'appuis se transposent. Si votre seul objectif est de transpirer sans apprendre de technique, un cours de fitness-boxing vous conviendra mieux que nos séances."}, {"slug": "sport-en-entreprise-geneve-guide-drh", "titre": "Sport en entreprise à Genève : le guide DRH (2026)", "texte": "pour une première expérience, nous recommandons une séance au studio plutôt que dans vos locaux : le changement de cadre fait partie de l'effet, et le matériel est complet. L'intervention sur site devient le meilleur choix pour un programme récurrent, quand le trajet freinerait la participation. Si votre objectif est un grand événement de plus de 30 personnes sur une demi-journée, la boxe n'est pas le format le plus adapté."}, {"slug": "studio-boxe-prive-vs-salle-classique-geneve", "titre": "Studio de boxe privé vs salle classique à Genève", "texte": "si vous débutez, si vous voulez une technique propre ou si le regard des autres vous freine, commencez en studio privé : le feedback individuel fait la différence sur les premiers mois. Si vous voulez boxer trois ou quatre fois par semaine avec un petit budget, ou si le sparring régulier est votre priorité, un club associatif vous conviendra mieux. Les deux se combinent bien : quelques séances privées pour poser les bases, puis le club ou un cours collectif pour le volume."}, {"slug": "team-building-boxe-geneve-cohesion-equipe", "titre": "Team building boxe à Genève : créer la cohésion", "texte": "pour une première fois, nous recommandons l'atelier découverte de 60 à 90 minutes au studio : c'est le format le plus simple à organiser et le plus facile à évaluer. Le programme récurrent n'a de sens qu'une fois l'adhésion de l'équipe vérifiée. Si vous cherchez une activité pour 40 personnes en une seule session, ou un moment purement festif, la boxe n'est pas le bon choix."}];
+
+const S = [
+{ id:"base", titre:"Les faits du studio", due:"Avant le lundi 19 octobre",
+  intro:"Ces réponses touchent les articles du 20 et du 22 octobre et plusieurs articles déjà en ligne.",
+  qs:[
+  {id:"sg_prix", q:"Small Group : les CHF 200 « la séance », c'est le prix du groupe à partager ou le prix par personne ?", ctx:"La grille dit « Small Group (4 personnes) : CHF 200 », la page coaching privé affiche « prix par personne ».", ch:["Prix du groupe, à partager","Prix par personne","Autre"]},
+  {id:"sg_effectif", q:"Small Group : combien de personnes au minimum et au maximum ?", ctx:"Le site dit tantôt « 4 à 8 », tantôt « 6 maximum », la grille « 4 personnes ».", ch:["4 à 8","4 exactement","Autre"]},
+  {id:"premiere", q:"La première séance est payée au tarif du format choisi (CHF 40 en Round by Round, CHF 120 en solo), sans essai gratuit : c'est bien ça ?", ch:["Oui","Non, autre règle"]},
+  {id:"gants", q:"Quelles tailles de gants le studio prête-t-il, et sont-ils nettoyés après chaque séance ? Les bandes sont-elles fournies à chaque fois ou seulement la première ?", ctx:"Les articles écrivent « 10, 12, 14 et 16 oz, nettoyés après chaque utilisation »."},
+  {id:"protege", q:"Le protège-dents : est-il prêté ?", ch:["Oui, jetable, si le coach le juge utile","Non, à apporter","Inutile, pas de contact"]},
+  {id:"horaires", q:"Quels sont les horaires d'ouverture réels du studio ?", ctx:"Un article disait 9 h–20 h en semaine, samedi 10 h–18 h, dimanche 11 h–18 h ; la page studio dit 7 h–21 h."},
+  {id:"confort", q:"Vestiaires, douches, serviettes fournies, parking à proximité : qu'est-ce qui est vrai ?", ctx:"Les articles parlent de vestiaires privés, de douches individuelles, de serviettes fournies, « sans baie vitrée ni zone de passage »."},
+  {id:"equipe", q:"Peut-on nommer Lionel, Jeremy et Eliza sur le site (prénom et rôle seulement) ? Quel est le rôle de chacun ? Lionel co-encadre-t-il certains petits groupes ?"},
+  {id:"contact", q:"On écrit que la boxe au studio est sans contact par défaut (sac, pattes d'ours, shadow) et que le contact léger se fait seulement avec l'accord de la personne, qui peut arrêter à tout moment. On peut le publier tel quel ?", ch:["Oui","À corriger"]},
+  {id:"rbr_musique", q:"Les séances Round by Round se font-elles en musique ?", ch:["Oui","Non","Parfois"]},
+  {id:"sans_saut", q:"Le coach propose-t-il une variante sans saut (corde, sautillés) quand une personne le demande ?", ch:["Oui","Non"]},
+  {id:"charges", q:"Le studio a-t-il des haltères, kettlebells ou autres charges pour du renforcement ?", ctx:"Pour l'article ménopause : sinon on écrit honnêtement « à compléter ailleurs ».", ch:["Oui","Non","Un peu"]},
+  {id:"minutage_prive", q:"Une séance privée de 60 minutes, hors première séance : combien de temps pour chaque bloc ? (échauffement / technique aux pattes / tonification et cardio / retour au calme)", ctx:"Le guide publié dit 10 / 20 / 20 / 10 pour une première séance."},
+  {id:"passage_groupe", q:"Combien de séances privées conseilles-tu avant de passer en groupe ?", ch:["5 à 10","Moins de 5","Ça dépend, pas de chiffre"]},
+  {id:"sg_regulier", q:"Small Group : peut-on venir de façon irrégulière ?", ch:["Oui","Non, groupe stable"]},
+  {id:"domicile", q:"Coaching à domicile : la zone est « canton de Genève, communes limitrophes sur devis ». On garde ce texte ?", ch:["Oui","À corriger"]},
+  {id:"groupe_femmes", q:"Un petit groupe composé uniquement de femmes existe-t-il, ou peut-il se monter à la demande (entre amies, collègues) ?", ch:["Existe déjà","À la demande","Non"]},
+  {id:"age_debutants", q:"Est-il vrai que la plupart des débutants du studio ont entre 30 et 50 ans ?", ch:["Oui","Non"]}
+]},
+{ id:"obs", titre:"Phrases écrites en ton nom", due:"Avant le lundi 19 octobre",
+  intro:"Ces phrases sont dans des articles en ligne. Sans ta confirmation, on les retire.",
+  qs:[
+  {id:"o_massive", q:"« Aucune pratiquante suivie n'est devenue massive, aucune n'a changé de taille de vêtements. »", ch:["Vrai, on garde","À reformuler","À retirer"]},
+  {id:"o_peur", q:"« Les femmes qui avaient peur deviennent souvent des pratiquantes régulières. »", ch:["Vrai, on garde","À reformuler","À retirer"]},
+  {id:"o_cycle", q:"« Les pratiquantes demandent rarement d'alléger en excès pendant leurs règles ; elles gardent le travail technique au sac. »", ch:["Vrai, on garde","À reformuler","À retirer"]},
+  {id:"o_cycle_tableau", q:"Le tableau des 4 phases du cycle avec un contenu de séance par phase (article boxe et règles) correspond-il à ce que tu fais vraiment ?", ch:["Oui","En partie","Non"]},
+  {id:"o_effets", q:"L'ordre dans lequel les effets apparaissent (souffle et posture d'abord, fermeté vers 8 à 12 semaines) : c'est ce que tu observes ?", ch:["Oui","À corriger"]},
+  {id:"o_actif", q:"« Le temps actif d'une séance est d'environ 35 à 50 minutes. »", ch:["Vrai","À corriger"]},
+  {id:"o_cinq_ans", q:"« Je dirige Bis Repetita depuis cinq ans. »", ch:["Vrai","À corriger"]},
+  {id:"o_cercle", q:"On avait écrit que l'origine du studio est liée au Cercle des Sports de Genève. On le remet ou on laisse retiré ?", ch:["On le remet","Laisser retiré"]},
+  {id:"o_freq_corpo", q:"Pour les entreprises : « 1 à 2 séances par semaine, environ 40 semaines par an ». C'est ton repère ?", ch:["Oui","À corriger"]}
+]},
+{ id:"corpo", titre:"Entreprises et team building", due:"Avant le vendredi 30 octobre",
+  intro:"Bloque l'article du 3 novembre (team building de fin d'année). Les articles actuels se contredisent sur ces chiffres.",
+  qs:[
+  {id:"c_capacite", q:"Combien de personnes au maximum : au studio ? sur site ? par coach ? À partir de combien faut-il un deuxième coach, et qui ?", ctx:"On trouve 20 sur site / 12 au studio, 10 participants, 8 par groupe, 6 à 8 pour un événement."},
+  {id:"c_zone", q:"Où vous déplacez-vous, et qu'est-ce qui est facturé en plus ?", ctx:"On trouve « 30 km autour du canton », « 5 km du studio inclus », « canton de Genève ». Vaud, France voisine ?"},
+  {id:"c_delai", q:"Délai réel pour envoyer un devis, puis pour confirmer une date ? Jusqu'à quand une entreprise peut-elle réserver une session avant le 23 décembre ?", ctx:"On trouve « devis sous 48 h » et « devis sous 5 jours »."},
+  {id:"c_gratuit", q:"La page entreprise affiche une « Séance découverte » gratuite (60 min, 10 personnes). On la garde ?", ch:["On la retire","On la garde gratuite","Elle devient payante"]},
+  {id:"c_tarif", q:"Publie-t-on une fourchette « 400 à 600 CHF la séance » ?", ch:["Oui, je l'ajoute à la grille","Non, « sur devis »"]},
+  {id:"c_minutage", q:"Une session team building de 60 à 90 minutes : comment se découpe-t-elle ?"},
+  {id:"c_faits", q:"Lesquels de ces engagements sont vrais ? Surface minimale de 30 m² sur site · séance pilote sans engagement · annulation 48 h à l'avance · créneaux tôt le matin, midi, fin de journée · attestation de prestations · rapport d'avancement · facturation à 30 jours."},
+  {id:"c_options", q:"Ces options existent-elles ? Sparring éducatif pour un séminaire de leadership · demi-journée avec conférence · rapport trimestriel · tarifs dégressifs."},
+  {id:"c_certif", q:"La page entreprise parle de « coachs certifiés ». Quelle certification, pour qui ?"},
+  {id:"c_pratique", q:"Pour une équipe qui vient au studio : tenue conseillée, accès en transports publics (arrêt, ligne) ?"}
+]},
+{ id:"enfant", titre:"Boxe parent-enfant", due:"Avant le mardi 3 novembre",
+  intro:"L'article du 10 novembre dépend entièrement de cette offre. Si la réponse à la première question est non, on abandonne l'article, sans souci.",
+  qs:[
+  {id:"e_mineurs", q:"Le studio accueille-t-il des mineurs ?", ch:["Oui","Non"]},
+  {id:"e_age", q:"À partir de quel âge, et avec quelles tranches ?", ctx:"Piste de la recherche, à valider ou non : 5–7 ans (45 min), 8–11 ans (60 min), 12–15 ans avec le parent (60–75 min)."},
+  {id:"e_format", q:"Quel format ?", ch:["Un parent + un enfant avec un coach","Petit groupe de binômes","Les deux"]},
+  {id:"e_prix", q:"Quel prix ? (le tarif Duo de CHF 140 ne s'applique pas d'office)"},
+  {id:"e_cycle", q:"Séance à l'unité ou cycle de plusieurs séances ?", ch:["À l'unité","Cycle","Les deux"]},
+  {id:"e_creneaux", q:"Quels créneaux ? (mercredi après-midi, samedi, vacances scolaires…)"},
+  {id:"e_coach", q:"Qui encadre ? As-tu suivi une formation Jeunesse+Sport (facultative) ?"},
+  {id:"e_parent", q:"Le parent est-il obligatoirement présent et actif ? S'il ne peut pas participer : séance annulée, reportée, autre adulte autorisé ?"},
+  {id:"e_assurance", q:"Assurance RC qui couvre les mineurs, autorisation signée du représentant légal, décharge : où en est-on ?"},
+  {id:"e_bon", q:"Le bon « Offrir un cours » peut-il servir pour une séance parent-enfant ?", ch:["Oui","Non"]}
+]},
+{ id:"rbr", titre:"Une séance Round by Round, étape par étape", due:"Avant le lundi 9 novembre",
+  intro:"L'article du 19 novembre promet le déroulé exact. Sans ces réponses, on ne l'écrit pas. Un appel de 15 minutes avec Jon peut remplacer cette partie.",
+  qs:[
+  {id:"r_deroule", q:"Les 50 minutes : durée et contenu de l'échauffement, nombre de rounds, récupération entre les rounds, part technique et part physique, retour au calme ou bilan à la fin ?"},
+  {id:"r_orga", q:"Avec un seul coach pour 8 : qui tient les pattes d'ours ? Rotation (une personne aux pattes avec le coach, les autres au sac) ? Travail à deux entre participants ?"},
+  {id:"r_corrections", q:"Les points que le coach corrige : garde, appuis et rotation du pied, coude, précision avant la force, respiration et rythme. Ta liste ?", ch:["Oui, c'est ça","À compléter"]},
+  {id:"r_anim", q:"Qui anime : toujours toi, ou un coach de l'équipe ?"},
+  {id:"r_2min", q:"Les rounds de 2 minutes sont-ils choisis pour l'effort d'un débutant (comme le format novice en amateur) ?", ch:["Oui","Autre raison"]},
+  {id:"r_deux_fois", q:"On propose d'écrire : « venez deux fois avant de juger ». Tu le dirais ?", ch:["Oui","Non"]}
+]},
+{ id:"bon", titre:"Offrir un cours à Noël", due:"Avant le lundi 9 novembre",
+  intro:"L'article du 17 novembre et la page « Offrir un cours » doivent dire la même chose. La page doit être à jour avant l'article.",
+  qs:[
+  {id:"b_forme", q:"Sous quelle forme est le bon ?", ch:["PDF par e-mail","Carte à retirer au studio","Les deux"]},
+  {id:"b_perso", q:"Personnalisation (nom du bénéficiaire, message) et paiement (en ligne, ou virement / Twint / espèces) ?"},
+  {id:"b_quoi", q:"Que peut-on offrir ?", ctx:"Plusieurs choix possibles : écris-les dans le champ.", ch:["Séance solo","Séance duo","Pack","Séance Round by Round","Montant libre"]},
+  {id:"b_prix", q:"Le prix est-il celui de la grille (solo CHF 120, duo CHF 140, Round by Round CHF 40, pack solo CHF 1'100…) ?", ch:["Oui, prix de la grille","Autre"]},
+  {id:"b_validite", q:"Validité du bon ?", ctx:"Attention : en droit suisse, limiter la validité d'un bon acheté est contesté. Jon fait vérifier par un juriste avant d'écrire une durée."},
+  {id:"b_resa", q:"Comment le bénéficiaire réserve-t-il ?", ch:["Planning en ligne avec un code","Message ou téléphone","Les deux"]},
+  {id:"b_coach", q:"La séance offerte est avec toi, ou avec n'importe quel coach du studio ?", ch:["Avec Nicolas","N'importe quel coach"]},
+  {id:"b_regles", q:"Le bon est-il nominatif ? transférable ? remboursable ? échangeable contre un autre format ?"},
+  {id:"b_age", q:"Âge minimum du bénéficiaire ?", ch:["Adultes seulement","Dès un certain âge, avec autorisation"]},
+  {id:"b_noel", q:"Dernier jour pour commander avant Noël ? Le studio est-il ouvert pendant les vacances (24 déc.–8 janv.) ?"},
+  {id:"b_entreprise", q:"Des bons pour les entreprises (cadeau de fin d'année aux collaborateurs) ?", ch:["Oui","Non"]}
+]},
+{ id:"manif", titre:"« Ce que nous refusons de faire »", due:"Avant le vendredi 13 novembre",
+  intro:"Un article manifeste, publié le 24 novembre, qui doit être fait de tes mots. Le plus simple : un appel de 15 minutes avec Jon. Sinon, réponds ici en quelques phrases, comme tu le dirais.",
+  qs:[
+  {id:"m_liste", q:"Cinq refus proposés : les cours à 20, le programme recyclé, le sparring imposé, la promesse de kilos, la séance gratuite qui sert d'appât. Lequel compte le plus pour toi ? Un à retirer, un à ajouter ?"},
+  {id:"m_premier", q:"Au premier échange, quelles questions poses-tu toujours (objectifs, passé sportif, blessures…) ? Est-ce aussi fait en Round by Round ?"},
+  {id:"m_prepa", q:"Comment prépares-tu une séance : y a-t-il une trame fixe ? Qu'est-ce qui change d'une fois à l'autre ? Comment gardes-tu la trace des corrections d'une personne (notes, appli, mémoire) ?"},
+  {id:"m_contact", q:"Comment proposes-tu un exercice avec contact léger, avec quels mots ? Qui décide qu'une personne est prête pour de l'opposition ?"},
+  {id:"m_kilos", q:"Quand quelqu'un arrive avec « perdre 8 kilos d'ici l'été », que lui réponds-tu ? Que suis-tu à la place ?"},
+  {id:"m_essai", q:"Pourquoi avoir arrêté la séance d'essai offerte ? Accepterais-tu d'écrire ce refus (sans le mot « appât ») ?"},
+  {id:"m_huit", q:"Qu'est-ce que 8 personnes au maximum te permettent de faire, que tu tiens à garder ? Que se passe-t-il quand un créneau est complet ?"},
+  {id:"m_phrase", q:"Une phrase à toi, telle que tu la dirais, pour résumer l'esprit du studio. Ces refus valent-ils pour toute l'équipe ?"}
+]},
+{ id:"avis", titre:"Les « Notre avis » des articles en ligne", due:"Quand tu peux, avant fin octobre",
+  intro:"Chaque article contient un avis qui tranche. Ils sont écrits au nom du studio : dis-nous si tu les signes.",
+  qs: AVIS.map((a,i)=>({id:"avis_"+a.slug, q:a.titre, quote:a.texte, ch:["Je valide","À modifier"]}))
+},
+{ id:"avis_neufs", titre:"Avis des articles à paraître", due:"Avant chaque publication",
+  intro:"Les avis tels qu'ils sont écrits dans les 7 articles prêts.",
+  qs:[{"id": "n_cours-boxe-prive-pet_0", "q": "Privé, petit groupe ou collectif (20 oct.), avis 1", "quote": "choisissez le Small Group si vous voulez progresser en groupe pendant plusieurs semaines avec les mêmes personnes. Choisissez Round by Round si vous voulez venir quand votre agenda le permet, à CHF 40 la séance. Round by Round n'est pas le bon choix pour qui attend des corrections personnelles à chaque round.", "ch": ["Je valide", "À modifier"]}, {"id": "n_cours-boxe-prive-pet_1", "q": "Privé, petit groupe ou collectif (20 oct.), avis 2", "quote": "par défaut, un débutant commence en privé, en solo ou en duo s'il vient à deux, le temps de poser la garde, les appuis et les directs. Le signe qu'il peut passer en groupe, c'est de tenir sa garde et d'enchaîner les coups de base sans rappel à chaque round. Ensuite, le Small Group convient si vous voulez un groupe stable et un programme qui se construit sur plusieurs semaines, et Round by Round si vous préférez venir à la carte. Une séance privée de temps en temps reste utile pour corriger. Si vous voulez avant tout bouger une ou deux fois par semaine sans objectif technique, commencer directement en Round by Round suffit.", "ch": ["Je valide", "À modifier"]}, {"id": "n_seance-boxe-femme-sp", "q": "Séance de boxe pour femme (22 oct.)", "quote": "pour une femme qui débute, la même boxe que tout le monde, en coaching privé ou en duo pour les premières séances, sans contact, avec deux ajustements à demander dès le premier jour si besoin : une variante sans saut et une brassière adaptée. Ce n'est pas le bon point de départ si vous êtes à moins de trois mois d'un accouchement ou si des fuites ou des douleurs pelviennes sont présentes : l'avis du professionnel de santé qui vous suit (médecin, sage-femme, physiothérapeute) passe d'abord, puis vous revenez.", "ch": ["Je valide", "À modifier"]}, {"id": "n_boxe-ou-pilates-se-t", "q": "Boxe ou Pilates pour se tonifier (27 oct.)", "quote": "si votre objectif est la silhouette et le souffle, notre choix par défaut est la boxe deux fois par semaine, avec une séance de Pilates en complément si vous avez le temps. Ce n'est pas le bon choix de départ si vous êtes à moins de trois mois d'un accouchement, si une douleur lombaire est en cours de prise en charge ou si vous reprenez après une blessure : l'avis du professionnel de santé qui vous suit passe d'abord, et il peut vous orienter vers une activité à faible impact comme le Pilates. Venez boxer ensuite.", "ch": ["Je valide", "À modifier"]}, {"id": "n_cardio-boxe-ou-boxe-", "q": "Cardio-boxe ou boxe technique (29 oct.)", "quote": "dès que l'objectif est de progresser, nous choisissons la boxe technique, en commençant par le Round by Round : l'énergie d'un groupe, comme au cardio-boxe, avec un coach qui corrige. Si des habitudes sont déjà installées, quelques séances en coaching solo aident à les reprendre. Le cardio-boxe reste un bon choix pour qui veut seulement transpirer. Ce n'est pas le bon choix pour quelqu'un qui ne veut aucune correction ni consigne technique.", "ch": ["Je valide", "À modifier"]}, {"id": "n_boxe-preparation-cou", "q": "Course de l'Escalade (5 nov.)", "quote": "par défaut, une séance de boxe par semaine jusqu'à la semaine de la course, en Round by Round ou en coaching solo, jamais la veille de votre séance clé. La boxe complète la préparation, elle ne remplace pas une sortie. Si vous n'avez que deux créneaux par semaine, gardez-les pour courir et revenez à la boxe après le 6 décembre.", "ch": ["Je valide", "À modifier"]}, {"id": "n_boxe-ou-crossfit-hyr", "q": "Boxe ou CrossFit / HYROX (12 nov.)", "quote": "le choix par défaut est de garder le CrossFit ou le HYROX et d'ajouter une séance de boxe technique par semaine. Commencez en coaching solo pour poser le geste, puis passez en Round by Round ou en Small Group. Ce n'est pas le bon choix si vous êtes en fin de préparation HYROX, ou si vous ne cherchez que de la capacité.", "ch": ["Je valide", "À modifier"]}, {"id": "n_boxe-menopause-os-eq", "q": "Boxe et ménopause (26 nov.)", "quote": "pour commencer, la séance Solo : le coach observe vos appuis et dose les impacts pour vous seule. Ensuite, Round by Round ou Small Group pour la régularité, en gardant un renforcement avec charge à côté. Ce n'est pas le bon point de départ si vous avez une fracture vertébrale récente ou des douleurs non expliquées : voyez d'abord un physiothérapeute. Pour le cadre général, voir la boxe pour les femmes, au studio.", "ch": ["Je valide", "À modifier"]}, {"id": "n_piloxing", "q": "Article Pilates : on a écrit « Nous ne proposons pas de piloxing ». C'est exact ?", "ch": ["Exact", "À retirer"]}, {"id": "n_rbr_coachs", "q": "Round by Round : combien de coachs par séance ?", "ch": ["1 coach", "2 coachs", "Ça dépend du créneau"]}]
+},
+{ id:"signature", titre:"Signature des articles", due:"Avant le lundi 19 octobre",
+  qs:[
+  {id:"sig", q:"Les articles sont signés « Équipe Bis Repetita » tant que tu ne les as pas relus. Comment veux-tu faire ?", ch:["Je relis et je signe chaque article","Je signe ceux que j'ai validés ici","Tout reste « Équipe Bis Repetita »"]},
+  {id:"sig_relecture", q:"Comment préfères-tu relire les textes ?", ch:["Document à commenter","Lien vers l'aperçu du site","Appel avec Jon"]}
+]},
+{ id:"jon", titre:"Pour Jon", due:"Au fil des publications", who:"Jon",
+  intro:"Points qui ne demandent pas Nicolas.",
+  qs:[
+  {id:"j_sante", q:"Relecteurs santé : qui relit les articles femme (22 oct.), Pilates (27 oct.), ménopause (26 nov.) et parent-enfant ? Nom et profession, mention publiée ou non."},
+  {id:"j_escalade", q:"Vérifier sur escalade.ch la date (5–6 déc. 2026), la distance adulte et les entraînements collectifs 2026 (le site bloque nos requêtes)."},
+  {id:"j_juriste", q:"Validité d'un bon cadeau : avis d'un juriste avant d'écrire une durée."},
+  {id:"j_offrir", q:"Mettre à jour la page « Offrir un cours » (format, prix, validité) avant le 17 nov. Paiement en ligne = chantier technique à estimer."},
+  {id:"j_eliza", q:"Autorisation d'Eliza (et des autres coachs) à être nommés."},
+  {id:"j_rbr_requete", q:"Article Round by Round : la requête principale passe de « cours de boxe collectif Genève » à « comment se passe un cours de boxe collectif », pour ne pas concurrencer la page du service.", ch:["OK","Garder l'ancienne"]},
+  {id:"j_meta_blessures", q:"La meta de l'article sur les blessures dit « moins de blessures que le football » alors que les études portent sur la compétition. On reformule ?", ch:["Oui","Non"]},
+  {id:"j_rebuild", q:"Mettre en place un rebuild Vercel planifié (deploy hook quotidien) pour que les articles programmés sortent à leur date.", ch:["Fait","À faire"]},
+  {id:"j_covers", q:"Covers : preset visuel à mettre à jour (Inter, N&B clair) ; images avec personnes reconnaissables = accord écrit."}
+]}
+];
+
+/* ---------- rendu ---------- */
+const $ = s => document.querySelector(s);
+const answers = {};            // id -> {choix, texte}
+const total = S.reduce((n,s)=>n+s.qs.length,0);
+let n = 0;
+const esc = t => String(t).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+$("#sections").innerHTML = S.map(s=>`
+  <section id="${s.id}">
+    <div class="shead"><h2>${esc(s.titre)}${s.who?`<span class="who">${esc(s.who)}</span>`:""}</h2><span class="due">${esc(s.due)}</span></div>
+    ${s.intro?`<p class="sintro">${esc(s.intro)}</p>`:""}
+    ${s.qs.map(q=>{ n++; return `
+    <div class="q" data-id="${q.id}">
+      <div class="qh"><span class="qn">${n}</span><span class="qt">${esc(q.q)}</span></div>
+      <div class="qb">
+        ${q.quote?`<blockquote>${esc(q.quote)}</blockquote>`:""}
+        ${q.ctx?`<p class="ctx">${esc(q.ctx)}</p>`:""}
+        ${q.ch?`<div class="ch" role="radiogroup" aria-label="${esc(q.q)}">${q.ch.map((c,i)=>`<label><input type="radio" name="r_${q.id}" id="r_${q.id}_${i}" value="${esc(c)}">${esc(c)}</label>`).join("")}</div>`:""}
+        <textarea id="t_${q.id}" aria-label="Réponse ou précision" placeholder="${q.ch?"Précision ou correction (facultatif)":"Ta réponse"}"></textarea>
+        <span class="done-mark">Enregistré</span>
+      </div>
+    </div>`}).join("")}
+  </section>`).join("");
+
+function refresh(){
+  let done = 0;
+  document.querySelectorAll(".q").forEach(el=>{
+    const a = answers[el.dataset.id];
+    const ok = !!(a && (a.choix || (a.texte||"").trim()));
+    el.classList.toggle("answered", ok); if(ok) done++;
+  });
+  $("#count").textContent = done + (done>1?" réponses":" réponse") + " sur " + total;
+  $("#barFill").style.width = (100*done/total)+"%";
+  $("#toc").innerHTML = S.map(s=>{
+    const d = s.qs.filter(q=>{const a=answers[q.id];return a&&(a.choix||(a.texte||"").trim())}).length;
+    return `<a href="#${s.id}"><span class="t">${esc(s.titre)}</span><span class="d">${esc(s.due)}</span><span class="n${d===s.qs.length?" full":""}">${d}/${s.qs.length}</span></a>`;
+  }).join("");
+}
+
+function paint(id){
+  const a = answers[id] || {};
+  const t = document.getElementById("t_"+id);
+  if (t && document.activeElement !== t) t.value = a.texte || "";
+  document.querySelectorAll(`input[name="r_${id}"]`).forEach(r=>{ r.checked = r.value === a.choix; });
+}
+
+/* ---------- stockage ---------- */
+let db = null;
+const LS = "nicolas-reponses";
+const timers = {};
+const setSave = (t,err) => { const el=$("#saveState"); el.textContent=t; el.classList.toggle("err",!!err); };
+
+function local(){ try{ return JSON.parse(localStorage.getItem(LS)||"{}"); }catch(e){ return {}; } }
+function saveLocal(){ try{ localStorage.setItem(LS, JSON.stringify(answers)); }catch(e){} }
+
+async function persist(id){
+  saveLocal();
+  if(!db){ setSave("Enregistré sur cet appareil seulement", true); return; }
+  setSave("Enregistrement…");
+  const a = answers[id];
+  try{
+    await db.collection("reponses").doc(id).set({choix:a.choix||"", texte:a.texte||"", maj:new Date().toISOString()});
+    setSave("Tout est enregistré");
+  }catch(e){
+    setSave("Non enregistré (" + (e&&e.code||"erreur") + ") : copie tes réponses en bas de page", true);
+  }
+}
+function queue(id, delay){ clearTimeout(timers[id]); timers[id] = setTimeout(()=>persist(id), delay); }
+
+document.addEventListener("change", e=>{
+  const r = e.target; if(r.type!=="radio") return;
+  const id = r.name.slice(2);
+  answers[id] = {...(answers[id]||{}), choix:r.value};
+  refresh(); queue(id, 0);
+});
+document.addEventListener("input", e=>{
+  const t = e.target; if(!t.id || !t.id.startsWith("t_")) return;
+  const id = t.id.slice(2);
+  answers[id] = {...(answers[id]||{}), texte:t.value};
+  refresh(); queue(id, 900);
+});
+
+Object.assign(answers, local());
+Object.keys(answers).forEach(paint);
+refresh();
+
+(async()=>{
+  try{ db = window.claude ? await window.claude.use("db") : null; }catch(e){ db = null; }
+  if(!db){ setSave("Enregistré sur cet appareil seulement", true); return; }
+  setSave("Tout est enregistré");
+  db.collection("reponses").onSnapshot(snap=>{
+    snap.docs.forEach(d=>{
+      const v = d.data(); if(!v) return;
+      answers[d.id] = {choix:v.choix||"", texte:v.texte||""};
+      paint(d.id);
+    });
+    saveLocal(); refresh();
+  }, err=>setSave("Connexion perdue : copie tes réponses en bas de page", true));
+})();
+
+/* ---------- copie de secours ---------- */
+$("#copyBtn").addEventListener("click", async ()=>{
+  const lines = [];
+  S.forEach(s=>{
+    const qs = s.qs.filter(q=>{const a=answers[q.id];return a&&(a.choix||(a.texte||"").trim())});
+    if(!qs.length) return;
+    lines.push("## "+s.titre);
+    qs.forEach(q=>{ const a=answers[q.id]; lines.push("- "+q.q+"\n  → "+[a.choix,(a.texte||"").trim()].filter(Boolean).join(" · ")); });
+    lines.push("");
+  });
+  const txt = lines.join("\n") || "Aucune réponse pour l'instant.";
+  const out = $("#copyOut"); out.value = txt;
+  try{ await navigator.clipboard.writeText(txt); $("#copyBtn").textContent = "Copié"; }
+  catch(e){ out.style.display="block"; out.focus(); out.select(); $("#copyBtn").textContent = "Sélectionné : copie avec Ctrl+C"; }
+});
+</script>

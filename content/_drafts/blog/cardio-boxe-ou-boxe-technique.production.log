@@ -1,0 +1,27 @@
+# Production log - cardio-boxe-ou-boxe-technique
+Date : 2026-10-17 | Worker : @article-producer | Statut : needs_human (pas ready_to_publish)
+
+## Etapes
+- write : article rédigé directement en .mdx (~1735 mots hors sources, tableau compris)
+- humanizer : passe manuelle (pas d'em dash, pas d'exclamation, pas de superlatif propre)
+- claims/sources : Decathlon re-vérifié en ligne (phrase retrouvée mot pour mot, apostrophes typographiques) ; Compendium, Sigrist, Loosemore, page Round by Round NON re-vérifiés (repris du spec)
+- assemblage : manuel (title = H1, author/tags/category/draft ajoutés) ; schema.json généré (2 nodes)
+- lint : 2 erreurs, 1 warning (voir ci-dessous)
+- review : auto-revue, review-editorial.json
+- cover : NON GENEREE (generate-cover dépend d'une API payante non configurée) ; aucune image dans public/, pas de champ image
+
+## Lint
+1. cta.final_unique FAIL : regex attend un lien /contact?... ; CTA du projet = ArticleCta vers /#planning (décalage connu, non contourné).
+2. ending.order FAIL : le lint cherche "## Sources et Références" (majuscule), le brief et le spec disent "Sources et références" ; heading conforme au spec conservé.
+3. description.max_estimated_px WARN : 976 px (max 960), description du spec inchangée.
+
+## Points en attente
+1. Musique en Round by Round (CLM-006) : repli appliqué, "la musique ne dicte pas la séance : le rythme vient du round et du coach".
+2. Recommandation Notre avis à valider par Nicolas ; aucun nombre de séances solo écrit.
+3. Signature : "Équipe Bis Repetita".
+4. Lien cours-boxe-prive-petit-groupe-collectif posé mais NON publié à ce jour (prévu 20 oct.) : à retirer si non publié avant le 29 oct.
+5. Lien retour depuis quelle-boxe-choisir-femme-geneve à ajouter à la publication.
+6. Cover + images inline 2 (schéma), 3, 4 à produire ; ajouter image au frontmatter.
+7. Citation Decathlon : le corps cite sans nommer l'enseigne ; l'enseigne figure dans Sources (spec SRC-004). Trancher si on la retire.
+8. "Article révisé en octobre 2026" dans l'intro.
+9. Prix à relire dans docs/tarifs-reference.md avant publication.

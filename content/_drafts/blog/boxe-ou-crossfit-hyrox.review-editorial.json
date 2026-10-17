@@ -1,0 +1,25 @@
+{
+  "slug": "boxe-ou-crossfit-hyrox",
+  "reviewer": "auto-revue du producteur (lecture seule par seo-review non exécutée, pas de sous-agent)",
+  "date": "2026-10-17",
+  "verdict": "needs_human",
+  "blockers": [],
+  "to_validate": [
+    "Verdict « Notre avis » et recommandation par défaut (décision n° 1)",
+    "Semaine type et règles de placement : repères du studio sans source",
+    "Liens conditionnels cardio-boxe-ou-boxe-technique et boxe-preparation-course-escalade (publiés avant le 12 nov.)",
+    "Sources 4 (HYROX, 89 athlètes) et 5 (Stewart, n=10) à re-vérifier ; aucune source re-vérifiée en ligne",
+    "Nombre de coachs en Round by Round (brief : 1, CLAUDE.md : 2), omis dans le texte"
+  ],
+  "checks": {
+    "claims_in_spec_only": true,
+    "no_invented_anecdote_price_figure": true,
+    "no_named_box_or_gym": true,
+    "injury_rates_not_ranked": true,
+    "no_small_group_price": true,
+    "no_solo_session_count": true,
+    "no_em_dash_exclamation_superlative_guarantee": true,
+    "voice_vouvoiement": true
+  },
+  "warnings": ["images inline et cover absentes", "description 1009 px estimés pour 960"]
+}

@@ -1,0 +1,415 @@
+{
+  "schema_version": 1,
+  "source_brief": "cours-boxe-prive-petit-groupe-collectif.md",
+  "slug": "cours-boxe-prive-petit-groupe-collectif",
+  "locale": "fr",
+  "module": "E",
+  "snippet": {
+    "title": "Cours de boxe privé, petit groupe ou collectif : notre avis",
+    "h1": "Cours de boxe privé, petit groupe ou collectif : notre avis",
+    "description": "Solo, duo, trio, petit groupe ou Round by Round : comment choisir votre cours de boxe à Genève selon votre objectif, pour qui et dans quel ordre."
+  },
+  "dates": {
+    "pubDate": "2026-10-20",
+    "updatedDate": null,
+    "reviewedDate": null
+  },
+  "word_count": {
+    "minimum": 1600,
+    "maximum": 2000
+  },
+  "primary_keyword": "cours de boxe privé ou collectif",
+  "keywords": [
+    {
+      "role": "primary",
+      "query": "cours de boxe privé ou collectif",
+      "natural_form": "un cours de boxe privé ou un cours collectif",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "coach boxe privé Genève",
+      "natural_form": "un coach de boxe privé à Genève",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "cours de boxe petit groupe Genève",
+      "natural_form": "un cours de boxe en petit groupe à Genève",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "cours collectif boxe Genève",
+      "natural_form": "un cours collectif de boxe à Genève",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "cours particulier de boxe",
+      "natural_form": "un cours particulier de boxe",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "boxe en duo",
+      "natural_form": "boxer en duo",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "coaching boxe à domicile Genève",
+      "natural_form": "un coaching de boxe à domicile à Genève",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "quel cours de boxe choisir débutant",
+      "natural_form": "quel cours de boxe choisir quand on débute",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "cours de boxe privé ou en groupe pour débuter",
+      "natural_form": "commencer la boxe en cours privé ou en groupe",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "peut-on mixer cours privé et cours collectif",
+      "natural_form": "combiner un cours privé et un cours collectif",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "prix cours de boxe privé Genève",
+      "natural_form": "le prix d'un cours de boxe privé à Genève",
+      "volume": null
+    }
+  ],
+  "structure": [
+    {
+      "id": "formats-tableau",
+      "level": 2,
+      "heading": "Cinq formats de cours de boxe comparés en un tableau",
+      "purpose": "Tableau récapitulatif des cinq formats (duo et trio fusionnés), prix à la séance seulement"
+    },
+    {
+      "id": "coaching-prive",
+      "level": 2,
+      "heading": "Coaching privé : solo, duo, trio ou à domicile",
+      "purpose": "Fiches pour qui / pas pour qui"
+    },
+    {
+      "id": "solo",
+      "level": 3,
+      "heading": "Le solo : chaque geste corrigé",
+      "purpose": "Fiche solo + nuance feedback SRC-002"
+    },
+    {
+      "id": "duo-trio",
+      "level": 3,
+      "heading": "Duo ou trio : le coût partagé, le suivi individuel",
+      "purpose": "Fiche duo/trio"
+    },
+    {
+      "id": "domicile",
+      "level": 3,
+      "heading": "À domicile : le studio vient chez vous",
+      "purpose": "Fiche domicile"
+    },
+    {
+      "id": "groupe",
+      "level": 2,
+      "heading": "En groupe : Small Group ou Round by Round",
+      "purpose": "Deux formats de groupe + Notre avis n° 1"
+    },
+    {
+      "id": "small-group",
+      "level": 3,
+      "heading": "Small Group : 4 à 8 personnes, un programme qui se construit",
+      "purpose": "Fiche Small Group + SRC-003"
+    },
+    {
+      "id": "round-by-round",
+      "level": 3,
+      "heading": "Round by Round : le collectif sans la foule",
+      "purpose": "Fiche Round by Round"
+    },
+    {
+      "id": "objectif",
+      "level": 2,
+      "heading": "Quel cours de boxe choisir selon votre objectif",
+      "purpose": "Arbre de décision + tableau final + Notre avis principal sur le parcours (pas le budget)"
+    },
+    {
+      "id": "apprendre",
+      "level": 3,
+      "heading": "Si vous voulez apprendre vite les bases",
+      "purpose": "Solo ou duo puis groupe"
+    },
+    {
+      "id": "forme",
+      "level": 3,
+      "heading": "Si vous voulez vous remettre en forme et tenir dans la durée",
+      "purpose": "Small Group ou Round by Round"
+    },
+    {
+      "id": "groupe-budget",
+      "level": 3,
+      "heading": "Si vous voulez le plaisir du groupe ou si votre budget est serré",
+      "purpose": "Round by Round, Small Group"
+    },
+    {
+      "id": "faq",
+      "level": 2,
+      "heading": "Questions fréquentes sur les formats de cours de boxe",
+      "purpose": "3 questions"
+    },
+    {
+      "id": "faq-combiner",
+      "level": 3,
+      "heading": "Peut-on combiner un cours privé et un cours collectif ?",
+      "purpose": "SRC-001"
+    },
+    {
+      "id": "faq-duo-niveau",
+      "level": 3,
+      "heading": "Peut-on boxer en duo avec quelqu'un d'un autre niveau ?",
+      "purpose": "page duo-trio"
+    },
+    {
+      "id": "faq-seances",
+      "level": 3,
+      "heading": "Combien de séances privées avant de passer en groupe ?",
+      "purpose": "prudence, décision n° 3"
+    },
+    {
+      "id": "conclusion",
+      "level": 2,
+      "heading": "Conclusion : choisir un format, puis l'ajuster",
+      "purpose": "Ancrage local + CTA unique"
+    }
+  ],
+  "internal_links": [
+    {
+      "url": "/cours-de-boxe-geneve",
+      "anchor": "les cours de boxe à Genève",
+      "section_id": "intro",
+      "required": true
+    },
+    {
+      "url": "/blog/prix-cours-boxe-geneve-2026",
+      "anchor": "le détail des prix et des packs",
+      "section_id": "formats-tableau",
+      "required": true
+    },
+    {
+      "url": "/tarifs",
+      "anchor": "la grille tarifaire",
+      "section_id": "formats-tableau",
+      "required": true
+    },
+    {
+      "url": "/services/coaching-solo",
+      "anchor": "le coaching solo",
+      "section_id": "solo",
+      "required": true
+    },
+    {
+      "url": "/services/coaching-duo-trio",
+      "anchor": "la boxe en duo ou en trio",
+      "section_id": "duo-trio",
+      "required": true
+    },
+    {
+      "url": "/services/coaching-boxe-domicile",
+      "anchor": "le coaching à domicile",
+      "section_id": "domicile",
+      "required": true
+    },
+    {
+      "url": "/services/small-group-training",
+      "anchor": "le Small Group Training",
+      "section_id": "small-group",
+      "required": true
+    },
+    {
+      "url": "/services/round-by-round",
+      "anchor": "les cours Round by Round",
+      "section_id": "round-by-round",
+      "required": true
+    },
+    {
+      "url": "/blog/studio-boxe-prive-vs-salle-classique-geneve",
+      "anchor": "ce qui distingue un studio privé d'une salle classique",
+      "section_id": "coaching-prive",
+      "required": false
+    },
+    {
+      "url": "/blog/combien-seances-boxe-par-semaine-debutant",
+      "anchor": "combien de séances par semaine quand on débute",
+      "section_id": "faq-seances",
+      "required": false
+    },
+    {
+      "url": "/blog/premier-cours-de-boxe-preparation",
+      "anchor": "préparer votre premier cours",
+      "section_id": "conclusion",
+      "required": false
+    },
+    {
+      "url": "/#planning",
+      "anchor": "Réserver une première séance",
+      "section_id": "conclusion",
+      "required": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "url": "https://www.who.int/fr/news-room/fact-sheets/detail/physical-activity",
+      "title": "OMS, fiche Activité physique, 26 juin 2024",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-002",
+      "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2010.00190/full",
+      "title": "Wulf et al. 2010, Frequent External-Focus Feedback Enhances Motor Learning",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-003",
+      "url": "https://research.birmingham.ac.uk/en/publications/group-versus-individual-approach-a-meta-analysis-of-the-effective/",
+      "title": "Burke et al. 2006, Group versus individual approach?, Sport & Exercise Psychology Review 2(1), 19–35",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-004",
+      "url": "https://bisrepetita.ch/tarifs",
+      "title": "Page Tarifs du site (docs/tarifs-reference.md)",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "statement": "Prix publiés à la séance : solo 120, duo 140, trio 160, Small Group 200, Round by Round 40, domicile dès 150 (CHF)",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-004"
+      ],
+      "allowed_wording": "Libellés exacts de /tarifs",
+      "limits": "Aucun pack de 10 dans l'article (renvoi vers l'article prix) ; Small Group sans prix par personne (décision n° 1)"
+    },
+    {
+      "id": "CLM-002",
+      "statement": "Round by Round : 8 personnes au plus, 1 coach, 50 minutes, sans échange de coups",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-004"
+      ]
+    },
+    {
+      "id": "CLM-003",
+      "statement": "Small Group : 4 à 8 personnes, 60 minutes",
+      "status": "to_confirm",
+      "source_ids": [],
+      "limits": "Meta de la page indique 6 max (décision n° 2)"
+    },
+    {
+      "id": "CLM-004",
+      "statement": "L'OMS recommande au moins 150 minutes d'activité modérée par semaine aux adultes",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-001"
+      ],
+      "limits": "Pas de promesse santé"
+    },
+    {
+      "id": "CLM-005",
+      "statement": "Un retour fréquent centré sur l'effet du geste a amélioré l'apprentissage dans une étude de 2010",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-002"
+      ],
+      "limits": "Statut débattu ; enfants, lancer de football"
+    },
+    {
+      "id": "CLM-006",
+      "statement": "S'entraîner dans un vrai groupe a fait mieux qu'un cours collectif standard (méta-analyse 2006)",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-003"
+      ],
+      "limits": "Ne pas dire que le studio applique un protocole de dynamique de groupe"
+    },
+    {
+      "id": "CLM-007",
+      "statement": "Commencer par 5 à 10 séances en solo avant de passer en groupe",
+      "status": "to_confirm",
+      "source_ids": [],
+      "limits": "Repère du plan à valider par Nicolas (décision n° 3)"
+    },
+    {
+      "id": "CLM-008",
+      "statement": "Séance d'essai gratuite ou offerte",
+      "status": "forbidden",
+      "source_ids": [],
+      "limits": "Décision oct. 2026"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG-001",
+      "placement": "cover",
+      "type": "photo",
+      "alt_text": "Coach de boxe tenant les pattes d'ours face à une élève au studio Bis Repetita à Genève, sacs de frappe en arrière-plan",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "IMG-002",
+      "placement": "after-h2:formats-tableau",
+      "type": "photo",
+      "alt_text": "Intérieur du studio de boxe Bis Repetita près de la place des Nations à Genève, avec le ring et les sacs de frappe",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-003",
+      "placement": "after-h3:duo-trio",
+      "type": "photo",
+      "alt_text": "Deux élèves en garde côte à côte pendant une séance de boxe en duo avec leur coach à Genève",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-004",
+      "placement": "after-h3:round-by-round",
+      "type": "photo",
+      "alt_text": "Participants d'un cours collectif Round by Round frappant chacun leur sac au studio Bis Repetita à Genève",
+      "aspect_ratio": "4:3"
+    }
+  ],
+  "cta": {
+    "url": "/#planning",
+    "anchor": "Réserver une première séance"
+  },
+  "frontmatter": {
+    "author": "Équipe Bis Repetita",
+    "category": "guide",
+    "tags": [
+      "cours de boxe privé ou collectif",
+      "coach boxe privé Genève",
+      "cours de boxe petit groupe Genève",
+      "cours collectif boxe Genève",
+      "Round by Round"
+    ],
+    "draft": true
+  },
+  "source_hash": "sha256:4e3415938756296ea69e7334ae5503beba905f57904adf2f67eacca11aa97fd8",
+  "context_hash": "sha256:9cf86644900a365c5d5588bca7deb098be83ad63f8eba66f53710afd97bc3e26",
+  "compiled_at": "2026-10-17T18:10:39+00:00"
+}

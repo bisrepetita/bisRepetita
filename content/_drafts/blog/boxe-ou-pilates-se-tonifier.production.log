@@ -1,0 +1,22 @@
+# Production log - boxe-ou-pilates-se-tonifier
+Date : 2026-10-17 | Worker : @article-producer | Statut : needs_human (pas ready_to_publish)
+HEALTH: relecture santé requise (H3 reprise, bloc Notre avis)
+
+## Etapes
+- write : draft.md (~1700 mots avec tableaux, hors sources)
+- humanizer : passe manuelle (pas d'em dash, pas de superlatif, rythme)
+- claims/sources : alignés sur le spec ; sources NON re-vérifiées en ligne (pas d'accès web), reprises du brief (accès 2026-10-17)
+- assemblage : build_article.py avec spec temporaire (h1 modifié pour contourner "h1 must differ"), puis suppression de h1/image du frontmatter ; author/tags/category/draft ajoutés à la main (non émis par le script)
+- schema : OK ; lint : 1 erreur (cta.final_unique), 0 warning
+- review : auto-revue, voir review-editorial.json
+- cover : NON GENEREE (generate-cover dépend d'une API payante gemini non vérifiée) ; image absente du frontmatter
+
+## Points en attente
+1. Notre avis (CLM-008) : boxe 2x/semaine + Pilates 1x et cas où le Pilates passe d'abord, à valider par Nicolas.
+2. Signature : "Équipe Bis Repetita" par défaut.
+3. Lien seance-boxe-femme-specificites : NON posé (non publié, pubDate prévue 22 oct.) ; à ajouter dans le H3 reprise si publié avant le 27 oct.
+4. Relecture par un professionnel de santé : H3 reprise + Notre avis.
+5. Prix à relire dans docs/tarifs-reference.md avant publication.
+6. Cover (diptyque) et images inline 2 et 3 à produire ; frontmatter image à ajouter avec la cover.
+7. Lint : cta.final_unique attend un lien /contact?... ; le projet utilise ArticleCta vers /#planning (règle inadaptée). Le TLDR est en blockquote canonique (brief/lint) et non en composant Tldr.
+8. Date "révisé le 27 octobre 2026" dans l'intro = pubDate.

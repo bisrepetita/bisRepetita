@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://bisrepetita.ch/blog/seance-boxe-femme-specificites#article",
+      "mainEntityOfPage": "https://bisrepetita.ch/blog/seance-boxe-femme-specificites",
+      "headline": "Séance de boxe pour femme : ce qui change vraiment",
+      "description": "Même technique, cadre ajusté : séance type de 60 minutes, brassière, plancher pelvien, cycle, post-partum. Réservez une première séance à Genève.",
+      "datePublished": "2026-10-22",
+      "dateModified": "2026-10-22",
+      "author": {
+        "@type": "Person",
+        "name": "Équipe Bis Repetita"
+      },
+      "image": "https://bisrepetita.ch/images/blog/seance-boxe-femme-specificites.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://bisrepetita.ch/blog/seance-boxe-femme-specificites#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Peut-on sauter à la corde quand on a des fuites urinaires ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pas forcément. La corde est un impact, et c'est souvent lui qui déclenche les fuites. Des pas de côté ou des montées de genoux gardent le rythme de l'échauffement sans les sauts. Si les fuites persistent, consultez un·e physiothérapeute en rééducation périnéale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il une brassière spéciale pour boxer ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Une brassière au maintien adapté à l'effort intense est conseillée, car la douleur mammaire à l'effort est fréquente chez les sportives. Sans contact, aucun protège-poitrine n'est nécessaire."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Une séance de boxe pour femme est-elle moins intense ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. C'est la même boxe : l'intensité est réglée sur la personne et sur le jour, pas sur le genre. Certaines séances sont plus soutenues, d'autres plus techniques, selon ce que le coach observe à l'échauffement. ---"
+          }
+        }
+      ]
+    }
+  ]
+}

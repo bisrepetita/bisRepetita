@@ -286,6 +286,13 @@
       "title": "Burke et al. 2006, Group versus individual approach?, Sport & Exercise Psychology Review 2(1), 19–35",
       "status": "verified",
       "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-004",
+      "url": "https://bisrepetita.ch/tarifs",
+      "title": "Page Tarifs du site (docs/tarifs-reference.md)",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
     }
   ],
   "claims": [
@@ -293,7 +300,9 @@
       "id": "CLM-001",
       "statement": "Prix publiés à la séance : solo 120, duo 140, trio 160, Small Group 200, Round by Round 40, domicile dès 150 (CHF)",
       "status": "confirmed",
-      "source_ids": [],
+      "source_ids": [
+        "SRC-004"
+      ],
       "allowed_wording": "Libellés exacts de /tarifs",
       "limits": "Aucun pack de 10 dans l'article (renvoi vers l'article prix) ; Small Group sans prix par personne (décision n° 1)"
     },
@@ -301,7 +310,9 @@
       "id": "CLM-002",
       "statement": "Round by Round : 8 personnes au plus, 1 coach, 50 minutes, sans échange de coups",
       "status": "confirmed",
-      "source_ids": []
+      "source_ids": [
+        "SRC-004"
+      ]
     },
     {
       "id": "CLM-003",

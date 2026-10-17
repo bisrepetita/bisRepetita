@@ -1,0 +1,34 @@
+# Production log : boxe-menopause-os-equilibre
+Date : 2026-10-17
+Worker : @article-producer (sans publication, sans commit)
+SANTE : relecture sante requise avant publication (D1)
+
+## Etapes
+- [ok] preconditions : brief + spec presents, hashes du spec non recalcules (declares a jour par l'appelant)
+- [ok] write : content/_drafts/blog/boxe-menopause-os-equilibre.article.mdx (~1730 mots hors sources, tableau et FAQ inclus)
+- [ok] humanizer (passe manuelle) : 0 em dash, 0 exclamation, superlatifs retires, espaces insecables dans le corps
+- [ok] claims : CLM-001 a 015 et 017 dans leurs limites ; CLM-016 absent
+- [ok] schema : boxe-menopause-os-equilibre.schema.json (2 noeuds)
+- [lint] shadow : 2 erreurs, 0 warning (ending.order, cta.final_unique), voir ci-dessous
+- [ok] review : boxe-menopause-os-equilibre.review-editorial.json (auto-revue)
+- [non genere] cover : aucune config/cle API image ; rien dans public/
+
+## Lint : decalages connus, non contournes
+- cta.final_unique : attend un lien /contact?... ; le CTA du projet est /#planning (ArticleCta).
+- ending.order : attend "## Conclusion" puis "## Sources et Références" ; le spec impose "## Pour finir", et le titre "Sources et références" est en casse francaise.
+- Le H2 FAQ du spec contient un tiret cadratin ; ecrit "FAQ : boxe et menopause" (style demande). Le lint ne l'a pas signale.
+
+## Points en attente
+1. D1 relecteur sante (Jon/Nicolas) : nom, profession, mention publiee ou non. Bloque la publication. Aucune mention "relu par" ecrite.
+2. D3 materiel de charge au studio (Nicolas) : repli applique, "a completer ailleurs".
+3. D4 variante sans saut (Nicolas) : repli applique, "a signaler au coach, variantes a voir dans l'echange initial", aucune promesse.
+4. D5 bloc "Notre avis" : proposition du brief reprise telle quelle, a valider.
+5. D6 signature : "Equipe Bis Repetita" ; Nicolas ne signe qu'apres relecture.
+6. Images : 3 TODO (schema HTML, 2 photos) ; cover : photo reelle avec accord ecrit ou photo studio sans personne, jamais IA.
+7. Plan du calendrier : mettre a jour le slug a la publication.
+
+## Liens
+Poses : /cours-de-boxe-geneve, /blog/effet-boxe-corps-femme-geneve, /blog/a-quel-age-commencer-la-boxe (x2), /services/boxe-femme, /blog/la-boxe-est-elle-dangereuse-blessures-loisir, /services/coaching-solo, /blog/boxe-regles-cycle-menstruel. Tous publies avant le 2026-11-26 (pubDate src/content/blog : juin a aout 2026). Aucun lien vers un article non publie. Liens retour a poser a la publication (maillage.md).
+
+## Verification des sources
+Non re-verifiees ici (web non consulte) : chiffres repris du brief/spec, verifies le 2026-10-17 par l'auteur du brief. SRC-003 : article SWAN 2012 non lu, cite via Shieh 2021 ; SRC-006 et SRC-008 : resumes seulement ; phrase col du fémur de SRC-008 non citee.

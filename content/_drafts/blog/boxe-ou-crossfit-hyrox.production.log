@@ -1,0 +1,30 @@
+# Production log - boxe-ou-crossfit-hyrox
+Date : 2026-10-17 | Worker : @article-producer | Statut : needs_human (pas ready_to_publish)
+
+## Etapes
+- write : rédaction directe depuis brief + spec (~1 970 mots de corps, tableaux inclus, hors sources)
+- humanizer : passe manuelle (pas d'em dash, pas d'exclamation, pas de superlatif)
+- claims/sources : alignés sur le spec ; AUCUNE source re-vérifiée en ligne (pas d'accès web). Reprises du brief (accès 2026-10-17)
+- assemblage : à la main (title = H1, pas de champ h1/image) ; author, tags, category, draft: true
+- schema : OK (build_schema.py) ; lint : 1 erreur (cta.final_unique), 1 warning (description 1009 px > 960)
+- review : auto-revue, voir review-editorial.json
+- cover : NON GENEREE (aucune config sans API payante vérifiée) ; pas d'image dans le frontmatter ; rien dans public/
+
+## Repli appliqués (Décisions requises non tranchées)
+- n° 1 reco par défaut : formulée telle que dans le brief, marquée à valider ; aucun nombre de séances solo
+- n° 2 Small Group : aucun prix cité (4 à 8 personnes seulement)
+- n° 3 signature : « Équipe Bis Repetita » ; title Expertise non utilisé
+- n° 5 règle de placement n° 2 : retirée ; seules la règle n° 1 et la règle « une séance en moins ailleurs » sont gardées
+
+## Points en attente
+1. Nicolas : valider le verdict « Notre avis » (n° 1) et la semaine type (repère du studio, sans source).
+2. Liens conditionnels POSÉS : /blog/cardio-boxe-ou-boxe-technique (29 oct.) et /blog/boxe-preparation-course-escalade (5 nov.), non encore dans src/content/blog (drafts). Le brief les dit conditionnels : à retirer si l'un des deux n'est pas publié avant le 12 nov.
+3. Citations CrossFit et HYROX en anglais : paraphrasées en français, sans guillemets (non retrouvées mot pour mot, pas d'accès web). Descriptions du CrossFit et ateliers HYROX à re-vérifier sur les pages officielles.
+4. Claims to_confirm : HYROX 89 athlètes / 14,4 pour 1 000 h (tableau, prudent) ; Stewart 2025 n = 10, -4,26 % (formulé comme exploratoire). Sources 4 et 5 à re-vérifier. Taux de blessures non comparés ni classés (phrase obligatoire présente).
+5. Round by Round : le brief dit 1 coach, CLAUDE.md du projet dit 2 coachs. Nombre de coachs omis dans l'article ; à trancher.
+6. Titre de section « Sources et Références » (R majuscule) exigé par la règle lint ending.order ; le spec écrit « Sources et références ».
+7. Lint cta.final_unique : attend un lien /contact?... ; le CTA du projet est ArticleCta vers /#planning. Décalage connu, non contourné.
+8. Lint description : 1009 px estimés pour un maximum de 960 (warning) ; description imposée par le spec, non modifiée (152 car.).
+9. Cover (16:9) et images inline 2 à 4 (schéma capacité/habileté, photo distance, schéma semaine type) à produire ; frontmatter image à ajouter avec la cover.
+10. Prix à relire dans docs/tarifs-reference.md avant publication (maj 2026-03-23).
+11. Date « révisé en novembre 2026 » dans l'intro = mois de pubDate.

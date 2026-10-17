@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "source_brief": "boxe-ou-crossfit-hyrox.md",
+  "slug": "boxe-ou-crossfit-hyrox",
+  "locale": "fr",
+  "module": "E",
+  "snippet": {
+    "title": "Boxe ou CrossFit, HYROX : ce que la boxe ajoute",
+    "h1": "Boxe ou CrossFit, HYROX : ce que la boxe ajoute",
+    "description": "CrossFit et HYROX entraînent la capacité ; la boxe ajoute le geste, la distance et la coordination sous fatigue. Comparatif, semaine type et notre avis."
+  },
+  "dates": {
+    "pubDate": "2026-11-12",
+    "updatedDate": null,
+    "reviewedDate": null
+  },
+  "word_count": {
+    "minimum": 1600,
+    "maximum": 2000
+  },
+  "primary_keyword": "boxe ou crossfit",
+  "keywords": [
+    {
+      "role": "primary",
+      "query": "boxe ou crossfit",
+      "natural_form": "la boxe ou le CrossFit",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "boxe et hyrox",
+      "natural_form": "la boxe et le HYROX",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "sport de combat ou crossfit",
+      "natural_form": "un sport de combat ou le CrossFit",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "compléter le crossfit",
+      "natural_form": "compléter le CrossFit avec la boxe",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "crossfit et boxe combiner",
+      "natural_form": "combiner CrossFit et boxe dans la semaine",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "boxe crossfit Genève",
+      "natural_form": "faire de la boxe à côté du CrossFit à Genève",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "coordination sous fatigue",
+      "natural_form": "garder sa coordination quand la fatigue monte",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "la boxe peut-elle remplacer le crossfit",
+      "natural_form": "la boxe peut-elle remplacer le CrossFit ?",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "boxe pour améliorer hyrox",
+      "natural_form": "la boxe aide-t-elle en HYROX ?",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "semaine type crossfit et boxe",
+      "natural_form": "une semaine type CrossFit et boxe",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "boxe de crossfit",
+      "natural_form": "les mouvements de boxe en WOD",
+      "volume": null
+    }
+  ],
+  "structure": [
+    {
+      "id": "comparatif",
+      "level": 2,
+      "heading": "Boxe, CrossFit, HYROX : le comparatif en un tableau",
+      "purpose": "Tableau 3 colonnes ; phrase obligatoire : taux de blessures non comparables"
+    },
+    {
+      "id": "crossfit-hyrox",
+      "level": 2,
+      "heading": "Ce que le CrossFit et le HYROX font très bien",
+      "purpose": "Respect, factuel, sources officielles"
+    },
+    {
+      "id": "crossfit",
+      "level": 3,
+      "heading": "Le CrossFit : varié, intense, encadré",
+      "purpose": "Autodescription de la marque"
+    },
+    {
+      "id": "hyrox",
+      "level": 3,
+      "heading": "Le HYROX : une course de capacité standardisée",
+      "purpose": "Format officiel"
+    },
+    {
+      "id": "boxe-ajoute",
+      "level": 2,
+      "heading": "Ce que la boxe ajoute : le geste, la distance, la coordination sous fatigue",
+      "purpose": "Sigrist 2013, Stewart 2025 avec limites"
+    },
+    {
+      "id": "geste",
+      "level": 3,
+      "heading": "Un geste qui se corrige",
+      "purpose": "Sigrist 2013"
+    },
+    {
+      "id": "distance",
+      "level": 3,
+      "heading": "Lire la distance",
+      "purpose": "Cible qui bouge, pattes d'ours"
+    },
+    {
+      "id": "fatigue",
+      "level": 3,
+      "heading": "Rester précis quand la fatigue monte",
+      "purpose": "Stewart 2025, n=10, exploratoire"
+    },
+    {
+      "id": "semaine",
+      "level": 2,
+      "heading": "Si vous faites déjà du CrossFit ou du HYROX : une semaine type",
+      "purpose": "Repère, pas programme ; règle n° 2 seulement si validée, sinon retirée"
+    },
+    {
+      "id": "avis",
+      "level": 2,
+      "heading": "Notre avis : quel format de boxe pour un crossfitteur",
+      "purpose": "Pour qui / pas pour qui, Si vous cherchez, Notre avis"
+    },
+    {
+      "id": "faq",
+      "level": 2,
+      "heading": "FAQ",
+      "purpose": "5 questions, 40-70 mots"
+    },
+    {
+      "id": "conclusion",
+      "level": 2,
+      "heading": "Conclusion",
+      "purpose": "3-4 phrases puis CTA unique"
+    },
+    {
+      "id": "sources",
+      "level": 2,
+      "heading": "Sources et références",
+      "purpose": "Liste des sources"
+    }
+  ],
+  "internal_links": [
+    {
+      "url": "/cours-de-boxe-geneve",
+      "anchor": "cours de boxe à Genève",
+      "section_id": "intro",
+      "required": true
+    },
+    {
+      "url": "/blog/la-boxe-est-elle-dangereuse-blessures-loisir",
+      "anchor": "les blessures en boxe loisir",
+      "section_id": "comparatif",
+      "required": true
+    },
+    {
+      "url": "/blog/combien-seances-boxe-par-semaine-debutant",
+      "anchor": "combien de séances de boxe par semaine",
+      "section_id": "semaine",
+      "required": true
+    },
+    {
+      "url": "/services/coaching-solo",
+      "anchor": "le coaching solo",
+      "section_id": "avis",
+      "required": true
+    },
+    {
+      "url": "/services/small-group-training",
+      "anchor": "le Small Group",
+      "section_id": "avis",
+      "required": true
+    },
+    {
+      "url": "/services/round-by-round",
+      "anchor": "le format Round by Round",
+      "section_id": "avis",
+      "required": true
+    },
+    {
+      "url": "/blog/equipement-boxe-debutant-geneve",
+      "anchor": "l'équipement de boxe pour débuter",
+      "section_id": "faq",
+      "required": true
+    },
+    {
+      "url": "/blog/cardio-boxe-ou-boxe-technique",
+      "anchor": "cardio-boxe ou boxe technique",
+      "section_id": "faq",
+      "required": false
+    },
+    {
+      "url": "/blog/boxe-preparation-course-escalade",
+      "anchor": "la boxe en renfort du coureur",
+      "section_id": "semaine",
+      "required": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "url": "https://hyrox.com/the-fitness-race/",
+      "title": "HYROX, The fitness race",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-002",
+      "url": "https://www.crossfit.com/what-is-crossfit",
+      "title": "CrossFit, What is CrossFit",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-003",
+      "url": "https://europepmc.org/article/MED/33322981",
+      "title": "Rodríguez et al. 2022, Injury in CrossFit, Phys Sportsmed",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-004",
+      "url": "https://europepmc.org/article/MED/42780891",
+      "title": "Chittenden et al. 2026, HYROX athletes, Front Sports Act Living",
+      "status": "to_verify",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-005",
+      "url": "https://europepmc.org/article/MED/41463652",
+      "title": "Stewart et al. 2025, Lower limb kinetics in boxing punches, Bioengineering",
+      "status": "to_verify",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-006",
+      "url": "https://europepmc.org/article/MED/23132605",
+      "title": "Sigrist et al. 2013, Psychonomic Bulletin & Review",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-007",
+      "url": "https://europepmc.org/article/MED/26192194",
+      "title": "Loosemore et al. 2015, Br J Sports Med",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-008",
+      "url": "https://bisrepetita.ch/tarifs",
+      "title": "Page Tarifs du site (docs/tarifs-reference.md)",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "statement": "HYROX : 8 fois 1 km de course, chacun suivi d'un atelier ; liste et distances des 8 ateliers",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-001"
+      ],
+      "limits": "source officielle"
+    },
+    {
+      "id": "CLM-002",
+      "statement": "CrossFit : « constantly varied functional movements performed at relative intensity » ; cours encadrés ; séances adaptables",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-002"
+      ],
+      "limits": "autodescription de la marque, à présenter comme telle"
+    },
+    {
+      "id": "CLM-003",
+      "statement": "CrossFit : 25 études, 12 079 pratiquants, prévalence moyenne 35,3 % ; épaule 26 %, colonne 24 %, genou 18 % ; 0,2 à 18,9 blessures pour 1 000 h",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-003"
+      ],
+      "limits": "études hétérogènes ; ne jamais comparer ni classer entre disciplines"
+    },
+    {
+      "id": "CLM-004",
+      "statement": "HYROX : 89 athlètes, 14,4 blessures pour 1 000 h, genou en tête (22 %)",
+      "status": "to_confirm",
+      "source_ids": [
+        "SRC-004"
+      ],
+      "limits": "une cohorte, petit échantillon ; formuler avec prudence"
+    },
+    {
+      "id": "CLM-005",
+      "statement": "Boxeurs amateurs (n=10) : après un circuit de jambes de 9,5 min, force des coups -4,26 % en moyenne",
+      "status": "to_confirm",
+      "source_ids": [
+        "SRC-005"
+      ],
+      "limits": "étude exploratoire, hommes uniquement ; ne pas en tirer une promesse"
+    },
+    {
+      "id": "CLM-006",
+      "statement": "Le feedback d'un expert améliore l'apprentissage moteur",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-006"
+      ],
+      "limits": "revue"
+    },
+    {
+      "id": "CLM-007",
+      "statement": "Chez des boxeurs d'élite, la main est la zone la plus touchée",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-007"
+      ],
+      "limits": "non transposable tel quel à la boxe loisir"
+    },
+    {
+      "id": "CLM-008",
+      "statement": "Prix : Round by Round CHF 40.- la séance ; coaching solo CHF 120.- ; aucun prix Small Group, CrossFit ou HYROX",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-008"
+      ],
+      "limits": "décision n° 2 du brief : pas de prix Small Group"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG-001",
+      "placement": "cover",
+      "type": "photo",
+      "alt_text": "Sportif déjà entraîné qui travaille la technique de boxe aux pattes d'ours",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "IMG-002",
+      "placement": "after-h2:Boxe, CrossFit, HYROX : le comparatif en un tableau",
+      "type": "schema",
+      "alt_text": "Schéma capacité et habileté technique : CrossFit, HYROX et boxe",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-003",
+      "placement": "after-h3:Lire la distance",
+      "type": "photo",
+      "alt_text": "Travail de la distance aux pattes d'ours en cours de boxe à Genève",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-004",
+      "placement": "after-h2:Si vous faites déjà du CrossFit ou du HYROX : une semaine type",
+      "type": "schema",
+      "alt_text": "Semaine type combinant CrossFit ou HYROX et une séance de boxe",
+      "aspect_ratio": "4:3"
+    }
+  ],
+  "cta": {
+    "url": "/#planning",
+    "anchor": "Réserver une première séance"
+  },
+  "frontmatter": {
+    "author": "Équipe Bis Repetita",
+    "category": "guide",
+    "tags": [
+      "boxe ou crossfit",
+      "boxe et hyrox",
+      "compléter le crossfit",
+      "boxe Genève"
+    ],
+    "draft": true
+  },
+  "source_hash": "sha256:13f8b9e0f9d30f7c7f817f96db3f2444405ff166851e4cb701f0ee31cebf6bcb",
+  "context_hash": "sha256:9cf86644900a365c5d5588bca7deb098be83ad63f8eba66f53710afd97bc3e26",
+  "compiled_at": "2026-10-17T18:12:03+00:00"
+}

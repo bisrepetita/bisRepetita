@@ -1,0 +1,33 @@
+# Production log : seance-boxe-femme-specificites
+Date : 2026-10-17
+Worker : @article-producer (sans publication, sans commit)
+
+## Etapes
+- [ok] preconditions : brief + spec presents, hashes du spec non recalcules (declares a jour par l'appelant)
+- [ok] write : content/_drafts/blog/seance-boxe-femme-specificites.article.mdx (~1795 mots hors sources, tableaux inclus)
+- [ok] humanizer (passe manuelle) : 0 em dash (le tiret demi-cadratin restant est dans la citation OFSPO verbatim et dans le titre du document Goom), 0 exclamation, 0 superlatif, espaces insecables appliquees au corps
+- [ok] claims/sources : CLM-001 a 005 ecrits dans leurs limites ; CLM-006, 007 en repli ; CLM-008 absent
+- [ok] schema : seance-boxe-femme-specificites.schema.json (2 noeuds)
+- [lint] shadow : 1 erreur (cta.final_unique, faux positif outil), 1 warning (description 970 px > 960, meta imposee par le spec)
+- [ok] review : seance-boxe-femme-specificites.review-editorial.json (auto-revue, pas de /seo-review automatise)
+- [non genere] cover : aucune cle API image (Gemini) configuree ; rien ecrit dans public/
+
+## Points en attente
+1. Durees par bloc (Nicolas) : repli applique, aucun minutage, "varie selon la pratiquante et le jour".
+2. Variante sans saut sur simple demande (Nicolas) : repli applique, "a evoquer avec le coach dans l'echange initial", pas de promesse "sur simple demande".
+3. Relecteur sante (Jon) : H3 plancher pelvien, H3 post-partum, disclaimer, bloc Notre avis, tableau des cinq points. A faire avant le 22 oct. ou decaler.
+4. Eliza : non nommee.
+5. Signature : "Equipe Bis Repetita" ; Nicolas doit valider le bloc Notre avis (position de studio).
+6. Hors perimetre : meta de /services/boxe-femme et docs/tarifs-reference.md mentionnent encore l'essai gratuit.
+7. Liens retour a poser a la publication : boxe-femme-geneve-guide-complet (section seance) et boxe-regles-cycle-menstruel vers cet article (maillage.md §3).
+8. Lien vers boxe-ou-pilates-se-tonifier : non pose (publication le 27 oct.), a ajouter au refresh.
+
+## Verification des sources
+- Web accessible, mais seul le PDF S3 a ete telecharge ; aucune relecture automatique du PDF (pas d'outil d'extraction). Les chiffres de S1 a S8 reposent sur le brief et le spec (verifies le 2026-10-17 par l'auteur du brief), non re-verifies ici.
+- Chiffre "44 % ne faisaient rien" de S3 volontairement omis : denominateur ambigu dans le brief.
+- Citations traduites (UEFA, Goom) marquees "(traduction)".
+
+## Notes
+- Lien lint : la regle cta.final_unique cherche un lien /contact?... ; le CTA projet est le composant ArticleCta vers /#planning (comme les articles publies). Regle h1.not_title : PASS (le spec impose h1 = title seulement pour l'assemblage ; build_article.py refuse h1 = title, donc frontmatter assemble a la main).
+- images.todo_remaining ne voit que les commentaires HTML ; les 3 TODO image sont des commentaires MDX {/* */}.
+- Images inline (3) et cover : non generees. frontmatter.image pointe vers /images/blog/seance-boxe-femme-specificites.webp qui n'existe pas encore.

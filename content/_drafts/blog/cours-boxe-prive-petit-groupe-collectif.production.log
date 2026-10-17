@@ -1,0 +1,25 @@
+# Production log — cours-boxe-prive-petit-groupe-collectif
+Date : 2026-10-17 | Worker : @article-producer | Statut : draft assemblé, NON publié (draft: true)
+
+## Étapes
+- write : content/_drafts/blog/cours-boxe-prive-petit-groupe-collectif.article.mdx (~2070 mots tableaux et sources exclues du compte des sources, tableaux inclus)
+- humanizer : relecture manuelle (0 em dash, 0 exclamation, pas de superlatif, guillemets avec espaces insécables)
+- claims/sources : sources du spec seulement ; aucune re-vérification web possible (pas d'accès) : SRC-001/002/003 reprises telles que vérifiées par le brief le 2026-10-17
+- assemblage : manuel (build_article.py refuse title == h1, exception projet plan §6.3) ; schema non généré (BlogPosting rendu par le layout)
+- seo-lint : 4 erreurs, 1 warning (voir review-static.json)
+- cover : non générée (pas de images.spec.json, preset visual/presets.yaml obsolète, décision n° 6) ; rien écrit dans public/
+
+## Liens
+- Posés : tous les obligatoires + studio-boxe-prive-vs-salle-classique-geneve, combien-seances-boxe-par-semaine-debutant, premier-cours-de-boxe-preparation (publiés avant le 2026-10-20) + /offrir-un-cours
+- Non posé : /blog/round-by-round-deroule-seance (publication prévue 2026-11-19, à ajouter ce jour-là au H3 Round by Round)
+
+## Points en attente
+1. Small Group : CHF 200 « la séance » = prix du groupe ou par personne ? Libellé repris sans calcul (décision n° 1)
+2. Effectif Small Group 4 à 8 (CLM-003 to_confirm) vs meta de la page « 6 max » (décision n° 2)
+3. Nombre de séances privées avant le groupe : aucun chiffre écrit (« les premières séances », FAQ sans chiffre) ; critère « tenir sa garde et enchaîner sans rappel » à valider par Nicolas (décision n° 3, CLM-007)
+4. Zone domicile : « canton de Genève, devis pour les communes limitrophes », sans rayon (décision n° 4)
+5. Assiduité Small Group : phrase « pas pour qui ne peut venir qu'irrégulièrement » retirée du Notre avis n° 1 (décision n° 5)
+6. Preset image / cover (décision n° 6) ; images 2 à 4 non insérées (aucun fichier validé dans le flux)
+7. Signature « Équipe Bis Repetita » ; Nicolas à valider le texte (plan §6.5)
+8. Santé : repères OMS (consensus), Wulf 2010 (débattu), Burke 2006 (consensus modéré, ancien) non re-vérifiés en ligne
+9. Publication : l'article prix doit être raccourci le 20 oct. (action hors article)

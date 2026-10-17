@@ -1,0 +1,27 @@
+# Production log : boxe-preparation-course-escalade
+Date : 2026-10-17 | Worker : @article-producer (sans publication, sans commit)
+
+## Etapes
+- [ok] article : boxe-preparation-course-escalade.article.mdx (~1400 mots corps hors sources/commentaires)
+- [ok] schema : .schema.json (1 noeud)
+- [lint] shadow : 2 erreurs, 1 warning (voir ci-dessous)
+- [ok] review : .review-editorial.json (auto-revue, pas de /seo-review automatise)
+- [non genere] cover : aucune config/cle image existante ; rien dans public/
+
+## Lint
+- ending.order FAIL : la regle cherche "## FAQ", le spec impose "## Questions frequentes" (decalage de regle, non contourne)
+- cta.final_unique FAIL : la regle attend /contact, CTA projet = /#planning (decalage connu)
+- description 981 px > 960 (WARN, meta imposee par le spec)
+
+## Points en attente
+1. D1 distance/denivele : non ecrits ; Jon verifie escalade.ch.
+2. D2 entrainements collectifs 2026 : non annonces ; rien dans l'article.
+3. D3 semaine type + bloc "Notre avis" + avis veille de course : redige tel que propose, commentaires MDX "A valider par Nicolas" ; signature Equipe Bis Repetita.
+4. D4 creneaux Round by Round : non cites, renvoi au planning.
+5. D5 date 5-6 dec. 2026 : ecrite (MySwitzerland) ; Jon revérifie sur escalade.ch.
+6. Sante : aucun conseil individuel ; seule phrase de prudence (douleur persistante -> professionnel de sante). Relecture sante facultative.
+7. Sources SRC-001 a 004 reprises du brief/spec (verifiees le 2026-10-17 par l'auteur du brief), non re-verifiees ici. SRC-005 non utilisee.
+8. Images inline (3 TODO en commentaires MDX) et cover absentes ; frontmatter.image pointe vers /blog/boxe-preparation-course-escalade.webp (inexistant).
+9. Lien vers boxe-ou-crossfit-hyrox non pose (publication 12 nov.) ; lien retour burn-out -> cet article a poser a la publication (maillage.md).
+## Liens
+Poses : round-by-round, burn-out-prevention..., combien-seances..., coaching-solo, cours-de-boxe-geneve, la-boxe-est-elle-dangereuse... (tous publies avant le 2026-11-05) + CTA /#planning.

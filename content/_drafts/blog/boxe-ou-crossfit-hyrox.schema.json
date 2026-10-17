@@ -1,0 +1,65 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://bisrepetita.ch/blog/boxe-ou-crossfit-hyrox#article",
+      "mainEntityOfPage": "https://bisrepetita.ch/blog/boxe-ou-crossfit-hyrox",
+      "headline": "Boxe ou CrossFit, HYROX : ce que la boxe ajoute",
+      "description": "CrossFit et HYROX entraînent la capacité ; la boxe ajoute le geste, la distance et la coordination sous fatigue. Comparatif, semaine type et notre avis.",
+      "datePublished": "2026-11-12",
+      "dateModified": "2026-11-12",
+      "author": {
+        "@type": "Person",
+        "name": "Équipe Bis Repetita"
+      },
+      "image": "https://bisrepetita.ch/images/blog/boxe-ou-crossfit-hyrox.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://bisrepetita.ch/blog/boxe-ou-crossfit-hyrox#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "La boxe peut-elle remplacer le CrossFit ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cela dépend de ce que vous cherchez. La boxe travaille le cardio, le gainage et la coordination, mais pas la force maximale ni la variété des mouvements du CrossFit. Si votre objectif est la capacité, gardez-le. Si vous voulez de la technique, ajoutez la boxe plutôt que de choisir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "La boxe aide-t-elle en HYROX ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nous ne connaissons pas d'étude qui le mesure, et nous ne promettons aucun gain de performance. La boxe travaille la coordination et le geste, pas la course ni les ateliers. En période de préparation, gardez-la légère ou reportez-la après la course."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on boxer le lendemain d'une séance CrossFit ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C'est possible si la séance de la veille était légère. Après une grosse séance de jambes, évitez la séance technique tant que le geste n'est pas acquis : la fatigue dégrade la précision. Écoutez vos sensations, et dites-les au coach dès l'échauffement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "La « boxe » des séances CrossFit, c'est de la boxe ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Frapper un sac ou une cible dans un circuit, ce que l'on trouve dans certaines séances du jour (les WOD), n'est pas de la boxe apprise : le plus souvent, la garde et le placement ne sont pas corrigés. Notre article sur le cardio-boxe ou la boxe technique détaille la différence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il du matériel particulier ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il faut des bandes et des gants. Pour une première séance, rien n'est à acheter : le prêt de gants et de bandes est détaillé dans notre article sur l'équipement de boxe pour débuter, avec le budget si vous continuez. ---"
+          }
+        }
+      ]
+    }
+  ]
+}
