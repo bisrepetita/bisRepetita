@@ -1,0 +1,89 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches",
+      "clicks": 4,
+      "impressions": 144,
+      "ctr": 0.0278,
+      "avg_position": 8.8,
+      "top_queries": [
+        {
+          "query": "boxe femme geneve",
+          "clicks": 3,
+          "impressions": 25,
+          "position": 9.3,
+          "note": "query site, page non attribuée dans l'export"
+        },
+        {
+          "query": "boxe femme",
+          "clicks": 1,
+          "impressions": 18,
+          "position": 15.9,
+          "note": "query site"
+        },
+        {
+          "query": "cours de boxe femme",
+          "clicks": 1,
+          "impressions": 7,
+          "position": 7.4,
+          "note": "query site"
+        }
+      ]
+    },
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "« …studio privé. Essai gratuit. » → « …studio privé sans contact. » (148 car.)",
+        "reason": "essai gratuit supprimé"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Lionel : nom de famille, palmarès et licence retirés → « Lionel, coach du studio » ; « Nous venons du monde de la compétition » retiré",
+        "reason": "règle équipe"
+      },
+      {
+        "type": "data",
+        "detail": "petit groupe : « 4 à 6 femmes, un ou deux coachs » / « 100 % féminin » → « 4 à 8 personnes, un coach »",
+        "reason": "faits produit"
+      },
+      {
+        "type": "reinforce",
+        "detail": "« Notre avis » ajouté dans « quel format choisir » (solo par défaut, duo si venir seule freine, groupe ensuite)",
+        "reason": "prise de position marque"
+      },
+      {
+        "type": "reinforce",
+        "detail": "BLUF en tête des H2 peurs, bienfaits, déroulé ; « peur numéro un », « c'est chaque fois », « la majorité de nos membres… » adoucis ; renforcement → tonification",
+        "reason": "anti-IA, claims"
+      },
+      {
+        "type": "link",
+        "detail": "lien /blog/boxe-regles-cycle-menstruel ajouté sur « forme du jour » ; lien /#planning dans « Comment démarrer »",
+        "reason": "maillage cycle, CTA"
+      },
+      {
+        "type": "link",
+        "detail": "ArticleCta et liens /cours-gratuit → « Réserver une première séance » vers /#planning",
+        "reason": "fin de l'essai gratuit (décision Jon)"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate: 2026-10-17",
+        "reason": "fraîcheur"
+      }
+    ],
+    "reason": "Retrait de l'essai gratuit, du palmarès de Lionel et des faits produit erronés ; ajout d'un verdict sur le format.",
+    "word_count_before": 2168,
+    "word_count_after": 2264,
+    "needs_validation": [
+      "« Notre avis » sur le choix du format",
+      "Existence d'un petit groupe composé entre femmes (formulé « à composer par exemple entre amies ou collègues »)",
+      "Lionel co-encadre les petits groupes : à confirmer, et autorisation de le nommer",
+      "Déroulé de séance 60 min et paragraphe à la première personne signé Nicolas"
+    ]
+  }
+]

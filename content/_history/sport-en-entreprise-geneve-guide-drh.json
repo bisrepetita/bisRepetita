@@ -1,0 +1,69 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches ; top_queries non ventilées par page dans l'export",
+      "clicks": 0,
+      "impressions": 28,
+      "ctr": 0,
+      "avg_position": 7.9,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "data",
+        "detail": "« Ring professionnel » → « Un ring » ; « Cornavin et Plainpalais » → « près de la place des Nations »",
+        "reason": "règles 3 et 5"
+      },
+      {
+        "type": "data",
+        "detail": "Round by Round 1 coach, 50 min ; plafond 8 (petit groupe 4 à 8) ; TLDR sans rayon 15 km contradictoire",
+        "reason": "règle 5 ; incohérence 15 km / 5 km"
+      },
+      {
+        "type": "geo",
+        "detail": "« 6,5 milliards SECO absentéisme » → Job-Stress-Index 2022 de Promotion Santé Suisse (pertes de productivité, >30 % d'épuisement émotionnel), lien",
+        "reason": "attribution erronée corrigée"
+      },
+      {
+        "type": "geo",
+        "detail": "Claim « la majorité des actifs genevois n'atteignent pas le seuil OMS » et référence vague au Journal of Occupational Health Psychology retirés",
+        "reason": "non sourcés"
+      },
+      {
+        "type": "geo",
+        "detail": "Fiscalité : « circulaire AFC » (introuvable) → Guide d'établissement du certificat de salaire, chiffre 72, lu via Weka ; « entrent généralement » → « peuvent entrer, sous réserve de la fiduciaire »",
+        "reason": "prudence fiscale"
+      },
+      {
+        "type": "data",
+        "detail": "Prix concurrents non sourcés (80-150 / 50-80) → fourchettes sourcées de l'article prix (relevé juillet 2026)",
+        "reason": "règle 6"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Running et DMN formulés avec nuance ; pseudo-citation de membres remplacée ; « je coache depuis cinq ans » → « je dirige »",
+        "reason": "respect du running, pas de témoignage non validé"
+      },
+      {
+        "type": "add_section",
+        "detail": "Blockquote « Notre avis » studio vs locaux",
+        "reason": "refresh : verdict"
+      }
+    ],
+    "reason": "Correction des faits (lieu, ring, coachs), des sources chiffrées et de la prudence fiscale.",
+    "word_count_before": 2751,
+    "word_count_after": 2849,
+    "needs_validation": [
+      "Déplacement inclus dans 5 km et zone couverte",
+      "Annulation 48h pour le programme récurrent corporate",
+      "Créneaux 7h-7h30 / midi / fin de journée",
+      "Session pilote sans engagement",
+      "Sacs en cuir, douches individuelles",
+      "Notre avis (studio d'abord ; pas adapté >30 personnes)"
+    ]
+  }
+]

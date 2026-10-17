@@ -1,0 +1,78 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches",
+      "clicks": 0,
+      "impressions": 56,
+      "ctr": 0,
+      "avg_position": 10.7,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "ancienne : Fini les cours à 20. Coaching individuel, progression rapide et cadre confidentiel dans un studio de boxe privé à Genève. Testez gratuitement. | nouvelle : Fini les cours à 20. Coaching individuel, feedback à chaque round et cadre confidentiel dans un studio de boxe privé à Genève, La Voie-Creuse 16.",
+        "reason": "règle 2"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate: 2026-10-17 ajouté",
+        "reason": "fraîcheur"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Essai gratuit retiré (TLDR, étape 2, 2 ArticleCta vers /#planning)",
+        "reason": "règle 1"
+      },
+      {
+        "type": "reinforce",
+        "detail": "« ring professionnel », « 150 m² », « centaines d'élèves », « 2 à 3 fois plus vite », « 500 à 800 calories », « garantie de bases solides », « ne peuvent pas garantir » retirés",
+        "reason": "règle 3 / sources"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Lionel : palmarès et licence retirés ; « boxeurs de compétition » et « Cercle des Sports de Genève » retirés ; Nicolas : licence + 20 ans de pratique + 5 ans à la tête du studio",
+        "reason": "règle 4"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Dénigrement retiré (buffet vs gastronomique, moniteur de step, salles bondées) ; section « limites » reformulée de façon factuelle",
+        "reason": "règle 6"
+      },
+      {
+        "type": "add_h2",
+        "detail": "Nouveau H2 « Quand un club de boxe classique est le meilleur choix » + blockquote « Notre avis » tranché",
+        "reason": "verdict demandé"
+      },
+      {
+        "type": "data",
+        "detail": "Petit groupe 4 à 8 (au lieu de 6 max) ; horaires précis retirés (conflit avec la page studio) ; préparation combat amateur retirée",
+        "reason": "règle 5"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Témoignages implicites (« beaucoup de nos membres féminines... ») retirés ; tirets longs « Étape 1 — » remplacés ; BLUF sur les H2",
+        "reason": "règle 9"
+      },
+      {
+        "type": "link",
+        "detail": "+ /cours-de-boxe-geneve (hub, ancre « cours de boxe à Genève » qui pointait vers /services/round-by-round), + /services/boxe-femme, + /blog/combien-seances-boxe-par-semaine-debutant, + /blog/prix-cours-boxe-geneve-2026, + /blog/bienfaits-boxe-cadres-managers-geneve",
+        "reason": "maillage"
+      }
+    ],
+    "reason": "Refresh marque 2026 : fin de l'essai gratuit, faits produit et claims alignés, verdict Bis Repetita, sources vérifiées.",
+    "word_count_before": 1596,
+    "word_count_after": 1670,
+    "needs_validation": [
+      "Notre avis studio vs club (club meilleur pour volume/budget/sparring)",
+      "Nouveau H2 « Quand un club de boxe classique est le meilleur choix »",
+      "Phrase à la 1re personne « je dirige Bis Repetita depuis cinq ans »",
+      "Horaires d'ouverture : article disait 9h-20h / sam 10h-18h / dim 11h-18h, page studio 7h-21h (TODO non confirmé) : retirés, à trancher",
+      "Cercle des Sports de Genève : origine retirée faute de validation"
+    ]
+  }
+]

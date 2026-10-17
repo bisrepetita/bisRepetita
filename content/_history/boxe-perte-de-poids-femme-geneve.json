@@ -1,0 +1,92 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches",
+      "clicks": 5,
+      "impressions": 353,
+      "ctr": 0.0142,
+      "avg_position": 7.1,
+      "top_queries": [
+        {
+          "query": "perte de poids boxe",
+          "clicks": 1,
+          "impressions": 6,
+          "position": 10,
+          "note": "requête site, attribution à la page supposée"
+        },
+        {
+          "query": "boxe perte de poids",
+          "clicks": 0,
+          "impressions": 8,
+          "position": 18.2,
+          "note": "requête site, attribution à la page supposée"
+        }
+      ]
+    },
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "Ancienne : « La boxe fait-elle maigrir ? Calories, métabolisme, délai de résultat et pourquoi elle n'épaissit pas la silhouette. Séance d'essai offerte à Genève. » → nouvelle : « La boxe fait-elle maigrir ? Calories, métabolisme, délais réalistes et pourquoi elle n'épaissit pas la silhouette. Coaching au studio, à Genève. »",
+        "reason": "promesse d'essai offert retirée (décision Jon)"
+      },
+      {
+        "type": "data",
+        "detail": "Chiffres caloriques recalés sur le tableau Harvard Health (324 kcal/30 min boxe sparring, 360 course 10 km/h, 70 kg) ; « 800 à 1 000 cal » non sourcé supprimé ; tableau converti en valeurs Harvard par 30 min",
+        "reason": "les chiffres 500-600 kcal/h attribués à Harvard ne correspondaient pas à la source"
+      },
+      {
+        "type": "geo",
+        "detail": "Sources inline : Harvard Health (URL précise), LaForgia 2006 (EPOC = 6-15 % du coût de l'effort, PubMed), Epel 2000 (cortisol et graisse abdominale, association non causale, PubMed)",
+        "reason": "sources vagues remplacées par des références vérifiées"
+      },
+      {
+        "type": "reinforce",
+        "detail": "TLDR, intro, section délais, FAQ et conclusion : plus aucune promesse de perte de poids ni de délai garanti ; mécanisme + variabilité ; « transformation nette » et « un des meilleurs outils » retirés",
+        "reason": "règle 3 (garanties de résultat interdites)"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Supprimé : « progressent deux fois plus vite », « plusieurs de nos membres rapportent », « abandons moins fréquents qu'en course »",
+        "reason": "chiffres et observations non sourcés"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Round by Round : 50 min, 8 max, un coach, sans échange de coups (au lieu de « deux coachs »)",
+        "reason": "règle 5"
+      },
+      {
+        "type": "reinforce",
+        "detail": "« se renforcent » → « gagnent en tonicité » ; guillemets « massive » ; BLUF ajouté sous les H2 chiffres, EPOC, massive, délais, course",
+        "reason": "règles 7 et 9, réponse directe"
+      },
+      {
+        "type": "add_h2",
+        "detail": "Blockquote « Notre avis » dans la section boxe ou course",
+        "reason": "verdict de marque demandé"
+      },
+      {
+        "type": "link",
+        "detail": "+ /cours-de-boxe-geneve (intro), + /blog/boxe-regles-cycle-menstruel (énergie), CTA vers /#planning ; ArticleCta corrigé",
+        "reason": "maillage hub absent, plus d'essai gratuit"
+      },
+      {
+        "type": "data",
+        "detail": "« Je coache via Bis Repetita depuis cinq ans » → « Je dirige le studio depuis cinq ans » ; sources : « cinq ans à la tête du studio »",
+        "reason": "portée exacte du claim biographique"
+      }
+    ],
+    "reason": "Page la plus vue du blog : retrait de l'essai offert et des promesses de résultat, chiffres recalés sur les sources réelles, ajout d'un avis tranché et du lien hub.",
+    "word_count_before": 2218,
+    "word_count_after": 2355,
+    "needs_validation": [
+      "Notre avis (boxe ou course) : formulation au nom du studio",
+      "Temps actif d'une séance « entre 35 et 50 minutes » (texte existant, non sourcé)",
+      "Ordres de grandeur des délais (2-3 semaines, 6-12 semaines) gardés comme indicatifs",
+      "Signature Nicolas sur un texte modifié (voice.md : validation individuelle)"
+    ]
+  }
+]

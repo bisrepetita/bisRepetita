@@ -1,0 +1,72 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches",
+      "clicks": null,
+      "impressions": null,
+      "ctr": null,
+      "avg_position": null,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "add_h2",
+        "detail": "H2 « Comment adapter la séance de boxe aux 4 phases du cycle » : tableau phase/ressenti/contenu, limites (durées, contraception hormonale, McNulty 2020), choix de parler ou non de son cycle, sans contact par défaut, « Notre avis »",
+        "reason": "demande explicite de Jon, brief §3"
+      },
+      {
+        "type": "reinforce",
+        "detail": "sparring remplacé par rounds cardio / enchaînements intenses (intro, TLDR, H2 1, conseils, FAQ, conclusion)",
+        "reason": "boxe femme sans contact par défaut"
+      },
+      {
+        "type": "geo",
+        "detail": "McNulty et al. 2020 vérifié (PubMed 32661839, doi 10.1007/s40279-020-01319-3), lien doi ajouté ; Arroyo-Fernández et al. 2026 JCM vérifié exact (PMID 42355588, doi 10.3390/jcm15124418, 29 études, 1704 participantes, certitude faible à très faible) : conservé, références complétées",
+        "reason": "vérification des sources"
+      },
+      {
+        "type": "reinforce",
+        "detail": "paragraphe « En cinq ans de coaching… » reformulé en observation studio, sans sparring ni parallélisme",
+        "reason": "claim 5 ans de coaching, anti-IA"
+      },
+      {
+        "type": "link",
+        "detail": "lien vers /blog/effet-boxe-corps-femme-geneve ajouté (conclusion), second lien /services/boxe-femme dans le nouveau H2",
+        "reason": "maillage cluster femme"
+      },
+      {
+        "type": "data",
+        "detail": "source Nicolas : « cinq ans de coaching » → « à la tête de Bis Repetita depuis cinq ans »",
+        "reason": "claim autorisé"
+      },
+      {
+        "type": "link",
+        "detail": "ArticleCta et liens /cours-gratuit → « Réserver une première séance » vers /#planning",
+        "reason": "fin de l'essai gratuit (décision Jon)"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate: 2026-10-17",
+        "reason": "fraîcheur"
+      },
+      {
+        "type": "style",
+        "detail": "guillemets « » avec espaces insécables",
+        "reason": "typographie française"
+      }
+    ],
+    "reason": "Ajout de l'approche du studio selon les 4 phases du cycle (brief rebranding §3), cadrage YMYL, retrait des mentions de sparring.",
+    "word_count_before": 2100,
+    "word_count_after": 2607,
+    "needs_validation": [
+      "Tableau des 4 phases et contenus de séance proposés : conforme à la pratique réelle du studio ?",
+      "« Notre avis » (suivre le ressenti avant l'application de suivi du cycle)",
+      "Observation studio : les pratiquantes demandent rarement d'alléger en excès, gardent le technique au sac",
+      "Mention « sans contact par défaut : sac, pattes d'ours, shadow »"
+    ]
+  }
+]

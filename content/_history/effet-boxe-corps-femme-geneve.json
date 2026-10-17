@@ -1,0 +1,85 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches",
+      "clicks": null,
+      "impressions": null,
+      "ctr": null,
+      "avg_position": null,
+      "top_queries": [
+        {
+          "query": "effet de la boxe sur le corps femme",
+          "clicks": 1,
+          "impressions": 3,
+          "position": 3.0,
+          "note": "query site"
+        },
+        {
+          "query": "boxe avant après corps femme",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 8.0,
+          "note": "query site"
+        }
+      ]
+    },
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "« …à Genève. Séance d'essai offerte. » → « …en cours privé au studio de Genève. » (142 car.)",
+        "reason": "essai gratuit supprimé"
+      },
+      {
+        "type": "reinforce",
+        "detail": "tutoiement (« tu te tiens différemment », « tu as l'air plus en forme ») reformulé au discours indirect",
+        "reason": "vouvoiement"
+      },
+      {
+        "type": "reinforce",
+        "detail": "« je coache depuis cinq ans » → « à la tête du studio depuis cinq ans » ; citation de Nicolas sur la posture retirée (doublon du paragraphe) ; « quasi-totalité » → « la plupart »",
+        "reason": "claims, citation non vérifiable"
+      },
+      {
+        "type": "geo",
+        "detail": "Harvard Health : lien vers la page tableau (Boxing: sparring, 270-324 kcal/30 min pour 57-70 kg) ; chiffre 500-600 → 540-650 kcal/h",
+        "reason": "source précisée et vérifiée"
+      },
+      {
+        "type": "reinforce",
+        "detail": "« Notre avis » sur la fréquence (2/semaine pendant 3 mois, solo/duo pour la posture) ; annonces de plan raccourcies ; « renforce » → « tonifie » (terme technique gardé une fois)",
+        "reason": "prise de position, anti-IA, vocabulaire"
+      },
+      {
+        "type": "link",
+        "detail": "lien /blog/boxe-regles-cycle-menstruel sur l'énergie",
+        "reason": "maillage cycle"
+      },
+      {
+        "type": "link",
+        "detail": "ArticleCta et liens /cours-gratuit → « Réserver une première séance » vers /#planning",
+        "reason": "fin de l'essai gratuit (décision Jon)"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate: 2026-10-17",
+        "reason": "fraîcheur"
+      },
+      {
+        "type": "style",
+        "detail": "guillemets « » avec espaces insécables",
+        "reason": "typographie française"
+      }
+    ],
+    "reason": "Retrait de l'essai offert et du tutoiement, source Harvard précisée, verdict sur la fréquence ajouté.",
+    "word_count_before": 1955,
+    "word_count_after": 1993,
+    "needs_validation": [
+      "« Notre avis » sur la fréquence",
+      "Observations à la première personne (ordre d'apparition des effets, paliers semaines 1 / 8-12) : à confirmer par Nicolas"
+    ]
+  }
+]

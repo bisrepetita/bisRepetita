@@ -1,0 +1,61 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches",
+      "clicks": 1,
+      "impressions": 62,
+      "ctr": 0.0161,
+      "avg_position": 9.5,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "Ancienne : « Ce que la boxe change dans la posture et l'assurance d'une femme, et pourquoi elle attire à un tournant. Studio bienveillant à Genève, essai gratuit. » → nouvelle : « Ce que la boxe change dans la posture et l'assurance d'une femme, et pourquoi elle attire à un tournant. Studio privé à Genève, La Voie-Creuse 16. »",
+        "reason": "essai gratuit retiré"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Ligne « # Boxe et confiance en soi : pourquoi tant de femmes commencent à 35, 40 ou 50 ans » supprimée (double H1) ; annonce de plan supprimée",
+        "reason": "règles 8 et 9"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Prudence psy : « abaisse le taux de cortisol » (inexact pour un effort intense) reformulé en association ; FAQ « produisent une assurance réelle » → sans garantie ; recherche posture présentée comme débattue ; « qu'aucun autre sport ne leur donnait » retiré ; « quasi-totalité » → « la plupart »",
+        "reason": "règle 3, pas de promesse psychologique"
+      },
+      {
+        "type": "geo",
+        "detail": "Bandura 1977 sourcé (DOI Psychological Review) inline + section Sources",
+        "reason": "citation d'autorité vérifiée"
+      },
+      {
+        "type": "add_h2",
+        "detail": "Blockquote « Notre avis » (solo/duo par défaut, club pour compétition ou petit budget, boxe en accompagnement d'un suivi, pas en remplacement)",
+        "reason": "verdict de marque"
+      },
+      {
+        "type": "link",
+        "detail": "+ /blog/boxe-regles-cycle-menstruel (FAQ énergie) ; CTA /cours-gratuit → /#planning ; ArticleCta corrigé",
+        "reason": "maillage et fin de l'essai gratuit"
+      },
+      {
+        "type": "data",
+        "detail": "« cinq ans de coaching via Bis Repetita » → « depuis cinq ans à la tête de Bis Repetita »",
+        "reason": "portée exacte du claim"
+      }
+    ],
+    "reason": "Retrait de l'essai gratuit et du double H1, prudence psychologique renforcée, avis de marque ajouté.",
+    "word_count_before": 1919,
+    "word_count_after": 1989,
+    "needs_validation": [
+      "Notre avis (solo/duo, club associatif, suivi psy)",
+      "Faits studio existants non vérifiés ailleurs : « sans baie vitrée, sans zone de passage, vestiaires privés, serviettes fournies », « pas de mixité imposée », « petit groupe de femmes »",
+      "Signature Nicolas sur un texte modifié"
+    ]
+  }
+]

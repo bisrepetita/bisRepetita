@@ -1,0 +1,60 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches",
+      "clicks": null,
+      "impressions": null,
+      "ctr": null,
+      "avg_position": null,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "ancienne : Trop vieux pour débuter la boxe à 40 ou 50 ans ? L'âge pour commencer selon votre profil : enfant, ado, adulte. Séance d'essai offerte à Genève. | nouvelle : Trop vieux pour débuter la boxe à 40 ou 50 ans ? L'âge pour commencer selon votre profil : enfant, ado, adulte, expliqué par un studio de Genève.",
+        "reason": "règle 2"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate: 2026-10-17 ajouté",
+        "reason": "fraîcheur"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Essai offert retiré (2 ArticleCta, lien markdown /cours-gratuit?utm → /#planning, conclusion, formats)",
+        "reason": "règle 1"
+      },
+      {
+        "type": "data",
+        "detail": "Âges enfants (5-6 ans baby-boxing, 13 ans compétition) non vérifiables : reformulés sans chiffre, renvoi vers FFBoxe et Swiss Boxing (liens vérifiés) ; aucun cours enfant ni parent-enfant promis",
+        "reason": "sources / consigne"
+      },
+      {
+        "type": "reinforce",
+        "detail": "« âge moyen 40 ans / majorité 30-50 ans » adoucis en « beaucoup de débutants ont entre 30 et 50 ans » ; promesses psychologiques (confiance, gestion émotionnelle) retirées",
+        "reason": "règle 3"
+      },
+      {
+        "type": "add_h2",
+        "detail": "Blockquote « Notre avis » : après 40 ans, privé d'abord, puis Round by Round",
+        "reason": "refresh"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Annonce de plan et « C'est le cœur de cet article » supprimés ; Small group 4 à 8 ; Round by Round 50 min, 1 coach ; « Genève centre » → près de la place des Nations ; coquille « confidence en soi » corrigée",
+        "reason": "règles 5 et 9"
+      }
+    ],
+    "reason": "Refresh marque 2026 : fin de l'essai gratuit, faits produit et claims alignés, verdict Bis Repetita, sources vérifiées.",
+    "word_count_before": 1865,
+    "word_count_after": 1895,
+    "needs_validation": [
+      "Tranche d'âge 30-50 ans fréquente chez les débutants du studio",
+      "Notre avis après 40 ans"
+    ]
+  }
+]

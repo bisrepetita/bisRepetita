@@ -17,3 +17,15 @@ La branche `refonte-2026` est poussée (jamais `main`) ; le site est déployé p
 
 ## 2026-10-16 — Polices hors système tolérées sur `/styleguide-test`
 Bodoni Moda (option C) est exclue du détecteur impeccable (`.impeccable/config.json`) car c'est une page de comparaison noindex, pas une police du site. Si Jon retient C : l'inscrire dans `DESIGN.md` et retirer l'exception.
+
+## 2026-10-17 — Refresh des 22 articles : plus d'essai gratuit, faits alignés
+Corps et meta descriptions ne promettent plus d'essai gratuit (14 meta réécrites, title/slug/H1 intacts ; 3 doubles H1 retirés). Faits alignés sur `PRODUCT.md` : Round by Round 1 coach, 50 min, 8 max ; Small Group 4 à 8 ; « un ring » ; Lionel/Jeremy/Eliza nommés par leur rôle seulement. Chaque comparatif porte un bloc `> **Notre avis :**`. Rejeté : réécrire les meta « figées » sans motif. Trace par article : `content/_history/{slug}.json` (dont `needs_validation`). Rouvrir si Nicolas refuse un avis ou un fait.
+
+## 2026-10-17 — `updatedDate` dans la collection blog
+Champ optionnel, affiché « Mis à jour le » et exposé en `dateModified` (JSON-LD). Requis par le refresh SEO.
+
+## 2026-10-17 — Cycle : 4 phases comme repère, ressenti d'abord
+L'article cycle et la page femmes présentent les phases comme un repère ; le ressenti du jour décide. Raison : la recherche (McNulty 2020, UEFA 2025) ne soutient pas une programmation par phase pour toutes. Rejeté : « cycle syncing » prescriptif.
+
+## 2026-10-17 — `docs/seo/context.md` seul contexte SEO
+Doublon `docs/seo-context.md` supprimé ; CTA « essai gratuit », palmarès de Lionel et « ring complet » retirés du contexte lu par les skills.

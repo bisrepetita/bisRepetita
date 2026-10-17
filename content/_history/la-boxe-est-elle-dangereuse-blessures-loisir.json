@@ -1,0 +1,59 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches",
+      "clicks": null,
+      "impressions": null,
+      "ctr": null,
+      "avg_position": null,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "ancienne : La boxe loisir affiche moins de blessures que le football. Le risque réel, et comment débuter sans prendre de coups, à Genève. Séance d'essai offerte. | nouvelle : La boxe loisir affiche moins de blessures que le football. Le risque réel, et comment débuter sans prendre de coups au studio Bis Repetita, à Genève.",
+        "reason": "règle 2"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate: 2026-10-17 ajouté",
+        "reason": "fraîcheur"
+      },
+      {
+        "type": "geo",
+        "detail": "Chiffres de blessures resourcés sur études primaires : Zazryn et al. 2006 (BJSM, boxe entraînement 0,5-1,7 / 1 000 h, global 2,0) et Ekstrand et al. 2011 (BJSM, football pro 4,1 entraînement / 8,0 global), liens inline + citation attribuée",
+        "reason": "titre « Les vrais chiffres »"
+      },
+      {
+        "type": "data",
+        "detail": "Retirés : « 0,6 / 1 000 h » (non trouvé), « rugby/AFL > 8 » (non sourcé), sources ownsport.fr / decathlon / vidal (non vérifiées) ; comparaison faite entraînement contre entraînement avec réserve sur la population étudiée",
+        "reason": "sources"
+      },
+      {
+        "type": "reinforce",
+        "detail": "« Dans cet article » supprimé (et doublon de lien hub) ; essai offert retiré (conclusion + ArticleCta vers /#planning)",
+        "reason": "règles 1 et 9"
+      },
+      {
+        "type": "data",
+        "detail": "Petit groupe 4 à 8 ; Round by Round 50 min, 1 coach, sans échange de coups ; « Genève centre » → près de la place des Nations",
+        "reason": "règle 5"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Absolus adoucis (« la littérature médicale est claire », casque, « se blesse / sans douleur », « l'un des sports les moins accidentogènes »)",
+        "reason": "sources"
+      }
+    ],
+    "reason": "Refresh marque 2026 : fin de l'essai gratuit, faits produit et claims alignés, verdict Bis Repetita, sources vérifiées.",
+    "word_count_before": 2075,
+    "word_count_after": 2137,
+    "needs_validation": [
+      "Meta garde « La boxe loisir affiche moins de blessures que le football » (début conservé) : les études portent sur des boxeurs de compétition à l'entraînement, à reformuler si Jon accepte de toucher au début"
+    ]
+  }
+]

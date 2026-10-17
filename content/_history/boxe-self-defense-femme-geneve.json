@@ -1,0 +1,61 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches",
+      "clicks": null,
+      "impressions": null,
+      "ctr": null,
+      "avg_position": null,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "Ancienne : « Réflexes, distance, confiance : ce que la boxe donne réellement pour se sentir en sécurité. Séance d'essai à Genève. » → nouvelle : « Réflexes, distance, confiance : ce que la boxe donne réellement pour se sentir en sécurité, et ses limites. Coaching en studio privé à Genève. »",
+        "reason": "promesse de séance d'essai retirée"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Ligne « # Est-ce que la boxe sert vraiment à se défendre ? La réponse honnête » supprimée (double H1) ; annonce « Cet article répond… » reformulée",
+        "reason": "règles 8 et 9"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Peur : « seule le soir, dans un parking, dans les transports » → « dans la rue comme ailleurs » ; « encaisser un choc » → « garder son équilibre » (sans contact par défaut) ; « de façon mesurable » et « exactement » retirés",
+        "reason": "règle 7, ne pas instrumentaliser la peur"
+      },
+      {
+        "type": "geo",
+        "detail": "Sources vérifiées le 2026-10-17 : Wikipédia Boxe anglaise (3 × 3 min amateur H/F) et Krav-maga (citation exacte et 1964 confirmés) ; URL krav-maga canonique",
+        "reason": "vérification demandée"
+      },
+      {
+        "type": "add_h2",
+        "detail": "Blockquote « Notre avis » (stage self-défense si priorité agression, boxe pour la régularité ; boxe femme sans contact par défaut)",
+        "reason": "verdict de marque"
+      },
+      {
+        "type": "link",
+        "detail": "+ /blog/quelle-boxe-choisir-femme-geneve ; CTA → /#planning ; ArticleCta corrigé",
+        "reason": "maillage frère, fin de l'essai gratuit"
+      },
+      {
+        "type": "data",
+        "detail": "« cinq ans de coaching via Bis Repetita » → « cinq ans à la tête de Bis Repetita »",
+        "reason": "portée exacte du claim"
+      }
+    ],
+    "reason": "Retrait de l'essai et du double H1, cadrage sans peur, sources revérifiées, avis de marque ajouté.",
+    "word_count_before": 1827,
+    "word_count_after": 1909,
+    "needs_validation": [
+      "Notre avis (stage dédié vs boxe)",
+      "Page absente de l'export GSC (aucune impression sur la période)",
+      "Signature Nicolas sur un texte modifié"
+    ]
+  }
+]

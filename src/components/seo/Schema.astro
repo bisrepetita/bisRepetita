@@ -19,6 +19,7 @@ interface Props {
         description?: string;
         image?: string;
         pubDate?: Date;
+        updatedDate?: Date;
         author?: string;
         url?: string;
         serviceType?: string;
@@ -79,6 +80,7 @@ if (type === "WebSite") {
         description: data.description,
         image: data.image,
         datePublished: data.pubDate,
+        dateModified: data.updatedDate ?? data.pubDate,
         author: authorNode,
         mainEntityOfPage: {
             "@type": "WebPage",

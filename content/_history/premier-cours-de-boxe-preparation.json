@@ -1,0 +1,60 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches",
+      "clicks": 1,
+      "impressions": 137,
+      "ctr": 0.0073,
+      "avg_position": 9.6,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "ancienne : Tenue, équipement, déroulement minute par minute : tout ce qu'il faut savoir avant votre premier cours de boxe. Séance d'essai gratuite à Genève. | nouvelle : Tenue, équipement, déroulement minute par minute : tout ce qu'il faut savoir avant votre premier cours de boxe au studio Bis Repetita, à Genève.",
+        "reason": "règle 2"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate: 2026-10-17 ajouté",
+        "reason": "fraîcheur"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Essai gratuit retiré (TLDR, suite après séance, FAQ prix, 2 ArticleCta vers /#planning)",
+        "reason": "règle 1"
+      },
+      {
+        "type": "data",
+        "detail": "Durée : 60 min gardée pour le coaching privé, Round by Round = 50 min, 1 coach (TLDR, intro, déroulé, FAQ)",
+        "reason": "règle 5"
+      },
+      {
+        "type": "reinforce",
+        "detail": "« Que vous soyez... » supprimé ; « centaines de débutants » retiré ; citation client anonyme et « beaucoup de nos membres » retirés",
+        "reason": "règles 3, 9, 10"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Protège-dents prêté retiré (gants + bandes) ; vestiaire/douche alignés sur la page studio ; petit groupe « dès CHF 200 »",
+        "reason": "faits produit"
+      },
+      {
+        "type": "link",
+        "detail": "+ /blog/combien-seances-boxe-par-semaine-debutant, + /blog/equipement-boxe-debutant-geneve, + /#planning",
+        "reason": "maillage"
+      }
+    ],
+    "reason": "Refresh marque 2026 : fin de l'essai gratuit, faits produit et claims alignés, verdict Bis Repetita, sources vérifiées.",
+    "word_count_before": 1973,
+    "word_count_after": 1997,
+    "needs_validation": [
+      "Première séance au tarif du format (CHF 40 Round by Round, CHF 120 solo)",
+      "Protège-dents : prêté ou non ? (retiré ici, conservé « si le coach juge utile » dans l'article équipement)"
+    ]
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches ; top_queries non ventilées par page dans l'export",
+      "clicks": 2,
+      "impressions": 77,
+      "ctr": 0.026,
+      "avg_position": 6.9,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "structure",
+        "detail": "Double H1 du corps supprimé",
+        "reason": "règle 8 : le H1 est le title"
+      },
+      {
+        "type": "reinforce",
+        "detail": "H2 « Les 6 critères » → « Les 4 critères », réponse directe en tête",
+        "reason": "le corps ne listait que 4 critères ; BLUF"
+      },
+      {
+        "type": "data",
+        "detail": "Round by Round : 8 max, 1 coach, 50 min, sans échange de coups ; Small Group 4 à 8 (au lieu de 6 max ; Lionel retiré)",
+        "reason": "faits produit validés (règles 4 et 5)"
+      },
+      {
+        "type": "data",
+        "detail": "Fourchette globale harmonisée sur le tableau (20 à 85 CHF au lieu de 25 à 120)",
+        "reason": "incohérence TLDR/FAQ/tableau"
+      },
+      {
+        "type": "add_section",
+        "detail": "Blockquote « Notre avis » après les profils, y compris cas où la boxe n'est pas adaptée",
+        "reason": "refresh : verdict tranché et honnête"
+      },
+      {
+        "type": "geo",
+        "detail": "Sources : Escalab retiré (prix non sourcé), lien OMS ajouté, renvoi vers l'article prix pour les tarifs sourcés",
+        "reason": "règle 6 et sources vérifiables"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Parallélisme négatif yoga/boxe reformulé, promesse « tête réellement dégagée » nuancée, « session d'essai » → séance pilote",
+        "reason": "anti-IA, claims"
+      }
+    ],
+    "reason": "Correction des faits produit et des incohérences chiffrées, ajout d'un verdict de marque.",
+    "word_count_before": 2846,
+    "word_count_after": 2964,
+    "needs_validation": [
+      "Notre avis (recommandation par défaut + cas où boxe/escalade ne conviennent pas)",
+      "Séance pilote corporate disponible avant engagement",
+      "Zone d'intervention (Carouge, Meyrin, Vernier, Lancy, Grand-Saconnex)",
+      "Surface minimum 30 m² sur site",
+      "Fourchettes du tableau (estimations sans source datée)"
+    ]
+  }
+]

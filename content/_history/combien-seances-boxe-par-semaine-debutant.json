@@ -1,0 +1,64 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches",
+      "clicks": 0,
+      "impressions": 50,
+      "ctr": 0,
+      "avg_position": 5.2,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "inchangée (pas de promesse d'essai ni de claim interdit)",
+        "reason": "règle 2"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate: 2026-10-17 ajouté",
+        "reason": "fraîcheur"
+      },
+      {
+        "type": "add_h2",
+        "detail": "Blockquote « Notre avis » : 2 séances/semaine par défaut 3 mois, 1 séance si reprise après blessure ou condition très basse",
+        "reason": "verdict demandé"
+      },
+      {
+        "type": "geo",
+        "detail": "Source ajoutée et vérifiée : ACSM 2009 (Med Sci Sports Exerc), 2-3 jours/semaine pour un débutant en renforcement musculaire, lien PubMed inline + section sources",
+        "reason": "sources"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Essai gratuit retiré (section Bis Repetita + ArticleCta vers /#planning)",
+        "reason": "règle 1"
+      },
+      {
+        "type": "data",
+        "detail": "« 48 à 72 heures » et « la plupart... dans les trois premières semaines » retirés (non sourcés) ; Small group 4 à 8 ; Round by Round 50 min ajouté aux formats",
+        "reason": "règle 5 / sources"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Annonce de plan supprimée ; parallélismes « n'est pas X, c'est Y » et piques « peu de coachs disent » retirés ; BLUF sous les H2 ; « cinq ans de coaching » → « cinq ans à la tête »",
+        "reason": "règles 3 et 9"
+      },
+      {
+        "type": "link",
+        "detail": "+ /blog/la-boxe-est-elle-dangereuse-blessures-loisir, + /#planning",
+        "reason": "maillage"
+      }
+    ],
+    "reason": "Refresh marque 2026 : fin de l'essai gratuit, faits produit et claims alignés, verdict Bis Repetita, sources vérifiées.",
+    "word_count_before": 1984,
+    "word_count_after": 2042,
+    "needs_validation": [
+      "Notre avis fréquence par défaut"
+    ]
+  }
+]

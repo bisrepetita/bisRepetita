@@ -1,0 +1,57 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches",
+      "clicks": 1,
+      "impressions": 15,
+      "ctr": 0.0667,
+      "avg_position": 5.3,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "inchangée (pas de promesse d'essai gratuit)",
+        "reason": "règle 2"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Toutes les mentions « séance d'essai » / « gratuite » retirées ; prêt de gants conservé (cohérent avec equipement-boxe-debutant, premier-cours, guide-complet) mais rattaché aux « premières séances »",
+        "reason": "règle 1"
+      },
+      {
+        "type": "add_h2",
+        "detail": "Blockquote « Notre avis » : rien à acheter avant la 1re séance, puis 12 oz synthétique 40-70 CHF + bandes 4,5 m par défaut, 10 oz pour petit gabarit, cuir/120 CHF+ seulement après plusieurs mois",
+        "reason": "verdict demandé"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Réponse courte en intro ; BLUF sous « Le bon modèle » ; « oubli numéro un » → « oubli le plus fréquent » ; erreur anatomique « métatarse » (pied) → « métacarpes » (main)",
+        "reason": "réponse directe, superlatif, exactitude"
+      },
+      {
+        "type": "link",
+        "detail": "+ /cours-de-boxe-geneve (intro) ; CTA /cours-gratuit → /#planning ; ArticleCta corrigé",
+        "reason": "maillage hub absent"
+      },
+      {
+        "type": "data",
+        "detail": "« qui coache via Bis Repetita depuis cinq ans » → « à la tête du studio depuis cinq ans »",
+        "reason": "portée exacte du claim"
+      }
+    ],
+    "reason": "Retrait des 14 mentions d'essai gratuit, verdict de marque sur les premiers gants, lien hub ajouté.",
+    "word_count_before": 1897,
+    "word_count_after": 1989,
+    "needs_validation": [
+      "Notre avis (12 oz par défaut, budget 40-70 CHF)",
+      "Tailles disponibles au studio « 10, 12, 14 et 16 oz, nettoyées après chaque utilisation » (texte existant)",
+      "Fourchettes de prix du marché suisse (non sourcées, texte existant)",
+      "Signature Nicolas sur un texte modifié"
+    ]
+  }
+]

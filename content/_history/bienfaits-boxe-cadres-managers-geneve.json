@@ -1,0 +1,56 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches ; top_queries non ventilées par page dans l'export",
+      "clicks": 1,
+      "impressions": 90,
+      "ctr": 0.0111,
+      "avg_position": 13.2,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "« Séance d'essai gratuite au studio Bis Repetita. » → « Coaching privé de 60 min au studio, La Voie-Creuse 16. »",
+        "reason": "règle 1 : plus d'essai gratuit"
+      },
+      {
+        "type": "cta",
+        "detail": "Essai gratuit retiré du TLDR, du corps et des 2 ArticleCta (→ /#planning) ; H2 « Comment tester sans engagement » → « Comment réserver une première séance »",
+        "reason": "règle 1"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Promesses santé retirées (cortisol qui chute, « la boxe réduit le stress », « vous repartez plus calme ») ; mention qu'il ne s'agit pas d'un traitement",
+        "reason": "pas de promesse médicale"
+      },
+      {
+        "type": "data",
+        "detail": "Small Group 4 à 8 ; Round by Round 50 min, 1 coach ; « Ring professionnel » → « Un ring » ; « Pas un coach de fitness reconverti » retiré ; 20 ans de pratique + 5 ans à la tête du studio",
+        "reason": "règles 3, 4, 5, pas de dénigrement"
+      },
+      {
+        "type": "add_section",
+        "detail": "Blockquote « Notre avis » sur le format par défaut pour un cadre",
+        "reason": "refresh : verdict"
+      },
+      {
+        "type": "link",
+        "detail": "Liens vers l'article burn-out et l'article team building",
+        "reason": "maillage frères"
+      }
+    ],
+    "reason": "Retrait de l'essai gratuit et des promesses santé, faits produit alignés, verdict ajouté.",
+    "word_count_before": 1540,
+    "word_count_after": 1665,
+    "needs_validation": [
+      "Notre avis (coaching solo par défaut ; fitness suffit si pas d'envie de technique)",
+      "Horaires 9h-20h semaine, samedi 10h-18h, dimanche 11h-18h, ouverture 7j/7",
+      "Parking à proximité"
+    ]
+  }
+]

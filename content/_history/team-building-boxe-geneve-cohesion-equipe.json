@@ -1,0 +1,70 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches ; top_queries non ventilées par page dans l'export",
+      "clicks": 1,
+      "impressions": 54,
+      "ctr": 0.0185,
+      "avg_position": 9.6,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "« zéro risque » retiré de la meta",
+        "reason": "claim de garantie"
+      },
+      {
+        "type": "data",
+        "detail": "Lionel : « tous deux agréés SwissBoxing » → « Lionel, coach du studio » ; TLDR « coachs agréés » → « encadrement »",
+        "reason": "règle 4"
+      },
+      {
+        "type": "data",
+        "detail": "« Ring professionnel » → « Un ring » ; quartier → « près de la place des Nations » ; surface harmonisée à environ 30 m²",
+        "reason": "règles 3 et 5, cohérence entre articles"
+      },
+      {
+        "type": "data",
+        "detail": "Prix « 400 à 600 CHF » retiré (corporate = devis selon tarifs-reference)",
+        "reason": "règle 5 prix"
+      },
+      {
+        "type": "geo",
+        "detail": "Wiltermuth & Heath 2009 précisé et lié (coopération), McNeill daté ; « leviers documentés » nuancé",
+        "reason": "exactitude des sources"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Contradiction binômes aux pattes / « contact nul, seul le coach reçoit » corrigée ; risque « comparable au fitness » retiré ; lien vers l'article blessures",
+        "reason": "cohérence et prudence"
+      },
+      {
+        "type": "cta",
+        "detail": "ArticleCta « Prêt à transformer la dynamique » → « Un atelier à organiser pour votre équipe ? »",
+        "reason": "promesse de transformation"
+      },
+      {
+        "type": "add_section",
+        "detail": "Blockquote « Notre avis » après les formats ; lien vers le comparatif",
+        "reason": "refresh : verdict, maillage"
+      }
+    ],
+    "reason": "Retrait des claims de garantie, prix et qualifications non validés ; verdict et maillage.",
+    "word_count_before": 2146,
+    "word_count_after": 2264,
+    "needs_validation": [
+      "Capacités 20 participants sur site / 12 au studio",
+      "Devis sous 48h, créneau sous 5 jours ouvrés",
+      "Rayon d'environ 30 km",
+      "Co-encadrement par Lionel au-delà de 10 personnes",
+      "Option sparring éducatif pour séminaires leadership",
+      "Demi-journée avec conférence leadership, rapport trimestriel, tarifs dégressifs",
+      "Notre avis (atelier découverte d'abord ; pas adapté à 40 personnes ou moment festif)"
+    ]
+  }
+]

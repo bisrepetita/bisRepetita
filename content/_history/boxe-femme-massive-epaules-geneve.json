@@ -1,0 +1,76 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches",
+      "clicks": 2,
+      "impressions": 63,
+      "ctr": 0.0317,
+      "avg_position": 6.7,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "reinforce",
+        "detail": "« Dans cet article… » supprimé, intro réécrite en gardant les deux liens",
+        "reason": "anti-IA"
+      },
+      {
+        "type": "data",
+        "detail": "« hypertrophie 2 à 3 fois plus lente » retiré (TLDR, corps, sources, TODO image) → écart en valeur absolue lié à la testostérone",
+        "reason": "chiffre non sourcé"
+      },
+      {
+        "type": "reinforce",
+        "detail": "« Ce que je peux garantir » retiré ; « systématiquement », « quasi-totalité » adoucis ; « rompre les fibres » corrigé",
+        "reason": "claims"
+      },
+      {
+        "type": "data",
+        "detail": "petit groupe 4-6 → 4-8 ; « pas de cours collectif de 25 » → Round by Round 8 max, un coach ; « Genève centre » → « près de la place des Nations » ; « cinq ans de coaching » → « cinq ans à la tête du studio »",
+        "reason": "faits produit"
+      },
+      {
+        "type": "reinforce",
+        "detail": "gainage renforcé → tronc tonique / tonifie (renforcement fonctionnel gardé une fois)",
+        "reason": "vocabulaire femmes"
+      },
+      {
+        "type": "reinforce",
+        "detail": "« Notre avis » : 2 séances/semaine pendant 3 mois en solo/duo ; la boxe n'est pas le bon outil pour prendre du volume",
+        "reason": "prise de position"
+      },
+      {
+        "type": "link",
+        "detail": "lien /blog/boxe-regles-cycle-menstruel sur l'énergie ; CTA final /#planning",
+        "reason": "maillage"
+      },
+      {
+        "type": "link",
+        "detail": "ArticleCta et liens /cours-gratuit → « Réserver une première séance » vers /#planning",
+        "reason": "fin de l'essai gratuit (décision Jon)"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate: 2026-10-17",
+        "reason": "fraîcheur"
+      },
+      {
+        "type": "style",
+        "detail": "guillemets « » avec espaces insécables",
+        "reason": "typographie française"
+      }
+    ],
+    "reason": "Retrait de « Dans cet article », de l'essai offert, d'un chiffre non sourcé (2-3x) et d'une garantie ; tonification ; verdict ajouté.",
+    "word_count_before": 2014,
+    "word_count_after": 2027,
+    "needs_validation": [
+      "« Notre avis »",
+      "Anecdote « aucune pratiquante suivie n'est devenue massive, aucune n'a changé de taille de vêtements »",
+      "« les femmes qui avaient peur deviennent souvent des pratiquantes régulières »"
+    ]
+  }
+]

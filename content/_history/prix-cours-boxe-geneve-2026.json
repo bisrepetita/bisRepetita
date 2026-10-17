@@ -1,0 +1,78 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches",
+      "clicks": 5,
+      "impressions": 188,
+      "ctr": 0.0266,
+      "avg_position": 6.3,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "ancienne : Prix d'un cours de boxe à Genève en 2026 : grille complète Bis Repetita, du collectif à 40 CHF au coaching solo. Essai gratuit, sans engagement. | nouvelle : Prix d'un cours de boxe à Genève en 2026 : grille complète Bis Repetita, du collectif à 40 CHF au coaching solo à 120 CHF, packs valables 6 mois.",
+        "reason": "règle 2"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate: 2026-10-17 ajouté",
+        "reason": "fraîcheur"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Toutes les promesses d'essai gratuit retirées (TLDR, conditions, liste « inclus », FAQ « vraiment gratuite » remplacée par « Faut-il un abonnement pour commencer ? », 3 ArticleCta vers /#planning)",
+        "reason": "règle 1"
+      },
+      {
+        "type": "data",
+        "detail": "Round by Round : 50 min, 1 coach (au lieu de 60 min, 1 à 2 coachs / 2 coachs certains créneaux)",
+        "reason": "règle 5"
+      },
+      {
+        "type": "data",
+        "detail": "Small Group : 4 à 8 personnes, prix « dès 200 / dès 1'800 CHF », suppression des « 50 CHF par personne »",
+        "reason": "règle 5"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Lionel : palmarès, licence, nom de famille et lien de parenté retirés ; « Nous venons de la compétition » retiré",
+        "reason": "règle 4"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Repères marché : noms OBC, Club Pugilistique de Carouge, Boxygène, Superprof, Coachs-sportifs.ch, CrossFit Genève et « 600 à 900 CHF » retirés ; fourchettes génériques ; phrase honnête sur le club associatif",
+        "reason": "règle 6"
+      },
+      {
+        "type": "add_h2",
+        "detail": "Blockquote « Notre avis » par profil (débutant technique, budget serré, Small Group, quand le solo ne convient pas)",
+        "reason": "verdict demandé"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Vestiaire/douche alignés sur la page studio ; protège-dents retiré ; « progrès les plus rapides » et parallélismes retirés ; guillemets « »",
+        "reason": "règles 3 et 9"
+      },
+      {
+        "type": "link",
+        "detail": "+ /blog/studio-boxe-prive-vs-salle-classique-geneve, + /blog/premier-cours-de-boxe-preparation, + /#planning",
+        "reason": "maillage"
+      }
+    ],
+    "reason": "Refresh marque 2026 : fin de l'essai gratuit, faits produit et claims alignés, verdict Bis Repetita, sources vérifiées.",
+    "word_count_before": 2160,
+    "word_count_after": 2245,
+    "needs_validation": [
+      "Notre avis par profil (solo d'abord pour un débutant, puis Round by Round)",
+      "Première séance facturée au tarif du format (plus d'essai gratuit) : à confirmer",
+      "Small Group 4 à 8 : prix « dès 200 CHF » à reconfirmer (tarifs-reference indique 4 personnes)",
+      "Lionel « encadre certaines séances » : autorisation de le nommer",
+      "Fourchettes génériques club 20-30 CHF / coach indépendant 80-140 CHF / fitness 150-250 CHF par mois : ordres de grandeur non sourcés"
+    ]
+  }
+]

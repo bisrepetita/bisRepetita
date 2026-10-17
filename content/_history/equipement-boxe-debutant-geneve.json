@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches",
+      "clicks": 2,
+      "impressions": 237,
+      "ctr": 0.0084,
+      "avg_position": 7.9,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "ancienne : Que faut-il vraiment acheter avant son premier cours de boxe ? Liste minimale, ce que le studio prête, budget réel. Essai gratuit à Genève. | nouvelle : Que faut-il vraiment acheter avant son premier cours de boxe ? Liste minimale, ce que le studio prête, budget réel en CHF pour débuter la boxe à Genève.",
+        "reason": "règle 2"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate: 2026-10-17 ajouté",
+        "reason": "fraîcheur"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Essai gratuit retiré (TLDR, liste du studio, budget, FAQ, 2 ArticleCta vers /#planning)",
+        "reason": "règle 1"
+      },
+      {
+        "type": "reinforce",
+        "detail": "« Ring professionnel » → « Un ring » ; « centaines de débutants » et « beaucoup de nos membres » retirés",
+        "reason": "règle 3"
+      },
+      {
+        "type": "add_h2",
+        "detail": "Blockquote « Notre avis » : bandes d'abord, gants après 2-3 séances et l'avis du coach",
+        "reason": "verdict demandé"
+      },
+      {
+        "type": "data",
+        "detail": "Magasins : « Decathlon Meyrin » (non confirmé) → Decathlon, plusieurs magasins à Genève ; « Qwartz à Plan-les-Ouates » retiré (introuvable)",
+        "reason": "sources"
+      },
+      {
+        "type": "reinforce",
+        "detail": "« aucun risque pour les dents » adouci ; parallélisme budget ; guillemets « »",
+        "reason": "règle 9"
+      },
+      {
+        "type": "link",
+        "detail": "+ /blog/gants-de-boxe-femme-debutante, + /blog/prix-cours-boxe-geneve-2026, + /#planning",
+        "reason": "maillage"
+      }
+    ],
+    "reason": "Refresh marque 2026 : fin de l'essai gratuit, faits produit et claims alignés, verdict Bis Repetita, sources vérifiées.",
+    "word_count_before": 1810,
+    "word_count_after": 1906,
+    "needs_validation": [
+      "Notre avis : bandes d'abord, gants ensuite",
+      "Protège-dents jetable mis à disposition « si le coach juge utile » : à confirmer",
+      "Gants du studio en 10/12/14/16 oz, nettoyés après chaque utilisation : à confirmer"
+    ]
+  }
+]

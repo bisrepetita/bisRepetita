@@ -1,0 +1,70 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches ; top_queries non ventilées par page dans l'export",
+      "clicks": 7,
+      "impressions": 268,
+      "ctr": 0.0261,
+      "avg_position": 6.6,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "« coupe la rumination là où le running l'amplifie » → « aide à couper la rumination autrement que le running » ; « retours terrain » → « limites »",
+        "reason": "claim psychologique et dénigrement du running"
+      },
+      {
+        "type": "geo",
+        "detail": "Revue JOHP non identifiable → Naczenski et al. 2017 (J Occup Health), avec sa limite (1 étude de haute qualité sur 10)",
+        "reason": "source vérifiée"
+      },
+      {
+        "type": "geo",
+        "detail": "« SECO 6,5 milliards absentéisme » et « un cadre sur quatre » → Job-Stress-Index 2022 Promotion Santé Suisse",
+        "reason": "attribution erronée, chiffre non retrouvé"
+      },
+      {
+        "type": "geo",
+        "detail": "Killingsworth & Gilbert : retrait de « le pourcentage monte lors d'activités monotones » (non dit par l'étude) ; Tomporowski : extrapolation signalée comme notre lecture ; dual-task reformulé ; marche en nature sourcée (Bratman 2015, PNAS)",
+        "reason": "exactitude des études"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Running et yoga présentés avec respect ; « bloquent », « empêchent », « effets mesurables » nuancés ; prévention = organisation du travail d'abord, avis médical",
+        "reason": "YMYL : aucune promesse de prévention/traitement"
+      },
+      {
+        "type": "data",
+        "detail": "Observation « baisse mesurable de la tension en réunion » et pseudo-citation de membres retirées ; petit groupe 4 à 8",
+        "reason": "pas de résultat ni témoignage non validé"
+      },
+      {
+        "type": "cta",
+        "detail": "ArticleCta « programme anti burn-out » → « programme sportif régulier »",
+        "reason": "promesse médicale"
+      },
+      {
+        "type": "add_section",
+        "detail": "Blockquote « Notre avis » (continuer son sport, ajouter une séance technique ; avis médical si épuisement)",
+        "reason": "refresh : verdict"
+      },
+      {
+        "type": "link",
+        "detail": "Lien inline vers /services/corporate ajouté ; ancre « sport de contact » corrigée (team building sans contact)",
+        "reason": "maillage hub, exactitude"
+      }
+    ],
+    "reason": "Mise en conformité YMYL : sources vérifiées, promesses retirées, ton respectueux envers le running.",
+    "word_count_before": 2194,
+    "word_count_after": 2309,
+    "needs_validation": [
+      "Notre avis (formulation santé à relire par Nicolas)",
+      "Fréquences recommandées (1 à 2 séances/semaine, 40 semaines/an) : repère du studio, non sourcé"
+    ]
+  }
+]

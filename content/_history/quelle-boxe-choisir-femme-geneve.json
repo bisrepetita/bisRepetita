@@ -1,0 +1,65 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches",
+      "clicks": null,
+      "impressions": null,
+      "ctr": null,
+      "avg_position": null,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "reinforce",
+        "detail": "« Notre avis » tranché : boxe anglaise solo/duo par défaut, thaï/kick plus tard, fitness-boxing si on veut seulement transpirer",
+        "reason": "comparatif sans verdict"
+      },
+      {
+        "type": "data",
+        "detail": "Round by Round : « petit groupe, 8 participantes, deux coachs » → « cours collectif, 50 min, 8 personnes max, un coach, sans échange de coups »",
+        "reason": "faits produit"
+      },
+      {
+        "type": "reinforce",
+        "detail": "citation attribuée à Nicolas (« progressent plus vite… ») remplacée par une explication sans citation ; « 5 ans de coaching » → « 5 ans à la tête de Bis Repetita »",
+        "reason": "citation non vérifiable, claim"
+      },
+      {
+        "type": "reinforce",
+        "detail": "annonce de plan supprimée, parallélisme négatif H2 2 réécrit, tonification ajoutée",
+        "reason": "anti-IA, vocabulaire"
+      },
+      {
+        "type": "link",
+        "detail": "liens /blog/boxe-regles-cycle-menstruel (avis), /blog/boxe-perte-de-poids-femme-geneve (FAQ), /#planning (conclusion)",
+        "reason": "maillage"
+      },
+      {
+        "type": "link",
+        "detail": "ArticleCta et liens /cours-gratuit → « Réserver une première séance » vers /#planning",
+        "reason": "fin de l'essai gratuit (décision Jon)"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate: 2026-10-17",
+        "reason": "fraîcheur"
+      },
+      {
+        "type": "style",
+        "detail": "guillemets « » avec espaces insécables",
+        "reason": "typographie française"
+      }
+    ],
+    "reason": "Verdict « Notre avis » ajouté, Round by Round corrigé, citation non vérifiable de Nicolas retirée.",
+    "word_count_before": 1581,
+    "word_count_after": 1638,
+    "needs_validation": [
+      "« Notre avis » (y compris « fitness-boxing vous conviendra mieux que nos séances »)",
+      "Meta (121 car., hors fourchette 130-155) laissée telle quelle : aucune promesse gratuite ni claim interdit"
+    ]
+  }
+]

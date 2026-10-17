@@ -1,0 +1,64 @@
+[
+  {
+    "date": "2026-10-17",
+    "trigger": "manual",
+    "page_type": "article",
+    "gsc_snapshot": {
+      "period": "2026-03-25..2026-06-23",
+      "note": "export GSC ancien, pas de données fraîches ; top_queries non ventilées par page dans l'export",
+      "clicks": null,
+      "impressions": null,
+      "ctr": null,
+      "avg_position": null,
+      "top_queries": []
+    },
+    "changes": [
+      {
+        "type": "data",
+        "detail": "Capacités : 8 max par groupe ; coaching technique 4 à 8 (au lieu de 6 max) ; Round by Round 1 coach, 50 min (au lieu de 2 coachs)",
+        "reason": "règle 5 ; harmonisation prudente Small Group"
+      },
+      {
+        "type": "data",
+        "detail": "Localisation : « à deux pas de Cornavin » → « près de la place des Nations »",
+        "reason": "règle 5 adresse"
+      },
+      {
+        "type": "data",
+        "detail": "Lionel retiré des sources (licence, palmarès) ; Nicolas « 5 ans à la tête du studio »",
+        "reason": "règle 4"
+      },
+      {
+        "type": "geo",
+        "detail": "Prix concurrents : datés « relevé juillet 2026 » dans le tableau ; Holmes Place 55-240 (cohérent avec la source) ; Alea revérifié 2026-10-17 (35 CHF + privatisation, 2 à 75)",
+        "reason": "règle 6 ; Yoga Lab, Becorpo, Parc Aventure, Alea revérifiés"
+      },
+      {
+        "type": "reinforce",
+        "detail": "Claims « littérature documente » et « effets mesurables dès le 2e mois » retirés",
+        "reason": "pas de source"
+      },
+      {
+        "type": "add_section",
+        "detail": "Blockquote « Notre avis » après les 4 paramètres",
+        "reason": "refresh : verdict"
+      },
+      {
+        "type": "link",
+        "detail": "Lien inline vers /services/corporate ajouté dans l'intro",
+        "reason": "maillage hub"
+      }
+    ],
+    "reason": "Mise en conformité des capacités et du staff, datation des prix concurrents, verdict de marque.",
+    "word_count_before": 2653,
+    "word_count_after": 2729,
+    "needs_validation": [
+      "Small Group / coaching technique corporate : 4 à 8 personnes (l'ancien texte disait 6 max)",
+      "Devis sous 48h et créneau sous 5 jours ouvrés",
+      "Frais de déplacement inclus dans un rayon de 5 km",
+      "Rapport d'avancement sur demande, facturation 30 jours",
+      "Attestation de prestations fournie",
+      "Notre avis (séance découverte d'abord ; pas adapté à 30+ personnes en une fois)"
+    ]
+  }
+]
