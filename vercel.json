@@ -1,5 +1,9 @@
 {
+  "trailingSlash": false,
   "redirects": [
-    { "source": "/cours-gratuit", "destination": "/offrir-un-cours", "permanent": true }
+    { "source": "/cours-gratuit", "destination": "/offrir-un-cours", "permanent": true },
+    { "source": "/about", "destination": "/equipe/nicolas-de-boccard", "permanent": true },
+    { "source": "/nicolas-de-boccard", "destination": "/equipe/nicolas-de-boccard", "permanent": true },
+    { "source": "/blog/cours-de-boxe-geneve-guide-debutant", "destination": "/cours-de-boxe-geneve", "permanent": true }
   ]
 }
