@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/cours-gratuit", "destination": "/offrir-un-cours", "permanent": true }
+  ]
+}

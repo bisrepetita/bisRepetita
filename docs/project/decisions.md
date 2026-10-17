@@ -29,3 +29,9 @@ L'article cycle et la page femmes présentent les phases comme un repère ; le r
 
 ## 2026-10-17 — `docs/seo/context.md` seul contexte SEO
 Doublon `docs/seo-context.md` supprimé ; CTA « essai gratuit », palmarès de Lionel et « ring complet » retirés du contexte lu par les skills.
+
+## 2026-10-17 — Fin de l'essai gratuit sur le site
+- Choix : « Essai gratuit / séance offerte » retiré des meta de 8 pages (accueil, tarifs, services) et de la séance découverte corporate (« Sur devis ») ; `/cours-gratuit` supprimée, redirection 301 vers `/offrir-un-cours` dans `vercel.json` (premier fichier de redirections actif sur Vercel).
+- Écarté : garder `/cours-gratuit` en page de réservation payante (URL et contenu trompeurs).
+- Pourquoi : décision d'octobre (« Offrir un cours » remplace l'essai) ; les meta promettaient une offre inexistante.
+- À rouvrir : si un essai revient, ou si la plateforme de réservation continue d'offrir la première séance à la première connexion.
