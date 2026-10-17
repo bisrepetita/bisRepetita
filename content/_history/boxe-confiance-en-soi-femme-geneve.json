@@ -57,5 +57,18 @@
       "Faits studio existants non vérifiés ailleurs : « sans baie vitrée, sans zone de passage, vestiaires privés, serviettes fournies », « pas de mixité imposée », « petit groupe de femmes »",
       "Signature Nicolas sur un texte modifié"
     ]
+  },
+  {
+    "date": "2026-10-17",
+    "trigger": "gsc",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "title (= H1) et description réécrits",
+        "reason": "« reprendre confiance en son corps genève » 159 impr., pos. 6,3, 0 clic"
+      }
+    ],
+    "source": "docs/_research/2026-10-17-bisrepetita-rapport-gsc-3-mois.md"
   }
 ]

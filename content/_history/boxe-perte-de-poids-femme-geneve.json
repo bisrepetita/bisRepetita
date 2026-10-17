@@ -88,5 +88,18 @@
       "Ordres de grandeur des délais (2-3 semaines, 6-12 semaines) gardés comme indicatifs",
       "Signature Nicolas sur un texte modifié (voice.md : validation individuelle)"
     ]
+  },
+  {
+    "date": "2026-10-17",
+    "trigger": "gsc",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "title (= H1) et description réécrits",
+        "reason": "CTR 0,7 % ; requêtes « est ce que la boxe fait maigrir » à 0 clic (GSC 14/07–13/10)"
+      }
+    ],
+    "source": "docs/_research/2026-10-17-bisrepetita-rapport-gsc-3-mois.md"
   }
 ]

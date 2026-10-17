@@ -21,7 +21,7 @@ Les liens **sortants** de chaque nouvel article sont dans son brief (`content/_d
 |---|---|---|
 | `/cours-de-boxe-geneve` | premier-cours-de-boxe-preparation, combien-seances-boxe-par-semaine-debutant, a-quel-age-commencer-la-boxe, la-boxe-est-elle-dangereuse-blessures-loisir, equipement-boxe-debutant-geneve, prix-cours-boxe-geneve-2026, studio-boxe-prive-vs-salle-classique-geneve | cours-boxe-prive-petit-groupe-collectif (20 oct.), cardio-boxe-ou-boxe-technique (29 oct.), boxe-preparation-course-escalade (5 nov.), boxe-parent-enfant-seance (10 nov.), boxe-ou-crossfit-hyrox (12 nov.), offrir-cours-boxe-noel-geneve (17 nov.), round-by-round-deroule-seance (19 nov.), ce-que-nous-refusons-studio-boxe (24 nov.), choisir-boxe-anglaise-thai-kickboxing (1 déc.), coaching-boxe-domicile-ou-studio (3 déc.), cours-sport-rembourses-assurance-complementaire (15 déc.), reprendre-boxe-six-semaines-bases (29 déc.) |
 | `/services/boxe-femme` | boxe-femme-geneve-guide-complet, boxe-regles-cycle-menstruel, effet-boxe-corps-femme-geneve, boxe-perte-de-poids-femme-geneve, boxe-femme-massive-epaules-geneve, boxe-confiance-en-soi-femme-geneve, boxe-self-defense-femme-geneve, quelle-boxe-choisir-femme-geneve, gants-de-boxe-femme-debutante | seance-boxe-femme-specificites (22 oct.), boxe-ou-pilates-se-tonifier (27 oct.), boxe-menopause-os-equilibre (26 nov.), reprendre-boxe-apres-grossesse (14 janv.) |
-| `/services/corporate` | team-building-boxe-geneve-cohesion-equipe, sport-en-entreprise-geneve-guide-drh, activites-sportives-entreprise-geneve-comparatif, prix-programme-sport-entreprise-geneve, bienfaits-boxe-cadres-managers-geneve, burn-out-prevention-sport-cadres-geneve | team-building-fin-annee-geneve-boxe (3 nov.) |
+| `/services/corporate` | team-building-boxe-geneve-cohesion-equipe, sport-en-entreprise-geneve-guide-drh, activites-sportives-entreprise-geneve-comparatif, prix-programme-sport-entreprise-geneve, bienfaits-boxe-cadres-managers-geneve, burn-out-prevention-sport-cadres-geneve | aucun : le cluster se regroupe (rapport GSC du 2026-10-17) ; section décembre ajoutée à team-building-boxe-geneve-cohesion-equipe le 3 nov. |
 
 ## 3. Liens entrants à poser à la publication
 
@@ -39,8 +39,6 @@ Chaque ligne se fait **le jour où l'article cible est publié**, dans le même 
 | 27 oct. | idem | seance-boxe-femme-specificites → H3 reprise (lien conditionnel du brief) | voir brief |
 | 29 oct. | cardio-boxe-ou-boxe-technique | quelle-boxe-choisir-femme-geneve → H2 « selon votre objectif » | « cardio-boxe ou boxe technique » |
 | 29 oct. | idem | cours-boxe-prive-petit-groupe-collectif → H2 5 (lien conditionnel du brief, sens inverse) | « la boxe technique, pas seulement du cardio » |
-| 3 nov. | team-building-fin-annee-geneve-boxe | team-building-boxe-geneve-cohesion-equipe → fin ou FAQ date | « une session en décembre » |
-| 3 nov. | idem | sport-en-entreprise-geneve-guide-drh → section événements | « le team building de fin d'année » |
 | 5 nov. | boxe-preparation-course-escalade | burn-out-prevention-sport-cadres-geneve → passage footing | « la boxe en renfort des coureurs » |
 | 5 nov. | idem | combien-seances-boxe-par-semaine-debutant → cas sportif | « si vous préparez la Course de l'Escalade » |
 | 10 nov. | boxe-parent-enfant-seance | a-quel-age-commencer-la-boxe → section enfants **et** FAQ : remplacer « Nous n'assurons pas de cours enfants » selon D1/D2 | « une séance de boxe parent-enfant » |

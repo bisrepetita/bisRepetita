@@ -55,5 +55,18 @@
     "needs_validation": [
       "Meta garde « La boxe loisir affiche moins de blessures que le football » (début conservé) : les études portent sur des boxeurs de compétition à l'entraînement, à reformuler si Jon accepte de toucher au début"
     ]
+  },
+  {
+    "date": "2026-10-17",
+    "trigger": "gsc",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "title (= H1) et description réécrits",
+        "reason": "CTR 1,7 % ; « se font taper dessus » 50 impr. 0 clic ; « blessure boxe » pos. 21 ; meta football reformulée (études sur la compétition)"
+      }
+    ],
+    "source": "docs/_research/2026-10-17-bisrepetita-rapport-gsc-3-mois.md"
   }
 ]

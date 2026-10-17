@@ -56,5 +56,18 @@
       "Première séance au tarif du format (CHF 40 Round by Round, CHF 120 solo)",
       "Protège-dents : prêté ou non ? (retiré ici, conservé « si le coach juge utile » dans l'article équipement)"
     ]
+  },
+  {
+    "date": "2026-10-17",
+    "trigger": "gsc",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "meta",
+        "detail": "title (= H1) et description réécrits",
+        "reason": "CTR 0,6 %"
+      }
+    ],
+    "source": "docs/_research/2026-10-17-bisrepetita-rapport-gsc-3-mois.md"
   }
 ]

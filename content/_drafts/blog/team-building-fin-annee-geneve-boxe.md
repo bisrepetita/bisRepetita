@@ -1,6 +1,7 @@
 ---
 slug: team-building-fin-annee-geneve-boxe
-status: blocked
+status: abandoned
+abandoned_reason: "Rapport GSC du 2026-10-17 : pas de nouvel article corporate. Le contenu devient une section « Une session en décembre » de team-building-boxe-geneve-cohesion-equipe, mise à jour le 3 nov. si les décisions D1 à D4 sont prises."
 blocked_by: "Décisions requises D1 à D4 (capacités, rayon, délai de devis, séance découverte gratuite)"
 planned_pubDate: 2026-11-03
 module: B
