@@ -35,3 +35,27 @@ Doublon `docs/seo-context.md` supprimé ; CTA « essai gratuit », palmarès de 
 - Écarté : garder `/cours-gratuit` en page de réservation payante (URL et contenu trompeurs).
 - Pourquoi : décision d'octobre (« Offrir un cours » remplace l'essai) ; les meta promettaient une offre inexistante.
 - À rouvrir : si un essai revient, ou si la plateforme de réservation continue d'offrir la première séance à la première connexion.
+
+## 2026-10-17 — Maillage : un seul document pour les liens entrants
+- Choix : les liens sortants restent dans chaque brief ; `docs/seo/maillage.md` porte les liens retour datés (posés le jour de publication de la cible) et les trous de l'existant.
+- Écarté : une matrice complète sortants + entrants (doublon des briefs).
+- À rouvrir : si les briefs cessent de porter leur section maillage.
+
+## 2026-10-17 — Questions à Nicolas sur une page claude.ai avec base de données
+- Choix : un artefact privé, réponses enregistrées dans sa base (lisibles par Claude), copie de secours par presse-papiers.
+- Écarté : document commenté (réponses dispersées), formulaire sur le site (hors périmètre).
+- À rouvrir : si Nicolas ne peut pas écrire (hors organisation).
+
+## 2026-10-17 — Pas de nouvel article corporate
+- Choix : « Team building de fin d'année » abandonné comme article ; une section décembre s'ajoute à `team-building-boxe-geneve-cohesion-equipe`.
+- Pourquoi : rapport GSC (17 clics pour 7 articles corporate, deux pages non indexées ou sans clic).
+- À rouvrir : après regroupement du cluster, si une requête saisonnière apparaît dans GSC.
+
+## 2026-10-17 — Titres réécrits d'après GSC
+- Choix : title (= H1) et meta réécrits pour perte de poids, confiance, dangers, fréquence, premier cours ; meta football retirée (études sur la compétition).
+- Écarté : changer les slugs (perte d'historique).
+- À rouvrir : mesure dans GSC 4 à 6 semaines après la mise en prod.
+
+## 2026-10-17 — Redirections dans `vercel.json`
+- Choix : `/about`, `/nicolas-de-boccard`, `/blog/cours-de-boxe-geneve-guide-debutant` portées depuis `netlify.toml`, `trailingSlash: false`. Sur la refonte seulement, pas de report sur `main` pour l'instant (choix de Jon).
+- À rouvrir : au merge de la refonte, ou si la 404 du guide coûte trop avant.

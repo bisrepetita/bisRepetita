@@ -1,21 +1,28 @@
 # Handoff — branche `refonte-2026`
 
 ## État
-Site de test complet dans la nouvelle DA (blanc, encre, photo N&B, Inter), preview Vercel via PR brouillon #1. Build OK (139 pages). SEO : title/canonical identiques à `main` ; meta changées consciemment (essai gratuit retiré) ; diff `design/seo-before.json` vs `seo-after.json`.
+Site de test complet dans la nouvelle DA (blanc, encre, photo N&B, Inter), preview Vercel via PR brouillon #1 (https://bis-repetita-git-refonte-2026-bisrepetitas-projects.vercel.app). Rien n'est en prod tant que la refonte n'est pas mergée dans `main`.
 
-Blog (2026-10-17) : 22 articles mis à jour (`updatedDate: 2026-10-17`), sidecars `content/_history/{slug}.json` avec la liste `needs_validation` de chacun. Plan oct.–nov. : `docs/seo/plan-editorial-2026-10-11.md` ; les 12 briefs sont dans `content/_drafts/blog/` (validés par brief-critic, 5 bloqués par des décisions listées en tête de chaque brief). Recherches : `docs/_research/2026-10-17-*.md`. Skills SEO RC13 triés dans `~/skills-src/seo-pipeline-v3-rc13/` (rapport `RAPPORT-2026-10-17.md`), installés le 2026-10-17 (`~/.claude/skills`, agents content-creator, brief-critic, article-producer).
+Blog :
+- 22 articles en ligne rafraîchis ; 5 titres/metas réécrits d'après le rapport GSC (`docs/_research/2026-10-17-bisrepetita-rapport-gsc-3-mois.md`), trace dans `content/_history/`.
+- Calendrier 20 oct. → 14 janv. : `docs/seo/plan-editorial-2026-10-11.md` (§3). Maillage et liens retour datés : `docs/seo/maillage.md`.
+- 7 articles rédigés en brouillon, non publiés : `content/_drafts/blog/{slug}.article.mdx` (20, 22, 27, 29 oct., 5, 12, 26 nov.). Points en attente dans chaque `{slug}.production.log`. Test de build OK.
+- 9 briefs validés sans article : parent-enfant, bon cadeau, Round by Round, manifeste (nov.) ; 5 sujets déc.–janv. Team building de fin d'année abandonné comme article.
+- Questions à Nicolas : page https://claude.ai/artifact/JwjJkDiaChgPuczo6iiYbx (réponses dans sa base, collection `reponses` ; lecture via ArtifactData). Source : `docs/seo/questions-nicolas.html`.
 
-## À trancher (Jon / Nicolas)
-- Validation des blocs « Notre avis » et des faits listés dans `needs_validation` ; signature Nicolas sur les textes modifiés (`docs/brand/voice.md`).
-- Première séance payante au tarif du format : à confirmer (articles l'écrivent ainsi).
-- Corporate : capacités (8 / 12 / 20), rayon (5 ou 30 km), délai de devis, Lionel co-encadrant.
-- Protège-dents prêté ou non ; tailles de gants prêtées ; horaires (TODO aussi sur `/studio`).
-- Parent-enfant : mineurs, âge, format, prix (bloque l'article du 10 nov.). Offrir un cours : format, prix, validité (bloque l'article du 17 nov., à publier avant le 23 nov.).
-- Label Qualitop ou équivalent (sujet assurance en réserve).
-- Typo A/B/C/D sur `/styleguide-test` ; quartier, CGV, note Google, `src/config/authors.ts` (« 100+ », JSON-LD Person) ; meta figées des pages (studio, small-group, Nicolas).
-- `nicolas-de-boccard.webp` filigrane IA ; covers blog (titre incrusté) à refaire.
-- `netlify.toml` ignoré par Vercel : `/about` en 404, en-têtes absents → `vercel.json`.
-- Articles programmés : pas de rebuild automatique à la `pubDate` (deploy hook planifié à créer).
+## À faire par Jon
+- Partager la page de questions à Nicolas, niveau **Contributeur**.
+- Relecteurs santé : séance femme (22 oct.), Pilates, ménopause, puis parent-enfant et post-partum.
+- Rebuild Vercel planifié (deploy hook) ou déploiement manuel les mardis et jeudis : un article programmé ne sort pas sans build.
+- Vérifier sur escalade.ch la date et la distance de la course ; juriste pour la validité du bon cadeau.
+- Covers des articles : photos réelles du studio (preset visuel obsolète, aucune clé image).
+- `noindex` sur `app.bisrepetita.ch` (outil de réservation).
+
+## Restes techniques
+- En-têtes de `netlify.toml` toujours inactifs sur Vercel (redirections portées dans `vercel.json`).
+- seo-lint signale à tort `cta.final_unique` (attend `/contact`, le projet utilise `/#planning`) et `ending.order` (intitulés exacts) : à régler dans la config du lint, pas dans les articles.
+- `/services/corporate` n'affiche aucun article lié (`RelatedArticles filterCategory="corporate"` à ajouter).
+- Pistes GSC non traitées : fusion `effet-boxe-corps-femme-geneve` + `boxe-femme-massive-epaules-geneve`, pages explorées non indexées (studio privé vs salle, bienfaits cadres, équipement), regroupement du cluster corporate, page « coach de boxe privé à Genève ».
 
 ## Prochaine étape
-Décisions de Nicolas (page de validation + « Décisions requises » des briefs) → `/seo-write` du 1er article (20 oct., `cours-boxe-prive-petit-groupe-collectif`). En parallèle : retirer « Essai gratuit » des meta de 7 pages service/tarifs et décider du sort de `/cours-gratuit` (changement SEO conscient, à valider par Jon).
+Lire les réponses de Nicolas (ArtifactData `list` sur `reponses`), reporter les faits dans les brouillons, mettre « Notre avis » et signatures à jour, puis publier l'article du 20 oct. (copie dans `src/content/blog/`, `draft: false`, liens retour du jour selon `maillage.md`). Ensuite rédaction des briefs débloqués.

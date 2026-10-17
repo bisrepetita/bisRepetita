@@ -27,7 +27,7 @@ npm run test         # Vitest
 - **Tailwind CSS v4** via Vite plugin (`@tailwindcss/vite`) — no `tailwind.config.js`, all config in `src/styles/global.css` using `@theme` directive
 - **GSAP 3 + ScrollTrigger** for animations
 - **TypeScript strict** (extends `astro/tsconfigs/strict`)
-- **Vercel** deployment (prod + previews par branche) ; `api/contact.js` = fonction Vercel. `netlify.toml` est un reste : Vercel l'ignore (redirects et en-têtes inactifs)
+- **Vercel** deployment (prod + previews par branche) ; `api/contact.js` = fonction Vercel. `netlify.toml` est un reste : Vercel l'ignore ; redirections portées dans `vercel.json`, en-têtes encore inactifs
 - **Plausible Analytics** (privacy-first, loaded in BaseLayout)
 
 ## Site Map
@@ -44,9 +44,9 @@ bisrepetita.ch/
 │   ├── /services/coaching-prive     → Hub coaching privé (comparatif formats)
 │   ├── /services/coaching-solo      → Coaching individuel 1-on-1
 │   ├── /services/coaching-duo-trio  → Coaching à 2 ou 3
-│   ├── /services/small-group-training → Petit groupe (6 max)
+│   ├── /services/small-group-training → Petit groupe (4 à 8)
 │   ├── /services/coaching-boxe-domicile → Coaching à domicile
-│   ├── /services/round-by-round     → Cours collectifs (8 max, 2 coachs)
+│   ├── /services/round-by-round     → Cours collectifs (8 max, 1 coach, 50 min)
 │   ├── /services/corporate          → Programmes entreprise + team building
 │   └── /services/boxe-femme         → Landing page dédiée femmes
 ├── /blog/                           → Liste des articles (pagination)
@@ -76,7 +76,7 @@ bisrepetita.ch/
 - `src/styles/global.css` — Tailwind v4 `@theme` + tokens N&B, classes `.wrap .section .t-* .btn .link-line .nb` (anciennes utilitaires or/verre neutralisées pour compat)
 - `src/utils/gsap.ts` — GSAP initialization with ScrollTrigger, defines all animation types
 - `src/content.config.ts` — blog content collection (glob `src/content/blog/*.{md,mdx}`)
-- `docs/calendrier-editorial-6-mois.md` — calendrier éditorial 80 articles sur 6 mois (avr–sept 2026)
+- `docs/seo/plan-editorial-2026-10-11.md` — calendrier éditorial en cours ; `docs/seo/maillage.md` — maillage interne
 
 ### Component Pattern
 
@@ -97,7 +97,7 @@ Garde-fou SEO : `node scripts/seo-snapshot.mjs dist > design/seo-after.json && n
 - Blog posts in `src/content/blog/` as Markdown/MDX with frontmatter: title, description, pubDate, author, image?, tags?, category?
 - Schema.org structured data per page type via `<Schema type="..." data={...} />`
 - Site URL: `https://bisrepetita.ch`
-- Redirect `/about` → `/studio` déclaré seulement dans `netlify.toml`, donc inactif sur Vercel (404 en prod)
+- Redirections dans `vercel.json` (`/about`, `/cours-gratuit`, ancien guide débutant…) : actives en prod seulement après le merge de la refonte
 
 ## Conventions
 
