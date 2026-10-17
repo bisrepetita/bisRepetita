@@ -19,8 +19,8 @@ Les liens **sortants** de chaque nouvel article sont dans son brief (`content/_d
 
 | Hub | Articles en ligne | Nouveaux articles (date) |
 |---|---|---|
-| `/cours-de-boxe-geneve` | premier-cours-de-boxe-preparation, combien-seances-boxe-par-semaine-debutant, a-quel-age-commencer-la-boxe, la-boxe-est-elle-dangereuse-blessures-loisir, equipement-boxe-debutant-geneve, prix-cours-boxe-geneve-2026, studio-boxe-prive-vs-salle-classique-geneve | cours-boxe-prive-petit-groupe-collectif (20 oct.), cardio-boxe-ou-boxe-technique (29 oct.), boxe-preparation-course-escalade (5 nov.), boxe-parent-enfant-seance (10 nov.), boxe-ou-crossfit-hyrox (12 nov.), offrir-cours-boxe-noel-geneve (17 nov.), round-by-round-deroule-seance (19 nov.), ce-que-nous-refusons-studio-boxe (24 nov.) |
-| `/services/boxe-femme` | boxe-femme-geneve-guide-complet, boxe-regles-cycle-menstruel, effet-boxe-corps-femme-geneve, boxe-perte-de-poids-femme-geneve, boxe-femme-massive-epaules-geneve, boxe-confiance-en-soi-femme-geneve, boxe-self-defense-femme-geneve, quelle-boxe-choisir-femme-geneve, gants-de-boxe-femme-debutante | seance-boxe-femme-specificites (22 oct.), boxe-ou-pilates-se-tonifier (27 oct.), boxe-menopause-os-equilibre (26 nov.) |
+| `/cours-de-boxe-geneve` | premier-cours-de-boxe-preparation, combien-seances-boxe-par-semaine-debutant, a-quel-age-commencer-la-boxe, la-boxe-est-elle-dangereuse-blessures-loisir, equipement-boxe-debutant-geneve, prix-cours-boxe-geneve-2026, studio-boxe-prive-vs-salle-classique-geneve | cours-boxe-prive-petit-groupe-collectif (20 oct.), cardio-boxe-ou-boxe-technique (29 oct.), boxe-preparation-course-escalade (5 nov.), boxe-parent-enfant-seance (10 nov.), boxe-ou-crossfit-hyrox (12 nov.), offrir-cours-boxe-noel-geneve (17 nov.), round-by-round-deroule-seance (19 nov.), ce-que-nous-refusons-studio-boxe (24 nov.), choisir-boxe-anglaise-thai-kickboxing (1 déc.), coaching-boxe-domicile-ou-studio (3 déc.), cours-sport-rembourses-assurance-complementaire (15 déc.), reprendre-boxe-six-semaines-bases (29 déc.) |
+| `/services/boxe-femme` | boxe-femme-geneve-guide-complet, boxe-regles-cycle-menstruel, effet-boxe-corps-femme-geneve, boxe-perte-de-poids-femme-geneve, boxe-femme-massive-epaules-geneve, boxe-confiance-en-soi-femme-geneve, boxe-self-defense-femme-geneve, quelle-boxe-choisir-femme-geneve, gants-de-boxe-femme-debutante | seance-boxe-femme-specificites (22 oct.), boxe-ou-pilates-se-tonifier (27 oct.), boxe-menopause-os-equilibre (26 nov.), reprendre-boxe-apres-grossesse (14 janv.) |
 | `/services/corporate` | team-building-boxe-geneve-cohesion-equipe, sport-en-entreprise-geneve-guide-drh, activites-sportives-entreprise-geneve-comparatif, prix-programme-sport-entreprise-geneve, bienfaits-boxe-cadres-managers-geneve, burn-out-prevention-sport-cadres-geneve | team-building-fin-annee-geneve-boxe (3 nov.) |
 
 ## 3. Liens entrants à poser à la publication
@@ -57,6 +57,22 @@ Chaque ligne se fait **le jour où l'article cible est publié**, dans le même 
 | 26 nov. | boxe-menopause-os-equilibre | effet-boxe-corps-femme-geneve → section durée | « après 45 ans et à la ménopause » |
 | 26 nov. | idem | a-quel-age-commencer-la-boxe → section adultes | « boxe et ménopause » |
 | 26 nov. | idem | boxe-regles-cycle-menstruel → fin | « quand le cycle s'arrête » |
+| 1 déc. | choisir-boxe-anglaise-thai-kickboxing | quelle-boxe-choisir-femme-geneve → après le H2 « selon votre objectif » | « le comparatif des trois disciplines, pour tous » |
+| 1 déc. | idem | cardio-boxe-ou-boxe-technique → FAQ | « boxe anglaise, thaï ou kickboxing » |
+| 1 déc. | idem | a-quel-age-commencer-la-boxe → section discipline | « choisir entre boxe anglaise, thaï et kickboxing » |
+| 3 déc. | coaching-boxe-domicile-ou-studio | page `/services/coaching-boxe-domicile` → FAQ | « domicile ou studio : comment choisir » |
+| 3 déc. | idem | cours-boxe-prive-petit-groupe-collectif → H3 à domicile | « domicile ou studio, la comparaison détaillée » |
+| 3 déc. | idem | studio-boxe-prive-vs-salle-classique-geneve → section lieu, si elle existe | « domicile ou studio » |
+| 15 déc. | cours-sport-rembourses-assurance-complementaire | prix-cours-boxe-geneve-2026 → conditions ou FAQ | « cours de sport et assurance complémentaire : ce qu'il faut vérifier » |
+| 15 déc. | idem | page `/tarifs` → note sous la grille, seulement si Jon et Nicolas l'acceptent, jamais de formule qui promet un remboursement | voir brief |
+| 29 déc. | reprendre-boxe-six-semaines-bases | combien-seances-boxe-par-semaine-debutant → fin | « un plan de six semaines pour reprendre » |
+| 29 déc. | idem | premier-cours-de-boxe-preparation → fin | « reprendre en janvier » |
+| 29 déc. | idem | cours-boxe-prive-petit-groupe-collectif → H2 objectif | « reprendre en janvier, le plan de six semaines » |
+| 14 janv. | reprendre-boxe-apres-grossesse | seance-boxe-femme-specificites → point post-partum | « reprendre la boxe après une grossesse, en détail » |
+| 14 janv. | idem | boxe-ou-pilates-se-tonifier → passage post-partum | « quand reprendre après un accouchement » |
+| 14 janv. | idem | boxe-femme-geneve-guide-complet → section reprise | « reprendre après une naissance » |
+| 14 janv. | idem | boxe-menopause-os-equilibre → mention du plancher pelvien | « le plancher pelvien après un accouchement » |
+| 14 janv. | idem | page `/services/boxe-femme` → FAQ | « boxe après une grossesse » |
 
 ## 4. Trous de l'existant (à corriger sans attendre)
 

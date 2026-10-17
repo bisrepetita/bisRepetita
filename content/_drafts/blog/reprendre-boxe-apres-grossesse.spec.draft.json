@@ -1,0 +1,370 @@
+{
+  "schema_version": 1,
+  "source_brief": "content/_drafts/blog/reprendre-boxe-apres-grossesse.md",
+  "slug": "reprendre-boxe-apres-grossesse",
+  "locale": "fr",
+  "module": "C",
+  "snippet": {
+    "title": "Boxe après une grossesse : quand reprendre, comment",
+    "h1": "Boxe après une grossesse : quand reprendre, comment",
+    "description": "Visite des 6 semaines, plancher pelvien, impacts : ce que disent les recommandations sur la reprise du sport après un accouchement, et la place de la boxe."
+  },
+  "dates": {
+    "pubDate": "2027-01-14",
+    "updatedDate": null,
+    "reviewedDate": null
+  },
+  "word_count": {
+    "minimum": 1500,
+    "maximum": 1900
+  },
+  "primary_keyword": "boxe après grossesse",
+  "keywords": [
+    {
+      "role": "primary",
+      "query": "boxe après grossesse",
+      "natural_form": "reprendre la boxe après une grossesse",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "reprendre le sport après accouchement",
+      "natural_form": "reprendre le sport après un accouchement",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "boxe post-partum",
+      "natural_form": "la boxe après l'accouchement",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "sport post-partum quand reprendre",
+      "natural_form": "quand reprendre une activité physique après la naissance",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "diastasis reprise du sport",
+      "natural_form": "le diastasis des grands droits et la reprise du sport",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "plancher pelvien reprise sport",
+      "natural_form": "le plancher pelvien après un accouchement",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "visite post-natale 6 semaines sport",
+      "natural_form": "la visite des six semaines après l'accouchement",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "peut-on faire de la boxe après un accouchement",
+      "natural_form": "boxer après un accouchement",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "fuites urinaires sport après accouchement",
+      "natural_form": "les fuites urinaires à l'effort après une naissance",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "sport après césarienne quand reprendre",
+      "natural_form": "reprendre le sport après une césarienne",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "reprendre la boxe après bébé sans impact",
+      "natural_form": "reprendre sans sauts ni impacts",
+      "volume": null
+    }
+  ],
+  "structure": [
+    {
+      "id": "quand",
+      "level": 2,
+      "heading": "Quand reprendre : ce que disent les recommandations",
+      "purpose": "Repères officiels sur le délai, les tests et l'écoute des symptômes"
+    },
+    {
+      "id": "visite",
+      "level": 3,
+      "heading": "La visite des six semaines n'est pas un feu vert pour l'impact",
+      "purpose": "Goom 2019 : au moins 3 mois et tests avant l'impact ; limite : lignes directrices de course"
+    },
+    {
+      "id": "plancher",
+      "level": 3,
+      "heading": "Le plancher pelvien et le ventre passent d'abord",
+      "purpose": "Plancher pelvien, diastasis : chiffres sourcés, aucune promesse de guérison"
+    },
+    {
+      "id": "signaux",
+      "level": 3,
+      "heading": "Les signaux à écouter, et quand demander un avis",
+      "purpose": "Symptômes à surveiller selon le consensus Delphi 2024 ; renvoi médical"
+    },
+    {
+      "id": "boxe-corps",
+      "level": 2,
+      "heading": "Ce que la boxe demande au corps, et ce qui peut attendre",
+      "purpose": "Tableau des éléments de séance par niveau d'impact (inférence du studio)"
+    },
+    {
+      "id": "studio",
+      "level": 2,
+      "heading": "Reprendre au studio : comment se passe la première séance",
+      "purpose": "Protocole d'accueil du studio (D2, D3) : échange, observation, adaptation"
+    },
+    {
+      "id": "faq",
+      "level": 2,
+      "heading": "Questions fréquentes sur la boxe après une grossesse",
+      "purpose": "FAQ : césarienne, allaitement, fuites"
+    },
+    {
+      "id": "conclusion",
+      "level": 2,
+      "heading": "Conclusion : un retour par étapes",
+      "purpose": "Conclusion 80–120 mots et CTA unique"
+    }
+  ],
+  "internal_links": [
+    {
+      "url": "/services/boxe-femme",
+      "anchor": "la boxe pour les femmes, au studio",
+      "section_id": "intro",
+      "required": true
+    },
+    {
+      "url": "/blog/seance-boxe-femme-specificites",
+      "anchor": "ce qui change vraiment dans une séance pour femme",
+      "section_id": "studio",
+      "required": true
+    },
+    {
+      "url": "/blog/effet-boxe-corps-femme-geneve",
+      "anchor": "l'effet de la boxe sur le corps d'une femme",
+      "section_id": "boxe-corps",
+      "required": false
+    },
+    {
+      "url": "/blog/boxe-ou-pilates-se-tonifier",
+      "anchor": "boxe ou Pilates pour se tonifier",
+      "section_id": "studio",
+      "required": true
+    },
+    {
+      "url": "/services/coaching-solo",
+      "anchor": "le coaching solo",
+      "section_id": "studio",
+      "required": true
+    },
+    {
+      "url": "/services/round-by-round",
+      "anchor": "les cours Round by Round",
+      "section_id": "studio",
+      "required": false
+    },
+    {
+      "url": "/blog/combien-seances-boxe-par-semaine-debutant",
+      "anchor": "combien de séances par semaine quand on débute",
+      "section_id": "faq",
+      "required": false
+    },
+    {
+      "url": "/blog/gants-de-boxe-femme-debutante",
+      "anchor": "choisir ses premiers gants",
+      "section_id": "faq",
+      "required": false
+    },
+    {
+      "url": "/#planning",
+      "anchor": "Réserver une première séance",
+      "section_id": "conclusion",
+      "required": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "url": "https://athleticsni.org/download/files/Returning_to_running_postnatal_guideline_for_medical_health_and_fitness_professionals_managing_this_population.05.pdf",
+      "title": "Goom, Donnelly, Brockwell 2019, Returning to running postnatal",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-002",
+      "url": "https://bjsm.bmj.com/content/58/4/183",
+      "title": "Deering et al. 2024, Delphi consensus return to running postnatal, BJSM 58(4)",
+      "status": "to_verify",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-003",
+      "url": "https://www.has-sante.fr/upload/docs/application/pdf/2022-08/synthese_aps_grossesse_post_partum_vf.pdf",
+      "title": "HAS 2022, synthèse Activité physique et sportive, grossesse et post-partum",
+      "status": "to_verify",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-004",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5013086/",
+      "title": "Sperstad et al. 2016, Diastasis recti abdominis, BJSM 50(17):1092",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-005",
+      "url": "https://doi.org/10.1093/ptj/pzy008",
+      "title": "Gluppe et al. 2018, postpartum training program and diastasis recti (à relire)",
+      "status": "to_verify",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-006",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7386138",
+      "title": "Pires et al. 2020, Prevalence of Urinary Incontinence in High-Impact Sport Athletes",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-007",
+      "url": "https://assets01.sdd1.ch/assets/lbwp-cdn/mobilesport/files/1694520360/mobilesport-activite-physique-conseils-pour-les-femmes-enceintes.pdf",
+      "title": "Promotion Santé Suisse, Miapas, conseils d'activité physique pendant et après la grossesse",
+      "status": "to_verify",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-008",
+      "url": "https://research.stmarys.ac.uk/id/eprint/408/1/Brown-White-Brasher-Scurr-Experience-of-Breast-Pain-Female-Runners.pdf",
+      "title": "Brown et al. 2014, Experience of breast pain in female runners, BJSM",
+      "status": "to_verify",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "statement": "Les lignes directrices britanniques de reprise de la course postnatale demandent d'attendre au moins trois mois et de passer des tests de charge, d'impact et de force ; la visite des six semaines n'est pas un feu vert pour l'impact.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-001"
+      ],
+      "limits": "lignes directrices de course, pas de boxe ; consensus"
+    },
+    {
+      "id": "CLM-002",
+      "statement": "Le consensus Delphi 2024 recommande repos relatif, progression graduelle et ajustement selon les symptômes pelviens ou musculosquelettiques, le sommeil, la santé mentale, l'allaitement et la disponibilité énergétique.",
+      "status": "to_confirm",
+      "source_ids": [
+        "SRC-002"
+      ],
+      "limits": "lu via résumé ; consensus d'experts"
+    },
+    {
+      "id": "CLM-003",
+      "statement": "La HAS (2022) publie une synthèse officielle sur l'activité physique pendant la grossesse et le post-partum.",
+      "status": "to_confirm",
+      "source_ids": [
+        "SRC-003"
+      ],
+      "limits": "non relue en détail"
+    },
+    {
+      "id": "CLM-004",
+      "statement": "Diastasis « non normal » chez environ 60 % des primipares à six semaines, 45 % à six mois et 33 % à douze mois.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-004"
+      ],
+      "limits": "cohorte de 300 primipares ; calcul d'après le tableau de l'article"
+    },
+    {
+      "id": "CLM-005",
+      "statement": "L'effet d'exercices spécifiques sur le diastasis est débattu ; un essai randomisé (175 primipares, 4 mois de renforcement supervisé du plancher pelvien dès 6 semaines) est cité par la recherche comme n'ayant pas montré de réduction de la prévalence.",
+      "status": "to_confirm",
+      "source_ids": [
+        "SRC-005"
+      ],
+      "limits": "cité de mémoire par la recherche ; statut débattu ; ne citer qu'après relecture"
+    },
+    {
+      "id": "CLM-006",
+      "statement": "Les fuites urinaires touchent 25,9 % des sportives (20,7 % à l'effort) selon une méta-analyse.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-006"
+      ],
+      "limits": "population de sportives, pas post-partum"
+    },
+    {
+      "id": "CLM-007",
+      "statement": "Round by Round : 8 personnes au plus, 1 coach, 50 minutes, aucun échange de coups ; coaching solo CHF 120 la séance.",
+      "status": "confirmed",
+      "source_ids": [],
+      "limits": "libellés de `/tarifs` et `docs/tarifs-reference.md`"
+    },
+    {
+      "id": "CLM-008",
+      "statement": "Les gestes de boxe sans impact (garde, ombre, frappes au sac à vitesse réduite) peuvent reprendre avant les gestes à impact (corde, sautillés) ; aucune étude n'a mesuré la reprise de la boxe après un accouchement.",
+      "status": "hypothesis",
+      "source_ids": [],
+      "limits": "inférence du studio, à présenter comme telle ; relue par le professionnel de santé (D1)"
+    },
+    {
+      "id": "CLM-009",
+      "statement": "La boxe referme le diastasis, répare le plancher pelvien, permet de retrouver son corps d'avant ou de perdre le poids de la grossesse ; une adaptation est « sûre » ou « garantie ».",
+      "status": "forbidden",
+      "source_ids": [],
+      "limits": "promesse médicale ou de résultat interdite"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG-001",
+      "placement": "cover",
+      "type": "photo",
+      "alt_text": "Femme en garde de boxe face à un sac de frappe immobile au studio Bis Repetita à Genève, séance calme et sans saut",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "IMG-002",
+      "placement": "after-h2:boxe-corps",
+      "type": "schéma",
+      "alt_text": "Schéma des éléments d'une séance de boxe classés du sans impact aux gestes à impact, pour une reprise progressive",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-003",
+      "placement": "after-h2:studio",
+      "type": "photo",
+      "alt_text": "Coach et élève échangeant avant une séance de boxe au studio Bis Repetita près de la place des Nations",
+      "aspect_ratio": "4:3"
+    }
+  ],
+  "cta": {
+    "url": "/#planning",
+    "anchor": "Réserver une première séance"
+  },
+  "frontmatter": {
+    "author": "Équipe Bis Repetita",
+    "category": "guide",
+    "tags": [
+      "boxe après grossesse",
+      "reprendre le sport après accouchement",
+      "boxe post-partum",
+      "boxe femme Genève",
+      "plancher pelvien"
+    ],
+    "draft": true
+  }
+}

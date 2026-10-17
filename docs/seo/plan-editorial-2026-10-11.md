@@ -51,7 +51,17 @@ Douze articles, deux par semaine (mardi, jeudi). Fil rouge : **comparer des form
 | mar. 24 nov. | `ce-que-nous-refusons-studio-boxe` | Ce que nous refusons de faire au studio | Manifeste, avis de marque | Marque → pillar | Brief validé, **bloqué : entretien Nicolas (avant 13 nov.)** |
 | jeu. 26 nov. | `boxe-menopause-os-equilibre` | Boxe et ménopause : os, impacts, énergie | Guide YMYL | Femme | Brief validé, relecture santé requise |
 
-Règle de repli : un article bloqué glisse à la place suivante ; jamais de publication d'une offre non décidée. Remplaçants prêts (§5) : « Boxe anglaise, thaï ou kickboxing » (version non genrée), « Coaching à domicile ou au studio ».
+### Décembre 2026 – janvier 2027 (briefs validés par brief-critic le 2026-10-17)
+
+| Date | Slug proposé | Article | Type | Cluster / hub | Statut |
+|---|---|---|---|---|---|
+| mar. 1 déc. | `choisir-boxe-anglaise-thai-kickboxing` | Boxe anglaise, thaï ou kickboxing : comment choisir | Comparatif + avis | Débutant → `/cours-de-boxe-geneve` | Brief validé, **GSC frais d'abord (D1)**, validation Nicolas |
+| jeu. 3 déc. | `coaching-boxe-domicile-ou-studio` | Coaching de boxe à domicile ou au studio : notre avis | Comparatif + avis | Coaching privé | Brief validé, **bloqué : faits domicile (D1 à D3)** |
+| mar. 15 déc. | `cours-sport-rembourses-assurance-complementaire` | Cours de sport et complémentaire : ce qu'il faut vérifier | Informationnel prudent | Débutant (budget) | Brief validé, **bloqué : label (D1, D2)**, gatekeeper needs_review |
+| mar. 29 déc. | `reprendre-boxe-six-semaines-bases` | Reprendre la boxe en janvier : 6 semaines pour les bases | Plan saisonnier | Débutant / reprise | Brief validé, **bloqué : plan validé par Nicolas (D1), fermetures de Noël (D2)** |
+| jeu. 14 janv. | `reprendre-boxe-apres-grossesse` | Boxe après une grossesse : quand reprendre, comment | Guide YMYL | Femme → `/services/boxe-femme` | Brief validé, **relecture sage-femme ou physio requise (D1, avant le 7 janv.)** |
+
+Règle de repli : un article bloqué glisse à la place suivante ; jamais de publication d'une offre non décidée. Remplaçants non encore passés au gatekeeper : « Boxe et mal de dos pour les profils de bureau » (YMYL), « S'entraîner seul entre deux séances ».
 
 ## 4. Mini-briefs
 
@@ -154,13 +164,10 @@ Format `seo-topical-map` Phase 7 : de quoi lancer `/seo-brief` sans re-chercher 
 
 ## 5. Réserve (prochains mois)
 
+Les cinq sujets précédents ont désormais un brief (calendrier §3, déc.–janv.). Restent :
+
 | Sujet | Pourquoi plus tard |
 |---|---|
-| Boxe anglaise, thaï ou kickboxing : laquelle choisir à Genève (non genré) | Proche de `quelle-boxe-choisir-femme-geneve` : vérifier la cannibalisation avec des données GSC fraîches |
-| Coaching à domicile ou au studio | Faits domicile à confirmer (rayon, matériel) |
-| Boxe après une grossesse (post-partum) | YMYL fort : relecture par une sage-femme ou une physiothérapeute |
-| Cours de sport remboursés par l'assurance complémentaire | Dépend d'un label (Qualitop, QualiCert…) que le studio n'a peut-être pas ; ne rien promettre |
-| Reprendre en janvier : 6 semaines pour poser les bases | À publier fin décembre |
 | Pages quartier (Pâquis, Eaux-Vives…) | Format proche du programmatique, à cadrer avec `/programmatic-seo` |
 | Garder la motivation quand il fait nuit à 17 h | Échoue au test « Surprise Gap » (`seo-gatekeeper`) : une IA y répond déjà aussi bien |
 

@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "source_brief": "content/_drafts/blog/coaching-boxe-domicile-ou-studio.md",
+  "slug": "coaching-boxe-domicile-ou-studio",
+  "locale": "fr",
+  "module": "E",
+  "snippet": {
+    "title": "Coaching de boxe à domicile ou au studio : notre avis",
+    "h1": "Coaching de boxe à domicile ou au studio : notre avis",
+    "description": "Matériel, espace, discrétion, prix : ce qui change entre un coach de boxe chez vous et une séance au studio à Genève, et pour qui choisir l'un ou l'autre."
+  },
+  "dates": {
+    "pubDate": "2026-12-03",
+    "updatedDate": null,
+    "reviewedDate": null
+  },
+  "word_count": {
+    "minimum": 1400,
+    "maximum": 1800
+  },
+  "primary_keyword": "coaching boxe à domicile ou en studio",
+  "keywords": [
+    {
+      "role": "primary",
+      "query": "coaching boxe à domicile ou en studio",
+      "natural_form": "un coaching de boxe à domicile ou au studio",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "coach boxe à domicile Genève",
+      "natural_form": "un coach de boxe à domicile à Genève",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "cours de boxe à domicile",
+      "natural_form": "des cours de boxe chez soi",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "cours particulier boxe Genève",
+      "natural_form": "un cours particulier de boxe à Genève",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "boxe à la maison",
+      "natural_form": "boxer chez vous",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "coach sportif à domicile Genève",
+      "natural_form": "un coach sportif à domicile à Genève",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "séance de boxe au studio",
+      "natural_form": "une séance de boxe au studio",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "coaching boxe à domicile prix",
+      "natural_form": "le prix d'un coaching de boxe à domicile",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "quel espace pour s'entraîner à la boxe chez soi",
+      "natural_form": "l'espace nécessaire pour boxer chez soi",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "boxe à domicile ou salle de boxe débutant",
+      "natural_form": "commencer la boxe chez soi ou en salle",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "peut-on alterner coaching à domicile et au studio",
+      "natural_form": "alterner séances à domicile et au studio",
+      "volume": null
+    }
+  ],
+  "structure": [
+    {
+      "id": "differences",
+      "level": 2,
+      "heading": "À domicile ou au studio : les différences en un tableau",
+      "purpose": "Tableau domicile vs studio : lieu, matériel, espace, durée, prix à la séance"
+    },
+    {
+      "id": "domicile",
+      "level": 2,
+      "heading": "À domicile : ce que vous gagnez, ce qui manque",
+      "purpose": "Fiche domicile : gains, limites, espace"
+    },
+    {
+      "id": "gains",
+      "level": 3,
+      "heading": "Le temps et la discrétion",
+      "purpose": "Gain de temps, discrétion, créneaux tôt/midi"
+    },
+    {
+      "id": "espace",
+      "level": 3,
+      "heading": "L'espace, le matériel et le voisinage",
+      "purpose": "Espace 6–8 m², matériel apporté, ce qui n'y est pas (ring, sacs), voisinage (D4)"
+    },
+    {
+      "id": "zone",
+      "level": 3,
+      "heading": "Zone couverte et réservation",
+      "purpose": "Zone et réservation, wording de la page seulement (D2)"
+    },
+    {
+      "id": "studio-lieu",
+      "level": 2,
+      "heading": "Au studio : ce que le lieu apporte",
+      "purpose": "Ce que le studio apporte : ring, sacs, coupure, passage vers le groupe"
+    },
+    {
+      "id": "choix",
+      "level": 2,
+      "heading": "Quel lieu selon votre situation",
+      "purpose": "Arbre de décision et Notre avis"
+    },
+    {
+      "id": "faq",
+      "level": 2,
+      "heading": "Questions fréquentes sur le coaching de boxe à domicile",
+      "purpose": "FAQ : espace, alternance, plusieurs personnes"
+    },
+    {
+      "id": "conclusion",
+      "level": 2,
+      "heading": "Conclusion : le même coaching, deux endroits",
+      "purpose": "Conclusion 80–120 mots et CTA unique"
+    }
+  ],
+  "internal_links": [
+    {
+      "url": "/cours-de-boxe-geneve",
+      "anchor": "les cours de boxe à Genève",
+      "section_id": "intro",
+      "required": true
+    },
+    {
+      "url": "/services/coaching-boxe-domicile",
+      "anchor": "le coaching à domicile",
+      "section_id": "domicile",
+      "required": true
+    },
+    {
+      "url": "/services/coaching-solo",
+      "anchor": "le coaching solo",
+      "section_id": "studio-lieu",
+      "required": true
+    },
+    {
+      "url": "/blog/prix-cours-boxe-geneve-2026",
+      "anchor": "le détail des prix et des packs",
+      "section_id": "differences",
+      "required": true
+    },
+    {
+      "url": "/tarifs",
+      "anchor": "la grille tarifaire",
+      "section_id": "differences",
+      "required": true
+    },
+    {
+      "url": "/services/coaching-duo-trio",
+      "anchor": "la boxe en duo ou en trio",
+      "section_id": "studio-lieu",
+      "required": false
+    },
+    {
+      "url": "/blog/cours-boxe-prive-petit-groupe-collectif",
+      "anchor": "choisir entre cours privé, petit groupe et collectif",
+      "section_id": "choix",
+      "required": true
+    },
+    {
+      "url": "/blog/studio-boxe-prive-vs-salle-classique-geneve",
+      "anchor": "ce qui distingue un studio privé d'une salle classique",
+      "section_id": "studio-lieu",
+      "required": false
+    },
+    {
+      "url": "/services/small-group-training",
+      "anchor": "le Small Group Training",
+      "section_id": "faq",
+      "required": false
+    },
+    {
+      "url": "/services/corporate",
+      "anchor": "les programmes corporate",
+      "section_id": "faq",
+      "required": false
+    },
+    {
+      "url": "/#planning",
+      "anchor": "Réserver une première séance",
+      "section_id": "conclusion",
+      "required": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "url": "https://www.who.int/fr/news-room/fact-sheets/detail/physical-activity",
+      "title": "OMS, fiche Activité physique, 26 juin 2024",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "statement": "Prix publiés à la séance : solo 120, duo 140, trio 160 (studio) ; coaching à domicile dès 150 (CHF).",
+      "status": "confirmed",
+      "source_ids": [],
+      "limits": "libellés exacts de `/tarifs` ; aucun pack ; domicile 2–3 personnes non tranché (D1)"
+    },
+    {
+      "id": "CLM-002",
+      "statement": "À domicile : 60 minutes, 1 à 3 personnes, matériel apporté par le coach (gants, pattes d'ours, tapis, corde, bandes), espace d'environ 6 à 8 m².",
+      "status": "confirmed",
+      "source_ids": [],
+      "limits": "page domicile"
+    },
+    {
+      "id": "CLM-003",
+      "statement": "À domicile, pas de ring ni de sacs de frappe : le travail technique se fait aux pattes d'ours.",
+      "status": "confirmed",
+      "source_ids": [],
+      "limits": "page domicile (FAQ)"
+    },
+    {
+      "id": "CLM-004",
+      "statement": "Déplacement inclus dans le canton de Genève ; communes limitrophes et hors canton sur devis.",
+      "status": "to_confirm",
+      "source_ids": [],
+      "limits": "contradiction interne de la page (D2)"
+    },
+    {
+      "id": "CLM-005",
+      "statement": "La qualité du coaching est la même à domicile et au studio.",
+      "status": "to_confirm",
+      "source_ids": [],
+      "limits": "affirmation de la page ; à valider par Nicolas, à présenter comme sa position (pas une donnée)"
+    },
+    {
+      "id": "CLM-006",
+      "statement": "L'OMS recommande au moins 150 minutes d'activité modérée par semaine aux adultes.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-001"
+      ],
+      "limits": "pas de promesse santé"
+    },
+    {
+      "id": "CLM-007",
+      "statement": "Un lieu est plus efficace que l'autre pour progresser techniquement.",
+      "status": "forbidden",
+      "source_ids": [],
+      "limits": "aucune source ne compare ; ne pas l'affirmer"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG-001",
+      "placement": "cover",
+      "type": "photo",
+      "alt_text": "Coach de boxe tenant les pattes d'ours face à une personne dans un salon pendant une séance à domicile à Genève",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "IMG-002",
+      "placement": "after-h2:differences",
+      "type": "photo",
+      "alt_text": "Intérieur du studio de boxe Bis Repetita près de la place des Nations à Genève, avec le ring et les sacs de frappe",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-003",
+      "placement": "after-h3:espace",
+      "type": "photo",
+      "alt_text": "Gants, pattes d'ours, corde à sauter et bandes de main posés sur un tapis pour une séance de boxe à domicile",
+      "aspect_ratio": "4:3"
+    }
+  ],
+  "cta": {
+    "url": "/#planning",
+    "anchor": "Réserver une première séance"
+  },
+  "frontmatter": {
+    "author": "Équipe Bis Repetita",
+    "category": "guide",
+    "tags": [
+      "coaching boxe à domicile",
+      "cours de boxe à domicile Genève",
+      "coach boxe Genève",
+      "coaching boxe studio",
+      "cours particulier boxe"
+    ],
+    "draft": true
+  }
+}
