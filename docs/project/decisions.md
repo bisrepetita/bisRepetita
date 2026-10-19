@@ -59,3 +59,24 @@ Doublon `docs/seo-context.md` supprimé ; CTA « essai gratuit », palmarès de 
 ## 2026-10-17 — Redirections dans `vercel.json`
 - Choix : `/about`, `/nicolas-de-boccard`, `/blog/cours-de-boxe-geneve-guide-debutant` portées depuis `netlify.toml`, `trailingSlash: false`. Sur la refonte seulement, pas de report sur `main` pour l'instant (choix de Jon).
 - À rouvrir : au merge de la refonte, ou si la 404 du guide coûte trop avant.
+
+## 2026-10-19 — Round by Round sans prérequis, essai gratuit seulement en Round by Round
+- Choix (Nicolas) : un débutant peut commencer directement en Round by Round ; la première séance y est offerte ; la première séance privée se paie.
+- Conséquence : les textes qui présentaient le privé comme passage obligé sont réécrits ; 4 avis validés qui le conseillent encore sont soumis à Nicolas (`rv_prive_dabord`).
+- À rouvrir : si la réponse de Nicolas demande d'aligner ces 4 avis.
+
+## 2026-10-19 — Contact seulement en séance privée
+- Choix (Nicolas) : sparring et contact léger uniquement en privé, proposés par le coach ; jamais en Round by Round ni Small Group.
+- À rouvrir : réponse sur l'option « Boxe avec contact » des entreprises (`p_corpo_contact`).
+
+## 2026-10-19 — Tarif entreprise publié
+- Choix : fourchette CHF 220–600 la séance affichée, au lieu de « sur devis » ; découverte gratuite pour 6 personnes ; paiement avant la séance.
+- Écarté : facturation à 30 jours, rapport trimestriel, demi-journée avec conférence (non confirmés).
+
+## 2026-10-19 — En-têtes de sécurité dans `vercel.json`, `netlify.toml` supprimé
+- Choix : en-têtes portés tels quels, sauf HSTS sans `includeSubDomains` (sous-domaines non vérifiés) ; `/cours-gratuit` → `/services/round-by-round`.
+- À rouvrir : ajouter `includeSubDomains` une fois tous les sous-domaines vérifiés en HTTPS.
+
+## 2026-10-19 — seo-lint réglable par projet
+- Choix : `project.yaml` `content.lint` (composant TLDR, intitulés FAQ / conclusion / sources, motif du CTA final) ; le linter partagé garde ses défauts.
+- Écarté : renommer les intitulés des articles (« Sources et références » est la bonne typographie).
