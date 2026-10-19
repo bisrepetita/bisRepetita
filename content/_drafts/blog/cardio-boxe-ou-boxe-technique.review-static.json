@@ -2,11 +2,11 @@
   "contract_version": 1,
   "rules_version": 1,
   "mode": "shadow",
-  "generated_at": "2026-10-17T18:16:55+00:00",
+  "generated_at": "2026-10-19T20:53:47+00:00",
   "article": "content/_drafts/blog/cardio-boxe-ou-boxe-technique.article.mdx",
-  "article_hash": "sha256:e613e8643d15d58cc4713e19106d2bc102d8f1ddfcaf9bd0428076247cda5e4f",
+  "article_hash": "sha256:6c17e2542e3e3a96175a7d4ff6538bc1d853581e1f26323bf36624e9daf73f87",
   "summary": {
-    "errors": 2,
+    "errors": 0,
     "warnings": 1,
     "evaluated": 38,
     "not_evaluated": 4
@@ -160,16 +160,16 @@
       "rule": "links.contextual_target_per_1000_min",
       "status": "PASS",
       "severity": "warning",
-      "detail": "5.05 internal links / 1000 words",
-      "observed": 5.05,
+      "detail": "4.98 internal links / 1000 words",
+      "observed": 4.98,
       "target": 3
     },
     {
       "rule": "links.contextual_target_per_1000_max",
       "status": "PASS",
       "severity": "warning",
-      "detail": "5.05 internal links / 1000 words",
-      "observed": 5.05,
+      "detail": "4.98 internal links / 1000 words",
+      "observed": 4.98,
       "target": 6
     },
     {
@@ -217,9 +217,9 @@
     },
     {
       "rule": "ending.order",
-      "status": "FAIL",
+      "status": "PASS",
       "severity": "error",
-      "detail": "required ending order missing"
+      "detail": "FAQ -> Conclusion -> Sources"
     },
     {
       "rule": "faq.questions_are_h3",
@@ -230,10 +230,10 @@
     },
     {
       "rule": "cta.final_unique",
-      "status": "FAIL",
+      "status": "PASS",
       "severity": "error",
-      "detail": "0 final CTA",
-      "observed": 0,
+      "detail": "1 final CTA",
+      "observed": 1,
       "expected": 1
     },
     {

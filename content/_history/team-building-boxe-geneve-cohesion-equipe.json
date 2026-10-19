@@ -66,5 +66,68 @@
       "Demi-journée avec conférence leadership, rapport trimestriel, tarifs dégressifs",
       "Notre avis (atelier découverte d'abord ; pas adapté à 40 personnes ou moment festif)"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "reinforce",
+        "detail": "ancienne : Notre avis « Si vous cherchez une activité pour 40 personnes en une seule session… la boxe n'est pas le bon choix » | nouvelle : mention des 40 personnes retirée (contradiction factuelle), reste de l'avis validé inchangé",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : plafonds 20 participants (atelier, FAQ), 12 au studio, co-encadrement au-delà de 10, dédoublement | nouvelle : capacité définie avec le client selon le format, 30 personnes et plus avec davantage de coachs",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : demi-journée séminaire avec conférence leadership (formats, FAQ dédiée) | nouvelle : retirée ; « Trois formats » → « Deux formats »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : rapport trimestriel de progression | nouvelle : retiré (tarifs dégressifs conservés)",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : délai de paiement de 30 jours (logistique, FAQ facturation), tarif sur devis | nouvelle : paiement avant la séance ; 220 à 600 CHF la séance selon le format",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ajout : séance découverte gratuite pour 6 personnes ; zone « hors France »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : description « Devis sous 5 jours » | nouvelle : « Devis sous 48h »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : bandes fournies / apportées (sur site, protections, FAQ espace) | nouvelle : sous-gants prêtés",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : vestiaires privés, douches, serviettes fournies | nouvelle : deux vestiaires (femmes, hommes) avec une douche dans chacun",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : séance type terminée par « circuit training court et étirements » | nouvelle : « jeux de boxe et exercices physiques »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

@@ -70,5 +70,38 @@
       }
     ],
     "source": "docs/_research/2026-10-17-bisrepetita-rapport-gsc-3-mois.md"
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "data",
+        "detail": "ancienne : « Ce que j'observe depuis cinq ans à la tête de Bis Repetita » | nouvelle : durée retirée",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : petit groupe de femmes / petit groupe féminin présenté comme existant (corps et FAQ) | nouvelle : petit groupe féminin constitué sur demande, entre amies ou collègues",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : vestiaires privés, serviettes fournies | nouvelle : deux vestiaires (femmes, hommes) avec une douche dans chacun",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "reinforce",
+        "detail": "ancienne : FAQ délais observés (premiers effets après 2 à 3 semaines, changement profond après 6 à 8 semaines, « ce qu'on observe couramment ») | nouvelle : délais chiffrés retirés, formulation prudente",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

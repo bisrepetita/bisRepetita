@@ -52,5 +52,48 @@
       "Horaires 9h-20h semaine, samedi 10h-18h, dimanche 11h-18h, ouverture 7j/7",
       "Parking à proximité"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "data",
+        "detail": "ancienne : séance type minutée (échauffement 10 min, technique 20, frappe 20, retour au calme 10) | nouvelle : pas de minutage fixe, séance sur mesure ; mêmes blocs sans durée",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : horaires 9h-20h en semaine, samedi 10h-18h, dimanche 11h-18h | nouvelle : 9 h 30-19 h 30 en semaine, samedi 9 h-18 h, dimanche 10 h-18 h",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : « et cinq ans à la tête du studio » | nouvelle : durée retirée",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : Petit groupe 4 à 8 personnes | nouvelle : 2 à 8",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : vestiaires privés, douches, serviettes fournies, pas de vestiaire partagé (corps et FAQ) | nouvelle : deux vestiaires (femmes, hommes) avec une douche dans chacun",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : facturation sur devis, délai de paiement de 30 jours | nouvelle : devis sous 48 h, paiement avant la séance",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

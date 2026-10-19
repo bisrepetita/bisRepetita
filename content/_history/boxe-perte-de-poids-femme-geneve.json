@@ -101,5 +101,33 @@
       }
     ],
     "source": "docs/_research/2026-10-17-bisrepetita-rapport-gsc-3-mois.md"
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "data",
+        "detail": "ancienne : « Je dirige le studio depuis cinq ans » (intro) et « cinq ans à la tête du studio » (sources) | nouvelle : durée retirée",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "reinforce",
+        "detail": "ancienne : « 6 à 12 semaines : chez beaucoup de pratiquantes, un premier changement… devient perceptible » | nouvelle : « peut devenir perceptible » (plus présenté comme observation du studio)",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : CTA « Équipement fourni » | nouvelle : « Gants et sous-gants prêtés »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

@@ -1,5 +1,5 @@
 ---
-// Page de test : le format et le prix du cours offert restent à décider. Aucun prix affiché.
+// Bon cadeau : formats et prix de la grille (/tarifs), pas de montant libre ni de durée de validité affichée.
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/widgets/Hero.astro";
 import Schema from "../components/seo/Schema.astro";
@@ -9,18 +9,21 @@ import coursPortrait from "../assets/cours-portrait.webp";
 const metadata = {
     title: "Offrir un cours de boxe à Genève",
     description:
-        "Offrez un cours de boxe avec Nicolas de Boccard à Genève : une séance préparée selon le niveau de la personne. Débutants bienvenus, matériel fourni.",
+        "Offrez un cours de boxe à Genève : un bon cadeau en PDF au nom de la personne, pour le format de votre choix. Débutants bienvenus, matériel prêté.",
 };
 
 const { phone, address } = siteConfig.contact;
 const tel = `tel:${phone.replace(/\s/g, "")}`;
 
 const steps = [
-    ["Pour qui", "La personne de votre choix. Débutant bienvenu, aucun niveau requis."],
-    ["La séance", "Un cours avec Nicolas, préparé selon le niveau et les envies de la personne."],
-    ["Matériel", "Gants et bandes fournis. Une tenue de sport suffit."],
+    ["Pour qui", "La personne de votre choix. Débutant bienvenu, aucun niveau requis. Un mineur peut en profiter à partir d'un certain âge, avec l'autorisation de ses parents."],
+    ["Le format", "Tous les formats de la grille, aux prix de la grille : Round by Round, coaching solo, duo, trio… Pas de montant libre."],
+    ["Le bon", "Un PDF au nom de la personne, envoyé par e-mail. Transférable et échangeable contre un autre format, non remboursable."],
+    ["Paiement", "En ligne, par virement, Twint ou espèces."],
+    ["Réservation", "Avec le coach de son choix : sur le planning en ligne pour le cours collectif, par WhatsApp pour le coaching privé."],
+    ["Matériel", "Gants et sous-gants prêtés. Une tenue de sport et des baskets réservées à l'intérieur suffisent."],
     ["Lieu", `Au studio, ${address}.`],
-    ["Comment faire", "Écrivez-nous ou appelez-nous. Nous convenons ensemble du format et de la date."],
+    ["Comment faire", "Écrivez-nous ou appelez-nous. Commandes jusqu'au 22 décembre. Bon réservé aux particuliers : pas d'offre entreprise."],
 ];
 const arrow = `<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>`;
 ---
@@ -40,7 +43,7 @@ const arrow = `<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true
 
     <Hero
         title="Offrir un cours de boxe"
-        description="Un cours de boxe avec Nicolas, à offrir à quelqu'un. Vous choisissez la personne, nous préparons la séance selon son niveau."
+        description="Un cours de boxe à offrir, au format de votre choix. Vous choisissez la personne, nous vous envoyons le bon à son nom."
         actions={[
             { text: "Nous écrire", href: "/contact?sujet=offrir" },
             { text: phone, href: tel, ariaLabel: `Appeler le ${phone}` },
@@ -52,7 +55,7 @@ const arrow = `<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true
     <section class="wrap gc">
         <div class="gc-head">
             <h2 class="t-title" data-split>Comment ça se passe</h2>
-            <p>Le principe est simple : un cours particulier, au studio, pensé pour la personne qui le reçoit.</p>
+            <p>Le principe est simple : un bon au nom de la personne, valable pour un cours au studio, collectif ou privé.</p>
         </div>
         <div>
             <dl class="gc-rows">

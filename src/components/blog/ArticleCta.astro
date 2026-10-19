@@ -11,7 +11,7 @@ interface Props {
 
 const { title = "", description, ctaText = Astro.props.text ?? "", ctaHref = Astro.props.href ?? "/#planning" } = Astro.props;
 
-// L'essai gratuit n'existe plus : les appels « séance d'essai / gratuite » deviennent
+// Essai gratuit : Round by Round seulement, et les articles ne précisent pas le format : les appels « séance d'essai / gratuite » deviennent
 // « Réserver une séance » vers le planning. Les cibles pages (services, studio, tarifs, contact)
 // sont gardées : c'est le maillage interne des articles.
 const FREE = /gratuit|offert|essai/i;

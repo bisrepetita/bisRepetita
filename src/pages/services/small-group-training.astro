@@ -16,22 +16,22 @@ import ambianceBis from "../../assets/ambiance-bis-repetita.webp";
 const metadata = {
     title: "Cours Boxe Petit Groupe Genève",
     description:
-        "Cours de boxe en petit groupe à Genève, 6 personnes maximum. Encadrement sur mesure par Nicolas de Boccard dans un studio privé, près des Nations.",
+        "Cours de boxe en petit groupe à Genève, de 2 à 8 personnes. Encadrement sur mesure par Nicolas de Boccard dans un studio privé, près des Nations.",
 };
 
 const facts = [
-    { k: "Effectif", v: "4 à 8 personnes" },
+    { k: "Effectif", v: "2 à 8 personnes, groupe stable" },
     { k: "Durée", v: "60 minutes" },
     { k: "Coach", v: "Nicolas de Boccard" },
     { k: "Niveau requis", v: "Aucun" },
-    { k: "Matériel", v: "Gants et bandes fournis" },
+    { k: "Matériel", v: "Gants et sous-gants prêtés" },
 ];
 
 const features = [
     {
         title: "Un petit groupe",
         description:
-            "Pas de file d'attente, pas de machines. De 4 à 8 personnes, avec un coach qui connaît chacun.",
+            "Pas de file d'attente, pas de machines. De 2 à 8 personnes, avec un coach qui connaît chacun.",
         icon: "lucide:shield",
     },
     {
@@ -55,7 +55,7 @@ const features = [
     {
         title: "Tarif partagé",
         description:
-            "Le coaching sur mesure, à un prix par personne plus bas qu'en solo.",
+            "Le prix est celui du groupe, à partager : par personne, moins cher qu'en solo.",
         icon: "lucide:wallet",
     },
 ];
@@ -68,7 +68,7 @@ const tiers = [
         priceNote: "/ séance",
         features: [
             "60 minutes de coaching",
-            "Tarif de base pour 4 participants",
+            "Prix du groupe, à partager",
             "Programme structuré",
             "Matériel fourni",
         ],
@@ -82,7 +82,7 @@ const tiers = [
         highlighted: true,
         features: [
             "10 × 60 minutes",
-            "Tarif de base pour 4 participants",
+            "Prix du groupe, à partager",
             "Suivi de progression",
             "Matériel fourni",
             "Tarif préférentiel",
@@ -94,7 +94,7 @@ const tiers = [
 const faqs = [
     {
         question: "Pourquoi 8 personnes maximum ?",
-        answer: "C'est le seuil au-delà duquel la qualité du coaching se dégrade. De 4 à 8, Nicolas peut corriger chaque geste, adapter l'intensité à chacun et garder une ambiance de club privé.",
+        answer: "C'est le seuil au-delà duquel la qualité du coaching se dégrade. De 2 à 8, Nicolas peut corriger chaque geste, adapter l'intensité à chacun et garder une ambiance de club privé.",
     },
     {
         question: "Quelle est la différence avec les cours Round by Round ?",
@@ -102,7 +102,7 @@ const faqs = [
     },
     {
         question: "Faut-il venir avec son propre groupe ?",
-        answer: "Non. Vous pouvez vous inscrire seul et rejoindre un groupe existant. Nicolas compose les groupes en fonction des niveaux et des disponibilités. Vous pouvez aussi réserver un créneau privé avec votre propre groupe.",
+        answer: "Non. Vous pouvez vous inscrire seul et rejoindre un groupe existant. Nicolas compose les groupes en fonction des niveaux et des disponibilités. Vous pouvez aussi réserver un créneau privé avec votre propre groupe, par exemple entre amies ou entre collègues. Dans tous les cas, le groupe est stable : on s'engage à venir régulièrement.",
     },
     {
         question: "Le small group convient-il aux débutants ?",
@@ -110,7 +110,7 @@ const faqs = [
     },
     {
         question: "Quels sont les tarifs du small group training ?",
-        answer: "Le small group est notre format le plus accessible par personne : séances à l'unité ou en pack de 10 avec tarif préférentiel. Le prix par personne est nettement inférieur au coaching solo. Consultez nos <a href='/tarifs' class='link-line'>tarifs détaillés</a> ou <a href='/contact' class='link-line'>contactez-nous</a>.",
+        answer: "Le small group est notre format privé le plus accessible par personne : CHF 200 la séance pour le groupe, à partager, à l'unité ou en pack de 10 avec tarif préférentiel. Le prix par personne est nettement inférieur au coaching solo. Consultez nos <a href='/tarifs' class='link-line'>tarifs détaillés</a> ou <a href='/contact' class='link-line'>contactez-nous</a>.",
     },
 ];
 ---
@@ -149,7 +149,7 @@ const faqs = [
     </Fragment>
     <Hero
         title={`<span class="text-primary">Small Group</span> Training à Genève`}
-        description="L'énergie d'un groupe, la précision d'un cours privé. De 4 à 8 personnes, un coach, un programme structuré, dans un studio privé au cœur de Genève."
+        description="L'énergie d'un groupe, la précision d'un cours privé. De 2 à 8 personnes, un coach, un programme structuré, dans un studio privé au cœur de Genève."
         image={cours2Landscape}
         imageAlt="Cours de boxe en petit groupe au studio Bis Repetita"
         locationBadge={{ text: "La Voie-Creuse 16, 1202 Genève" }}
@@ -161,7 +161,7 @@ const faqs = [
     <section class="section wrap intro">
         <p class="t-lead intro-lead">
             Le coaching privé, avec l'énergie d'un groupe.
-            <span class="soft">Un groupe volontairement réduit, de 4 à 8 personnes.</span>
+            <span class="soft">Un groupe volontairement réduit et stable, de 2 à 8 personnes.</span>
         </p>
         <dl class="facts">
             {facts.map((f) => (

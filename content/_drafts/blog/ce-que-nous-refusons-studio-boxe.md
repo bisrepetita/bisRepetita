@@ -1,7 +1,7 @@
 ---
 slug: ce-que-nous-refusons-studio-boxe
 status: blocked
-blocked_by: entretien de 15 min avec Nicolas (guide ci-dessous) + décisions D1 à D7
+blocked_by: réponses partielles du 2026-10-19 (sparring tronqué, D3 liste des refus, D5 équipe, D7 photos)
 planned_pubDate: 2026-11-24
 unblock_deadline: 2026-11-13
 module: B
@@ -227,3 +227,15 @@ Aucune source externe n'est nécessaire : c'est un avis de marque. Faits interne
 
 ## Spec machine
 Pas de `ce-que-nous-refusons-studio-boxe.spec.draft.json` tant que le statut est `blocked` : la liste des refus, la structure et le snippet dépendent de D1–D3. À produire après l'entretien et le passage de `brief-critic`.
+
+## Réponses de Nicolas (2026-10-19)
+
+- **Sparring imposé (Q6, Q7, Q11)** : réponse tronquée. Fait confirmé ailleurs : contact uniquement en séance privée pour l'instant, jamais en RbR ni en Small Group ; le coach le propose s'il estime la personne prête et lui demande si ça l'intéresse ; sinon sac, pattes d'ours, shadow.
+- **Premier échange (Q3)** : en privé, objectif, passé sportif, blessures, attentes sur la séance. Pas de questionnaire avant RbR.
+- **Préparation et suivi (Q5, D4)** : pas de trame ni de minutage fixe ; chaque séance privée est faite sur mesure (besoins, forme du jour, objectifs). Suivi des corrections dans une appli.
+- **Promesse de kilos (Q8)** : « dépend de la date, possible si pris en avance ». À arbitrer : cette réponse ne correspond pas au refus « promesse de kilos » du plan ; ne pas l'écrire comme un refus sans revalidation.
+- **Séance gratuite (Q9, D1)** : l'essai gratuit en privé a été arrêté parce qu'il mobilise une heure de coach pour une majorité qui veut juste du gratuit. L'essai gratuit existe toujours en Round by Round (première séance offerte) : le refus porte seulement sur le privé.
+- **8 au plus (Q1, D2)** : à 8 maximum, tout le monde passe aux pattes d'ours avec le coach. Small Group : 2 à 8 personnes (et non 4 à 8), groupe stable.
+- **Phrase pour l'esprit du studio (Q12)** : « Il ne faut pas se comparer, mais devenir une meilleure version de soi à chaque séance. »
+- **Signature (D6)** : « Équipe Bis Repetita » (jamais au nom de Nicolas).
+- **Restent ouverts** : réponse complète sur le sparring imposé ; D3 liste finale des refus (et sort du refus « promesse de kilos ») ; D5 les refus valent-ils pour toute l'équipe ; D7 accord photo ; Q2 liste d'attente.

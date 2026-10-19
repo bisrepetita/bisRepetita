@@ -1,6 +1,7 @@
 ---
 slug: cours-sport-rembourses-assurance-complementaire
-status: brief
+status: abandoned
+abandoned_reason: "2026-10-19 : aucun label reconnu par les assurances complémentaires et Nicolas refuse l'article (version B)."
 planned_pubDate: 2026-12-15
 module: B
 module_secondary: C
@@ -260,3 +261,7 @@ Documents ouverts par la recherche du 2026-10-17 (`docs/_research/2026-10-17-sou
 
 ## Spec machine
 Spec draft : `content/_drafts/blog/cours-sport-rembourses-assurance-complementaire.spec.draft.json` (sans hashes). Artefact gatekeeper : `.seo-data/gatekeeper-cours-sport-rembourses-assurance-complementaire.json`. La finalisation (`finalize_spec.py --research-artifact gatekeeper=…`) reste à faire après les décisions bloquantes ; l'image spec suivra la spec finalisée.
+
+## Réponses de Nicolas (2026-10-19)
+
+**ABANDONNÉ.** D1 : le studio n'a aucun label reconnu par les assurances complémentaires (et aucune certification de coachs à écrire). D2 : Nicolas refuse l'article (version B). L'article n'est pas écrit ; prendre un sujet de remplacement dans la réserve.

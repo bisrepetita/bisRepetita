@@ -1,7 +1,7 @@
 ---
 slug: round-by-round-deroule-seance
 status: blocked
-blocked_by: minutage et organisation de la séance à faire confirmer par Nicolas (Décisions requises n° 1)
+blocked_by: minutage de la séance (durées) non fourni ; organisation et déroulé répondus le 2026-10-19 (voir « Réponses de Nicolas »)
 planned_pubDate: 2026-11-19
 module: B
 page_type: article
@@ -238,3 +238,12 @@ Sources de terrain (analyse SERP, à ne pas citer) : https://www.geneve.ch/theme
 - La page service contient encore « Essai gratuit » (meta), une réservation présentée via formulaire et téléphone, et une section équipe avec Lionel et son palmarès : à corriger hors de ce brief.
 - La raison du choix des rounds de 2 minutes n'est pas documentée ; le rapprochement avec le format novice amateur est une proposition à valider.
 - Pas de volumes, pas de SERP Google.ch ; `seo-gatekeeper` non lancé (exigé par `finalize_spec.py`).
+
+## Réponses de Nicolas (2026-10-19)
+
+- **Déroulé (D1, partiel)** : échauffement collectif, puis circuit de 4 stations en binômes, rounds chronométrés, 2 à 3 tours. Stations : technique (garde, coups, déplacements), cardio (sac, corde, enchaînements rapides), renforcement (gainage), pattes d'ours avec le coach. Les 3 autres stations changent d'une séance à l'autre ; la station pattes d'ours reste. Durées (échauffement, rounds, récupération) et retour au calme : **non fournies**.
+- **Organisation à 1 coach (D2)** : 1 coach par séance, 8 personnes au plus. Le coach tient les pattes d'ours (seul ou à deux, correction en direct) ; à 8 au plus, tout le monde passe aux pattes. Les binômes tournent sur les stations ; aucun échange de coups (sans combat).
+- **Matériel (D4)** : gants prêtés en 12 et 14 oz, désinfectés après chaque séance, et sous-gants prêtés à chaque fois. Protège-dents inutile en RbR. Tenue de sport, baskets utilisées seulement en intérieur. Deux vestiaires (femmes, hommes), une douche dans chacun (ne pas écrire serviettes fournies, vestiaires privés, douches individuelles, parking garanti).
+- **Animateur (D5)** : tous les coachs peuvent animer sauf Eliza ; chaque coach a ses créneaux, visibles sur le planning. Aucun prénom de coach à publier sans accord écrit (Jon).
+- **Accès** : aucun prérequis, débutant bienvenu directement ; pas de questionnaire avant ; première séance gratuite ; ensuite CHF 40 à l'unité, packs et abonnements (renvoyer à /tarifs, ne pas inventer de prix). Séance de 50 min, en musique ; variante sans saut sur demande.
+- **Restent ouverts** : minutage (repli n° 9 du brief : décider avec Jon si une version sans durées chiffrées est acceptable) ; D3 liste des points de correction ; D6 requête (Jon) ; D7 images ; D8 « venez deux fois » ; D10 raison des rounds de 2 minutes.

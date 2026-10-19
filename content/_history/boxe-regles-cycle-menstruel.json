@@ -68,5 +68,33 @@
       "Observation studio : les pratiquantes demandent rarement d'alléger en excès, gardent le technique au sac",
       "Mention « sans contact par défaut : sac, pattes d'ours, shadow »"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "reinforce",
+        "detail": "ancienne : « Au studio, le cycle sert de repère » (TL;DR) et « Chez Bis Repetita, le cycle sert de repère pour ajuster la séance » (avant le tableau des 4 phases) | nouvelle : présenté comme une piste ; contenu du tableau inchangé",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "reinforce",
+        "detail": "ancienne : « les pratiquantes qui demandent d'alléger leur séance pendant leurs règles le font rarement en excès… garder le travail technique au sac » | nouvelle : phrase retirée",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : « à la tête de Bis Repetita depuis cinq ans » (sources) | nouvelle : « fondateur de Bis Repetita »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

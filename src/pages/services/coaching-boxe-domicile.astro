@@ -41,8 +41,8 @@ const zones = [
         description: "Rive droite et quartier international. Séances en français ou en anglais.",
     },
     {
-        title: "Grand Genève",
-        description: "Communes limitrophes : Versoix, Meyrin, Lancy, Onex. Sur devis.",
+        title: "Tout le canton",
+        description: "Versoix, Meyrin, Lancy, Onex et les autres communes du canton. Au-delà, sur devis.",
     },
 ];
 
@@ -82,11 +82,11 @@ const features = [
 const tiers = [
     {
         name: "Séance unité",
-        description: "Une séance complète de coaching de boxe chez vous.",
+        description: "Une séance complète de coaching de boxe chez vous : dès CHF 150 seul, CHF 170 à deux, CHF 190 à trois.",
         price: "dès CHF 150.-",
         priceNote: "/ séance",
         features: [
-            "60 minutes de coaching individuel",
+            "60 minutes de coaching, de 1 à 3 personnes",
             "Programme personnalisé",
             "Matériel fourni",
             "Déplacement inclus (canton GE)",
@@ -102,7 +102,7 @@ const faqs = [
     },
     {
         question: "Que fournissez-vous comme matériel ?",
-        answer: "Tout le matériel professionnel est inclus : gants de boxe, pattes d'ours, tapis de sol, corde à sauter, bandes de protection. Vous n'avez besoin que d'une tenue de sport et d'une bouteille d'eau.",
+        answer: "Tout le matériel professionnel est inclus : gants de boxe, pattes d'ours, tapis de sol, corde à sauter, sous-gants. Vous n'avez besoin que d'une tenue de sport et d'une bouteille d'eau.",
     },
     {
         question: "Quelle différence avec une séance au studio ?",
@@ -110,7 +110,7 @@ const faqs = [
     },
     {
         question: "Quelles zones couvrez-vous à Genève ?",
-        answer: "Nous intervenons dans tout le canton de Genève : Eaux-Vives, Champel, Cologny, Carouge, Plainpalais, Sécheron, Nations, Pâquis, et communes limitrophes. Les zones hors canton sont disponibles sur devis.",
+        answer: "Nous intervenons dans tout le canton de Genève : Eaux-Vives, Champel, Cologny, Carouge, Plainpalais, Sécheron, Nations, Pâquis, Versoix, Meyrin, Lancy, Onex… Au-delà du canton, sur devis.",
     },
     {
         question: "Peut-on être plusieurs pour une séance à domicile ?",
@@ -118,7 +118,7 @@ const faqs = [
     },
     {
         question: "Quels sont les tarifs du coaching à domicile ?",
-        answer: "Le coaching à domicile est disponible à la séance ou en pack de 10 séances avec tarif préférentiel. Le déplacement dans le canton de Genève est inclus. Consultez nos <a href='/tarifs' class='link-line'>tarifs détaillés</a> ou <a href='/contact' class='link-line'>contactez-nous</a> pour un devis personnalisé.",
+        answer: "Le coaching à domicile se paie à la séance : dès CHF 150 seul, CHF 170 à deux, CHF 190 à trois. Le déplacement dans le canton de Genève est inclus ; au-delà, sur devis. Consultez nos <a href='/tarifs' class='link-line'>tarifs détaillés</a> ou <a href='/contact' class='link-line'>contactez-nous</a> pour un devis personnalisé.",
     },
     {
         question: "Comment réserver et annuler une séance ?",
@@ -191,7 +191,7 @@ const faqs = [
                 },
                 {
                     title: "Le matériel est apporté",
-                    description: "Gants, pattes d'ours, tapis, corde à sauter, bandes. Vous n'avez rien à acheter ni à ranger.",
+                    description: "Gants, pattes d'ours, tapis, corde à sauter, sous-gants. Vous n'avez rien à acheter ni à ranger.",
                 },
                 {
                     title: "Le coaching Bis Repetita, chez vous",
@@ -200,24 +200,24 @@ const faqs = [
             ]}
         />
         <ContentShowcase
-            title="60 minutes, quatre phases"
+            title="Une séance construite pour vous"
             image={ambianceBis}
             imageAlt="Échauffement à la corde à sauter"
             items={[
                 {
-                    title: "Échauffement, 10 min",
+                    title: "Échauffement",
                     description: "Mobilité, corde à sauter, shadow boxing, adaptés à votre espace.",
                 },
                 {
-                    title: "Technique aux pattes d'ours, 20 à 25 min",
+                    title: "Technique aux pattes d'ours",
                     description: "Enchaînements, esquives, contre-attaques, avec le coach sur chacun de vos gestes. Les pattes d'ours remplacent le sac.",
                 },
                 {
-                    title: "Renforcement et cardio, 15 à 20 min",
+                    title: "Renforcement et cardio",
                     description: "Un circuit adapté à votre domicile : renforcement, explosivité, cardio. Aucun équipement encombrant.",
                 },
                 {
-                    title: "Retour au calme, 5 min",
+                    title: "Retour au calme",
                     description: "Étirements, respiration, débrief. On prépare la séance suivante.",
                 },
             ]}

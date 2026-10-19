@@ -57,5 +57,23 @@
       "Page absente de l'export GSC (aucune impression sur la période)",
       "Signature Nicolas sur un texte modifié"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "data",
+        "detail": "ancienne : « Après cinq ans à la tête de Bis Repetita » (corps) et « 5 ans à la tête du studio » (sources) | nouvelle : durée retirée",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

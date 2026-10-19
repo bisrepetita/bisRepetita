@@ -31,3 +31,9 @@ Worker : @article-producer (sans publication, sans commit)
 - Lien lint : la regle cta.final_unique cherche un lien /contact?... ; le CTA projet est le composant ArticleCta vers /#planning (comme les articles publies). Regle h1.not_title : PASS (le spec impose h1 = title seulement pour l'assemblage ; build_article.py refuse h1 = title, donc frontmatter assemble a la main).
 - images.todo_remaining ne voit que les commentaires HTML ; les 3 TODO image sont des commentaires MDX {/* */}.
 - Images inline (3) et cover : non generees. frontmatter.image pointe vers /images/blog/seance-boxe-femme-specificites.webp qui n'existe pas encore.
+
+## 2026-10-19 — réponses de Nicolas (fiche faits du 17–19 oct.)
+- Corrigé (faits seulement) : gants 12 et 14 oz désinfectés + sous-gants prêtés (au lieu de « gants et bandes fournis »), contact uniquement en séance privée et proposé par le coach (au lieu de « sparring sur demande explicite »), variante sans saut « proposée sur demande », aucun minutage ni déroulé fixe des blocs, charges (haltères, kettlebells) possibles en tonification, RbR en musique et première séance offerte.
+- Répondus : n° 1 (pas de minutage fixe), n° 2 (variante sans saut sur demande : oui), n° 4 (Eliza et autres coachs : aucun prénom sans accord écrit), n° 5 signature (« Équipe Bis Repetita »), n° 6 (essai gratuit = RbR seulement ; pages hors périmètre).
+- Avis en attente de précision Nicolas : marqué « à modifier » sans détail ; texte du bloc Notre avis laissé tel quel. À noter : il recommande « coaching privé ou duo pour les premières séances », ce qui peut contredire « aucun prérequis privé avant RbR ».
+- Restent ouverts : n° 3 relecteur santé ; n° 7 et 8 liens à poser à la publication ; cover et images.

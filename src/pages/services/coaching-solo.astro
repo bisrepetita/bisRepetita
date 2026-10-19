@@ -28,7 +28,7 @@ const facts = [
     { k: "Durée", v: "60 minutes" },
     { k: "Coach", v: "Nicolas de Boccard, 20 ans de pratique" },
     { k: "Niveau requis", v: "Aucun" },
-    { k: "Matériel", v: "Gants et bandes fournis" },
+    { k: "Matériel", v: "Gants et sous-gants prêtés" },
 ];
 
 const pourQuiPanels = [
@@ -71,7 +71,7 @@ const tiers = [
         features: [
             "60 minutes de coaching individuel",
             "Bilan personnalisé",
-            "Matériel fourni (gants, bandes)",
+            "Matériel prêté (gants, sous-gants)",
             "Sans engagement",
         ],
         cta: { text: "Réserver une séance", href: "#planning" },
@@ -100,7 +100,7 @@ const faqs = [
     },
     {
         question: "Le coaching solo est-il adapté aux débutants complets ?",
-        answer: "Absolument. C'est même le format idéal pour débuter : Nicolas construit les bases techniques à votre rythme, sans pression du groupe. Posture, garde, déplacements — tout est enseigné progressivement.",
+        answer: "Absolument, si vous voulez une correction individuelle : Nicolas construit les bases techniques à votre rythme, sans pression du groupe. Posture, garde, déplacements — tout est enseigné progressivement. Ce n'est pas une étape obligatoire : vous pouvez aussi commencer directement en <a href='/services/round-by-round' class='link-line'>Round by Round</a>, sans prérequis.",
     },
     {
         question: "Puis-je combiner le coaching solo avec d'autres formats ?",
@@ -199,24 +199,24 @@ const faqs = [
     <PricingTable title="Formules coaching solo" tiers={tiers} columns={2} />
 
     <ContentShowcase
-        title="60 minutes, quatre phases"
+        title="Une séance sur mesure"
         image={lionelNicolas}
         imageAlt="Deux coachs font le point au bord du ring"
         items={[
             {
-                title: "Échauffement, 10 min",
+                title: "Échauffement",
                 description: "Mobilité, corde à sauter, shadow boxing. Le corps se prépare, le cardio monte progressivement.",
             },
             {
-                title: "Technique, 20 à 25 min",
+                title: "Technique",
                 description: "Pattes d'ours et sac de frappe. Enchaînements, esquives, contre-attaques, avec le coach sur chacun de vos gestes.",
             },
             {
-                title: "Préparation physique, 15 à 20 min",
+                title: "Préparation physique",
                 description: "Un circuit ciblé : renforcement, explosivité, cardio, dosés selon votre condition du jour.",
             },
             {
-                title: "Bilan, 5 min",
+                title: "Bilan",
                 description: "Retour au calme, étirements, débrief. On prépare la séance suivante.",
             },
         ]}

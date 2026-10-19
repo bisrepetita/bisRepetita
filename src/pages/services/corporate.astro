@@ -9,6 +9,7 @@ import FAQ from "../../components/widgets/FAQ.astro";
 import CTABanner from "../../components/widgets/CTABanner.astro";
 import ProfileShowcase from "../../components/widgets/ProfileShowcase.astro";
 import RelatedServices from "../../components/widgets/RelatedServices.astro";
+import RelatedArticles from "../../components/widgets/RelatedArticles.astro";
 import Schema from "../../components/seo/Schema.astro";
 import coursLandscape from "../../assets/cours-2-landscape.webp";
 import imageCta from "../../assets/image-cta.webp";
@@ -17,15 +18,15 @@ import nicolasPortrait from "../../assets/nicolas-de-boccard.webp";
 const metadata = {
     title: "Boxe Corporate & Team Building Genève",
     description:
-        "Boxe corporate à Genève : team building, gestion du stress, cohésion d'équipe. Coachs certifiés, déplacement dans le canton.",
+        "Boxe corporate à Genève : team building, gestion du stress, cohésion d'équipe. Devis sous 48 h, intervention jusqu'à 30 km autour du canton.",
 };
 
 const facts = [
     { k: "Lieu", v: "Dans vos locaux ou au studio" },
-    { k: "Zone", v: "Canton de Genève" },
-    { k: "Participants", v: "Jusqu'à 20 en entreprise, 12 au studio" },
+    { k: "Zone", v: "Jusqu'à 30 km autour du canton de Genève, pas en France" },
+    { k: "Participants", v: "Selon le format, défini avec vous" },
     { k: "Contact", v: "Aucun par défaut" },
-    { k: "Tarif", v: "Sur devis" },
+    { k: "Tarif", v: "CHF 220 à 600 la séance, devis sous 48 h" },
 ];
 
 const features = [
@@ -57,12 +58,8 @@ const features = [
 
 const teamBuildingFormats = [
     {
-        title: "Atelier découverte (1h)",
-        description: "Initiation à la boxe sans contact pour 10 à 20 collaborateurs. Pour un afterwork, une journée d'intégration ou un team building ponctuel.",
-    },
-    {
-        title: "Séminaire leadership (demi-journée)",
-        description: "Atelier pratique et conférence interactive sur la prise de décision sous pression. Le parallèle entre le ring et le management.",
+        title: "Atelier découverte",
+        description: "Initiation à la boxe sans contact pour vos collaborateurs. Pour un afterwork, une journée d'intégration ou un team building ponctuel.",
     },
     {
         title: "Programme récurrent (hebdomadaire)",
@@ -95,7 +92,7 @@ const approches = [
             "Progression par étapes",
             "Niveau intermédiaire recommandé",
         ],
-        ideal: "Équipes déjà initiées, séminaires leadership",
+        ideal: "Équipes déjà initiées",
     },
 ];
 
@@ -103,10 +100,10 @@ const tiers = [
     {
         name: "Séance découverte",
         description: "Un atelier d'initiation pour tester la boxe avec votre équipe.",
-        price: "Sur devis",
+        price: "Offerte",
         features: [
-            "Atelier découverte de 60 min",
-            "Jusqu'à 10 participants",
+            "Séance d'initiation au studio",
+            "Pour 6 personnes",
             "Matériel fourni",
             "Sans engagement",
         ],
@@ -118,11 +115,11 @@ const tiers = [
         price: "Sur devis",
         priceNote: "",
         features: [
-            "Session de 60-90 min",
-            "Jusqu'à 20 participants",
+            "Échauffement, bases techniques, mise en pratique",
+            "Jeux de boxe et exercices physiques",
+            "Effectif défini avec vous",
             "Matériel fourni",
             "En entreprise ou au studio",
-            "Débriefing collectif",
         ],
         cta: { text: "Demander un devis", href: "/contact" },
     },
@@ -133,26 +130,12 @@ const tiers = [
         priceNote: "",
         features: [
             "1 à 2 séances par semaine",
+            "Environ 48 semaines par an",
             "Programme évolutif",
-            "Suivi des progrès",
-            "Rapport trimestriel",
             "Tarif dégressif",
         ],
         cta: { text: "Demander un devis", href: "/contact" },
         highlighted: true,
-    },
-    {
-        name: "Séminaires & Keynotes",
-        description: "Le parallèle entre le ring et l'entreprise.",
-        price: "Sur devis",
-        priceNote: "",
-        features: [
-            "Conférence interactive",
-            "Atelier pratique inclus",
-            "Thèmes : leadership, prise de décision, effort",
-            "Adapté aux séminaires d'entreprise",
-        ],
-        cta: { text: "Demander un devis", href: "/contact" },
     },
 ];
 
@@ -171,15 +154,15 @@ const faqs = [
     },
     {
         question: "Quel espace prévoir dans nos bureaux ?",
-        answer: "Un minimum de 20m² avec un sol stable et dégagé suffit. Salle de réunion, open space, parking couvert — on s'adapte à votre configuration.",
+        answer: "Un minimum de 30 m² avec un sol stable et dégagé suffit. Salle de réunion, open space, parking couvert — on s'adapte à votre configuration.",
     },
     {
         question: "Combien de participants par séance ?",
-        answer: "Jusqu'à 20 personnes en déplacement, 12 au studio pour garantir un encadrement optimal sur le ring et les équipements.",
+        answer: "Cela dépend du format, que nous définissons avec vous. Les grands groupes sont possibles, 30 personnes et plus : il faut alors davantage de coachs.",
     },
     {
         question: "Quels sont les tarifs corporate ?",
-        answer: "Les séances corporate sont facturées entre 400 et 600 CHF selon le format, la durée et le nombre de participants. Les formules mensuelles bénéficient de tarifs dégressifs. <a href='/contact' class='link-line'>Demandez un devis personnalisé</a> pour un tarif précis.",
+        answer: "Les séances corporate coûtent entre CHF 220 et 600 selon le format, la durée et le nombre de participants. Nous envoyons le devis sous 48 h. Les formules mensuelles bénéficient de tarifs dégressifs. <a href='/contact' class='link-line'>Demandez un devis personnalisé</a> pour un tarif précis.",
     },
     {
         question: "Proposez-vous des contrats récurrents ?",
@@ -187,7 +170,7 @@ const faqs = [
     },
     {
         question: "Comment fonctionne la facturation ?",
-        answer: "Nous émettons une facture avec un délai de paiement de 30 jours. Le règlement par virement bancaire est privilégié pour les entreprises. <a href='/contact' class='link-line'>Contactez-nous</a> pour discuter des modalités.",
+        answer: "Nous émettons une facture, réglée avant la séance. Le règlement par virement bancaire est privilégié pour les entreprises. <a href='/contact' class='link-line'>Contactez-nous</a> pour discuter des modalités.",
     },
 ];
 ---
@@ -321,7 +304,7 @@ const faqs = [
     </section>
 
     <PricingTable
-        title="Quatre formats pour répondre à vos besoins"
+        title="Trois formats pour répondre à vos besoins"
         tiers={tiers}
     />
 
@@ -333,7 +316,7 @@ const faqs = [
             {
                 title: "Compétiteur et formateur",
                 description:
-                    "Licencié SwissBoxing #102860, formé dans les clubs genevois historiques. Nicolas a adapté la rigueur de la compétition au monde de l'entreprise.",
+                    "Licencié SwissBoxing #102860, formé au Cercle des Sports de Genève. Nicolas a adapté la rigueur de la compétition au monde de l'entreprise.",
             },
             {
                 title: "Entraîneur agréé Swiss Boxing",
@@ -380,6 +363,8 @@ const faqs = [
     />
 
     <RelatedServices currentSlug="corporate" />
+
+    <RelatedArticles title="Nos articles pour les entreprises" filterCategory="corporate" />
 
     <FAQ
         id="faq"

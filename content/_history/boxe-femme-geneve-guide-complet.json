@@ -85,5 +85,53 @@
       "Lionel co-encadre les petits groupes : à confirmer, et autorisation de le nommer",
       "Déroulé de séance 60 min et paragraphe à la première personne signé Nicolas"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "data",
+        "detail": "ancienne : « pas de vestiaire partagé » (TL;DR), vestiaires privés, douches individuelles (corps, CTA studio) | nouvelle : deux vestiaires (femmes, hommes) avec une douche dans chacun",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : petit groupe de 4 à 8 personnes (TL;DR, formats) | nouvelle : 2 à 8",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : contact progressif après plusieurs mois pour celles qui le souhaitent | nouvelle : contact uniquement en séance privée, proposé par le coach s'il estime la personne prête",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : petit groupe féminin présenté comme existant | nouvelle : constitué sur demande, pas de groupe existant",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : première séance en quatre temps minutés (10/20/20/10 min) | nouvelle : sans minutage fixe, sur mesure ; mêmes blocs sans durée",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : le studio fournit gants, bandes, pattes d'ours ; serviettes et produits de douche | nouvelle : gants prêtés 12 et 14 oz désinfectés, sous-gants prêtés ; baskets réservées à l'intérieur",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : protège-dents si sparring léger | nouvelle : précisé « en séance privée »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

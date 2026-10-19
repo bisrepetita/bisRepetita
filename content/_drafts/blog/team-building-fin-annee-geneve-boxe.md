@@ -218,3 +218,16 @@ Preuve sociale locale (module B) : aucun témoignage client validé (`PRODUCT.md
 ## Citations exploitables (GEO — Quotation Addition)
 - « team building has a positive moderate effect across all team outcomes » — Klein, DiazGranados, Salas et al., *Small Group Research*, 2009 (https://stars.library.ucf.edu/facultybib2000/1735). Citer en anglais entre guillemets avec traduction, ou paraphraser en français en attribuant.
 - Vacances de Noël et Nouvel An « du jeudi 24 décembre 2026 au vendredi 8 janvier 2027 » — République et canton de Genève (ge.ch). Fait daté, à reprendre tel quel.
+
+## Réponses de Nicolas (2026-10-19)
+
+Brief abandonné (statut inchangé) ; réponses utiles pour la section « Une session en décembre » de `team-building-boxe-geneve-cohesion-equipe`.
+
+- **D1 capacité** : dépend du format, définie avec le client ; 30 personnes et plus, c'est faisable avec plus de coachs. Retirer les plafonds 20/12/10/8.
+- **D2 zone** : jusqu'à 30 km autour du canton de Genève ; pas en France.
+- **D3 devis** : sous 48 h. Facturation et paiement avant la séance.
+- **D4 séance découverte** : gratuite, gardée, pour 6 personnes.
+- **D5 tarif** : entre CHF 220 et 600 la séance selon le format.
+- **D6 pratique** : deux vestiaires (femmes, hommes), une douche dans chacun ; tenue de sport et baskets d'intérieur ; créneaux à n'importe quel moment de la journée ; surface minimale 30 m² sur site.
+- **D7 déroulé** : échauffement, explication des bases techniques, mise en pratique, jeux de boxe et exercices physiques, sans minutage.
+- **Restent ouverts** : dates de fermeture de fin d'année (inconnues) ; date limite pour une session avant Noël.

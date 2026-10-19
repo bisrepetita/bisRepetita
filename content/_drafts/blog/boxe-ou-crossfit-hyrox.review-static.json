@@ -2,11 +2,11 @@
   "contract_version": 1,
   "rules_version": 1,
   "mode": "shadow",
-  "generated_at": "2026-10-17T18:18:42+00:00",
+  "generated_at": "2026-10-19T20:53:47+00:00",
   "article": "content/_drafts/blog/boxe-ou-crossfit-hyrox.article.mdx",
-  "article_hash": "sha256:68506c10391f1900de6a9b8bdacd1507a7fa0b3fa0de5919f5f8a98c6c6462cc",
+  "article_hash": "sha256:9f65028fad611a7df79b08d980ce4e82422e6c62639d7393c2165b2dfc000f0f",
   "summary": {
-    "errors": 1,
+    "errors": 0,
     "warnings": 1,
     "evaluated": 38,
     "not_evaluated": 4
@@ -160,16 +160,16 @@
       "rule": "links.contextual_target_per_1000_min",
       "status": "PASS",
       "severity": "warning",
-      "detail": "4.19 internal links / 1000 words",
-      "observed": 4.19,
+      "detail": "4.12 internal links / 1000 words",
+      "observed": 4.12,
       "target": 3
     },
     {
       "rule": "links.contextual_target_per_1000_max",
       "status": "PASS",
       "severity": "warning",
-      "detail": "4.19 internal links / 1000 words",
-      "observed": 4.19,
+      "detail": "4.12 internal links / 1000 words",
+      "observed": 4.12,
       "target": 6
     },
     {
@@ -230,10 +230,10 @@
     },
     {
       "rule": "cta.final_unique",
-      "status": "FAIL",
+      "status": "PASS",
       "severity": "error",
-      "detail": "0 final CTA",
-      "observed": 0,
+      "detail": "1 final CTA",
+      "observed": 1,
       "expected": 1
     },
     {

@@ -53,5 +53,38 @@
       "Fourchettes de prix du marché suisse (non sourcées, texte existant)",
       "Signature Nicolas sur un texte modifié"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "data",
+        "detail": "ancienne : studio fournit gants en 10, 12, 14 et 16 oz, nettoyés | nouvelle : gants prêtés en 12 et 14 oz, désinfectés après chaque séance",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : « gants, bandes et matériel fournis » (CTA, section studio, FAQ, conclusion) | nouvelle : gants et sous-gants prêtés à chaque séance",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : « Beaucoup de débutantes… réalisent en les essayant que le 10 oz leur convient mieux » | nouvelle : on teste 12 et 14 oz au studio, le coach dit si un 10 oz conviendrait mieux ; conseils d'achat inchangés",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : « à la tête du studio depuis cinq ans » | nouvelle : « fondateur du studio »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

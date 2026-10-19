@@ -74,5 +74,38 @@
       "Horaires d'ouverture : article disait 9h-20h / sam 10h-18h / dim 11h-18h, page studio 7h-21h (TODO non confirmé) : retirés, à trancher",
       "Cercle des Sports de Genève : origine retirée faute de validation"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "data",
+        "detail": "ancienne : vestiaire privé, douche et serviettes fournies (TL;DR, corps ×3, CTA ×2) | nouvelle : deux vestiaires (femmes, hommes) avec une douche dans chacun",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : petit groupe de 4 à 8 personnes | nouvelle : 2 à 8",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : « je dirige Bis Repetita depuis cinq ans » | nouvelle : durée retirée",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : CTA « Matériel fourni » | nouvelle : « Gants prêtés »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

@@ -72,5 +72,43 @@
       "Anecdote « aucune pratiquante suivie n'est devenue massive, aucune n'a changé de taille de vêtements »",
       "« les femmes qui avaient peur deviennent souvent des pratiquantes régulières »"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "data",
+        "detail": "ancienne : « cinq ans à la tête du studio » (4 occurrences, dont sources) | nouvelle : durée retirée",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "reinforce",
+        "detail": "ancienne : « aucune n'est devenue massive… aucune n'a eu à changer de taille de vêtements » | nouvelle : pas de prise de masse observée ; un changement de taille arrive quand l'objectif est la perte de poids",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "reinforce",
+        "detail": "ancienne : H2 « Ce qu'on observe vraiment après trois mois », posture signalée « dès la troisième ou quatrième semaine » | nouvelle : « avec la pratique », « parmi les premiers changements »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : petit groupe de 4 à 8 personnes | nouvelle : 2 à 8",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : vestiaires privés | nouvelle : deux vestiaires (femmes, hommes)",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

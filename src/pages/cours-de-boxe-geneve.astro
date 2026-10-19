@@ -21,7 +21,7 @@ const facts = [
     { k: "Formats", v: "Solo, duo, petit groupe, collectif" },
     { k: "Âge", v: "Aucune limite pour débuter" },
     { k: "Niveau requis", v: "Aucun" },
-    { k: "Matériel", v: "Gants et bandes fournis" },
+    { k: "Matériel", v: "Gants et sous-gants prêtés" },
     { k: "Studio", v: "La Voie-Creuse 16, Genève" },
 ];
 
@@ -72,14 +72,14 @@ const typesDePratique = [
 ];
 
 const firstSession = [
-    { t: "Échauffement", m: "10 à 15 min", d: "Corde à sauter, mobilité, shadow boxing léger. Le coach observe votre posture, votre coordination et votre souffle." },
-    { t: "Technique de base", m: "20 min", d: "La garde, le jab, le direct arrière, le déplacement latéral. Le coach décompose chaque geste et corrige : appuis, rotation du buste, retour de la main." },
-    { t: "Travail aux pattes d'ours", m: "15 min", d: "Le coach tient les pattes, vous enchaînez les combinaisons. Vous dosez la puissance et coordonnez bras et jambes." },
-    { t: "Retour au calme", m: "5 à 10 min", d: "Étirements, gainage léger, bilan. Le coach vous donne un ou deux points à travailler la prochaine fois." },
+    { t: "Échauffement", d: "Corde à sauter, mobilité, shadow boxing léger. Le coach observe votre posture, votre coordination et votre souffle." },
+    { t: "Technique de base", d: "La garde, le jab, le direct arrière, le déplacement latéral. Le coach décompose chaque geste et corrige : appuis, rotation du buste, retour de la main." },
+    { t: "Travail aux pattes d'ours", d: "Le coach tient les pattes, vous enchaînez les combinaisons. Vous dosez la puissance et coordonnez bras et jambes." },
+    { t: "Retour au calme", d: "Étirements, gainage léger, bilan. Le coach vous donne un ou deux points à travailler la prochaine fois." },
 ];
 
 const objections = [
-    { t: "« Je vais prendre des coups »", d: "Non, et jamais sans votre accord. Un cours débutant se concentre sur la technique : posture, garde, déplacements, frappes au sac et aux pattes d'ours. Le sparring vient après plusieurs mois, uniquement si vous le souhaitez." },
+    { t: "« Je vais prendre des coups »", d: "Non, et jamais sans votre accord. Un cours débutant se concentre sur la technique : posture, garde, déplacements, frappes au sac et aux pattes d'ours. Le sparring n'existe qu'en séance privée : le coach peut le proposer s'il vous estime prêt, et vous demande si cela vous intéresse." },
     { t: "« J'ai 35 ans, c'est trop tard »", d: "Commencer à 30, 35 ou 40 ans est courant. Vous n'êtes pas là pour devenir champion, mais pour progresser et vous sentir bien. Le coach adapte la séance à votre corps." },
     { t: "« Je n'ai pas le physique »", d: "Personne ne l'a en arrivant. La condition physique se construit avec la pratique. Les premières séances partent de votre niveau réel." },
     { t: "« L'ambiance des clubs me fait peur »", d: "Les clubs associatifs ont parfois une atmosphère compétitive qui ne convient pas à tout le monde. C'est une des raisons d'être du {link} : un espace fermé, un coaching individualisé." },
@@ -89,10 +89,10 @@ const formats = [
     { t: "Coaching privé", d: "Le format historique de Bis Repetita : un coach, votre rythme, votre programme. Regroupe le solo, le duo, le trio et le petit groupe.", href: "/services/coaching-prive" },
     { t: "Coaching solo", d: "Séance individuelle avec Nicolas de Boccard. 60 minutes, toute l'attention du coach sur votre technique.", href: "/services/coaching-solo" },
     { t: "Coaching duo & trio", d: "Le coaching privé à deux ou trois : même encadrement, coût partagé. Pour les couples, amis ou collègues.", href: "/services/coaching-duo-trio" },
-    { t: "Small Group Training", d: "De 4 à 8 personnes. Entre coaching privé et cours collectif : l'énergie du groupe, un suivi technique précis.", href: "/services/small-group-training" },
+    { t: "Small Group Training", d: "De 2 à 8 personnes, en groupe stable. Entre coaching privé et cours collectif : l'énergie du groupe, un suivi technique précis.", href: "/services/small-group-training" },
     { t: "Coaching à domicile", d: "Le coach vient chez vous, partout dans le canton de Genève, avec le matériel (gants, pattes d'ours, tapis, corde). À Cologny, Versoix, Champel ou Carouge.", href: "/services/coaching-boxe-domicile" },
     { t: "Round by Round", d: "Cours collectif structuré en rounds chronométrés. 8 personnes au plus, un coach, 50 minutes, CHF 40 la séance.", href: "/services/round-by-round" },
-    { t: "Corporate et team building", d: "Pour les entreprises genevoises : team building, séances bien-être, masterclass technique. Au studio ou dans vos locaux, sur devis.", href: "/services/corporate" },
+    { t: "Corporate et team building", d: "Pour les entreprises genevoises : team building, séances bien-être, masterclass technique. Au studio ou dans vos locaux, de CHF 220 à 600 la séance.", href: "/services/corporate" },
     { t: "Boxe femme", d: "Cadre privé, intensité ajustée, aucun contact imposé. Pour débuter la boxe à Genève en solo, en duo ou en petit groupe.", href: "/services/boxe-femme" },
 ];
 
@@ -103,15 +103,15 @@ const faqs = [
     },
     {
         question: "À quel âge peut-on commencer la boxe ?",
-        answer: "Il n'y a pas d'âge limite pour débuter. Nos élèves ont entre 25 et 65 ans. La boxe éducative s'adapte à chaque condition physique — l'important est d'être encadré par un professionnel qui ajuste l'intensité.",
+        answer: "Il n'y a pas d'âge limite pour débuter. La plupart de nos débutants ont entre 27 et 50 ans. La boxe éducative s'adapte à chaque condition physique — l'important est d'être encadré par un professionnel qui ajuste l'intensité.",
     },
     {
         question: "Quel équipement faut-il pour débuter ?",
-        answer: "Pour votre première séance : une tenue de sport confortable et des baskets propres suffisent. Gants, bandes et tout le matériel technique sont fournis par le studio. Si vous souhaitez acheter vos propres gants par la suite, comptez entre CHF 50 et 80.",
+        answer: "Pour votre première séance : une tenue de sport confortable et des baskets réservées à l'intérieur suffisent. Le studio prête les gants (12 et 14 oz, désinfectés après chaque séance), les sous-gants et tout le matériel technique. Si vous souhaitez acheter vos propres gants par la suite, comptez entre CHF 50 et 80.",
     },
     {
         question: "La boxe est-elle dangereuse pour un débutant ?",
-        answer: "Non. La boxe éducative se pratique sans contact entre participants. Tout le travail se fait au sac et aux pattes d'ours tenues par le coach. Il n'y a aucun sparring tant que vous ne le demandez pas — et même là, c'est progressif et encadré. <a href='/services/corporate#faq' class='link-line'>En savoir plus sur la sécurité</a>.",
+        answer: "Non. La boxe éducative se pratique sans contact entre participants. Tout le travail se fait au sac et aux pattes d'ours tenues par le coach. Le sparring n'existe qu'en séance privée : le coach peut le proposer s'il vous estime prêt, et vous demande si cela vous intéresse. C'est progressif et encadré. <a href='/services/corporate#faq' class='link-line'>En savoir plus sur la sécurité</a>.",
     },
     {
         question: "Combien de séances par semaine pour progresser ?",
@@ -123,7 +123,7 @@ const faqs = [
     },
     {
         question: "Y a-t-il du contact dès le premier cours ?",
-        answer: "Non. Nos séances sont sans contact par défaut. Vous frappez le sac et les pattes d'ours, jamais une autre personne. Le sparring n'arrive que bien plus tard, sur demande, après une progression technique validée par le coach.",
+        answer: "Non. Nos séances sont sans contact par défaut. Vous frappez le sac et les pattes d'ours, jamais une autre personne. Le sparring n'existe qu'en séance privée : le coach peut le proposer s'il vous estime prêt, et vous demande si cela vous intéresse.",
     },
     {
         question: "La boxe fait-elle maigrir ?",
@@ -198,14 +198,14 @@ const faqs = [
     <section id="premiere-seance" class="section method">
         <div class="wrap split">
             <div class="split-head">
-                <h2 class="t-title" data-split>Votre première séance de boxe, minute par minute</h2>
-                <p>Vous arrivez au studio, La Voie-Creuse 16. Vestiaire privé, douche et serviettes fournis : vous venez en tenue de sport, le reste est sur place. Voici les 60 minutes, sans sparring ni mise en situation de combat.</p>
+                <h2 class="t-title" data-split>Votre première séance de boxe, étape par étape</h2>
+                <p>Vous arrivez au studio, La Voie-Creuse 16. Deux vestiaires, femmes et hommes, avec une douche dans chacun : vous venez en tenue de sport, le reste est sur place. Voici une première séance type, sans sparring ni mise en situation de combat. Chaque séance privée est ensuite construite sur mesure.</p>
             </div>
             <ol class="list steps">
                 {firstSession.map((s, i) => (
                     <li>
                         <span class="step-n">{i + 1}</span>
-                        <h3 class="t-subtitle">{s.t} <span class="step-m">{s.m}</span></h3>
+                        <h3 class="t-subtitle">{s.t}</h3>
                         <p>{s.d}</p>
                     </li>
                 ))}
@@ -286,7 +286,6 @@ const faqs = [
     .steps li { grid-template-columns: 48px minmax(0, 1fr); column-gap: 16px; }
     .steps p { grid-column: 2; }
     .step-n { grid-row: span 2; font-size: 14px; color: var(--gray-2); font-variant-numeric: tabular-nums; padding-top: 6px; }
-    .step-m { font-size: 14px; font-weight: 400; letter-spacing: 0; color: var(--gray-2); margin-left: 8px; }
 
     .formats-head { display: grid; gap: 16px; max-width: 760px; margin-bottom: clamp(32px, 4vw, 56px); }
     .formats-head p { color: var(--gray-1); }

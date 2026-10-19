@@ -59,5 +59,38 @@
       "Surface minimum 30 m² sur site",
       "Fourchettes du tableau (estimations sans source datée)"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "reinforce",
+        "detail": "ancienne : Notre avis « Si vous voulez réunir 40 personnes en une seule fois, ni la boxe ni l'escalade ne sont le bon choix… » | nouvelle : 30 personnes ou plus faisable avec davantage de coachs, format défini avec le client",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : Coaching small group 4 à 8 participants | nouvelle : 2 à 8",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : Demi-journée thématique (initiation, exercices collectifs, temps convivial) | nouvelle : Session team building (échauffement, bases techniques, mise en pratique, jeux de boxe et exercices physiques)",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : zone Genève centre et communes proches ; devis spécifique hors zone (corps et FAQ) | nouvelle : canton de Genève et jusqu'à 30 km autour, hors France",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

@@ -2,11 +2,11 @@
   "contract_version": 1,
   "rules_version": 1,
   "mode": "shadow",
-  "generated_at": "2026-10-17T18:13:13+00:00",
+  "generated_at": "2026-10-19T20:53:47+00:00",
   "article": "content/_drafts/blog/boxe-ou-pilates-se-tonifier.article.mdx",
-  "article_hash": "sha256:9cb4bb523730a20c7268e87db3ca329196891474615446ad82f93099230a57ae",
+  "article_hash": "sha256:ef883b55a8b1b71280e333f5ca8a962fd669ccb09289c3a19ccf53c47d0caa22",
   "summary": {
-    "errors": 1,
+    "errors": 0,
     "warnings": 0,
     "evaluated": 38,
     "not_evaluated": 4
@@ -160,16 +160,16 @@
       "rule": "links.contextual_target_per_1000_min",
       "status": "PASS",
       "severity": "warning",
-      "detail": "3.72 internal links / 1000 words",
-      "observed": 3.72,
+      "detail": "3.69 internal links / 1000 words",
+      "observed": 3.69,
       "target": 3
     },
     {
       "rule": "links.contextual_target_per_1000_max",
       "status": "PASS",
       "severity": "warning",
-      "detail": "3.72 internal links / 1000 words",
-      "observed": 3.72,
+      "detail": "3.69 internal links / 1000 words",
+      "observed": 3.69,
       "target": 6
     },
     {
@@ -230,10 +230,10 @@
     },
     {
       "rule": "cta.final_unique",
-      "status": "FAIL",
+      "status": "PASS",
       "severity": "error",
-      "detail": "0 final CTA",
-      "observed": 0,
+      "detail": "1 final CTA",
+      "observed": 1,
       "expected": 1
     },
     {

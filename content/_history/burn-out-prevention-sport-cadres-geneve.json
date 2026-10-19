@@ -66,5 +66,28 @@
       "Notre avis (formulation santé à relire par Nicolas)",
       "Fréquences recommandées (1 à 2 séances/semaine, 40 semaines/an) : repère du studio, non sourcé"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "data",
+        "detail": "ancienne : petit groupe 4 à 8 personnes | nouvelle : 2 à 8",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : FAQ « 40 semaines ou plus par an » | nouvelle : « environ 48 semaines par an »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

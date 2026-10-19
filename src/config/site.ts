@@ -42,7 +42,7 @@ export const servicePages: ServicePage[] = [
   {
     slug: "small-group-training",
     title: "Small Group Training",
-    shortDescription: "L'énergie du groupe, la précision du privé. De 4 à 8 personnes.",
+    shortDescription: "L'énergie du groupe, la précision du privé. De 2 à 8 personnes.",
     href: "/services/small-group-training",
     image: cours2Landscape,
     category: "prive",
@@ -50,7 +50,7 @@ export const servicePages: ServicePage[] = [
   {
     slug: "coaching-boxe-domicile",
     title: "Coaching à domicile",
-    shortDescription: "Le coach et le matériel viennent chez vous, partout à Genève.",
+    shortDescription: "Le coach et le matériel viennent chez vous, dans le canton de Genève.",
     href: "/services/coaching-boxe-domicile",
     image: coursPortrait,
     category: "prive",
@@ -117,8 +117,8 @@ export const siteConfig = {
         items: [
           { text: "Solo", href: "/services/coaching-solo", meta: "1 personne", image: "nicolas-portrait.webp" },
           { text: "Duo & Trio", href: "/services/coaching-duo-trio", meta: "2 ou 3 personnes", image: "lionel-nicolas-boxe.webp" },
-          { text: "Small Group", href: "/services/small-group-training", meta: "4 à 8 personnes", image: "cours-2-landscape.webp" },
-          { text: "À domicile", href: "/services/coaching-boxe-domicile", meta: "Partout à Genève", image: "ambiance-bis-repetita.webp" },
+          { text: "Small Group", href: "/services/small-group-training", meta: "2 à 8 personnes", image: "cours-2-landscape.webp" },
+          { text: "À domicile", href: "/services/coaching-boxe-domicile", meta: "Canton de Genève", image: "ambiance-bis-repetita.webp" },
         ],
       },
       {

@@ -48,40 +48,43 @@ const sections = [
     {
         id: "small-group",
         title: "Small Group Training : tarifs petit groupe",
-        text: "De 4 à 8 personnes, pour que Nicolas puisse corriger chaque mouvement.",
+        text: "De 2 à 8 personnes, en groupe stable, pour que Nicolas puisse corriger chaque mouvement. Prix du groupe pour la séance, à partager.",
         link: { href: "/services/small-group-training", text: "Le small group training" },
-        // TODO prix par personne à confirmer par Nicolas (CHF 200 / 1’800 = tarif pour un groupe de 4).
-        rows: [{ f: "Small Group", d: "à partir de 4 personnes · 60 min", s: "CHF 200", p: "CHF 1’800" }],
+        rows: [{ f: "Small Group", d: "2 à 8 personnes · 60 min · prix du groupe", s: "CHF 200", p: "CHF 1’800" }],
     },
     {
         id: "boxe-groupe",
         title: "Cours collectifs Round by Round : tarifs boxe Genève",
-        text: "Ouvert à tous les niveaux, sans combat. Un coach, 8 personnes au plus.",
+        text: "Ouvert à tous les niveaux, sans combat ni prérequis. Un coach, 8 personnes au plus. Première séance offerte ; packs et abonnements disponibles, écrivez-nous.",
         link: { href: "/services/round-by-round", text: "Le cours Round by Round" },
-        rows: [{ f: "Round by Round", d: "1 coach · 50 min · 8 personnes au plus", s: "CHF 40", p: null }],
+        rows: [{ f: "Round by Round", d: "1 coach · 50 min · 8 personnes au plus · prix à la séance", s: "CHF 40", p: "sur demande" }],
     },
     {
         id: "domicile",
         title: "Coaching de boxe à domicile",
-        text: "Le coach et le matériel viennent chez vous, partout à Genève.",
+        text: "Le coach et le matériel viennent chez vous, dans le canton de Genève. Au-delà, sur devis.",
         link: { href: "/services/coaching-boxe-domicile", text: "Le coaching à domicile" },
-        rows: [{ f: "À domicile", d: "selon le lieu et le nombre de personnes", s: "dès CHF 150", p: null }],
+        rows: [
+            { f: "Solo", d: "1 personne", s: "dès CHF 150", p: null },
+            { f: "Duo", d: "2 personnes", s: "dès CHF 170", p: null },
+            { f: "Trio", d: "3 personnes", s: "dès CHF 190", p: null },
+        ],
     },
 ];
 
 const corporate = [
     ["Pour", "Team building, bien-être, cohésion d'équipe"],
-    ["Lieu", "Au studio ou dans vos locaux, à Genève et environs"],
+    ["Lieu", "Au studio ou dans vos locaux, jusqu'à 30 km autour du canton de Genève (pas en France)"],
     ["Formats", "Séance unique, programme récurrent ou événement"],
     ["Matériel", "Fourni pour tous les participants"],
-    ["Tarif", "Sur devis"],
-    ["Facturation", "Entreprise, paiement à 30 jours"],
+    ["Tarif", "Entre CHF 220 et 600 la séance selon le format, devis sous 48 h"],
+    ["Facturation", "Facture entreprise, paiement avant la séance"],
 ];
 
-// Conditions (la « première séance d'essai offerte » est retirée : l'offre n'existe plus).
+// Conditions (essai gratuit : Round by Round seulement, voir FAQ).
 const conditions = [
-    ["Matériel", "Gants, bandes et protections fournis. Venez en tenue de sport."],
-    ["Vestiaires", "Vestiaires et douches sur place, avant ou après le travail."],
+    ["Matériel", "Gants (12 et 14 oz) et sous-gants prêtés. Venez en tenue de sport, avec des baskets réservées à l'intérieur."],
+    ["Vestiaires", "Deux vestiaires, femmes et hommes, avec une douche dans chacun."],
     ["Suivi", "Un programme adapté à vos objectifs, à votre niveau et à vos contraintes."],
     ["Packs", "Valables 6 mois dès la date d'achat. Sans abonnement."],
     ["Annulation", "Gratuite jusqu'à 24 h avant la séance."],
@@ -94,7 +97,7 @@ const conditions = [
 const faqs = [
     {
         question: "Proposez-vous une séance d'essai ?",
-        answer: "Pour le coaching privé, la première séance commence par un bilan : vos objectifs, votre passé sportif, vos limites. Pour Round by Round, vous réservez directement un créneau. <a href='/#planning' class='link-line'>Voir le planning</a>.",
+        answer: "Oui, pour Round by Round : votre première séance est offerte, vous réservez directement un créneau, sans prérequis. <a href='/#planning' class='link-line'>Voir le planning</a>. En coaching privé, il n'y a pas d'essai gratuit : la première séance se paie au tarif du format et commence par un échange sur vos objectifs, votre passé sportif et vos blessures éventuelles.",
     },
     {
         question: "Les packs ont-ils une date d'expiration ?",
@@ -106,15 +109,15 @@ const faqs = [
     },
     {
         question: "Quels modes de paiement acceptez-vous ?",
-        answer: "Nous acceptons les paiements par virement bancaire, Twint et espèces. Pour les entreprises, nous émettons des factures avec un délai de 30 jours.",
+        answer: "Nous acceptons les paiements par virement bancaire, Twint et espèces. Pour les entreprises, la facture est réglée avant la séance.",
     },
     {
         question: "Comment fonctionne la facturation corporate ?",
-        answer: "Les <a href='/services/corporate' class='text-primary hover:underline'>programmes corporate</a> font l'objet d'un devis personnalisé. La facturation se fait par virement avec un délai de 30 jours. <a href='/contact' class='text-primary hover:underline'>Contactez-nous</a> pour en discuter.",
+        answer: "Les <a href='/services/corporate' class='text-primary hover:underline'>programmes corporate</a> font l'objet d'un devis personnalisé, envoyé sous 48 h : entre CHF 220 et 600 la séance selon le format. La facture est réglée avant la séance. <a href='/contact' class='text-primary hover:underline'>Contactez-nous</a> pour en discuter.",
     },
     {
         question: "Les séances de coaching sont-elles déductibles des impôts ou prises en charge par l'assurance à Genève ?",
-        answer: "À Genève, les frais de coaching sportif ne sont généralement pas déductibles des impôts pour les particuliers. Certaines assurances complémentaires (Helsana, Swica, CSS) proposent des contributions santé qui peuvent couvrir une partie des cours. Nous vous conseillons de vérifier auprès de votre assureur.",
+        answer: "À Genève, les frais de coaching sportif ne sont généralement pas déductibles des impôts pour les particuliers. Bis Repetita n'a pas de label reconnu par les assurances complémentaires : ne comptez pas sur une prise en charge, et vérifiez auprès de votre assureur.",
     },
     {
         question: "Quelle est votre politique d'annulation ?",
@@ -130,7 +133,7 @@ const faqs = [
 const offers = [
     { name: "Coaching Privé 1:1", description: "Séances individuelles de boxe avec programme personnalisé à Genève.", url: "/services/coaching-solo" },
     { name: "Coaching Duo & Trio", description: "Coaching privé partagé à 2 ou 3 personnes.", url: "/services/coaching-duo-trio" },
-    { name: "Small Group Training", description: "Coaching en petit groupe de 6 personnes maximum.", url: "/services/small-group-training" },
+    { name: "Small Group Training", description: "Coaching en petit groupe stable, de 2 à 8 personnes.", url: "/services/small-group-training" },
     { name: "Round by Round", description: "Cours collectifs de boxe accessibles à tous, sans combat.", url: "/services/round-by-round" },
     { name: "Programme Corporate", description: "Boxe en entreprise à Genève — team building et bien-être au travail.", url: "/services/corporate" },
 ];

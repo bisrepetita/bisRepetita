@@ -74,5 +74,53 @@
       "Lionel « encadre certaines séances » : autorisation de le nommer",
       "Fourchettes génériques club 20-30 CHF / coach indépendant 80-140 CHF / fitness 150-250 CHF par mois : ordres de grandeur non sourcés"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "data",
+        "detail": "ancienne : Small Group 4 à 8 pers., « dès 200 CHF » / « 200 CHF et plus » (TL;DR, intro, 2 tableaux, sections, FAQ) | nouvelle : 2 à 8 pers., 200 CHF la séance pour le groupe à partager (25 à 100 CHF/pers), groupe stable",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : Round by Round « séances à l'unité, sans pack » (tableau, FAQ) | nouvelle : packs et abonnements existent, renvoi vers /tarifs ; première séance gratuite (TL;DR, tableau, section, FAQ abonnement)",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : FAQ « première séance à l'unité, au tarif du format choisi » | nouvelle : gratuite en Round by Round, au tarif du format en coaching privé",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : domicile « dès 150 CHF », pack « sur demande », tarif selon la zone (Genève intra-muros, Versoix…) | nouvelle : dès 150 CHF seul, 170 à deux, 190 à trois, canton de Genève, au-delà sur devis ; pas de pack ; packs « hors domicile »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : corporate « devis sur demande », « facturation 30 jours » | nouvelle : 220 à 600 CHF la séance selon le format, devis sous 48 h, paiement avant la séance",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : gants, bandes, pattes d'ours et sacs fournis ; matériel fourni (CTA) | nouvelle : gants 12 et 14 oz désinfectés et sous-gants prêtés, pattes d'ours et sacs sur place",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : vestiaire privé, douche et serviettes fournies | nouvelle : deux vestiaires (femmes, hommes) avec une douche dans chacun",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

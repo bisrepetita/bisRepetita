@@ -56,5 +56,38 @@
       "Tranche d'âge 30-50 ans fréquente chez les débutants du studio",
       "Notre avis après 40 ans"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "data",
+        "detail": "ancienne : « dont cinq à la tête du studio » (intro) et « 5 ans à la tête de Bis Repetita » (sources) | nouvelle : durée retirée",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : beaucoup de débutants entre 30 et 50 ans (TL;DR, corps, sources) | nouvelle : la plupart des débutants entre 27 et 50 ans",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "reinforce",
+        "detail": "ancienne : Notre avis « après 40 ans, commencez par quelques séances en coaching privé… Round by Round vient ensuite » | nouvelle : on peut commencer directement en Round by Round sans séance solo ; le privé est une option pour un suivi individuel",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : Small group 4 à 8 personnes | nouvelle : 2 à 8 personnes",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

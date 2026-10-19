@@ -68,5 +68,43 @@
       }
     ],
     "source": "docs/_research/2026-10-17-bisrepetita-rapport-gsc-3-mois.md"
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "data",
+        "detail": "ancienne : sparring « choix tardif discuté avec le coach » / « que vous ferez bien plus tard » (corps, FAQ) | nouvelle : uniquement en séance privée, proposé par le coach s'il estime la personne prête ; Round by Round et Small Group sans échange de coups",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : petit groupe de 4 à 8 personnes | nouvelle : 2 à 8",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : première séance minutée (10 / 10-15 / 15-20 / 10-15 / 5-10 min), « détail minute par minute » | nouvelle : sans minutage fixe, séance sur mesure ; mêmes blocs sans durée",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : CTA « Équipement fourni » | nouvelle : « Gants et sous-gants prêtés »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : « à la tête de Bis Repetita depuis cinq ans » (sources) | nouvelle : « fondateur de Bis Repetita »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

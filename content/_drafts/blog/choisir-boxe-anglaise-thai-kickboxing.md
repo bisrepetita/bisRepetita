@@ -275,3 +275,11 @@ Formulations tirées de la recherche du 2026-10-17 ; le writer vérifie la citat
 
 ## Spec machine
 Spec draft : `content/_drafts/blog/choisir-boxe-anglaise-thai-kickboxing.spec.draft.json` (sans hashes). Artefact gatekeeper : `.seo-data/gatekeeper-choisir-boxe-anglaise-thai-kickboxing.json`. La finalisation (`finalize_spec.py --research-artifact gatekeeper=…`) reste à faire après les décisions bloquantes ; l'image spec suivra la spec finalisée.
+
+## Réponses de Nicolas (2026-10-19)
+
+- **Périmètre (D2)** : à la question « on écrit que le studio n'enseigne que la boxe anglaise ? », Nicolas a répondu « Non ». **En attente de précision** : on ne sait pas ce que le studio enseigne d'autre ; ne rien écrire sur l'offre du studio en thaï ou kickboxing tant que ce n'est pas clarifié.
+- **Contact (D3)** : RbR = 1 coach, aucun échange de coups. Le contact (opposition, sparring même léger) se fait uniquement en séance privée pour l'instant, jamais en RbR ni en Small Group ; le coach le propose s'il estime la personne prête et lui demande si ça l'intéresse. Protège-dents non prêté, à apporter seulement en privé pour du sparring.
+- **Formation** : Nicolas a été formé au Cercle des Sports de Genève. Pas de « coachs certifiés ».
+- **D5 signature** : « Équipe Bis Repetita ».
+- **Restent ouverts** : précision sur la réponse « Non » (D2) ; D1 test GSC ; D4 règlements thaï et kickboxing.

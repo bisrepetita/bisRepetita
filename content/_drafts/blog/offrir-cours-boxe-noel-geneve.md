@@ -1,7 +1,7 @@
 ---
 slug: offrir-cours-boxe-noel-geneve
-status: blocked
-blocked_by: format, prix et validité du bon non décidés (D1 à D6 ci-dessous)
+status: brief
+open_points: D8 dates de fermeture de Noël inconnues ; D10 page /offrir-un-cours à aligner (format, prix et validité décidés le 2026-10-19)
 planned_pubDate: 2026-11-17
 publish_before: 2026-11-23
 unblock_deadline: 2026-11-10
@@ -255,3 +255,17 @@ Aucune citation externe prévue dans l'article (sujet commercial ; la seule sour
 ## Spec machine
 
 Pas de `offrir-cours-boxe-noel-geneve.spec.draft.json` tant que le statut est `blocked` : la spec figerait un format, un prix et une validité non décidés. À compiler une fois D1–D6 tranchés, D10 fait et le brief passé par `brief-critic`.
+
+## Réponses de Nicolas (2026-10-19)
+
+- **D1 forme** : PDF envoyé par e-mail, au nom du bénéficiaire. Paiement en ligne, virement, Twint ou espèces.
+- **D2 et D3 contenu et prix** : tous les formats de la grille, aux prix de la grille ; pas de montant libre.
+- **D4 validité** : pas de durée de validité (n'en écrire aucune).
+- **D7** : transférable, non remboursable, échangeable contre un autre format.
+- **D6 coach** : avec n'importe quel coach du studio (aucun prénom sans accord écrit).
+- **D5 réservation** : planning en ligne pour le collectif, WhatsApp pour le privé.
+- **D12 âge** : mineurs acceptés dès un certain âge, avec autorisation (parent-enfant : dès 6 ans).
+- **D8 date de commande** : jusqu'au 22 décembre. **Dates de fermeture de Noël et du Nouvel An : inconnues** (ne rien écrire sur l'ouverture pendant les vacances).
+- **D9 entreprises** : pas d'offre entreprise (la FAQ 6 saute).
+- **D11 signature** : « Équipe Bis Repetita ».
+- **Restent ouverts** : D8 dates de fermeture ; D10 mise à jour de `/offrir-un-cours` (format, prix, paiement) avant publication ; brief à repasser par `brief-critic`.

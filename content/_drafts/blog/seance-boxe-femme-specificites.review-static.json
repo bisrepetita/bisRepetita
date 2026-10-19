@@ -2,11 +2,11 @@
   "contract_version": 1,
   "rules_version": 1,
   "mode": "shadow",
-  "generated_at": "2026-10-17T18:13:18+00:00",
+  "generated_at": "2026-10-19T20:53:47+00:00",
   "article": "content/_drafts/blog/seance-boxe-femme-specificites.article.mdx",
-  "article_hash": "sha256:0932543a91eab8ba335e72a722b4d83ca4e66afde11d90cf0d7ed33bcb006057",
+  "article_hash": "sha256:b532b84589ee51fc8269dca048550debddc28b35948be188be1ab890bf05f6a3",
   "summary": {
-    "errors": 1,
+    "errors": 0,
     "warnings": 1,
     "evaluated": 38,
     "not_evaluated": 4
@@ -160,16 +160,16 @@
       "rule": "links.contextual_target_per_1000_min",
       "status": "PASS",
       "severity": "warning",
-      "detail": "3.32 internal links / 1000 words",
-      "observed": 3.32,
+      "detail": "3.23 internal links / 1000 words",
+      "observed": 3.23,
       "target": 3
     },
     {
       "rule": "links.contextual_target_per_1000_max",
       "status": "PASS",
       "severity": "warning",
-      "detail": "3.32 internal links / 1000 words",
-      "observed": 3.32,
+      "detail": "3.23 internal links / 1000 words",
+      "observed": 3.23,
       "target": 6
     },
     {
@@ -230,10 +230,10 @@
     },
     {
       "rule": "cta.final_unique",
-      "status": "FAIL",
+      "status": "PASS",
       "severity": "error",
-      "detail": "0 final CTA",
-      "observed": 0,
+      "detail": "1 final CTA",
+      "observed": 1,
       "expected": 1
     },
     {

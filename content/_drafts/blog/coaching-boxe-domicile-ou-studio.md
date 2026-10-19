@@ -253,3 +253,13 @@ Pages du site à citer comme **sources de faits** (pas comme autorités externes
 
 ## Spec machine
 Spec draft : `content/_drafts/blog/coaching-boxe-domicile-ou-studio.spec.draft.json` (sans hashes). Artefact gatekeeper : `.seo-data/gatekeeper-coaching-boxe-domicile-ou-studio.json`. La finalisation (`finalize_spec.py --research-artifact gatekeeper=…`) reste à faire après les décisions bloquantes ; l'image spec suivra la spec finalisée.
+
+## Réponses de Nicolas (2026-10-19)
+
+- **D1 prix** : dès CHF 150 seul, CHF 170 à deux, CHF 190 à trois.
+- **D2 zone** : canton de Genève ; au-delà, sur devis.
+- **D3 pack** : pas de pack de 10 séances à domicile (à retirer de la page).
+- **D4 (partiel)** : une variante sans saut est proposée sur demande (règle générale du studio) ; pas de règle spécifique « immeuble » confirmée.
+- **Côté studio, pour la comparaison** : horaires lun.–ven. 9 h 30–19 h 30, sam. 9 h–18 h, dim. 10 h–18 h ; deux vestiaires (femmes, hommes) avec une douche chacun ; gants 12 et 14 oz et sous-gants prêtés ; haltères et kettlebells disponibles ; séance privée sans minutage fixe.
+- **D5 signature** : « Équipe Bis Repetita ».
+- **Restent ouverts** : règle de séance en appartement (bruit, voisins) ; matériel exact apporté à domicile.

@@ -264,3 +264,11 @@ Sources de la recherche du 2026-10-17 (`docs/_research/2026-10-17-sources-sante-
 
 ## Spec machine
 Spec draft : `content/_drafts/blog/reprendre-boxe-apres-grossesse.spec.draft.json` (sans hashes). Artefact gatekeeper : `.seo-data/gatekeeper-reprendre-boxe-apres-grossesse.json`. La finalisation (`finalize_spec.py --research-artifact gatekeeper=…`) reste à faire après les décisions bloquantes ; l'image spec suivra la spec finalisée.
+
+## Réponses de Nicolas (2026-10-19)
+
+- **D2 politique d'accueil** : feu vert médical requis avant de reprendre au studio.
+- **D3 variantes** : variante sans saut proposée sur demande.
+- **D4 (c)** : aucun prénom de coach (Eliza comprise) sans accord écrit.
+- **D5 signature** : « Équipe Bis Repetita ».
+- **Restent ouverts** : D1 relecteur santé (bloque la publication) ; délai minimal et forme du feu vert (écrit ou non) ; formats ouverts en post-partum (Solo seulement ou aussi RbR).

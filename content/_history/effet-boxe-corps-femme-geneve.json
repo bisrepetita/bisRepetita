@@ -81,5 +81,43 @@
       "« Notre avis » sur la fréquence",
       "Observations à la première personne (ordre d'apparition des effets, paliers semaines 1 / 8-12) : à confirmer par Nicolas"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "data",
+        "detail": "ancienne : « Je suis à la tête du studio depuis cinq ans » (intro) et « cinq ans à la tête du studio » (sources) | nouvelle : durée retirée",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "reinforce",
+        "detail": "ancienne : Notre avis « le cours collectif Round by Round complète bien une fois les bases posées » | nouvelle : « Round by Round se suit dès le début, sans bases à poser »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "reinforce",
+        "detail": "ancienne : ordre d'apparition « observé en studio, assez constant », posture « dès les toutes premières semaines », « presque toujours / presque systématiquement » (TL;DR, corps, conclusion) | nouvelle : ordre qui varie, posture « souvent » en premier",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "reinforce",
+        "detail": "ancienne : délais chiffrés présentés comme observation (semaine 1, semaine 8 à 12 ; paliers 3-4 semaines et 6-8 semaines ; FAQ « dès les 3 à 4 premières semaines », « rythme observé ») | nouvelle : paliers sans délai chiffré, formulation prudente ; horizon général 3 à 6 mois conservé",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : CTA « Équipement fourni » | nouvelle : « Gants et sous-gants prêtés »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

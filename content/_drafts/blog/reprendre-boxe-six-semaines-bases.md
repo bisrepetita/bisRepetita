@@ -259,3 +259,10 @@ Sources de terrain (analyse SERP, **pas** à citer, aucun club nommé) : `docs/_
 
 ## Spec machine
 Spec draft : `content/_drafts/blog/reprendre-boxe-six-semaines-bases.spec.draft.json` (sans hashes). Artefact gatekeeper : `.seo-data/gatekeeper-reprendre-boxe-six-semaines-bases.json`. La finalisation (`finalize_spec.py --research-artifact gatekeeper=…`) reste à faire après les décisions bloquantes ; l'image spec suivra la spec finalisée.
+
+## Réponses de Nicolas (2026-10-19)
+
+- **D1 plan des six semaines** : Nicolas validera le plan. Le rédiger comme proposition, puis le lui soumettre avant publication.
+- **Accès** : aucun prérequis pour Round by Round (on peut reprendre directement en collectif) ; première séance RbR offerte ; pas d'essai gratuit en privé ; séance privée sans minutage fixe. Small Group 2 à 8, groupe stable.
+- **Horaires** : lun.–ven. 9 h 30–19 h 30, sam. 9 h–18 h, dim. 10 h–18 h.
+- **Restent ouverts** : D2 dates de fermeture de Noël et du Nouvel An, et disponibilité RbR / Small Group en janvier ; D3 fréquence ; D5 date. Signature : « Équipe Bis Repetita ».

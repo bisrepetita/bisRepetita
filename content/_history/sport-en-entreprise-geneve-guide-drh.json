@@ -65,5 +65,63 @@
       "Sacs en cuir, douches individuelles",
       "Notre avis (studio d'abord ; pas adapté >30 personnes)"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "reinforce",
+        "detail": "ancienne : Notre avis « grand événement de plus de 30 personnes… la boxe n'est pas le format le plus adapté » | nouvelle : faisable avec davantage de coachs",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : groupes jusqu'à 8 personnes, plafond à 8, 4 à 8 en petit groupe, groupes de 6 à 8 (TL;DR, taille de groupe, budget, FAQ) | nouvelle : capacité définie avec le client selon le format, 30 personnes et plus avec davantage de coachs",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : zone Genève centre, Eaux-Vives, Carouge, Grand-Saconnex, Meyrin et communes proches ; « Genève et environs » | nouvelle : canton de Genève et jusqu'à 30 km autour, hors France (TL;DR, corps, FAQ)",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : tarif sur devis sans fourchette | nouvelle : entre 220 et 600 CHF la séance selon le format (budget, FAQ)",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : facturation mensuelle, annulation 48h | nouvelle : facturation et paiement avant la séance",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : demi-journée thématique de 2 heures, 6 à 8 personnes | nouvelle : session team building (échauffement, bases techniques, mise en pratique, jeux de boxe, exercices physiques)",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : attestation de prestations fournie (fiscalité, FAQ) | nouvelle : retirée (non confirmée)",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : vestiaires privés, douches individuelles, serviettes fournies | nouvelle : deux vestiaires (femmes, hommes) avec une douche dans chacun",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : « Depuis cinq ans que je dirige Bis Repetita » | nouvelle : « Depuis que je dirige Bis Repetita »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

@@ -1,7 +1,7 @@
 ---
 slug: boxe-parent-enfant-seance
 status: blocked
-blocked_by: offre parent-enfant non décidée (D1 à D8 et D13 bloquants ; D9 à D12 non bloquants, ci-dessous)
+blocked_by: D8 assurance RC couvrant les mineurs « à vérifier » (D1 à D7, D9, D13 répondus le 2026-10-19) ; D11 relecteur santé
 planned_pubDate: 2026-11-10
 unblock_deadline: 2026-11-03
 module: C
@@ -281,3 +281,17 @@ Retirée : la page officielle OFSP sur les recommandations ne donne pas le chiff
 ## Spec machine
 
 Pas de `boxe-parent-enfant-seance.spec.draft.json` tant que le statut est `blocked` : la spec figerait un format, un âge et un CTA qui n'existent pas. À compiler (`finalize_spec.py`) une fois D1–D8 tranchés et le brief passé par `brief-critic`.
+
+## Réponses de Nicolas (2026-10-19)
+
+- **D1 mineurs** : oui. Conséquence : corriger « Nous n'assurons pas de cours enfants » dans `a-quel-age-commencer-la-boxe` à la publication.
+- **D2 âge** : dès 6 ans.
+- **D3 format** : un ou deux parents avec un ou deux enfants.
+- **D4 prix** : prix de la séance d'un adulte + CHF 10 par enfant.
+- **D5** : à l'unité ou en cycle.
+- **D6 créneaux** : les dimanches (studio ouvert le dimanche de 10 h à 18 h).
+- **D7 encadrement** : l'un des coachs du studio (aucun prénom sans accord écrit).
+- **D13 présence du parent** : si le parent ne peut pas participer, un autre adulte autorisé peut le remplacer, ou la séance se fait avec l'enfant seul.
+- **D9 bon cadeau** : utilisable pour une séance parent-enfant.
+- **D8 assurance RC couvrant les mineurs** : « à vérifier » — **reste bloquant**. Ne rien promettre sur l'assurance tant que ce n'est pas confirmé.
+- **Restent ouverts** : D8 (bloquant), D11 relecteur santé, D12 cover ; autorisation du représentant légal (forme : document signé ou non) ; durée de séance. Signature : « Équipe Bis Repetita » (règle projet, jamais au nom de Nicolas).

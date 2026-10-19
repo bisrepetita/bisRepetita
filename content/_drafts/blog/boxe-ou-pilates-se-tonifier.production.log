@@ -20,3 +20,9 @@ HEALTH: relecture santé requise (H3 reprise, bloc Notre avis)
 6. Cover (diptyque) et images inline 2 et 3 à produire ; frontmatter image à ajouter avec la cover.
 7. Lint : cta.final_unique attend un lien /contact?... ; le projet utilise ArticleCta vers /#planning (règle inadaptée). Le TLDR est en blockquote canonique (brief/lint) et non en composant Tldr.
 8. Date "révisé le 27 octobre 2026" dans l'intro = pubDate.
+
+## 2026-10-19 — réponses de Nicolas (fiche faits du 17–19 oct.)
+- Corrigé (faits seulement) : phrase « Nous n'en proposons pas » (piloxing) retirée ; RbR CHF 40 à l'unité, première séance offerte, packs et abonnements ; CTA « Équipement fourni, aucun abonnement » → « Gants et sous-gants prêtés. Première séance Round by Round offerte. ». Le fichier intermédiaire .draft.md n'a pas été aligné (l'article.mdx fait foi).
+- Répondus : n° 2 signature (« Équipe Bis Repetita »), n° 5 prix (RbR 40 = unitaire, packs et abonnements existent ; renvoi /tarifs).
+- Avis en attente de précision Nicolas : n° 1, marqué « à modifier » sans détail ; texte laissé tel quel.
+- Restent ouverts : n° 3 lien vers seance-boxe-femme-specificites ; n° 4 relecture santé ; n° 6 cover et images ; n° 7 lint ; n° 8 date « révisé le ».

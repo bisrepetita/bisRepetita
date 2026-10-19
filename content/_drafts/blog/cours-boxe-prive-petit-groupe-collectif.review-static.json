@@ -2,11 +2,11 @@
   "contract_version": 1,
   "rules_version": 1,
   "mode": "shadow",
-  "generated_at": "2026-10-17T18:13:00+00:00",
+  "generated_at": "2026-10-19T20:53:47+00:00",
   "article": "content/_drafts/blog/cours-boxe-prive-petit-groupe-collectif.article.mdx",
-  "article_hash": "sha256:36e5143356df431a01d133afc03ad587d7b3f3297fcf7fe65077e7c45b4cd4bd",
+  "article_hash": "sha256:0afd5d8823f7a2a7fbf9314fc99bf2157bc3d57ad3415a1b7e4e17f492b744aa",
   "summary": {
-    "errors": 4,
+    "errors": 0,
     "warnings": 1,
     "evaluated": 38,
     "not_evaluated": 4
@@ -58,24 +58,24 @@
       "rule": "description.max_chars",
       "status": "PASS",
       "severity": "error",
-      "detail": "145 characters",
-      "observed": 145,
+      "detail": "129 characters",
+      "observed": 129,
       "maximum": 155
     },
     {
       "rule": "description.min_chars",
       "status": "PASS",
       "severity": "warning",
-      "detail": "145 characters",
-      "observed": 145,
+      "detail": "129 characters",
+      "observed": 129,
       "minimum": 70
     },
     {
       "rule": "description.max_estimated_px",
       "status": "PASS",
       "severity": "warning",
-      "detail": "estimated 954px",
-      "observed": 954,
+      "detail": "estimated 848px",
+      "observed": 848,
       "maximum": 960
     },
     {
@@ -160,16 +160,16 @@
       "rule": "links.contextual_target_per_1000_min",
       "status": "PASS",
       "severity": "warning",
-      "detail": "6.49 internal links / 1000 words",
-      "observed": 6.49,
+      "detail": "6.21 internal links / 1000 words",
+      "observed": 6.21,
       "target": 3
     },
     {
       "rule": "links.contextual_target_per_1000_max",
       "status": "WARN",
       "severity": "warning",
-      "detail": "6.49 internal links / 1000 words",
-      "observed": 6.49,
+      "detail": "6.21 internal links / 1000 words",
+      "observed": 6.21,
       "target": 6
     },
     {
@@ -202,24 +202,24 @@
     },
     {
       "rule": "tldr.present_before_first_h2",
-      "status": "FAIL",
+      "status": "PASS",
       "severity": "error",
-      "detail": "TLDR missing or misplaced"
+      "detail": "project TLDR component before first H2"
     },
     {
       "rule": "tldr.bullets",
-      "status": "FAIL",
+      "status": "PASS",
       "severity": "error",
-      "detail": "0 bullets",
-      "observed": 0,
+      "detail": "5 bullets",
+      "observed": 5,
       "minimum": 3,
       "maximum": 5
     },
     {
       "rule": "ending.order",
-      "status": "FAIL",
+      "status": "PASS",
       "severity": "error",
-      "detail": "required ending order missing"
+      "detail": "FAQ -> Conclusion -> Sources"
     },
     {
       "rule": "faq.questions_are_h3",
@@ -230,10 +230,10 @@
     },
     {
       "rule": "cta.final_unique",
-      "status": "FAIL",
+      "status": "PASS",
       "severity": "error",
-      "detail": "0 final CTA",
-      "observed": 0,
+      "detail": "1 final CTA",
+      "observed": 1,
       "expected": 1
     },
     {

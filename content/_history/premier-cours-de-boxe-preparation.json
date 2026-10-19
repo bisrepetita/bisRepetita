@@ -69,5 +69,63 @@
       }
     ],
     "source": "docs/_research/2026-10-17-bisrepetita-rapport-gsc-3-mois.md"
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "data",
+        "detail": "ancienne : déroulé « minute par minute » d'une séance privée (H2, intro, H3 Minutes 0-10 / 10-30 / 30-50 / 50-60, description) | nouvelle : « étape par étape », sans minutage fixe, séance sur mesure ; H3 sans minutes",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : « en Round by Round, la séance… suit la même logique, en plus resserré » | nouvelle : échauffement collectif puis circuit de 4 stations en binômes, dont pattes d'ours avec le coach",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : FAQ prix « première séance au tarif du format : CHF 40 en Round by Round » ; petit groupe « dès CHF 200 » | nouvelle : première séance Round by Round gratuite puis CHF 40 l'unité (packs et abonnements) ; première séance privée payante (CHF 120) ; petit groupe CHF 200 la séance pour le groupe, à partager",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : gants et bandes fournis (TL;DR, corps, CTA ×2, FAQ) | nouvelle : gants et sous-gants prêtés",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : vestiaire privé, douche, serviettes fournies (corps, alt image, après séance) | nouvelle : deux vestiaires (femmes, hommes) avec une douche dans chacun",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : sparring « bien plus tard, si vous le souhaitez » | nouvelle : uniquement en séance privée, si le coach estime la personne prête",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : petits groupes de 4 à 8 personnes (CTA) | nouvelle : 2 à 8",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : « dont cinq à la tête de Bis Repetita » | nouvelle : durée retirée",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ajout : baskets réservées à l'intérieur (TL;DR, liste tenue)",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

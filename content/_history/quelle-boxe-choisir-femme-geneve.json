@@ -61,5 +61,28 @@
       "« Notre avis » (y compris « fitness-boxing vous conviendra mieux que nos séances »)",
       "Meta (121 car., hors fourchette 130-155) laissée telle quelle : aucune promesse gratuite ni claim interdit"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "data",
+        "detail": "ancienne : « 5 ans à la tête de Bis Repetita » (sources) | nouvelle : « fondateur de Bis Repetita »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : CTA « Équipement fourni » | nouvelle : « Gants et sous-gants prêtés »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]

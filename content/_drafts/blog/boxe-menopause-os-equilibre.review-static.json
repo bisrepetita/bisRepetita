@@ -2,11 +2,11 @@
   "contract_version": 1,
   "rules_version": 1,
   "mode": "shadow",
-  "generated_at": "2026-10-17T18:15:47+00:00",
+  "generated_at": "2026-10-19T20:53:47+00:00",
   "article": "content/_drafts/blog/boxe-menopause-os-equilibre.article.mdx",
-  "article_hash": "sha256:581bea9c76c645332795787dae2e72f91fb5034465497750a64493f736a644ee",
+  "article_hash": "sha256:0365f21ddf7fa82a759cb62d7050f1b939aa2f312ecbdcf624278614c61ba7ad",
   "summary": {
-    "errors": 2,
+    "errors": 0,
     "warnings": 0,
     "evaluated": 38,
     "not_evaluated": 4
@@ -160,16 +160,16 @@
       "rule": "links.contextual_target_per_1000_min",
       "status": "PASS",
       "severity": "warning",
-      "detail": "3.35 internal links / 1000 words",
-      "observed": 3.35,
+      "detail": "3.29 internal links / 1000 words",
+      "observed": 3.29,
       "target": 3
     },
     {
       "rule": "links.contextual_target_per_1000_max",
       "status": "PASS",
       "severity": "warning",
-      "detail": "3.35 internal links / 1000 words",
-      "observed": 3.35,
+      "detail": "3.29 internal links / 1000 words",
+      "observed": 3.29,
       "target": 6
     },
     {
@@ -217,9 +217,9 @@
     },
     {
       "rule": "ending.order",
-      "status": "FAIL",
+      "status": "PASS",
       "severity": "error",
-      "detail": "required ending order missing"
+      "detail": "FAQ -> Conclusion -> Sources"
     },
     {
       "rule": "faq.questions_are_h3",
@@ -230,10 +230,10 @@
     },
     {
       "rule": "cta.final_unique",
-      "status": "FAIL",
+      "status": "PASS",
       "severity": "error",
-      "detail": "0 final CTA",
-      "observed": 0,
+      "detail": "1 final CTA",
+      "observed": 1,
       "expected": 1
     },
     {

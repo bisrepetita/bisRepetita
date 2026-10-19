@@ -20,7 +20,7 @@ import ambianceBis from "../assets/ambiance-bis-repetita.webp";
 const metadata = {
     title: "Salle de Boxe à Genève — Studio Privé La Voie-Creuse | Bis Repetita",
     description:
-        "Visitez notre salle de boxe au cœur de Genève : ring professionnel, 150 m² d'espace, vestiaires haut de gamme. La Voie-Creuse 16, 1202 Genève. Horaires et accès.",
+        "Visitez notre salle de boxe au cœur de Genève : ring professionnel, 150 m² d'espace, vestiaires avec douche. La Voie-Creuse 16, 1202 Genève. Horaires et accès.",
     ignoreTitleTemplate: true,
 };
 
@@ -34,11 +34,10 @@ const contactRows = [
     { k: "Parking", v: "À proximité (Sécheron)" },
 ];
 
-// TODO: confirmer les horaires avec Nicolas
 const hours = [
-    { k: "Lundi à vendredi", v: "7 h – 21 h" },
-    { k: "Samedi", v: "9 h – 17 h" },
-    { k: "Dimanche", v: "Fermé" },
+    { k: "Lundi à vendredi", v: "9 h 30 – 19 h 30" },
+    { k: "Samedi", v: "9 h – 18 h" },
+    { k: "Dimanche", v: "10 h – 18 h" },
 ];
 
 const partners = [
@@ -59,11 +58,11 @@ const faqs = [
     },
     {
         question: "Quel équipement dois-je apporter ?",
-        answer: "Venez simplement avec une tenue de sport confortable et une bouteille d'eau. Les gants, bandes et tout le matériel d'entraînement sont fournis par le studio.",
+        answer: "Venez simplement avec une tenue de sport, des baskets réservées à l'intérieur et une bouteille d'eau. Le studio prête les gants (12 et 14 oz, désinfectés après chaque séance), les sous-gants et tout le matériel d'entraînement.",
     },
     {
         question: "Comment réserver une séance ?",
-        answer: "Vous pouvez réserver directement via notre <a href='/contact' class='link-line'>formulaire de contact</a> ou par téléphone. Nous vous recommandons de commencer par une séance découverte pour vous familiariser avec le studio.",
+        answer: "Vous pouvez réserver directement via notre <a href='/contact' class='link-line'>formulaire de contact</a> ou par téléphone. Votre première séance Round by Round est offerte.",
     },
     {
         question: "Proposez-vous des programmes pour les entreprises ?",
@@ -176,7 +175,7 @@ const faqs = [
         panels={[
             {
                 title: "Un ring",
-                description: "Pour le travail aux pattes, le sparring encadré, le coaching privé et les cours Round by Round.",
+                description: "Pour le travail aux pattes, le coaching privé (sparring encadré compris, si le coach vous juge prêt) et les cours Round by Round.",
                 image: lionelNicolas,
                 alt: "Deux coachs font le point au bord du ring du studio",
             },
@@ -188,7 +187,7 @@ const faqs = [
             },
             {
                 title: "Vestiaires",
-                description: "Douches, casiers et serviettes.",
+                description: "Deux vestiaires, femmes et hommes, avec une douche dans chacun.",
                 image: salle1,
                 alt: "Serviettes pliées au vestiaire du studio",
             },

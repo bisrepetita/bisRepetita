@@ -17,15 +17,15 @@ const metadata = {
     title:
         "Nicolas de Boccard — Head Coach & Fondateur de Bis Repetita | Boxe Genève",
     description:
-        "Nicolas de Boccard, fondateur de Bis Repetita à Genève. 20 ans de pratique de la boxe, 5 ans à la tête du studio, 100+ élèves accompagnés. Découvrez son parcours et son approche.",
+        "Nicolas de Boccard, fondateur de Bis Repetita à Genève. 20 ans de pratique de la boxe, 100+ élèves accompagnés. Découvrez son parcours et son approche.",
     ignoreTitleTemplate: true,
 };
 
-// Seules formulations autorisées pour les durées : « 20 ans de pratique », « 5 ans à la tête du studio ».
+// Seule formulation autorisée pour les durées : « 20 ans de pratique » (durée à la tête du studio inconnue : ne pas en écrire).
 const facts = [
     { k: "Discipline", v: "Boxe anglaise" },
     { k: "Pratique", v: "20 ans de pratique" },
-    { k: "Studio", v: "5 ans à la tête du studio" },
+    { k: "Formation", v: "Cercle des Sports de Genève" },
     { k: "Rôle", v: "Head Coach et fondateur" },
     { k: "Adresse", v: "La Voie-Creuse 16, Genève" },
 ];
@@ -81,7 +81,7 @@ const faqs = [
     },
     {
         question: "Comment réserver une séance avec Nicolas ?",
-        answer: "Le plus simple : passer par le <a href='/contact' class='text-primary hover:underline'>formulaire de contact</a> ou directement par téléphone. La <a href='/tarifs' class='text-primary hover:underline'>première séance découverte</a> est l'entrée standard pour caler les objectifs et le format adapté.",
+        answer: "Le plus simple : passer par le <a href='/contact' class='text-primary hover:underline'>formulaire de contact</a> ou directement par téléphone. En <a href='/services/round-by-round' class='text-primary hover:underline'>Round by Round</a>, la première séance est offerte et sans prérequis. En coaching privé, la première séance commence par un échange sur vos objectifs, au <a href='/tarifs' class='text-primary hover:underline'>tarif du format</a>.",
     },
 ];
 
@@ -122,7 +122,7 @@ const sameAs = [
         <div class="wrap nb-head">
             <h1 class="t-display nb-title" data-split>Nicolas <span class="text-primary">de Boccard</span></h1>
             <div class="nb-side">
-                <p>Head Coach et fondateur de Bis Repetita, à Genève. 20 ans de pratique, 5 ans à la tête du studio.</p>
+                <p>Head Coach et fondateur de Bis Repetita, à Genève. 20 ans de pratique.</p>
                 <a href="/#planning" class="btn btn-solid">Réserver une séance <Fragment set:html={arrow} /></a>
             </div>
         </div>

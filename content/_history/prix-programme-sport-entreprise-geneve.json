@@ -60,5 +60,58 @@
       "Attestation de prestations fournie",
       "Notre avis (séance découverte d'abord ; pas adapté à 30+ personnes en une fois)"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "trigger": "manual",
+    "page_type": "article",
+    "changes": [
+      {
+        "type": "reinforce",
+        "detail": "ancienne : Notre avis « pour un premier contact, nous conseillons une séance découverte… Si votre projet consiste à occuper 30 personnes ou plus… la boxe n'est pas le format le plus simple » | nouvelle : séance découverte au studio d'abord (gratuite pour 6 personnes), puis programme en petit groupe ; phrase 30 personnes retirée",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : plafond « 8 personnes maximum par groupe », « pas de cours de masse », petit groupe 4 à 8 (paramètre taille, format, effectif) | nouvelle : capacité définie avec le client selon le format, 30 personnes et plus faisables avec davantage de coachs",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : « 100 % sur devis », pas de tarif | nouvelle : sur devis, entre 220 et 600 CHF la séance selon le format (TL;DR, intro, FAQ ×3)",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ajout : zone d'intervention jusqu'à 30 km autour du canton de Genève, hors France",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : événement ponctuel en demi-journée thématique, groupe de 6 à 8 personnes ; « demi-journée team-building » (fiscalité) | nouvelle : session team building (échauffement, bases techniques, mise en pratique, jeux de boxe, exercices physiques), sans plafond chiffré",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : programme récurrent avec facturation à 30 jours et rapport d'avancement | nouvelle : facturation et paiement avant la séance",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : attestation de prestations fournie (fiscalité, FAQ) | nouvelle : retirée (non confirmée)",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "ancienne : « 5 ans à la tête du studio » (sources) | nouvelle : « fondateur du studio »",
+        "reason": "réponses Nicolas 2026-10-19"
+      },
+      {
+        "type": "data",
+        "detail": "updatedDate : 2026-10-17 → 2026-10-19",
+        "reason": "réponses Nicolas 2026-10-19"
+      }
+    ],
+    "reason": "Alignement sur les faits confirmés par Nicolas (17–19 oct. 2026)."
   }
 ]
