@@ -8,6 +8,15 @@
         "value": "bodoni moda",
         "createdAt": "2026-10-16T19:09:17.264Z",
         "reason": "Claude: option C de la page interne /styleguide-test (comparaison typo demandée par Jon, noindex) ; pas une police du système"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "docs/seo/questions-nicolas.html"
+        ],
+        "createdAt": "2026-10-19T20:42:30.929Z",
+        "reason": "Claude: #a3a3a3 is the dark-theme --muted token, only rendered on #0f0f0f; light theme uses #5f5f5f on #fff (6.4:1)"
       }
     ]
   }

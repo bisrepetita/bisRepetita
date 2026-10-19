@@ -19,10 +19,8 @@ Blog :
 - `noindex` sur `app.bisrepetita.ch` (outil de réservation).
 
 ## Restes techniques
-- En-têtes de `netlify.toml` toujours inactifs sur Vercel (redirections portées dans `vercel.json`).
-- seo-lint signale à tort `cta.final_unique` (attend `/contact`, le projet utilise `/#planning`) et `ending.order` (intitulés exacts) : à régler dans la config du lint, pas dans les articles.
-- `/services/corporate` n'affiche aucun article lié (`RelatedArticles filterCategory="corporate"` à ajouter).
-- Pistes GSC non traitées : fusion `effet-boxe-corps-femme-geneve` + `boxe-femme-massive-epaules-geneve`, pages explorées non indexées (studio privé vs salle, bienfaits cadres, équipement), regroupement du cluster corporate, page « coach de boxe privé à Genève ».
+- Domaine www → apex : géré dans les réglages de domaine Vercel (hors `vercel.json`), à vérifier dans le dashboard.
+- Pistes GSC non traitées (décisions éditoriales) : fusion `effet-boxe-corps-femme-geneve` + `boxe-femme-massive-epaules-geneve`, pages explorées non indexées (studio privé vs salle, bienfaits cadres, équipement), regroupement du cluster corporate, page « coach de boxe privé à Genève ».
 
 ## Prochaine étape
 Lire les réponses de Nicolas (ArtifactData `list` sur `reponses`), reporter les faits dans les brouillons, mettre « Notre avis » et signatures à jour, puis publier l'article du 20 oct. (copie dans `src/content/blog/`, `draft: false`, liens retour du jour selon `maillage.md`). Ensuite rédaction des briefs débloqués.

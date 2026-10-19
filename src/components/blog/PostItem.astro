@@ -43,7 +43,7 @@ const categoryLabel = post.data.category
 
   <div class="flex flex-1 flex-col pt-5">
     <div class="flex items-center gap-2 text-[13px] text-gray-2">
-      {categoryLabel && (
+      {post.data.category && (
         <a href={`/blog/category/${slugify(post.data.category)}`} class="hover:text-ink transition-colors">{categoryLabel}</a>
       )}
       {categoryLabel && readingTime && <span aria-hidden="true">·</span>}

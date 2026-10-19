@@ -36,3 +36,9 @@ content:
     published_date: pubDate
     cover: image
     required_fields: ["title", "description", "pubDate", "category", "draft"]
+  lint:
+    tldr_component: Tldr
+    faq_headings: ["## Questions fréquentes", "## FAQ"]
+    conclusion_headings: ["## Conclusion", "## Pour finir"]
+    sources_headings: ["## Sources et références", "## Sources et Références", "## Sources"]
+    final_cta_pattern: '^<ArticleCta\b'

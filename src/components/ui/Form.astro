@@ -72,7 +72,7 @@ const {
                 <textarea name={field.name} id={field.name} rows="4" required={field.required} placeholder={field.placeholder} />
             ) : (
                 <input
-                    type={field.type}
+                    type={field.type as "text" | "tel" | "email"}
                     name={field.name}
                     id={field.name}
                     autocomplete={field.autocomplete}

@@ -27,7 +27,7 @@ npm run test         # Vitest
 - **Tailwind CSS v4** via Vite plugin (`@tailwindcss/vite`) — no `tailwind.config.js`, all config in `src/styles/global.css` using `@theme` directive
 - **GSAP 3 + ScrollTrigger** for animations
 - **TypeScript strict** (extends `astro/tsconfigs/strict`)
-- **Vercel** deployment (prod + previews par branche) ; `api/contact.js` = fonction Vercel. `netlify.toml` est un reste : Vercel l'ignore ; redirections portées dans `vercel.json`, en-têtes encore inactifs
+- **Vercel** deployment (prod + previews par branche) ; `api/contact.js` = fonction Vercel ; redirections et en-têtes dans `vercel.json`
 - **Plausible Analytics** (privacy-first, loaded in BaseLayout)
 
 ## Site Map
