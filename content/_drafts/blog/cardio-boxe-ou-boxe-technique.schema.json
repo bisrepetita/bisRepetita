@@ -1,0 +1,65 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://bisrepetita.ch/blog/cardio-boxe-ou-boxe-technique#article",
+      "mainEntityOfPage": "https://bisrepetita.ch/blog/cardio-boxe-ou-boxe-technique",
+      "headline": "Cardio-boxe ou boxe technique : ce qui fait progresser",
+      "description": "Le cardio-boxe fait transpirer, la boxe technique apprend la garde et la distance. Comparatif des deux formats et notre avis pour choisir à Genève.",
+      "datePublished": "2026-10-29",
+      "dateModified": "2026-10-29",
+      "author": {
+        "@type": "Person",
+        "name": "Équipe Bis Repetita"
+      },
+      "image": "https://bisrepetita.ch/images/blog/cardio-boxe-ou-boxe-technique.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://bisrepetita.ch/blog/cardio-boxe-ou-boxe-technique#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Le cardio-boxe, est-ce vraiment de la boxe ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il emprunte des gestes à la boxe, mais son but déclaré est la dépense, pas la technique de combat. Vous y trouvez des coups de poing, pas l'apprentissage de la garde, de la distance et des appuis. C'est un bon cardio ; ce n'est pas de la boxe apprise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le cardio-boxe convient-il pour débuter ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, si votre objectif est de bouger et de vous défouler. Pour apprendre à boxer, débuter par la boxe technique évite d'installer des habitudes à corriger ensuite. Un cours collectif encadré, comme le Round by Round, accueille les débutants"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Lequel fait le plus transpirer ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cela dépend de la cadence, pas du nom du cours. Le Compendium 2024 le montre pour le sac : de 5,8 à 10,8 MET selon le nombre de coups par minute. Il n'existe pas de mesure pour un cours de cardio-boxe sur musique ; à cadence de frappe égale, la dépense se ressemble."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "J'ai mal aux poignets après un cours de cardio-boxe : que faire ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reposez la main. Vérifiez que vos bandes sont bien posées et que le poing reste aligné avec l'avant-bras à l'impact. Si la douleur persiste, consultez un professionnel de santé : nous ne posons pas de diagnostic."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on faire les deux dans la même semaine ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, rien ne l'interdit : la fatigue est votre repère. Gardez la boxe technique pour apprendre et le cardio-boxe pour vous défouler. Pour ajuster le rythme, voyez combien de séances par semaine conviennent à un débutant en boxe. ---"
+          }
+        }
+      ]
+    }
+  ]
+}

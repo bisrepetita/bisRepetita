@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "source_brief": "content/_drafts/blog/choisir-boxe-anglaise-thai-kickboxing.md",
+  "slug": "choisir-boxe-anglaise-thai-kickboxing",
+  "locale": "fr",
+  "module": "E",
+  "snippet": {
+    "title": "Boxe anglaise, thaï ou kickboxing : comment choisir",
+    "h1": "Boxe anglaise, thaï ou kickboxing : comment choisir",
+    "description": "Poings, coudes, genoux, jambes : ce que chaque discipline demande, le contact en séance et le cas où la boxe anglaise n'est pas votre choix."
+  },
+  "dates": {
+    "pubDate": "2026-12-01",
+    "updatedDate": null,
+    "reviewedDate": null
+  },
+  "word_count": {
+    "minimum": 1500,
+    "maximum": 1900
+  },
+  "primary_keyword": "boxe anglaise ou boxe thaï",
+  "keywords": [
+    {
+      "role": "primary",
+      "query": "boxe anglaise ou boxe thaï",
+      "natural_form": "choisir entre la boxe anglaise et la boxe thaï",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "différence boxe anglaise boxe thaï",
+      "natural_form": "ce qui distingue la boxe anglaise de la boxe thaï",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "boxe anglaise ou kickboxing",
+      "natural_form": "boxe anglaise ou kickboxing",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "quel sport de combat choisir",
+      "natural_form": "quel sport de combat choisir quand on débute",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "boxe thaï ou kickboxing",
+      "natural_form": "la différence entre boxe thaï et kickboxing",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "boxe anglaise Genève",
+      "natural_form": "pratiquer la boxe anglaise à Genève",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "kickboxing Genève",
+      "natural_form": "s'entraîner au kickboxing à Genève",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "boxe thaï ou boxe anglaise pour débuter",
+      "natural_form": "commencer par la boxe anglaise ou par la boxe thaï",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "boxe anglaise sans contact possible",
+      "natural_form": "boxer sans recevoir de coups",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "quel sport de combat pour se défendre",
+      "natural_form": "quel sport de combat pour se défendre",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "licence boxe Suisse compétition",
+      "natural_form": "passer de l'entraînement à la compétition en Suisse",
+      "volume": null
+    }
+  ],
+  "structure": [
+    {
+      "id": "disciplines",
+      "level": 2,
+      "heading": "Boxe anglaise, thaï, kickboxing : ce que chaque discipline autorise",
+      "purpose": "Tableau des trois disciplines : outils, distance, contact, matériel"
+    },
+    {
+      "id": "seance",
+      "level": 2,
+      "heading": "Ce qui change dans une séance : contact, matériel, risques",
+      "purpose": "Trois points concrets de séance : contact, matériel, blessures"
+    },
+    {
+      "id": "contact",
+      "level": 3,
+      "heading": "Le contact : ce qui est prévu, ce qui est proposé",
+      "purpose": "Contact et sparring : règles J+S, pratique au studio"
+    },
+    {
+      "id": "materiel",
+      "level": 3,
+      "heading": "Matériel et protections de départ",
+      "purpose": "Matériel de départ par discipline (protège-tibias, etc.)"
+    },
+    {
+      "id": "blessures",
+      "level": 3,
+      "heading": "Blessures : ce que l'on sait et ce que l'on ne sait pas",
+      "purpose": "Risque de blessure : renvoi à l'article existant, aucune comparaison chiffrée inventée"
+    },
+    {
+      "id": "choix",
+      "level": 2,
+      "heading": "Choisir selon ce que vous cherchez",
+      "purpose": "Arbre de décision par objectif : technique, jambes, compétition"
+    },
+    {
+      "id": "technique",
+      "level": 3,
+      "heading": "Si vous cherchez une technique de poings précise",
+      "purpose": "Boxe anglaise : garde, appuis, distance"
+    },
+    {
+      "id": "jambes",
+      "level": 3,
+      "heading": "Si vous voulez frapper aussi avec les jambes (et les coudes, les genoux)",
+      "purpose": "Kickboxing et boxe thaï : ce qu'elles ajoutent, honnêtement hors studio"
+    },
+    {
+      "id": "competition",
+      "level": 3,
+      "heading": "Si vous pensez à la compétition ou à la licence",
+      "purpose": "Compétition et licence en Suisse, sans promouvoir la préparation compétiteur"
+    },
+    {
+      "id": "studio",
+      "level": 2,
+      "heading": "Boxe anglaise au studio : ce que nous proposons, et pour qui",
+      "purpose": "Ancrage local : formats du studio, adresse, sans prix de pack"
+    },
+    {
+      "id": "faq",
+      "level": 2,
+      "heading": "Questions fréquentes sur le choix d'un sport de combat",
+      "purpose": "FAQ : changer de discipline, défense, enfants"
+    },
+    {
+      "id": "conclusion",
+      "level": 2,
+      "heading": "Conclusion : choisir, puis essayer sans vous engager sur dix séances",
+      "purpose": "Conclusion 80–120 mots et CTA unique"
+    }
+  ],
+  "internal_links": [
+    {
+      "url": "/cours-de-boxe-geneve",
+      "anchor": "les cours de boxe à Genève",
+      "section_id": "intro",
+      "required": true
+    },
+    {
+      "url": "/blog/quelle-boxe-choisir-femme-geneve",
+      "anchor": "quelle boxe choisir pour une débutante",
+      "section_id": "intro",
+      "required": true
+    },
+    {
+      "url": "/blog/la-boxe-est-elle-dangereuse-blessures-loisir",
+      "anchor": "ce que disent les chiffres sur les blessures",
+      "section_id": "blessures",
+      "required": true
+    },
+    {
+      "url": "/services/coaching-solo",
+      "anchor": "le coaching solo",
+      "section_id": "technique",
+      "required": true
+    },
+    {
+      "url": "/blog/equipement-boxe-debutant-geneve",
+      "anchor": "le matériel pour débuter",
+      "section_id": "materiel",
+      "required": false
+    },
+    {
+      "url": "/blog/cours-boxe-prive-petit-groupe-collectif",
+      "anchor": "choisir entre cours privé, petit groupe et collectif",
+      "section_id": "studio",
+      "required": true
+    },
+    {
+      "url": "/blog/cardio-boxe-ou-boxe-technique",
+      "anchor": "la boxe technique, pas seulement du cardio",
+      "section_id": "disciplines",
+      "required": false
+    },
+    {
+      "url": "/blog/boxe-self-defense-femme-geneve",
+      "anchor": "la boxe pour se défendre",
+      "section_id": "faq",
+      "required": false
+    },
+    {
+      "url": "/blog/a-quel-age-commencer-la-boxe",
+      "anchor": "à quel âge commencer la boxe",
+      "section_id": "faq",
+      "required": false
+    },
+    {
+      "url": "/#planning",
+      "anchor": "Réserver une première séance",
+      "section_id": "conclusion",
+      "required": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "url": "https://www.bfu.ch/media/dfrpavf3/mb_f_boxe-light-contact.pdf",
+      "title": "OFSPO/J+S, BPA, Prévention des accidents en boxe light-contact, 04/2022",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-002",
+      "url": "https://www.jugendundsport.ch/dam/fr/sd-web/v62Vbr491lST/mb_f_Kickboxing-Light.pdf",
+      "title": "OFSPO/J+S, BPA, WAKO Switzerland, Prévention des accidents en kick-boxing light, 03/2026",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-003",
+      "url": "https://www.geneve.ch/themes/sport/index-disciplines-sportives/boxe-francaise-anglaise-thai",
+      "title": "Ville de Genève, index des disciplines : boxe française, anglaise, thaï",
+      "status": "to_verify",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-004",
+      "url": "https://conseilsport.decathlon.fr/comment-choisir-son-type-de-boxe",
+      "title": "Decathlon Conseil Sport, Comment choisir son type de boxe",
+      "status": "to_verify",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "statement": "Boxe anglaise : seuls les poings frappent. Kickboxing : poings et jambes. Boxe thaï : poings, jambes, coudes et genoux.",
+      "status": "to_confirm",
+      "source_ids": [
+        "SRC-004"
+      ],
+      "limits": "contrôle par une source fédérale (D4) avant rédaction"
+    },
+    {
+      "id": "CLM-002",
+      "statement": "J+S (boxe light-contact) : aucune frappe à la tête avant 8 ans ; sparring limité à de légers contacts corporels pour les jeunes.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-001"
+      ],
+      "limits": "repère de sécurité pour mineurs, pas une règle pour adultes"
+    },
+    {
+      "id": "CLM-003",
+      "statement": "J+S (kick-boxing light, 03/2026) : coups à la tête interdits jusqu'à 10 ans au moins ; protège-poitrine pour les filles dès le développement de la poitrine ; WAKO Switzerland cité.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-002"
+      ],
+      "limits": "contexte jeunes"
+    },
+    {
+      "id": "CLM-004",
+      "statement": "Le studio enseigne la boxe anglaise ; il ne propose ni boxe thaï ni kickboxing.",
+      "status": "to_confirm",
+      "source_ids": [],
+      "limits": "à valider par Nicolas (D2) ; expertise de `docs/seo/context.md`"
+    },
+    {
+      "id": "CLM-005",
+      "statement": "Round by Round : aucun échange de coups ; autres formats : contact léger, contrôlé et consenti sur demande.",
+      "status": "to_confirm",
+      "source_ids": [],
+      "limits": "formulation exacte à valider (D3)"
+    },
+    {
+      "id": "CLM-006",
+      "statement": "Les bases de garde, d'appuis et de distance de la boxe anglaise se transposent en partie vers les autres disciplines.",
+      "status": "hypothesis",
+      "source_ids": [],
+      "limits": "inférence du studio, aucune étude ; à présenter comme telle"
+    },
+    {
+      "id": "CLM-007",
+      "statement": "Prix publiés à la séance : solo 120, duo 140, trio 160, Small Group 200, Round by Round 40 (CHF).",
+      "status": "confirmed",
+      "source_ids": [],
+      "limits": "libellés exacts de `/tarifs` ; aucun pack ; Small Group sans prix par personne"
+    },
+    {
+      "id": "CLM-008",
+      "statement": "Une discipline est plus dangereuse, plus efficace pour se défendre ou fait plus maigrir qu'une autre.",
+      "status": "forbidden",
+      "source_ids": [],
+      "limits": "aucune donnée comparative retrouvée ; promesse interdite"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG-001",
+      "placement": "cover",
+      "type": "photo",
+      "alt_text": "Gants de boxe et bandes de main posés sur le ring du studio Bis Repetita à Genève",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "IMG-002",
+      "placement": "after-h2:disciplines",
+      "type": "photo",
+      "alt_text": "Intérieur du studio de boxe Bis Repetita près de la place des Nations à Genève, avec le ring et les sacs de frappe",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-003",
+      "placement": "after-h3:technique",
+      "type": "photo",
+      "alt_text": "Coach de boxe corrigeant la garde d'une élève pendant une séance de coaching solo au studio Bis Repetita",
+      "aspect_ratio": "4:3"
+    }
+  ],
+  "cta": {
+    "url": "/#planning",
+    "anchor": "Réserver une première séance"
+  },
+  "frontmatter": {
+    "author": "Équipe Bis Repetita",
+    "category": "guide",
+    "tags": [
+      "boxe anglaise ou boxe thaï",
+      "boxe anglaise ou kickboxing",
+      "quel sport de combat choisir",
+      "différence boxe anglaise boxe thaï",
+      "boxe Genève"
+    ],
+    "draft": true
+  }
+}

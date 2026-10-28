@@ -1,0 +1,23 @@
+{
+  "topic": "cours de sport remboursés assurance complémentaire",
+  "slug": "cours-sport-rembourses-assurance-complementaire",
+  "generated_at": "2026-10-17T18:23:02.530550+00:00",
+  "source": "docs/seo/plan-editorial-2026-10-11.md §5 (réserve)",
+  "candidates": [
+    {
+      "keyword": "cours de sport remboursés assurance complémentaire",
+      "verdict": "needs_review",
+      "gates": {
+        "surprise_gap": "pass",
+        "grounding": "needs_review"
+      },
+      "signals": {
+        "intent": null,
+        "pseo_scalable": false
+      },
+      "failed_pillar": "grounding",
+      "rationale": "Surprise Gap : un trou existe (la boxe n'est citée ni par Qualitop ni par la liste Helsana ; documents 2026 datés, sources officielles lues), mais un LLM résume déjà correctement le principe (base / complémentaire / label). Grounding CONDITIONNEL : aucune preuve first-party tant que le studio n'a pas confirmé s'il détient un label (D1) ; sans label l'article apporte peu de valeur au studio et risque une promesse implicite non tenable. Pas FAIL (le fait d'absence de label n'est pas encore établi) : needs_review, checkpoint humain D1/D2 avant rédaction. Intention Know. Volumes : Non vérifié.",
+      "priority": "moyenne"
+    }
+  ]
+}

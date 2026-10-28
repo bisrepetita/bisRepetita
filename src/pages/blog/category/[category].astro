@@ -47,53 +47,37 @@ const metadata = {
 ---
 
 <BaseLayout metadata={metadata}>
-  <div class="theme-light">
-    <div class="min-h-screen bg-background">
-      <BlogHero
-        title={categoryLabel}
-        subtitle={`${posts.length} article${posts.length === 1 ? "" : "s"} dans cette categorie.`}
-        categories={allCategories}
-        activeCategory={category}
-      />
+  <BlogHero
+    title={categoryLabel}
+    subtitle={`${posts.length} article${posts.length === 1 ? "" : "s"} dans cette catégorie.`}
+    categories={allCategories}
+    activeCategory={category}
+  />
 
-      <div class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-        <div class="mb-8">
-          <a
-            href="/blog"
-            class="inline-flex items-center text-sm font-medium text-primary transition-colors hover:text-primary/80"
-          >
-            <svg
-              class="mr-1 h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
-            </svg>
-            Tous les articles
-          </a>
+  <div class="wrap blog-list">
+    {
+      posts.length === 0 ? (
+        <p class="py-20 text-gray-1">Aucun article dans cette catégorie.</p>
+      ) : (
+        <div class="post-grid">
+          {posts.map((post) => (
+            <PostItem post={post} />
+          ))}
         </div>
-
-        {
-          posts.length === 0 ? (
-            <div class="py-20 text-center">
-              <p class="text-lg text-muted-foreground">
-                Aucun article dans cette categorie.
-              </p>
-            </div>
-          ) : (
-            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {posts.map((post) => (
-                <PostItem post={post} />
-              ))}
-            </div>
-          )
-        }
-      </div>
-    </div>
+      )
+    }
   </div>
 </BaseLayout>
+
+<style>
+  .blog-list { padding-bottom: var(--section); }
+  .post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(48px, 5vw, 72px) clamp(24px, 2.4vw, 40px);
+    padding-top: clamp(40px, 4vw, 64px);
+    border-top: 1px solid var(--line);
+  }
+  @media (max-width: 1023px) { .post-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 640px) { .post-grid { grid-template-columns: 1fr; } }
+</style>

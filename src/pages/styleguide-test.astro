@@ -1,0 +1,125 @@
+---
+// Page interne de comparaison typographique (noindex, hors sitemap). À supprimer après arbitrage.
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const metadata = {
+    title: "Typographie — options",
+    description: "Comparaison interne des options typographiques de la refonte.",
+    noindex: true,
+};
+
+const options = [
+    {
+        id: "a",
+        name: "A — Inter Display, 500",
+        note: "Option actuelle du site de test. Le luxe vient du tracking serré et de l'air (Kanso).",
+        cls: "opt-a",
+    },
+    {
+        id: "b",
+        name: "B — Inter Display, capitales",
+        note: "Titres en capitales, plus architecturés (Das Studio). Plus froid, très « maison ».",
+        cls: "opt-b",
+    },
+    {
+        id: "c",
+        name: "C — Inter + Bodoni Moda",
+        note: "Didone pour les grands titres, Inter pour tout le reste. Registre mode / Zara. Licence libre (OFL).",
+        cls: "opt-c",
+    },
+    {
+        id: "d",
+        name: "D — Inter Display, 300",
+        note: "Même famille, graisse légère pour les grands titres. Plus aérien, plus éditorial.",
+        cls: "opt-d",
+    },
+];
+---
+
+<BaseLayout {metadata}>
+    <link
+        slot="fonts"
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..500&display=swap"
+        rel="stylesheet"
+    />
+
+    <section class="wrap sg-head">
+        <h1 class="t-title">Typographie : quatre options</h1>
+        <p>
+            Chaque bloc montre la même page, à taille réelle : titre principal, titre de section, texte d'accroche,
+            boutons. Black Mango n'est pas présenté : il faut d'abord ses fichiers et sa licence web.
+        </p>
+        <nav class="sg-jump" aria-label="Options">
+            {options.map((o) => <a href={`#${o.id}`} class="btn btn-line btn-sm">{o.name.split(" — ")[0]}</a>)}
+        </nav>
+    </section>
+
+    {options.map((o) => (
+        <section id={o.id} class:list={["sg-opt", o.cls]}>
+            <div class="wrap sg-label">
+                <p class="sg-name">{o.name}</p>
+                <p class="t-meta">{o.note}</p>
+            </div>
+            <div class="wrap sg-hero">
+                <p class="sg-h1" role="presentation">Coaching de boxe <span class="soft2">sur mesure</span> à Genève</p>
+                <div class="sg-side">
+                    <p>Studio privé à Genève. Cours privés, cours collectifs Round by Round et programmes pour les entreprises.</p>
+                    <div class="sg-actions">
+                        <span class="btn btn-solid">Réserver une séance</span>
+                        <span class="btn btn-line">Les cours</span>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap sg-body">
+                <p class="sg-h2">Comment se déroule une séance</p>
+                <p class="t-lead">
+                    Nous mettons la boxe au service de vos objectifs.
+                    <span class="soft">Le format, le contenu et l'intensité s'adaptent à votre niveau et à votre état du jour.</span>
+                </p>
+                <div class="sg-rows">
+                    <div><span class="sg-row-t">Coaching solo</span><span class="t-meta">1 pers. · CHF 120</span></div>
+                    <div><span class="sg-row-t">Round by Round</span><span class="t-meta">8 max · CHF 40</span></div>
+                </div>
+            </div>
+        </section>
+    ))}
+</BaseLayout>
+
+<style>
+    .sg-head { padding-block: clamp(48px, 6vw, 96px) 48px; display: grid; gap: 20px; max-width: 900px; margin-inline: 0; }
+    .sg-head p { color: var(--gray-1); max-width: 60ch; }
+    .sg-jump { display: flex; flex-wrap: wrap; gap: 8px; }
+    .sg-opt { border-top: 1px solid var(--ink); padding-bottom: var(--section); scroll-margin-top: var(--nav-h); }
+    .sg-label { display: flex; justify-content: space-between; gap: 24px; padding-block: 16px 0; }
+    .sg-name { font-weight: 500; font-size: 14px; }
+    .sg-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+        gap: 28px clamp(32px, 6vw, 120px);
+        align-items: end;
+        padding-block: clamp(48px, 6vw, 96px);
+    }
+    .sg-h1 { font-size: clamp(2.5rem, 6.2vw, 6rem); line-height: 0.98; max-width: 12ch; }
+    .soft2 { color: var(--gray-2); }
+    .sg-side { display: grid; gap: 24px; color: var(--gray-1); font-size: 17px; max-width: 420px; }
+    .sg-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .sg-body { display: grid; gap: 40px; }
+    .sg-h2 { font-size: clamp(2rem, 4vw, 3.75rem); line-height: 1.02; }
+    .sg-rows { border-top: 1px solid var(--ink); }
+    .sg-rows div { display: flex; justify-content: space-between; align-items: baseline; padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .sg-row-t { font-size: clamp(1.375rem, 2.2vw, 2rem); letter-spacing: var(--track-title); }
+
+    .opt-a :is(.sg-h1, .sg-h2, .sg-row-t) { font-weight: 500; letter-spacing: -0.045em; }
+    .opt-b :is(.sg-h1, .sg-h2) { font-weight: 500; text-transform: uppercase; letter-spacing: -0.035em; line-height: 0.95; }
+    .opt-b .sg-h1 { max-width: 13ch; }
+    .opt-b .sg-row-t { text-transform: uppercase; font-weight: 500; letter-spacing: -0.02em; }
+    .opt-c :is(.sg-h1, .sg-h2, .sg-row-t) { font-family: "Bodoni Moda", serif; font-weight: 400; letter-spacing: -0.02em; }
+    .opt-c .sg-h1 { line-height: 1; }
+    .opt-d :is(.sg-h1, .sg-h2) { font-weight: 300; letter-spacing: -0.05em; }
+    .opt-d .sg-row-t { font-weight: 400; }
+
+    @media (max-width: 860px) {
+        .sg-hero { grid-template-columns: 1fr; }
+        .sg-label { flex-direction: column; gap: 4px; }
+    }
+</style>

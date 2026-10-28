@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "source_brief": "content/_drafts/blog/team-building-fin-annee-geneve-boxe.md",
+  "slug": "team-building-fin-annee-geneve-boxe",
+  "locale": "fr",
+  "module": "B",
+  "snippet": {
+    "title": "Team building de fin d'année à Genève : une session boxe",
+    "h1": "Team building de fin d'année à Genève : une session boxe",
+    "description": "Avant le repas de fin d'année, une session de boxe sans contact de 60 à 90 min, au studio ou dans vos locaux à Genève. Déroulé, logistique, devis."
+  },
+  "dates": {
+    "pubDate": "2026-11-03",
+    "updatedDate": null,
+    "reviewedDate": null
+  },
+  "word_count": {
+    "minimum": 1200,
+    "maximum": 1500
+  },
+  "primary_keyword": "team building fin d'année Genève",
+  "keywords": [
+    {
+      "role": "primary",
+      "query": "team building fin d'année Genève",
+      "natural_form": "un team building de fin d'année à Genève",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "team building décembre Genève",
+      "natural_form": "un team building en décembre à Genève",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "activité d'équipe fin d'année Genève",
+      "natural_form": "une activité d'équipe pour la fin d'année à Genève",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "team building Genève",
+      "natural_form": "un team building à Genève",
+      "volume": 110
+    },
+    {
+      "role": "secondary",
+      "query": "activité team building Genève",
+      "natural_form": "une activité de team building à Genève",
+      "volume": 10
+    },
+    {
+      "role": "secondary",
+      "query": "sortie entreprise Genève",
+      "natural_form": "une sortie d'entreprise à Genève",
+      "volume": 10
+    },
+    {
+      "role": "secondary",
+      "query": "team building suisse romande",
+      "natural_form": "un team building en Suisse romande",
+      "volume": 40
+    },
+    {
+      "role": "long_tail",
+      "query": "soirée team building",
+      "natural_form": "une soirée de team building",
+      "volume": 10
+    },
+    {
+      "role": "long_tail",
+      "query": "team building avant repas de Noël",
+      "natural_form": "une activité avant le repas de Noël de l'équipe",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "team building sportif sans contact",
+      "natural_form": "un team building sportif, sans contact entre collègues",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "idée sortie d'équipe décembre",
+      "natural_form": "une idée de sortie d'équipe pour décembre",
+      "volume": null
+    }
+  ],
+  "structure": [
+    {
+      "id": "session-decembre",
+      "level": 2,
+      "heading": "Une session boxe en décembre, avant le repas ou l'apéritif",
+      "purpose": "Réponse directe : format, durée, place dans la soirée"
+    },
+    {
+      "id": "deroule",
+      "level": 2,
+      "heading": "Le déroulé d'une session de 60 à 90 minutes",
+      "purpose": "Étapes de la session, minutage à valider (D7)"
+    },
+    {
+      "id": "studio-ou-locaux",
+      "level": 2,
+      "heading": "Au studio ou dans vos locaux : ce qu'il faut prévoir en décembre",
+      "purpose": "Tableau studio / sur site, calendrier de décembre"
+    },
+    {
+      "id": "questions-prestataire",
+      "level": 2,
+      "heading": "Ce qu'il faut demander au prestataire avant de signer",
+      "purpose": "Checklist DRH"
+    },
+    {
+      "id": "notre-avis",
+      "level": 2,
+      "heading": "Notre avis : pour qui une session boxe en fin d'année",
+      "purpose": "Pour qui / pas pour qui, Klein 2009, bloc Notre avis"
+    },
+    {
+      "id": "faq",
+      "level": 2,
+      "heading": "Questions fréquentes",
+      "purpose": "FAQ locale H3"
+    }
+  ],
+  "internal_links": [
+    {
+      "url": "/services/corporate",
+      "anchor": "le programme corporate du studio",
+      "section_id": "session-decembre",
+      "required": true
+    },
+    {
+      "url": "/blog/team-building-boxe-geneve-cohesion-equipe",
+      "anchor": "ce qui fait qu'une séance de boxe soude une équipe",
+      "section_id": "session-decembre",
+      "required": true
+    },
+    {
+      "url": "/blog/prix-programme-sport-entreprise-geneve",
+      "anchor": "ce qui fait varier le prix d'un programme sport en entreprise",
+      "section_id": "faq",
+      "required": true
+    },
+    {
+      "url": "/blog/activites-sportives-entreprise-geneve-comparatif",
+      "anchor": "comparer avec d'autres activités sportives pour les entreprises à Genève",
+      "section_id": "notre-avis",
+      "required": false
+    },
+    {
+      "url": "/blog/sport-en-entreprise-geneve-guide-drh",
+      "anchor": "un programme récurrent de sport en entreprise",
+      "section_id": "notre-avis",
+      "required": true
+    },
+    {
+      "url": "/studio",
+      "anchor": "le studio de La Voie-Creuse",
+      "section_id": "studio-ou-locaux",
+      "required": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "url": "https://stars.library.ucf.edu/facultybib2000/1735",
+      "title": "Klein et al., Does Team Building Work?, Small Group Research, 2009",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-002",
+      "url": "https://www.ge.ch/vacances-scolaires-jours-feries/vacances-scolaires-2026-2027",
+      "title": "Vacances scolaires 2026-2027, canton de Genève",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-003",
+      "url": "https://www.myswitzerland.com/fr-ch/decouvrir/manifestations/48e-course-de-lescalade/",
+      "title": "48e Course de l'Escalade, MySwitzerland",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "statement": "Le team building a un effet positif modéré sur les résultats d'équipe, plus net sur les résultats affectifs et de fonctionnement ; études sur des interventions non sportives",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-001"
+      ]
+    },
+    {
+      "id": "CLM-002",
+      "statement": "Vacances de Noël à Genève du 24 décembre 2026 au 8 janvier 2027",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-002"
+      ]
+    },
+    {
+      "id": "CLM-003",
+      "statement": "Course de l'Escalade les 5 et 6 décembre 2026",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-003"
+      ]
+    },
+    {
+      "id": "CLM-004",
+      "statement": "Capacité par session (studio, sur site)",
+      "status": "to_confirm",
+      "source_ids": []
+    },
+    {
+      "id": "CLM-005",
+      "statement": "Zone de déplacement",
+      "status": "to_confirm",
+      "source_ids": []
+    },
+    {
+      "id": "CLM-006",
+      "statement": "Délai de devis et de confirmation",
+      "status": "to_confirm",
+      "source_ids": []
+    },
+    {
+      "id": "CLM-007",
+      "statement": "Séance découverte corporate gratuite",
+      "status": "forbidden",
+      "source_ids": []
+    },
+    {
+      "id": "CLM-008",
+      "statement": "Fourchette 400 à 600 CHF par séance",
+      "status": "forbidden",
+      "source_ids": []
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG-001",
+      "placement": "cover",
+      "type": "photo",
+      "alt_text": "Équipe de collègues en binômes aux pattes d'ours lors d'une session de boxe sans contact de fin d'année à Genève",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "IMG-002",
+      "placement": "after-h2:Le déroulé d'une session de 60 à 90 minutes",
+      "type": "photo",
+      "alt_text": "Collaborateurs qui posent leurs bandes de boxe avant l'échauffement d'un team building au studio",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-003",
+      "placement": "after-h2:Au studio ou dans vos locaux : ce qu'il faut prévoir en décembre",
+      "type": "photo",
+      "alt_text": "Salle de réunion dégagée avec gants, bandes et pattes d'ours prêts pour une session de boxe en entreprise",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-004",
+      "placement": "after-h2:Notre avis : pour qui une session boxe en fin d'année",
+      "type": "photo",
+      "alt_text": "Studio de boxe près de la place des Nations à Genève, vide après une session d'équipe en fin de journée",
+      "aspect_ratio": "4:3"
+    }
+  ],
+  "cta": {
+    "url": "/services/corporate",
+    "anchor": "Demander un devis corporate"
+  },
+  "frontmatter": {
+    "author": "Équipe Bis Repetita",
+    "category": "corporate",
+    "tags": [
+      "team building Genève",
+      "team building fin d'année",
+      "sport entreprise Genève",
+      "corporate boxing"
+    ],
+    "draft": true
+  }
+}

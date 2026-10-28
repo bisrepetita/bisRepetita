@@ -1,131 +1,43 @@
 ---
 import WidgetWrapper from "./WidgetWrapper.astro";
 import type { FeaturesProps } from "../../types/types";
-import { Icon } from "astro-icon/components";
-import Headline from "../ui/Headline.astro";
 
+// Titre à gauche, items en lignes à filet à droite. icon, iconClass, tagline, columns,
+// headlineAlign, isDark et bento sont acceptés pour compatibilité mais ignorés.
 interface Props extends FeaturesProps {
     bento?: "2-3";
 }
 
 const {
     features = [],
-    columns = 3,
     title,
     subtitle,
-    tagline,
     id,
-    isDark = false,
     classes = {},
-    headlineAlign = "center",
     bg = await Astro.slots.render("bg"),
-    bento,
 } = Astro.props as Props;
 
-const { container: containerClassProp = "", ...otherClasses } = classes;
-
-const gridColsClass: Record<number, string> = {
-    1: "md:grid-cols-1",
-    2: "md:grid-cols-2",
-    3: "md:grid-cols-3",
-    4: "md:grid-cols-4",
-};
-const gridClass = gridColsClass[columns] || "md:grid-cols-3";
+const { container: containerClassProp = "" } = classes;
 ---
 
-<WidgetWrapper
-    id={id}
-    isDark={isDark}
-    containerClass={` ${containerClassProp}`}
-    bg={bg}
-    classes={otherClasses}
->
-    <Headline
-        title={title}
-        subtitle={subtitle}
-        tagline={tagline}
-        classes={{
-            container: `max-w-3xl mb-10 md:mb-14 ${headlineAlign === "left" ? "" : "mx-auto text-center"}`,
-        }}
-    />
-    {bento === "2-3" ? (
-        <!-- Bento 2-3: first 2 cards in 2-col row, rest in 3-col row -->
-        <div class="space-y-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {features.slice(0, 2).map((feature) => (
-                    <div class="group relative bg-card/60 backdrop-blur-sm p-8 rounded-3xl border border-border/50 transition-all duration-300 hover:border-primary/30 hover:shadow-[var(--shadow-gold-card)] overflow-hidden">
-                        {feature.icon && (
-                            <div class="absolute top-4 right-4 opacity-[0.06] transition-transform duration-500 group-hover:rotate-12">
-                                <Icon name={feature.icon} class="w-24 h-24 text-primary" />
-                            </div>
-                        )}
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent rounded-full"></div>
-                        {feature.icon && (
-                            <div class={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 relative z-10 ${feature.iconClass || "bg-primary/10 text-primary"}`}>
-                                <Icon name={feature.icon} class="w-6 h-6" />
-                            </div>
-                        )}
-                        <h3 class="text-xl font-bold text-foreground mb-3 relative z-10">{feature.title}</h3>
-                        <p class="text-muted-foreground text-sm relative z-10">{feature.description}</p>
-                    </div>
-                ))}
+<WidgetWrapper id={id} containerClass={containerClassProp} bg={bg}>
+    <div class="grid gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] md:gap-[clamp(40px,8vw,160px)]">
+        {(title || subtitle) && (
+            <div class="md:sticky md:top-[calc(var(--nav-h)+32px)] md:self-start">
+                {title && <h2 class="t-title" data-split set:html={title} />}
+                {subtitle && <p class="mt-5 max-w-[42ch] text-[17px] text-gray-1" set:html={subtitle} />}
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {features.slice(2).map((feature) => (
-                    <div class="group relative bg-card/60 backdrop-blur-sm p-8 rounded-3xl border border-border/50 transition-all duration-300 hover:border-primary/30 hover:shadow-[var(--shadow-gold-card)] overflow-hidden">
-                        {feature.icon && (
-                            <div class="absolute top-4 right-4 opacity-[0.06] transition-transform duration-500 group-hover:rotate-12">
-                                <Icon name={feature.icon} class="w-24 h-24 text-primary" />
-                            </div>
-                        )}
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent rounded-full"></div>
-                        {feature.icon && (
-                            <div class={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 relative z-10 ${feature.iconClass || "bg-primary/10 text-primary"}`}>
-                                <Icon name={feature.icon} class="w-6 h-6" />
-                            </div>
-                        )}
-                        <h3 class="text-xl font-bold text-foreground mb-3 relative z-10">{feature.title}</h3>
-                        <p class="text-muted-foreground text-sm relative z-10">{feature.description}</p>
-                    </div>
+        )}
+        <div class:list={[!(title || subtitle) && "md:col-start-2"]}>
+            <ul class="border-t border-line">
+                {features.map((f) => (
+                    <li class="grid gap-x-8 gap-y-2 border-b border-line py-6 sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
+                        <h3 class="text-[19px] font-medium leading-snug tracking-[-0.02em]">{f.title}</h3>
+                        <p class="text-[15px] text-gray-1" set:html={f.description} />
+                    </li>
                 ))}
-                <slot />
-            </div>
-        </div>
-    ) : (
-        <!-- Default grid -->
-        <div class={`grid grid-cols-1 ${gridClass} gap-6`}>
-            {
-                features.map((feature, i) => (
-                    <div
-                        class:list={[
-                            "group relative bg-card/60 backdrop-blur-sm p-8 rounded-3xl border border-border/50 transition-all duration-300 hover:border-primary/30 hover:shadow-[var(--shadow-gold-card)] overflow-hidden",
-                            i === 0 && !isDark && "md:col-span-2",
-                            isDark && "highlighted-card",
-                        ]}
-                    >
-                        {feature.icon && (
-                            <div class="absolute top-4 right-4 opacity-[0.06] transition-transform duration-500 group-hover:rotate-12">
-                                <Icon name={feature.icon} class="w-24 h-24 text-primary" />
-                            </div>
-                        )}
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent rounded-full"></div>
-                        {feature.icon && (
-                            <div
-                                class={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 relative z-10 ${feature.iconClass || "bg-primary/10 text-primary"}`}
-                            >
-                                <Icon name={feature.icon} class="w-6 h-6" />
-                            </div>
-                        )}
-                        <h3 class="text-xl font-bold text-foreground mb-3 relative z-10">
-                            {feature.title}
-                        </h3>
-                        <p class="text-muted-foreground text-sm relative z-10">
-                            {feature.description}
-                        </p>
-                    </div>
-                ))
-            }
+            </ul>
             <slot />
         </div>
-    )}
+    </div>
 </WidgetWrapper>

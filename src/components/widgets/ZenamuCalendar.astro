@@ -1,7 +1,8 @@
 ---
 import WidgetWrapper from "./WidgetWrapper.astro";
-import Headline from "../ui/Headline.astro";
+import SectionTitle from "../ui/SectionTitle.astro";
 
+// Planning Zenamu en thème clair. tagline / isDark sont acceptés pour compatibilité.
 interface Props {
     id?: string;
     title?: string;
@@ -14,36 +15,44 @@ const {
     id = "reservation",
     title = "Réservez votre créneau",
     subtitle = "Consultez les disponibilités et réservez directement votre séance.",
-    tagline = "Réservation",
-    isDark = true,
 } = Astro.props;
-
-const iframeSrc = isDark
-    ? "https://app.bisrepetita.ch/embed/planning?theme=dark"
-    : "https://app.bisrepetita.ch/embed/planning";
 ---
 
-<WidgetWrapper id={id} isDark={isDark}>
-    <Headline
-        title={title}
-        subtitle={subtitle}
-        tagline={tagline}
-        titleAs="h2"
-        classes={{
-            container: "mb-12 text-center",
-            title: "text-4xl md:text-5xl font-medium tracking-tight font-display",
-            subtitle: "text-lg text-muted-foreground max-w-2xl mx-auto",
-        }}
-    />
-    <div class="zenamu-calendar-wrapper">
+<WidgetWrapper id={id} classes={{ container: "planning" }}>
+    <div class="planning-head">
+        <SectionTitle title={title} />
+        <p class="planning-sub">{subtitle}</p>
+    </div>
+    <div class="planning-frame">
         <iframe
             id="br-planning-iframe"
-            src={iframeSrc}
-            style="width:100%; border:none; min-height:400px; display:block;"
-            scrolling="no"
-        ></iframe>
+            src="https://app.bisrepetita.ch/embed/planning"
+            title="Planning des séances Bis Repetita"
+            loading="lazy"
+            style="width:100%; border:none; min-height:420px; display:block;"
+            scrolling="no"></iframe>
     </div>
+    <p class="planning-note t-meta">
+        Une question avant de réserver ? <a href="/contact" class="link-line">Écrivez-nous</a> ou appelez le
+        <a href="tel:+41768012596" class="link-line">+41 76 801 25 96</a>.
+    </p>
 </WidgetWrapper>
+
+<style>
+    .planning-head {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+        gap: 24px clamp(32px, 6vw, 120px);
+        align-items: end;
+        margin-bottom: clamp(32px, 4vw, 56px);
+    }
+    .planning-sub { color: var(--gray-1); font-size: 17px; max-width: 40ch; }
+    .planning-frame { border-top: 1px solid var(--ink); padding-top: 20px; }
+    .planning-note { margin-top: 24px; }
+    @media (max-width: 860px) {
+        .planning-head { grid-template-columns: 1fr; }
+    }
+</style>
 
 <script>
     window.addEventListener("message", (event) => {

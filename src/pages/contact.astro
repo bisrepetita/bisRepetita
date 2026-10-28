@@ -1,10 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Container from "../components/ui/Container.astro";
 import ContactForm from "../components/widgets/ContactForm.astro";
 import ZenamuCalendar from "../components/widgets/ZenamuCalendar.astro";
 import LocationMap from "../components/widgets/LocationMap.astro";
-import GsapReveal from "../components/widgets/GsapReveal.astro";
 
 const metadata = {
     title: "Contact & Devis | Studio de Boxe Genève",
@@ -14,29 +12,17 @@ const metadata = {
 ---
 
 <BaseLayout {metadata}>
-    <div class="theme-light">
-        <!-- Split: contenu + formulaire -->
-        <ContactForm />
+    <ContactForm />
 
-        <!-- Calendrier Zenamu -->
-        <GsapReveal animation="fadeUp">
-            <ZenamuCalendar isDark={false} />
-        </GsapReveal>
+    <ZenamuCalendar />
 
-        <!-- Map heading -->
-        <section class="pt-8 pb-4 md:pt-16 md:pb-6">
-            <Container>
-                <GsapReveal animation="fadeUp">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-display tracking-tight text-center">
-                        Où trouver le studio <span class="text-primary">Bis Repetita</span> ?
-                    </h2>
-                </GsapReveal>
-            </Container>
-        </section>
-
-        <!-- Map -->
-        <GsapReveal animation="fadeUp">
-            <LocationMap />
-        </GsapReveal>
-    </div>
+    <section id="map" class="wrap map-head">
+        <h2 class="t-title" data-split>Où trouver le studio <span class="text-primary">Bis Repetita</span> ?</h2>
+    </section>
+    <LocationMap classes={{ container: "pt-0!" }} />
 </BaseLayout>
+
+<style>
+    .map-head { padding-top: var(--section); padding-bottom: clamp(32px, 4vw, 56px); scroll-margin-top: var(--nav-h); border-top: 1px solid var(--line); }
+    .map-head h2 { max-width: 16ch; }
+</style>

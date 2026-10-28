@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "source_brief": "content/_drafts/blog/cours-sport-rembourses-assurance-complementaire.md",
+  "slug": "cours-sport-rembourses-assurance-complementaire",
+  "locale": "fr",
+  "module": "B",
+  "snippet": {
+    "title": "Cours de sport et complémentaire : ce qu'il faut vérifier",
+    "h1": "Cours de sport et complémentaire : ce qu'il faut vérifier",
+    "description": "Label, plafond annuel, liste de cours reconnus : comment une assurance complémentaire suisse participe à un cours de sport, et ce que dit la boxe."
+  },
+  "dates": {
+    "pubDate": "2026-12-15",
+    "updatedDate": null,
+    "reviewedDate": null
+  },
+  "word_count": {
+    "minimum": 1400,
+    "maximum": 1800
+  },
+  "primary_keyword": "cours de sport remboursés assurance complémentaire",
+  "keywords": [
+    {
+      "role": "primary",
+      "query": "cours de sport remboursés assurance complémentaire",
+      "natural_form": "des cours de sport pris en charge par l'assurance complémentaire",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "remboursement sport assurance complémentaire Suisse",
+      "natural_form": "le remboursement du sport par une complémentaire en Suisse",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "assurance complémentaire sport label Qualitop",
+      "natural_form": "le label Qualitop",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "participation fitness caisse maladie",
+      "natural_form": "la participation de votre caisse à un abonnement de fitness",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "LAMal sport remboursement",
+      "natural_form": "ce que l'assurance de base ne rembourse pas",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "assurance complémentaire cours de sport plafond annuel",
+      "natural_form": "le plafond annuel de votre assurance complémentaire",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "cours de boxe remboursé assurance",
+      "natural_form": "un cours de boxe pris en charge par la caisse",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "ma caisse maladie rembourse-t-elle un cours de sport",
+      "natural_form": "savoir si votre caisse participe à un cours de sport",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "QualiCert Fitness-Guide EMfit différence",
+      "natural_form": "les labels reconnus par les caisses",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "chèque fitness Visana Helsana CSS plafond",
+      "natural_form": "les plafonds publiés par quelques caisses",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "comment se faire rembourser un abonnement sport",
+      "natural_form": "démarches pour obtenir une participation",
+      "volume": null
+    }
+  ],
+  "structure": [
+    {
+      "id": "base-compl",
+      "level": 2,
+      "heading": "Ce que l'assurance de base ne paie pas, ce que la complémentaire peut prendre",
+      "purpose": "Distinction assurance de base / complémentaire, plafond par année civile, exemples de plafonds datés"
+    },
+    {
+      "id": "lamal",
+      "level": 3,
+      "heading": "L'assurance de base ne rembourse pas le fitness",
+      "purpose": "LAMal : pas de remboursement des abonnements de fitness"
+    },
+    {
+      "id": "plafond",
+      "level": 3,
+      "heading": "Les complémentaires : un plafond par année civile",
+      "purpose": "Plafonds de quelques caisses, datés, avec renvoi vers le document de chaque caisse"
+    },
+    {
+      "id": "label",
+      "level": 2,
+      "heading": "Le label du prestataire : la condition que posent presque toutes les caisses",
+      "purpose": "Labels reconnus, nuance « certification ≠ reconnaissance »"
+    },
+    {
+      "id": "boxe",
+      "level": 2,
+      "heading": "Et un cours de boxe : est-il pris en charge ?",
+      "purpose": "Ce que les documents établissent pour la boxe : rien de garanti ; position du studio (D1)"
+    },
+    {
+      "id": "verifier",
+      "level": 2,
+      "heading": "Comment vérifier auprès de votre caisse : cinq questions",
+      "purpose": "Checklist de cinq questions, Notre avis prudent"
+    },
+    {
+      "id": "faq",
+      "level": 2,
+      "heading": "Questions fréquentes sur le remboursement du sport en Suisse",
+      "purpose": "FAQ : base, séance à l'unité, plafond partagé"
+    },
+    {
+      "id": "conclusion",
+      "level": 2,
+      "heading": "Conclusion : une question à poser avant de réserver",
+      "purpose": "Conclusion 80–120 mots et CTA unique"
+    }
+  ],
+  "internal_links": [
+    {
+      "url": "/cours-de-boxe-geneve",
+      "anchor": "les cours de boxe à Genève",
+      "section_id": "intro",
+      "required": true
+    },
+    {
+      "url": "/tarifs",
+      "anchor": "la grille tarifaire",
+      "section_id": "boxe",
+      "required": true
+    },
+    {
+      "url": "/blog/prix-cours-boxe-geneve-2026",
+      "anchor": "le détail des prix des cours de boxe à Genève",
+      "section_id": "boxe",
+      "required": true
+    },
+    {
+      "url": "/services/round-by-round",
+      "anchor": "les cours Round by Round",
+      "section_id": "boxe",
+      "required": false
+    },
+    {
+      "url": "/services/coaching-prive",
+      "anchor": "le coaching privé",
+      "section_id": "boxe",
+      "required": false
+    },
+    {
+      "url": "/blog/cours-boxe-prive-petit-groupe-collectif",
+      "anchor": "la formule la plus adaptée à votre objectif",
+      "section_id": "conclusion",
+      "required": false
+    },
+    {
+      "url": "/contact",
+      "anchor": "nous contacter",
+      "section_id": "verifier",
+      "required": false
+    },
+    {
+      "url": "/#planning",
+      "anchor": "Réserver une première séance",
+      "section_id": "conclusion",
+      "required": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "url": "https://www.axa.ch/fr/privatkunden/blog/sante/conseils-et-astuces/abonnement-fitness-caisse-maladie.html",
+      "title": "AXA, blog, Abonnement fitness et caisse maladie",
+      "status": "to_verify",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-002",
+      "url": "https://www.bonus.ch/ND/Assurance-complementaire-qu-en-est-il-des-fitness-ID201801312LCP.aspx",
+      "title": "bonus.ch, Assurance complémentaire et fitness",
+      "status": "to_verify",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-003",
+      "url": "https://www.helsana.ch/dam/fr/pdf/prives/listes/offres-de-promotion-sante-reconnues.pdf",
+      "title": "Helsana, Offres de promotion de la santé reconnues, état au 1.7.2026",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-004",
+      "url": "https://www.css.ch/fr/clients-prives/ma-sante/promouvoir-sante/compte-sante/fitness.html",
+      "title": "CSS, Compte santé, fitness",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-005",
+      "url": "https://www.clever-fit.com/app/uploads/2026/02/qualitop-gesundheitsfoerderungsbeitraege_FR_2026.pdf",
+      "title": "Qualitop, Contributions à la promotion de la santé 2026, version du 27.01.2026",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-006",
+      "url": "https://www.qualitop.ch/fr/",
+      "title": "Qualitop, site du label",
+      "status": "to_verify",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-007",
+      "url": "https://www.groupemutuel.ch/en/private-customers/our-services/approved-facilities-and-healthcare-providers/fitness-and-health-promotion.html",
+      "title": "Groupe Mutuel, Fitness et promotion de la santé",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "statement": "L'assurance de base (LAMal) ne rembourse pas les abonnements de fitness ; certaines complémentaires participent, souvent sous condition de label.",
+      "status": "to_confirm",
+      "source_ids": [
+        "SRC-001",
+        "SRC-002"
+      ],
+      "limits": "sources grand public, à recouper avec un assureur"
+    },
+    {
+      "id": "CLM-002",
+      "statement": "Helsana (SANA/COMPLETA) : 75 % de la facture, maximum 200 CHF par année civile et par domaine ; liste fermée de cours ; labels EMfit, Qualitop, QualiCert, Fitness-Guide.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-003"
+      ],
+      "limits": "état au 1.7.2026 ; produits changeants ; « jusqu'à … selon votre contrat »"
+    },
+    {
+      "id": "CLM-003",
+      "statement": "CSS : 50 % du coût, plafonds 150, 250 ou 500 CHF par année civile selon le produit ; cours en ligne exclus.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-004"
+      ],
+      "limits": "page consultée le 2026-10-17"
+    },
+    {
+      "id": "CLM-004",
+      "statement": "Le plafond s'applique par année civile.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-003",
+        "SRC-004"
+      ],
+      "limits": "à reformuler caisse par caisse"
+    },
+    {
+      "id": "CLM-005",
+      "statement": "Un cours de boxe-fitness pourrait relever de « circuit training » ou « functional training » si le prestataire est certifié.",
+      "status": "hypothesis",
+      "source_ids": [
+        "SRC-003"
+      ],
+      "limits": "à marquer comme hypothèse ; à vérifier auprès d'Helsana"
+    },
+    {
+      "id": "CLM-006",
+      "statement": "La boxe ne figure pas en tant que telle dans la liste de cours reconnus d'Helsana.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-003"
+      ],
+      "limits": "état au 1.7.2026"
+    },
+    {
+      "id": "CLM-007",
+      "statement": "Le studio est certifié par un label reconnu des caisses.",
+      "status": "to_confirm",
+      "source_ids": [],
+      "limits": "décision D1 ; ne rien écrire avant réponse"
+    },
+    {
+      "id": "CLM-008",
+      "statement": "Votre cours de boxe est remboursé ou pris en charge ; vous économiserez X CHF ; demandez le remboursement de nos séances.",
+      "status": "forbidden",
+      "source_ids": [],
+      "limits": "promesse non tenable"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG-001",
+      "placement": "cover",
+      "type": "photo",
+      "alt_text": "Intérieur du studio de boxe Bis Repetita près de la place des Nations à Genève, avec le ring et les sacs de frappe",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "IMG-002",
+      "placement": "after-h2:label",
+      "type": "schéma",
+      "alt_text": "Schéma en quatre étapes de la participation d'une assurance complémentaire à un cours de sport : contrat, label, plafond, justificatif",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-003",
+      "placement": "after-h2:verifier",
+      "type": "photo",
+      "alt_text": "Carnet et stylo posés sur le comptoir d'accueil du studio de boxe Bis Repetita à Genève",
+      "aspect_ratio": "4:3"
+    }
+  ],
+  "cta": {
+    "url": "/#planning",
+    "anchor": "Réserver une première séance"
+  },
+  "frontmatter": {
+    "author": "Équipe Bis Repetita",
+    "category": "guide",
+    "tags": [
+      "assurance complémentaire sport",
+      "cours de sport remboursés",
+      "label Qualitop",
+      "remboursement sport Suisse",
+      "boxe Genève"
+    ],
+    "draft": true
+  }
+}

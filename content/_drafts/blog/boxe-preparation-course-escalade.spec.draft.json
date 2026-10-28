@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "source_brief": "content/_drafts/blog/boxe-preparation-course-escalade.md",
+  "slug": "boxe-preparation-course-escalade",
+  "locale": "fr",
+  "module": "B",
+  "snippet": {
+    "title": "Préparer la Course de l'Escalade : la boxe en renfort",
+    "h1": "Préparer la Course de l'Escalade : la boxe en renfort",
+    "description": "Un mois avant la Course de l'Escalade, une séance de boxe par semaine en plus de vos sorties : gainage, haut du corps, intensité courte. Semaine type."
+  },
+  "dates": {
+    "pubDate": "2026-11-05",
+    "updatedDate": null,
+    "reviewedDate": null
+  },
+  "word_count": {
+    "minimum": 1200,
+    "maximum": 1500
+  },
+  "primary_keyword": "préparation course de l'Escalade",
+  "keywords": [
+    {
+      "role": "primary",
+      "query": "préparation course de l'Escalade",
+      "natural_form": "la préparation de la Course de l'Escalade",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "entraînement Escalade",
+      "natural_form": "l'entraînement pour l'Escalade",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "boxe et course à pied",
+      "natural_form": "la boxe et la course à pied",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "renforcement coureur hiver",
+      "natural_form": "le renforcement du coureur en hiver",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "cross-training course à pied",
+      "natural_form": "le cross-training pour un coureur",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "gainage coureur",
+      "natural_form": "le gainage pour le coureur",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "combien de séances par semaine avant l'Escalade",
+      "natural_form": "combien de séances par semaine avant l'Escalade",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "renforcement musculaire blessures course à pied",
+      "natural_form": "le renforcement musculaire et les blessures en course à pied",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "règle des 10 % course à pied",
+      "natural_form": "la règle des 10 % en course à pied",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "boxe la veille d'une course",
+      "natural_form": "faire de la boxe la veille d'une course",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "Course de l'Escalade 2026 date",
+      "natural_form": "la Course de l'Escalade 2026",
+      "volume": null
+    }
+  ],
+  "structure": [
+    {
+      "id": "apports",
+      "level": 2,
+      "heading": "À un mois de l'Escalade, ce que la boxe apporte au coureur",
+      "purpose": "Réponse directe, quatre mécanismes"
+    },
+    {
+      "id": "limites",
+      "level": 2,
+      "heading": "Ce que la boxe n'apporte pas avant une course",
+      "purpose": "Honnêteté, Balsalobre-Fernández 2016"
+    },
+    {
+      "id": "semaine-type",
+      "level": 2,
+      "heading": "Une semaine type à quatre semaines de la course",
+      "purpose": "Tableau semaine, format conseillé (D3)"
+    },
+    {
+      "id": "etudes",
+      "level": 2,
+      "heading": "Renforcement et blessures : ce que disent les études",
+      "purpose": "Lauersen 2014, Buist 2008, statuts de preuve"
+    },
+    {
+      "id": "notre-avis",
+      "level": 2,
+      "heading": "Notre avis : pour qui la boxe a du sens avant l'Escalade",
+      "purpose": "Pour qui / pas pour qui, bloc Notre avis, après la course"
+    },
+    {
+      "id": "faq",
+      "level": 2,
+      "heading": "Questions fréquentes",
+      "purpose": "FAQ locale H3"
+    }
+  ],
+  "internal_links": [
+    {
+      "url": "/services/round-by-round",
+      "anchor": "le cours collectif Round by Round",
+      "section_id": "semaine-type",
+      "required": true
+    },
+    {
+      "url": "/blog/burn-out-prevention-sport-cadres-geneve",
+      "anchor": "pourquoi le running garde toute sa valeur",
+      "section_id": "limites",
+      "required": true
+    },
+    {
+      "url": "/blog/combien-seances-boxe-par-semaine-debutant",
+      "anchor": "combien de séances de boxe par semaine",
+      "section_id": "notre-avis",
+      "required": true
+    },
+    {
+      "url": "/services/coaching-solo",
+      "anchor": "le coaching solo pour corriger la technique",
+      "section_id": "semaine-type",
+      "required": false
+    },
+    {
+      "url": "/cours-de-boxe-geneve",
+      "anchor": "le guide des cours de boxe à Genève",
+      "section_id": "apports",
+      "required": true
+    },
+    {
+      "url": "/blog/la-boxe-est-elle-dangereuse-blessures-loisir",
+      "anchor": "les risques réels de la boxe de loisir",
+      "section_id": "etudes",
+      "required": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "url": "https://www.myswitzerland.com/fr-ch/decouvrir/manifestations/48e-course-de-lescalade/",
+      "title": "48e Course de l'Escalade, MySwitzerland",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-002",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24100287/",
+      "title": "Lauersen et al., Br J Sports Med, 2014",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-003",
+      "url": "https://research.rug.nl/en/publications/no-effect-of-a-graded-training-program-on-the-number-of-running-r/",
+      "title": "Buist et al., Am J Sports Med, 2008",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-004",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26694507/",
+      "title": "Balsalobre-Fernández et al., J Strength Cond Res, 2016",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-005",
+      "url": "https://www.hug.ch/node/32558",
+      "title": "HUG, entraînements Course de l'Escalade 2023",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "statement": "Course de l'Escalade les 5 et 6 décembre 2026, parc des Bastions",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-001"
+      ]
+    },
+    {
+      "id": "CLM-002",
+      "statement": "Le renforcement musculaire réduit les blessures sportives à moins d'un tiers (RR 0,315), tous sports",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-002"
+      ]
+    },
+    {
+      "id": "CLM-003",
+      "statement": "La règle des 10 % ne réduit pas les blessures chez des coureurs débutants (20,8 % vs 20,3 %)",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-003"
+      ]
+    },
+    {
+      "id": "CLM-004",
+      "statement": "Renforcement et pliométrie 2-3 fois par semaine sur 8-12 semaines améliorent l'économie de course chez des coureurs entraînés",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-004"
+      ]
+    },
+    {
+      "id": "CLM-005",
+      "statement": "Entraînements collectifs gratuits le dimanche en novembre 2026",
+      "status": "to_confirm",
+      "source_ids": [
+        "SRC-005"
+      ]
+    },
+    {
+      "id": "CLM-006",
+      "statement": "Distance adulte 2026",
+      "status": "to_confirm",
+      "source_ids": []
+    },
+    {
+      "id": "CLM-007",
+      "statement": "La boxe fait gagner du temps ou prévient les blessures",
+      "status": "forbidden",
+      "source_ids": []
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG-001",
+      "placement": "cover",
+      "type": "photo",
+      "alt_text": "Coureur en tenue d'hiver qui travaille au sac de frappe pour préparer la Course de l'Escalade à Genève",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "IMG-002",
+      "placement": "after-h2:À un mois de l'Escalade, ce que la boxe apporte au coureur",
+      "type": "photo",
+      "alt_text": "Rotation du tronc et gainage sur un direct au sac, travail utile au coureur en hiver",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-003",
+      "placement": "after-h2:Une semaine type à quatre semaines de la course",
+      "type": "schema",
+      "alt_text": "Semaine type de préparation de l'Escalade avec deux sorties de course, une séance de boxe et des jours de repos",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-004",
+      "placement": "after-h2:Notre avis : pour qui la boxe a du sens avant l'Escalade",
+      "type": "photo",
+      "alt_text": "Chaussures de course à pied et gants de boxe posés côte à côte sur un banc de studio à Genève",
+      "aspect_ratio": "4:3"
+    }
+  ],
+  "cta": {
+    "url": "/#planning",
+    "anchor": "Réserver une première séance"
+  },
+  "frontmatter": {
+    "author": "Équipe Bis Repetita",
+    "category": "guide",
+    "tags": [
+      "Course de l'Escalade",
+      "boxe et course à pied",
+      "renforcement coureur",
+      "Genève"
+    ],
+    "draft": true
+  }
+}

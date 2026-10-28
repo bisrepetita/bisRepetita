@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Bis Repetita** — premium boxing studio website for Nicolas de Boccard in Geneva, Switzerland. French-language site (`fr_CH`) targeting local SEO for boxing/coaching services. Dark theme with gold (#D4A853) accents, glassmorphism design, GSAP scroll animations.
+**Bis Repetita** — premium boxing studio website for Nicolas de Boccard in Geneva, Switzerland. French-language site (`fr_CH`) targeting local SEO for boxing/coaching services. Branche `refonte-2026` : monde blanc / encre / photo N&B, Inter seule — le système visuel est dans `DESIGN.md` (fait foi), le produit dans `PRODUCT.md`.
 
 ## Commands
 
@@ -27,7 +27,7 @@ npm run test         # Vitest
 - **Tailwind CSS v4** via Vite plugin (`@tailwindcss/vite`) — no `tailwind.config.js`, all config in `src/styles/global.css` using `@theme` directive
 - **GSAP 3 + ScrollTrigger** for animations
 - **TypeScript strict** (extends `astro/tsconfigs/strict`)
-- **Netlify** deployment with security headers and redirects (`netlify.toml`)
+- **Vercel** deployment (prod + previews par branche) ; `api/contact.js` = fonction Vercel ; redirections et en-têtes dans `vercel.json`
 - **Plausible Analytics** (privacy-first, loaded in BaseLayout)
 
 ## Site Map
@@ -44,9 +44,9 @@ bisrepetita.ch/
 │   ├── /services/coaching-prive     → Hub coaching privé (comparatif formats)
 │   ├── /services/coaching-solo      → Coaching individuel 1-on-1
 │   ├── /services/coaching-duo-trio  → Coaching à 2 ou 3
-│   ├── /services/small-group-training → Petit groupe (6 max)
+│   ├── /services/small-group-training → Petit groupe (4 à 8)
 │   ├── /services/coaching-boxe-domicile → Coaching à domicile
-│   ├── /services/round-by-round     → Cours collectifs (8 max, 2 coachs)
+│   ├── /services/round-by-round     → Cours collectifs (8 max, 1 coach, 50 min)
 │   ├── /services/corporate          → Programmes entreprise + team building
 │   └── /services/boxe-femme         → Landing page dédiée femmes
 ├── /blog/                           → Liste des articles (pagination)
@@ -67,16 +67,16 @@ bisrepetita.ch/
 
 ### Layout Flow
 
-`BaseLayout.astro` → wraps every page. Loads Google Fonts (Bricolage Grotesque for headings, Manrope/Geist for body), initializes GSAP, renders Navbar (fixed glassmorphism) + Footer (large watermark). All pages pass a `metadata` object for SEO.
+`BaseLayout.astro` → wraps every page. Loads Inter (Google Fonts, axe opsz), initializes GSAP, renders Navbar (barre blanche + panneau « Cours ») + Footer (logo pleine largeur). All pages pass a `metadata` object for SEO.
 
 ### Key Directories
 
 - `src/config/site.ts` — centralized site config (contact info, nav links, social links, map embed, footer links)
 - `src/types/types.d.ts` — all TypeScript interfaces for components (Widget, HeroProps, FeaturesProps, etc.)
-- `src/styles/global.css` — Tailwind v4 `@theme` config, CSS custom properties (colors, shadows), custom utilities (`.glass-card`, `.text-gradient-gold`, `.section-label`), keyframe animations
+- `src/styles/global.css` — Tailwind v4 `@theme` + tokens N&B, classes `.wrap .section .t-* .btn .link-line .nb` (anciennes utilitaires or/verre neutralisées pour compat)
 - `src/utils/gsap.ts` — GSAP initialization with ScrollTrigger, defines all animation types
 - `src/content.config.ts` — blog content collection (glob `src/content/blog/*.{md,mdx}`)
-- `docs/calendrier-editorial-6-mois.md` — calendrier éditorial 80 articles sur 6 mois (avr–sept 2026)
+- `docs/seo/plan-editorial-2026-10-11.md` — calendrier éditorial en cours ; `docs/seo/maillage.md` — maillage interne
 
 ### Component Pattern
 
@@ -86,38 +86,18 @@ Pages compose **widgets** (`src/components/widgets/`) with **UI primitives** (`s
 - **UI primitives** = Button, Card, Container, SectionTitle, Headline, Badge, Form, Tags, Pagination.
 - **SEO components** (`src/components/seo/`) = `Seo.astro` (meta/OG tags), `Schema.astro` (JSON-LD supporting: WebSite, BlogPosting, SportsActivityLocation, Service, Person, FAQPage).
 
-### GSAP Animation System
+### Design & animation
 
-Animations are applied via HTML attributes, initialized in `src/utils/gsap.ts`:
+Voir `DESIGN.md` (tokens, typo, composants, mouvement). GSAP + ScrollTrigger dans `gsap.matchMedia()` avec `prefers-reduced-motion` (`src/utils/gsap.ts`) : `data-split` (titres), `data-photo-reveal`, `data-parallax`, `data-clip-grow`, `data-follow`, `.gsap-reveal`, `.gsap-stagger-cards`. Références et règles de refonte : `design/references/refs.md`, `docs/project/rebranding-2026-10.md`.
 
-```html
-<!-- Single element -->
-<div class="gsap-reveal" data-animation="fadeUp" data-delay="0" data-duration="0.8">
-
-<!-- Staggered children -->
-<div class="gsap-stagger-cards">
-  <div>Card 1</div>
-  <div>Card 2</div>
-</div>
-
-<!-- Count-up numbers -->
-<span class="gsap-count-up" data-value="500+">0</span>
-```
-
-Available animations: `fadeUp`, `fadeIn`, `slideLeft`, `slideRight`, `scaleIn`, `clipReveal`, `rotateIn`. Or use the `<GsapReveal>` wrapper component.
-
-### Design Tokens
-
-All in CSS custom properties (`global.css`): `--background` (#0a0a0a), `--foreground` (#e8e4de), `--primary` (#D4A853), `--card` (#111111), `--muted` (#141414), `--border` (#1f1f1f). Gold glow shadows: `--shadow-gold-card`, `--shadow-gold-button`, `--shadow-gold-icon`.
-
-Custom fonts: LASVALLES family (Regular, Rounded, Vintage) loaded from `/public/fonts/`.
+Garde-fou SEO : `node scripts/seo-snapshot.mjs dist > design/seo-after.json && node scripts/seo-diff.mjs design/seo-before.json design/seo-after.json`.
 
 ### Content & SEO
 
 - Blog posts in `src/content/blog/` as Markdown/MDX with frontmatter: title, description, pubDate, author, image?, tags?, category?
 - Schema.org structured data per page type via `<Schema type="..." data={...} />`
 - Site URL: `https://bisrepetita.ch`
-- Netlify redirect: `/about` → `/studio` (301)
+- Redirections dans `vercel.json` (`/about`, `/cours-gratuit`, ancien guide débutant…) : actives en prod seulement après le merge de la refonte
 
 ## Conventions
 

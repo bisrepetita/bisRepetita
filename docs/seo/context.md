@@ -1,18 +1,21 @@
 ---
 extends: identity
-expertise: Boxe anglaise (loisir, technique, compétition amateur), coaching privé 1-1 et petits groupes, cours collectifs petit comité (Round by Round), team-building et programmes corporate, coaching à domicile
-location: Genève centre — La Voie-Creuse 16, 1202 Genève — service Genève + agglomération + transfrontalier proche
-eeat_proof: Nicolas de Boccard — boxeur licencié SwissBoxing #102860, 20 ans de pratique, 5 ans de coaching via Bis Repetita ; Lionel de Boccard — licencié SwissBoxing #103010, Champion Suisse Romand 2013 Jeunes (65 kg, Cercle des Sports Genève) ; studio professionnel équipé d'un ring complet à La Voie-Creuse 16
-cadence_blog: 3/semaine
+expertise: Boxe anglaise (loisir et technique ; préparation compétiteur en pause éditoriale), coaching privé solo, duo/trio et small group (4 à 8), cours collectif Round by Round (8 max, 1 coach, 50 min, sans échange de coups), boxe femme sans contact, team-building et programmes corporate, coaching à domicile
+location: La Voie-Creuse 16, 1202 Genève (près de la place des Nations) — service Genève + agglomération
+eeat_proof: Nicolas de Boccard — boxeur licencié SwissBoxing #102860, 20 ans de pratique, 5 ans à la tête du studio. Équipe (Lionel, Jeremy, Eliza) nommable avec son rôle seulement, sans palmarès ni licence (docs/brand/proofs.md). Studio privé avec un ring (jamais « professionnel », aucune mesure)
+cadence_blog: 2/semaine (mardi, jeudi)
 goals:
   cluster: Construire l'autorité organique sur le cluster "boxe Genève" — pillar page /cours-de-boxe-geneve + 22 articles répartis en 4 sous-clusters (débutant total, femme débutante, sportif en reconversion, boxeur amateur) + 5 articles Round by Round
-  transactional: Générer des demandes de séance d'essai gratuite vers /services/coaching-prive ou /services/round-by-round, et des demandes de devis corporate vers /services/corporate
+  transactional: Générer des réservations (planning /#planning) vers le coaching privé ou Round by Round, et des demandes de devis corporate vers /services/corporate. Plus de séance d'essai gratuite (décision oct. 2026) ; « Offrir un cours » (/offrir-un-cours) la remplace pour le cadeau
   local: Apparaître sur les requêtes géolocalisées Genève — "cours de boxe Genève", "boxe anglaise Genève", "studio boxe Genève", "coach boxe Genève", + variantes par quartier (Eaux-Vives, Plainpalais, Carouge, Pâquis, Champel)
   evergreen: Nurturing — amener le lecteur vers le hub de son sous-cluster ou vers la page service correspondante (coaching privé, Round by Round, corporate, boxe femme)
 cta_map:
   hot:
-    url: /contact
-    anchor: "Réserver ma séance d'essai gratuite"
+    url: /#planning
+    anchor: "Réserver une première séance"
+  gift:
+    url: /offrir-un-cours
+    anchor: "Offrir un cours de boxe"
   warm:
     url: /services/coaching-prive
     anchor: "Découvrir le coaching privé"
@@ -85,6 +88,9 @@ Le persona principal est **le plus gros gisement de trafic organique** du site. 
 > Cartographie SERP Genève — focus cluster Persona 1 (B2C individuel).
 
 ### Concurrents directs Genève — clubs et studios
+
+- **Le Carré Boxing Club** (Lancy, Pont-Rouge) — seul concurrent local qui publie un blog régulier (~3 billets/mois, générique, sans auteur ni sources), positionnement premium/cadres proche du nôtre (relevé 2026-10-17).
+- **Studios fitness-boxe** (KOMBAK « Boxe & Burn », URBANRIDE, Pure Sport Club « HIIT Boxing ») — boxe sur musique, via ClassPass/Mindbody : comparer les formats, jamais les enseignes.
 
 - **Boxygène** — club historique genevois
   - Point fort : Bien référencé sur "cours de boxe Genève" et "boxe femme Genève" (créneau féminin existant), bonne notoriété locale.

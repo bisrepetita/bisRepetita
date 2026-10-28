@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "source_brief": "content/_drafts/blog/seance-boxe-femme-specificites.md",
+  "slug": "seance-boxe-femme-specificites",
+  "locale": "fr",
+  "module": "C",
+  "snippet": {
+    "title": "Séance de boxe pour femme : ce qui change vraiment",
+    "h1": "Séance de boxe pour femme : ce qui change vraiment",
+    "description": "Même technique, cadre ajusté : séance type de 60 minutes, brassière, plancher pelvien, cycle, post-partum. Réservez une première séance à Genève."
+  },
+  "dates": {
+    "pubDate": "2026-10-22",
+    "updatedDate": null,
+    "reviewedDate": null
+  },
+  "word_count": {
+    "minimum": 1500,
+    "maximum": 1800
+  },
+  "primary_keyword": "séance de boxe femme",
+  "keywords": [
+    {
+      "role": "primary",
+      "query": "séance de boxe femme",
+      "natural_form": "une séance de boxe pour femme",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "programme boxe femme",
+      "natural_form": "le programme d'une séance de boxe pour une femme",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "boxe femme tonifier",
+      "natural_form": "tonifier son corps par la boxe",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "séance de boxe adaptée femme",
+      "natural_form": "une séance de boxe adaptée à la personne et au jour",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "brassière boxe",
+      "natural_form": "la brassière de sport pour boxer",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "boxe plancher pelvien",
+      "natural_form": "le plancher pelvien pendant les sauts",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "boxe après accouchement",
+      "natural_form": "reprendre la boxe après un accouchement",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "boxe pendant les règles séance",
+      "natural_form": "boxer pendant ses règles",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "boxe sans contact femme Genève",
+      "natural_form": "une boxe sans contact à Genève",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "combien de temps dure une séance de boxe",
+      "natural_form": "une séance dure 60 minutes en coaching privé",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "sauter à la corde fuites urinaires",
+      "natural_form": "sauter à la corde quand on a des fuites",
+      "volume": null
+    }
+  ],
+  "structure": [
+    {
+      "id": "meme-boxe",
+      "level": 2,
+      "heading": "La même boxe, un cadre ajusté",
+      "purpose": "BLUF : même technique, cadre et cinq points du corps ajustés ; sans contact par défaut"
+    },
+    {
+      "id": "seance-type",
+      "level": 2,
+      "heading": "Une séance type de 60 minutes, bloc par bloc",
+      "purpose": "Tableau des 5 blocs ; pas de minutage précis avant validation"
+    },
+    {
+      "id": "cinq-points",
+      "level": 2,
+      "heading": "Cinq points qui changent vraiment pour le corps",
+      "purpose": "Tableau 5 lignes avec statut de preuve"
+    },
+    {
+      "id": "plancher-pelvien",
+      "level": 3,
+      "heading": "Sauts et plancher pelvien",
+      "purpose": "Pires 2020 ; variante sans saut ; physiothérapeute"
+    },
+    {
+      "id": "cycle",
+      "level": 3,
+      "heading": "Cycle : un repère, votre ressenti décide",
+      "purpose": "3-5 phrases + lien article cycle ; pas de tableau des phases"
+    },
+    {
+      "id": "post-partum",
+      "level": 3,
+      "heading": "Après une grossesse",
+      "purpose": "Goom 2019 : pas d'impact avant ~3 mois, sur tests"
+    },
+    {
+      "id": "tonifier",
+      "level": 2,
+      "heading": "Tonifier : ce que le mot veut dire en boxe",
+      "purpose": "Roberts 2020, Refalo 2025 ; Notre avis en fin de section"
+    },
+    {
+      "id": "faq",
+      "level": 2,
+      "heading": "FAQ",
+      "purpose": "3 questions absentes du guide et de l'article cycle"
+    }
+  ],
+  "internal_links": [
+    {
+      "url": "/services/boxe-femme",
+      "anchor": "les cours de boxe pour femmes au studio",
+      "section_id": "meme-boxe",
+      "required": true
+    },
+    {
+      "url": "/blog/boxe-regles-cycle-menstruel",
+      "anchor": "ce que le cycle change, phase par phase",
+      "section_id": "cycle",
+      "required": true
+    },
+    {
+      "url": "/blog/effet-boxe-corps-femme-geneve",
+      "anchor": "l'effet de la boxe sur le corps d'une femme dans la durée",
+      "section_id": "tonifier",
+      "required": true
+    },
+    {
+      "url": "/blog/boxe-femme-massive-epaules-geneve",
+      "anchor": "pourquoi la boxe ne rend pas massive",
+      "section_id": "tonifier",
+      "required": true
+    },
+    {
+      "url": "/blog/gants-de-boxe-femme-debutante",
+      "anchor": "choisir ses premiers gants",
+      "section_id": "seance-type",
+      "required": false
+    },
+    {
+      "url": "/blog/boxe-femme-geneve-guide-complet",
+      "anchor": "le déroulé d'une première séance et les peurs du début",
+      "section_id": "seance-type",
+      "required": false
+    },
+    {
+      "url": "/services/round-by-round",
+      "anchor": "le cours collectif Round by Round",
+      "section_id": "seance-type",
+      "required": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7386138",
+      "title": "Pires et al. 2020, J Hum Kinet",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-002",
+      "url": "https://athleticsni.org/download/files/Returning_to_running_postnatal_guideline_for_medical_health_and_fitness_professionals_managing_this_population.05.pdf",
+      "title": "Goom, Donnelly, Brockwell 2019, Returning to running postnatal",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-003",
+      "url": "https://research.stmarys.ac.uk/id/eprint/408/1/Brown-White-Brasher-Scurr-Experience-of-Breast-Pain-Female-Runners.pdf",
+      "title": "Brown et al., Br J Sports Med 2013 (doi 10.1136/bjsports-2013-092175), manuscrit lu",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-004",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32218059/",
+      "title": "Roberts et al. 2020, JSCR",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-005",
+      "url": "https://peerj.com/articles/19042",
+      "title": "Refalo et al. 2025, PeerJ",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-006",
+      "url": "https://assets01.sdd1.ch/assets/lbwp-cdn/mobilesport/files/1767707721/mobile-dossier-1-26-zyklus-der-frau_fr.pdf",
+      "title": "OFSPO mobilesport.ch 1/2026",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-007",
+      "url": "https://doi.org/10.1007/s40279-020-01319-3",
+      "title": "McNulty et al. 2020, Sports Med",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-008",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12458775",
+      "title": "UEFA consensus 2025, BMJ Open SEM",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "statement": "25,9 % des sportives (9 études) rapportent une incontinence urinaire, 20,7 % une incontinence d'effort",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-001"
+      ],
+      "limits": "sportives de sports à fort impact ; aucune donnée spécifique à la boxe"
+    },
+    {
+      "id": "CLM-002",
+      "statement": "Pas d'impact (sauts, corde) avant environ 3 mois post-partum, et seulement après des tests sans symptôme",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-002"
+      ],
+      "limits": "avis d'experts conçu pour la course, appliqué par analogie",
+      "allowed_wording": "Avant 3 mois post-partum, l'avis du professionnel de santé passe d'abord"
+    },
+    {
+      "id": "CLM-003",
+      "statement": "32 % des coureuses du marathon de Londres 2012 ont une douleur mammaire, liée à la taille de bonnet ; 44 % ne font rien",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-003"
+      ],
+      "limits": "données de course"
+    },
+    {
+      "id": "CLM-004",
+      "statement": "Les femmes gagnent du muscle dans les mêmes proportions relatives que les hommes",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-004",
+        "SRC-005"
+      ]
+    },
+    {
+      "id": "CLM-005",
+      "statement": "Le cycle est un repère ; le ressenti du jour décide ; pas de programmation par phase justifiée",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-006",
+        "SRC-007",
+        "SRC-008"
+      ]
+    },
+    {
+      "id": "CLM-006",
+      "statement": "Minutage précis des blocs de la séance type",
+      "status": "to_confirm",
+      "source_ids": [],
+      "limits": "à valider par Nicolas"
+    },
+    {
+      "id": "CLM-007",
+      "statement": "Variantes sans saut proposées sur simple demande",
+      "status": "to_confirm",
+      "source_ids": [],
+      "limits": "à confirmer par Nicolas"
+    },
+    {
+      "id": "CLM-008",
+      "statement": "Séance d'essai gratuite",
+      "status": "forbidden",
+      "source_ids": []
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG-001",
+      "placement": "cover",
+      "type": "photo",
+      "subject": "femme en garde face aux pattes d'ours",
+      "alt_text": "Femme en garde qui frappe un direct dans des pattes d'ours pendant une séance de boxe au studio de Genève",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "IMG-002",
+      "placement": "after-h2:Une séance type de 60 minutes, bloc par bloc",
+      "type": "photo",
+      "subject": "travail au sac",
+      "alt_text": "Femme qui enchaîne des coups au sac de frappe pendant le bloc cardio d'une séance de boxe",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-003",
+      "placement": "after-h3:Sauts et plancher pelvien",
+      "type": "photo",
+      "subject": "variante sans saut",
+      "alt_text": "Déplacement latéral en appuis à la place de la corde à sauter, variante sans saut de l'échauffement de boxe",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-004",
+      "placement": "after-h2:Tonifier : ce que le mot veut dire en boxe",
+      "type": "photo",
+      "subject": "gainage en garde",
+      "alt_text": "Femme en gainage avec gants de boxe, exercice de tonification de la sangle abdominale en séance",
+      "aspect_ratio": "4:3"
+    }
+  ],
+  "cta": {
+    "url": "/#planning",
+    "anchor": "Réserver une première séance"
+  },
+  "frontmatter": {
+    "author": "Équipe Bis Repetita",
+    "category": "guide",
+    "tags": [
+      "séance de boxe femme",
+      "boxe femme Genève",
+      "boxe femme tonifier",
+      "boxe sans contact",
+      "cours de boxe femme"
+    ],
+    "draft": true
+  }
+}

@@ -36,3 +36,6 @@ docs/design/refs/framer/
 
 # Exports bruts Hermes (réponses client) — déjà intégrés dans docs/brand/interview
 .hermes/desktop-attachments/
+design/shots/
+.impeccable/review/
+.agent/recordings/

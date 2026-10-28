@@ -1,8 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Hero from "../components/widgets/Hero.astro";
-import CTABanner from "../components/widgets/CTABanner.astro";
-import GsapReveal from "../components/widgets/GsapReveal.astro";
 
 const metadata = {
     title: "Conditions Générales de Vente",
@@ -11,25 +8,24 @@ const metadata = {
 ---
 
 <BaseLayout {metadata}>
-    <Hero
-        title={`Conditions Générales de <span class="font-display text-primary">Vente et d'Utilisation</span>`}
-        description="Dernière mise à jour : Avril 2025"
-        classes={{ container: "min-h-[50vh]" }}
-    />
+    <article class="wrap legal">
+        <header class="legal-head">
+            <h1 class="t-title">Conditions Générales de <span class="text-primary">Vente et d'Utilisation</span></h1>
+            <p class="t-meta">Dernière mise à jour : avril 2025</p>
+        </header>
 
-    <div class="mx-auto max-w-3xl px-4 pb-16 md:pb-24 sm:px-6 lg:px-8">
-        <div class="prose prose-invert prose-lg max-w-none">
+        <div class="legal-body">
             <h2>1. Présentation de l'entreprise</h2>
             <p>
                 Bis Repetita SARL<br />
-                Adresse : ch. du domaine-patry 8, 1224 Chêne-Bougeries, Suisse<br />
-                Numéro d'identification : CHE-143.100.981<br />
-                Email : <a href="mailto:contact@bisrepetita.com">contact@bisrepetita.com</a><br />
-                Téléphone : <a href="tel:+41788012596">+41 78 801 25 96</a>
+                Adresse : ch. du domaine-patry 8, 1224 Chêne-Bougeries, Suisse<br />
+                Numéro d'identification : CHE-143.100.981<br />
+                Email : <a href="mailto:contact@bisrepetita.com">contact@bisrepetita.com</a><br />
+                Téléphone : <a href="tel:+41788012596">+41 78 801 25 96</a>
             </p>
 
             <h2>2. Description des services</h2>
-            <p>Bis Repetita SARL :</p>
+            <p>Bis Repetita SARL :</p>
             <ul>
                 <li>Activités physiques et sportives adaptées à tous niveaux</li>
                 <li>Entraînements personnalisés et accompagnements spécifiques</li>
@@ -50,7 +46,7 @@ const metadata = {
                 <li>En cas d'annulation de notre part, le client sera remboursé intégralement.</li>
             </ul>
             <p>
-                Pour annuler, veuillez nous contacter à l'adresse :
+                Pour annuler, veuillez nous contacter à l'adresse :
                 <a href="mailto:contact@bisrepetita.com">contact@bisrepetita.com</a>
             </p>
 
@@ -96,12 +92,22 @@ const metadata = {
                 Conditions Générales de Vente et d'Utilisation.
             </p>
         </div>
-    </div>
 
-    <GsapReveal animation="fadeUp">
-        <CTABanner
-            title="Des questions ?"
-            cta={{ text: "Nous contacter", href: "/contact" }}
-        />
-    </GsapReveal>
+        <p class="legal-end">Une question sur ces conditions ? <a href="/contact" class="link-line">Nous contacter</a></p>
+    </article>
 </BaseLayout>
+
+<style>
+    .legal { padding-block: clamp(48px, 7vw, 112px) var(--section); }
+    .legal-head { display: grid; gap: 16px; padding-bottom: clamp(32px, 4vw, 56px); border-bottom: 1px solid var(--line); }
+    .legal-head h1 { max-width: 18ch; }
+    .legal-body { max-width: 68ch; padding-top: clamp(32px, 4vw, 56px); color: var(--gray-1); font-size: 16px; line-height: 1.65; }
+    .legal-body :global(h2) { margin: 2.5em 0 0.75em; color: var(--ink); font-size: 1.25rem; letter-spacing: -0.02em; }
+    .legal-body :global(h2:first-child) { margin-top: 0; }
+    .legal-body :global(p + p) { margin-top: 0.75em; }
+    .legal-body :global(ul) { margin: 0.75em 0; padding-left: 1.1em; list-style: disc; }
+    .legal-body :global(li + li) { margin-top: 0.4em; }
+    .legal-body :global(a) { color: var(--ink); text-decoration: underline; }
+    .legal-end { max-width: 68ch; margin-top: clamp(48px, 6vw, 88px); padding-top: 24px; border-top: 1px solid var(--line); color: var(--gray-1); }
+    .legal-end a { color: var(--ink); margin-left: 4px; }
+</style>

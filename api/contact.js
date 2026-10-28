@@ -3,6 +3,10 @@ const SUBJECT_LABELS = {
   "devis-prive": "Demande de devis — Coaching privé",
   "devis-duo-trio": "Demande de devis — Duo ou Trio",
   "devis-corporate": "Demande de devis — Programme corporate",
+  "small-group": "Small Group Training",
+  "round-by-round": "Round by Round — cours collectif",
+  domicile: "Coaching à domicile",
+  offrir: "Offrir un cours",
   renseignement: "Renseignement général",
   autre: "Autre",
 };

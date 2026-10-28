@@ -6,25 +6,22 @@ interface Props {
 const { title = "L'essentiel en bref" } = Astro.props;
 ---
 
-<aside class="not-prose mb-8 rounded-xl border border-primary/20 bg-primary/5 p-6">
-  <div class="mb-3 flex items-center gap-2">
-    <svg
-      class="h-5 w-5 text-primary"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      stroke-width="2"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-    </svg>
-    <span class="text-sm font-semibold uppercase tracking-wide text-primary">
-      {title}
-    </span>
-  </div>
-  <div class="text-base leading-relaxed text-foreground/80 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1">
-    <slot />
-  </div>
+<aside class="not-prose tldr" aria-label={title}>
+  <p class="tldr-label">{title}</p>
+  <div class="tldr-body"><slot /></div>
 </aside>
+
+<style>
+  .tldr {
+    margin: 0 0 48px;
+    padding: 20px 0 24px;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--line);
+  }
+  .tldr-label { font-size: 13px; color: var(--gray-2); margin-bottom: 12px; }
+  .tldr-body { font-size: 17px; line-height: 1.55; color: var(--ink); }
+  .tldr-body :global(ul) { list-style: none; padding: 0; margin: 0; }
+  .tldr-body :global(li) { padding: 10px 0; border-top: 1px solid var(--line); }
+  .tldr-body :global(li:first-child) { border-top: 0; padding-top: 0; }
+  .tldr-body :global(p + p) { margin-top: 12px; }
+</style>

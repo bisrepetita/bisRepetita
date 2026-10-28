@@ -4,115 +4,55 @@ import type { PricingNavProps } from "../../types/types";
 const { items } = Astro.props as PricingNavProps;
 ---
 
-<nav
-  id="pricing-nav"
-  class="sticky top-[72px] z-40 -mx-4 md:-mx-0 backdrop-blur-xl bg-background/80 border-b border-border/50 transition-all duration-300"
-  aria-label="Navigation tarifs"
->
-  <div class="mx-auto max-w-7xl px-4 md:px-6">
-    <div class="flex items-center gap-3 py-3">
-      <span id="pricing-nav-hint" class="shrink-0 flex items-center gap-2 text-xs font-medium text-primary uppercase tracking-wider transition-opacity duration-300">
-        <span>Votre formule</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-      </span>
-      <ul class="flex gap-1 overflow-x-auto scrollbar-hide -mx-1" role="tablist">
-        {items.map((item) => (
-          <li class="shrink-0">
-            <a
-              href={`#${item.anchorId}`}
-              class="pricing-nav-link flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-all duration-200 hover:text-foreground whitespace-nowrap"
-              data-target={item.anchorId}
-            >
-              {item.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </div>
+<nav id="pricing-nav" class="pnav" aria-label="Navigation tarifs">
+  <ul class="wrap pnav-list scrollbar-hide">
+    {items.map((item) => (
+      <li>
+        <a href={`#${item.anchorId}`} class="pnav-link" data-target={item.anchorId}>{item.label}</a>
+      </li>
+    ))}
+  </ul>
 </nav>
 
 <script>
   function initPricingNav() {
     const nav = document.getElementById("pricing-nav");
-    if (!nav) return;
+    if (!nav || nav.dataset.ready) return;
+    nav.dataset.ready = "1";
 
-    const links = nav.querySelectorAll<HTMLAnchorElement>(".pricing-nav-link");
-    if (!links.length) return;
-
+    const links = Array.from(nav.querySelectorAll<HTMLAnchorElement>(".pnav-link"));
+    const list = nav.querySelector("ul")!;
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    // Smooth scroll on click
     links.forEach((link) => {
       link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const targetId = link.dataset.target;
-        if (!targetId) return;
-        const target = document.getElementById(targetId);
+        const target = document.getElementById(link.dataset.target!);
         if (!target) return;
-        target.scrollIntoView({
-          behavior: prefersReduced ? "auto" : "smooth",
-          block: "start",
-        });
+        e.preventDefault();
+        target.scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth", block: "start" });
+        history.replaceState(null, "", `#${target.id}`);
       });
     });
 
-    // Scroll-spy via IntersectionObserver
-    const sectionIds = Array.from(links).map((l) => l.dataset.target!);
-    const sections = sectionIds
-      .map((id) => document.getElementById(id))
-      .filter(Boolean) as HTMLElement[];
-
-    let currentActive = "";
-    const hint = document.getElementById("pricing-nav-hint");
-
     function setActive(id: string) {
-      if (id === currentActive) return;
-      currentActive = id;
-
-      // Hide hint once a section is active
-      if (hint && id) {
-        hint.style.opacity = "0";
-        hint.style.width = "0";
-        hint.style.overflow = "hidden";
-      }
       links.forEach((link) => {
         const isActive = link.dataset.target === id;
-        link.classList.toggle("text-primary", isActive);
-        link.classList.toggle("bg-primary/10", isActive);
-        link.classList.toggle("border-primary/30", isActive);
-        link.classList.toggle("text-muted-foreground", !isActive);
-
-        // Auto-scroll the nav horizontally to keep active item visible
-        // NOTE: Do NOT use link.scrollIntoView() here — it scrolls the PAGE
-        // back to the nav's natural DOM position (above quiz) since nav is sticky.
+        if (isActive) link.setAttribute("aria-current", "true");
+        else link.removeAttribute("aria-current");
+        // Ne pas utiliser scrollIntoView ici : il ferait défiler la page (nav sticky).
         if (isActive) {
-          const ul = link.closest("ul");
-          if (ul) {
-            const linkLeft = (link as HTMLElement).offsetLeft;
-            const linkWidth = (link as HTMLElement).offsetWidth;
-            const ulWidth = ul.offsetWidth;
-            ul.scrollTo({
-              left: linkLeft - ulWidth / 2 + linkWidth / 2,
-              behavior: "smooth",
-            });
-          }
+          list.scrollTo({ left: link.offsetLeft - list.offsetWidth / 2 + link.offsetWidth / 2, behavior: "smooth" });
         }
       });
     }
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
-          }
-        });
-      },
-      { rootMargin: "-80px 0px -60% 0px", threshold: 0 }
+      (entries) => entries.forEach((entry) => entry.isIntersecting && setActive(entry.target.id)),
+      { rootMargin: "-140px 0px -55% 0px", threshold: 0 }
     );
-
-    sections.forEach((section) => observer.observe(section));
+    links
+      .map((l) => document.getElementById(l.dataset.target!))
+      .forEach((section) => section && observer.observe(section));
   }
 
   initPricingNav();
@@ -120,17 +60,26 @@ const { items } = Astro.props as PricingNavProps;
 </script>
 
 <style>
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  .pnav {
+    position: sticky;
+    top: var(--nav-h);
+    z-index: 40;
+    background: var(--bg);
+    border-block: 1px solid var(--line);
+    transition: top 0.6s var(--ease-out-expo);
   }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+  /* La barre principale se masque au défilement vers le bas : la sous-nav prend sa place. */
+  :global(body:has(#site-nav[data-hidden="true"])) .pnav { top: 0; }
+  .pnav-list { display: flex; gap: clamp(20px, 3vw, 40px); overflow-x: auto; }
+  .pnav-link {
+    display: block;
+    padding: 14px 0 13px;
+    font-size: 14px;
+    color: var(--gray-2);
+    white-space: nowrap;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
   }
-  .pricing-nav-link {
-    border: 1px solid transparent;
-  }
-  .pricing-nav-link:hover {
-    background: rgba(255, 255, 255, 0.05);
-  }
+  .pnav-link:hover { color: var(--ink); }
+  .pnav-link[aria-current="true"] { color: var(--ink); border-bottom-color: var(--ink); }
 </style>

@@ -1,0 +1,329 @@
+{
+  "schema_version": 1,
+  "source_brief": "content/_drafts/blog/round-by-round-deroule-seance.md",
+  "slug": "round-by-round-deroule-seance",
+  "locale": "fr",
+  "module": "B",
+  "snippet": {
+    "title": "Round by Round : le déroulé d'un cours de boxe collectif",
+    "h1": "Round by Round : le déroulé d'un cours de boxe collectif",
+    "description": "Huit personnes, un coach, 50 minutes sans échange de coups : le déroulé d'une séance Round by Round, ce que le coach corrige et comment réserver."
+  },
+  "dates": {
+    "pubDate": "2026-11-19",
+    "updatedDate": null,
+    "reviewedDate": null
+  },
+  "word_count": {
+    "minimum": 1000,
+    "maximum": 1300
+  },
+  "primary_keyword": "comment se passe un cours de boxe collectif",
+  "keywords": [
+    {
+      "role": "primary",
+      "query": "comment se passe un cours de boxe collectif",
+      "natural_form": "comment se passe un cours de boxe collectif",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "round by round boxe",
+      "natural_form": "un cours Round by Round",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "cours de boxe collectif Genève",
+      "natural_form": "un cours collectif de boxe à Genève",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "cours boxe en groupe Genève",
+      "natural_form": "un cours de boxe en groupe à Genève",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "boxe sans contact",
+      "natural_form": "une boxe sans échange de coups",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "cours de boxe débutant",
+      "natural_form": "un cours de boxe pour débutant",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "déroulé cours de boxe collectif",
+      "natural_form": "le déroulé d'un cours de boxe collectif",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "que faut-il apporter à un cours de boxe",
+      "natural_form": "ce qu'il faut apporter à un cours de boxe",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "faut-il un niveau pour un cours de boxe collectif",
+      "natural_form": "faut-il un niveau pour suivre un cours collectif",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "durée d'un round de boxe",
+      "natural_form": "la durée d'un round de boxe",
+      "volume": null
+    }
+  ],
+  "structure": [
+    {
+      "id": "deroule",
+      "level": 2,
+      "heading": "Le déroulé d'une séance Round by Round, étape par étape",
+      "purpose": "Cœur de l'article ; minutage à confirmer (bloquant)"
+    },
+    {
+      "id": "echauffement",
+      "level": 3,
+      "heading": "L'échauffement",
+      "purpose": "Corde, mobilité, shadow ; observation"
+    },
+    {
+      "id": "rounds",
+      "level": 3,
+      "heading": "Les rounds : technique et préparation physique",
+      "purpose": "Rounds de 2 min, sac, pattes d'ours, physique intégré, SRC-004"
+    },
+    {
+      "id": "fin-seance",
+      "level": 3,
+      "heading": "La fin de séance",
+      "purpose": "À confirmer ; retiré si non documenté"
+    },
+    {
+      "id": "corrections",
+      "level": 2,
+      "heading": "Ce que le coach corrige pendant les rounds",
+      "purpose": "4 à 6 points validés par Nicolas"
+    },
+    {
+      "id": "pratique",
+      "level": 2,
+      "heading": "Niveau, matériel et réservation",
+      "purpose": "Section courte sans H3 (100–150 mots), renvois vers la page service et l'article préparation"
+    },
+    {
+      "id": "pour-qui",
+      "level": 2,
+      "heading": "Pour qui Round by Round est le bon point de départ",
+      "purpose": "Pour qui / pas pour qui + Notre avis"
+    },
+    {
+      "id": "faq",
+      "level": 2,
+      "heading": "Questions fréquentes sur Round by Round",
+      "purpose": "2 questions courtes, renvoi vers la FAQ de la page service"
+    },
+    {
+      "id": "faq-contact",
+      "level": 3,
+      "heading": "Y a-t-il des contacts entre participants ?",
+      "purpose": "Non"
+    },
+    {
+      "id": "faq-lieu",
+      "level": 3,
+      "heading": "Où se trouve le studio ?",
+      "purpose": "FAQ locale"
+    },
+    {
+      "id": "conclusion",
+      "level": 2,
+      "heading": "Conclusion : 50 minutes pour savoir si la boxe vous parle",
+      "purpose": "CTA unique"
+    }
+  ],
+  "internal_links": [
+    {
+      "url": "/cours-de-boxe-geneve",
+      "anchor": "les cours de boxe à Genève",
+      "section_id": "intro",
+      "required": true
+    },
+    {
+      "url": "/services/round-by-round",
+      "anchor": "les cours collectifs de boxe à Genève",
+      "section_id": "intro",
+      "required": true
+    },
+    {
+      "url": "/services/round-by-round",
+      "anchor": "tous les détails pratiques de Round by Round",
+      "section_id": "pratique",
+      "required": true
+    },
+    {
+      "url": "/blog/cours-boxe-prive-petit-groupe-collectif",
+      "anchor": "choisir entre cours privé, petit groupe et collectif",
+      "section_id": "pour-qui",
+      "required": true
+    },
+    {
+      "url": "/blog/premier-cours-de-boxe-preparation",
+      "anchor": "préparer votre premier cours de boxe",
+      "section_id": "pratique",
+      "required": true
+    },
+    {
+      "url": "/blog/equipement-boxe-debutant-geneve",
+      "anchor": "l'équipement à acheter ensuite",
+      "section_id": "pratique",
+      "required": false
+    },
+    {
+      "url": "/services/small-group-training",
+      "anchor": "le Small Group Training",
+      "section_id": "pour-qui",
+      "required": false
+    },
+    {
+      "url": "/services/coaching-solo",
+      "anchor": "le coaching solo",
+      "section_id": "pour-qui",
+      "required": false
+    },
+    {
+      "url": "/#planning",
+      "anchor": "Réserver une première séance",
+      "section_id": "conclusion",
+      "required": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-004",
+      "url": "https://www.ontario.ca/document/amateur-combative-sport-rules-boxing/part-iv-competition-requirements",
+      "title": "Ontario, Amateur combative sport rules: Boxing, Part IV",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-002",
+      "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2010.00190/full",
+      "title": "Wulf et al. 2010, Frequent External-Focus Feedback Enhances Motor Learning",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "statement": "Round by Round : 8 personnes au plus, 1 coach, 50 minutes, aucun échange de coups, CHF 40 la séance",
+      "status": "confirmed",
+      "source_ids": []
+    },
+    {
+      "id": "CLM-002",
+      "statement": "Rounds de 2 minutes avec récupération active",
+      "status": "confirmed",
+      "source_ids": []
+    },
+    {
+      "id": "CLM-003",
+      "statement": "Minutage des blocs (échauffement, nombre de rounds, fin de séance)",
+      "status": "to_confirm",
+      "source_ids": [],
+      "limits": "Bloquant, décision n° 1"
+    },
+    {
+      "id": "CLM-004",
+      "statement": "Organisation des pattes d'ours avec un seul coach pour 8",
+      "status": "to_confirm",
+      "source_ids": [],
+      "limits": "Décision n° 2"
+    },
+    {
+      "id": "CLM-005",
+      "statement": "Règles amateurs : 3 rounds de 3 minutes en élite, 2 minutes pour les novices",
+      "status": "to_confirm",
+      "source_ids": [
+        "SRC-004"
+      ],
+      "limits": "Source et encadré gardés seulement si Nicolas valide la raison des rounds de 2 min (décision n° 10)"
+    },
+    {
+      "id": "CLM-006",
+      "statement": "Le format de 2 minutes correspond à l'effort d'un débutant",
+      "status": "hypothesis",
+      "source_ids": [
+        "SRC-004"
+      ],
+      "limits": "Raison non documentée, à valider"
+    },
+    {
+      "id": "CLM-007",
+      "statement": "Gants et bandes fournis à chaque séance",
+      "status": "to_confirm",
+      "source_ids": [],
+      "limits": "Décision n° 4 ; écrire « pour la première séance »"
+    },
+    {
+      "id": "CLM-008",
+      "statement": "Séance d'essai gratuite ; effet sur le stress ; 2 coachs ; palmarès de Lionel",
+      "status": "forbidden",
+      "source_ids": []
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG-001",
+      "placement": "cover",
+      "type": "photo",
+      "alt_text": "Participants d'un cours collectif Round by Round travaillant chacun au sac de frappe au studio Bis Repetita à Genève",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "IMG-002",
+      "placement": "after-h3:echauffement",
+      "type": "photo",
+      "alt_text": "Corde à sauter pendant l'échauffement d'un cours collectif de boxe Round by Round à Genève",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-003",
+      "placement": "after-h3:rounds",
+      "type": "photo",
+      "alt_text": "Travail aux pattes d'ours avec le coach pendant un round, sans opposition entre participants",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-004",
+      "placement": "after-h2:pour-qui",
+      "type": "photo",
+      "alt_text": "Cours collectif de boxe Round by Round au studio Bis Repetita, près de la place des Nations à Genève",
+      "aspect_ratio": "4:3"
+    }
+  ],
+  "cta": {
+    "url": "/#planning",
+    "anchor": "Réserver une première séance"
+  },
+  "frontmatter": {
+    "author": "Équipe Bis Repetita",
+    "category": "guide",
+    "tags": [
+      "Round by Round",
+      "cours de boxe collectif Genève",
+      "déroulé cours de boxe",
+      "boxe sans contact",
+      "cours de boxe débutant"
+    ],
+    "draft": true
+  }
+}

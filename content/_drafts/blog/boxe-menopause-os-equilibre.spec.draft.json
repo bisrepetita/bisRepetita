@@ -1,0 +1,422 @@
+{
+  "schema_version": 1,
+  "source_brief": "content/_drafts/blog/boxe-menopause-os-equilibre.md",
+  "slug": "boxe-menopause-os-equilibre",
+  "locale": "fr",
+  "module": "C",
+  "snippet": {
+    "title": "Sport et ménopause : la boxe, les os et l'équilibre",
+    "h1": "Sport et ménopause : la boxe, les os et l'équilibre",
+    "description": "Impacts, charge, équilibre : ce que recommandent les spécialistes de l'os après la ménopause, et la place d'une séance de boxe. Sources citées."
+  },
+  "dates": {
+    "pubDate": "2026-11-26",
+    "updatedDate": null,
+    "reviewedDate": null
+  },
+  "word_count": {
+    "minimum": 1400,
+    "maximum": 1700
+  },
+  "primary_keyword": "sport ménopause",
+  "keywords": [
+    {
+      "role": "primary",
+      "query": "sport ménopause",
+      "natural_form": "le sport à la ménopause",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "boxe ménopause",
+      "natural_form": "la boxe à la ménopause",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "sport densité osseuse ménopause",
+      "natural_form": "le sport pour la densité osseuse après la ménopause",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "quel sport après 50 ans femme",
+      "natural_form": "quel sport choisir après 50 ans, quand on est une femme",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "sport ostéoporose",
+      "natural_form": "faire du sport avec une ostéoporose",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "exercices équilibre ménopause",
+      "natural_form": "des exercices d'équilibre après la ménopause",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "renforcement musculaire ménopause",
+      "natural_form": "le renforcement musculaire à la ménopause",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "peut-on faire de la boxe avec de l'ostéoporose",
+      "natural_form": "peut-on boxer avec une ostéoporose",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "sauter ménopause fuites urinaires",
+      "natural_form": "les sauts et les fuites urinaires après la ménopause",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "combien d'impacts par jour pour les os",
+      "natural_form": "combien d'impacts par séance pour les os",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "sport bouffées de chaleur",
+      "natural_form": "le sport contre les bouffées de chaleur",
+      "volume": null
+    }
+  ],
+  "structure": [
+    {
+      "id": "os",
+      "level": 2,
+      "heading": "Ce que la ménopause change pour les os",
+      "purpose": "voir brief, section Ce que la ménopause change pour les os"
+    },
+    {
+      "id": "impacts-charge",
+      "level": 2,
+      "heading": "Impacts et charge : ce que recommandent les spécialistes de l'os",
+      "purpose": "voir brief, section Impacts et charge : ce que recommandent les spécialistes de l'os"
+    },
+    {
+      "id": "osteoporose",
+      "level": 3,
+      "heading": "Avec une ostéoporose ou une fracture vertébrale",
+      "purpose": "voir brief, section Avec une ostéoporose ou une fracture vertébrale"
+    },
+    {
+      "id": "seance-boxe",
+      "level": 2,
+      "heading": "Ce qu'une séance de boxe apporte, et ce qu'elle n'apporte pas",
+      "purpose": "voir brief, section Ce qu'une séance de boxe apporte, et ce qu'elle n'apporte pas"
+    },
+    {
+      "id": "equilibre",
+      "level": 3,
+      "heading": "L'équilibre : ce que la boxe sollicite",
+      "purpose": "voir brief, section L'équilibre, l'atout le plus direct"
+    },
+    {
+      "id": "energie",
+      "level": 3,
+      "heading": "Énergie et bouffées de chaleur : ce qu'on ne sait pas",
+      "purpose": "voir brief, section Énergie et bouffées de chaleur : ce qu'on ne sait pas"
+    },
+    {
+      "id": "doser",
+      "level": 2,
+      "heading": "Doser : impacts, plancher pelvien, première séance",
+      "purpose": "voir brief, section Doser : impacts, plancher pelvien, première séance"
+    },
+    {
+      "id": "faq",
+      "level": 2,
+      "heading": "FAQ — Boxe et ménopause",
+      "purpose": "voir brief, section FAQ — Boxe et ménopause"
+    },
+    {
+      "id": "pour-finir",
+      "level": 2,
+      "heading": "Pour finir",
+      "purpose": "voir brief, section Pour finir"
+    }
+  ],
+  "internal_links": [
+    {
+      "url": "/blog/effet-boxe-corps-femme-geneve",
+      "anchor": "l'effet de la boxe sur le corps d'une femme",
+      "section_id": "equilibre",
+      "required": true
+    },
+    {
+      "url": "/blog/a-quel-age-commencer-la-boxe",
+      "anchor": "à quel âge commencer la boxe",
+      "section_id": "faq",
+      "required": true
+    },
+    {
+      "url": "/services/boxe-femme",
+      "anchor": "la boxe pour les femmes, au studio",
+      "section_id": "pour-finir",
+      "required": true
+    },
+    {
+      "url": "/cours-de-boxe-geneve",
+      "anchor": "cours de boxe à Genève",
+      "section_id": "intro",
+      "required": true
+    },
+    {
+      "url": "/blog/la-boxe-est-elle-dangereuse-blessures-loisir",
+      "anchor": "ce que disent les chiffres sur les blessures",
+      "section_id": "doser",
+      "required": false
+    },
+    {
+      "url": "/services/coaching-solo",
+      "anchor": "la séance Solo",
+      "section_id": "pour-finir",
+      "required": false
+    },
+    {
+      "url": "/blog/boxe-regles-cycle-menstruel",
+      "anchor": "boxe et cycle menstruel",
+      "section_id": "intro",
+      "required": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9304091",
+      "title": "Strong, steady and straight: UK consensus statement (BJSM 2022)",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-002",
+      "url": "https://academic.oup.com/jbmr/article/33/2/211/7605709",
+      "title": "LIFTMOR RCT (JBMR 2018)",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-003",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8208668",
+      "title": "Shieh et al., JCEM 2021 (SWAN)",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-004",
+      "url": "https://www.chuv.ch/fr/cimo/accueil/patients-et-familles/maladies-traitees/osteoporose",
+      "title": "CHUV CiMO, Ostéoporose (2021)",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-005",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7719906/",
+      "title": "WHO 2020 guidelines (BJSM 2020)",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-006",
+      "url": "https://doi.org/10.1002/14651858.CD006108.pub4",
+      "title": "Cochrane 2014, Exercise for vasomotor menopausal symptoms",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-007",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7386138",
+      "title": "Pires et al., J Hum Kinet 2020",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-008",
+      "url": "https://doi.org/10.1038/s41598-025-94510-3",
+      "title": "Xiaoya et al., Sci Rep 2025",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "statement": "Perte osseuse la plus rapide de 1 an avant à 2 ans après les dernières règles : ~2,5 %/an rachis lombaire, 1,8 %/an col du fémur.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-003"
+      ],
+      "limits": "donnée de cohorte observationnelle"
+    },
+    {
+      "id": "CLM-002",
+      "statement": "La ménopause est la cause principale de l'ostéoporose chez la femme ; fractures liées à l'ostéoporose chez 50 % des femmes de plus de 50 ans en Suisse.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-004"
+      ],
+      "limits": "source institutionnelle suisse"
+    },
+    {
+      "id": "CLM-003",
+      "statement": "Impacts modérés la plupart des jours, au moins 50 par séance (ex. 5 x 10).",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-001"
+      ]
+    },
+    {
+      "id": "CLM-004",
+      "statement": "Renforcement 2 à 3 jours/semaine, charge soulevable 8 à 12 fois, jusqu'à 3 séries.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-001"
+      ]
+    },
+    {
+      "id": "CLM-005",
+      "statement": "Impacts très élevés (réception d'une hauteur) non recommandés.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-001"
+      ]
+    },
+    {
+      "id": "CLM-006",
+      "statement": "LIFTMOR : rachis +2,9 % vs -1,2 %, col du fémur +0,3 % vs -1,9 %, 8 mois, supervisé.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-002"
+      ]
+    },
+    {
+      "id": "CLM-007",
+      "statement": "Combiner endurance et renforcement donne les meilleurs résultats sur la densité osseuse.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-008"
+      ]
+    },
+    {
+      "id": "CLM-008",
+      "statement": "Les bénéfices l'emportent en général sur les risques.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-001"
+      ]
+    },
+    {
+      "id": "CLM-009",
+      "statement": "Fracture vertébrale : impacts jusqu'au niveau de la marche rapide, physiothérapeute au départ.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-001"
+      ]
+    },
+    {
+      "id": "CLM-010",
+      "statement": "Aucune étude sur boxe et densité osseuse ; le jeu de jambes ressemble aux impacts modérés.",
+      "status": "hypothesis",
+      "source_ids": [
+        "SRC-001"
+      ]
+    },
+    {
+      "id": "CLM-011",
+      "statement": "Les frappes au sac ne sont pas un impact osseux au sens du consensus.",
+      "status": "hypothesis",
+      "source_ids": []
+    },
+    {
+      "id": "CLM-012",
+      "statement": "OMS : 65+ ans, équilibre fonctionnel et force 3 jours/semaine ou plus pour prévenir les chutes.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-005"
+      ],
+      "limits": "vise les 65 ans et plus"
+    },
+    {
+      "id": "CLM-013",
+      "statement": "Équilibre et renforcement au moins 2 fois/semaine pour réduire les chutes.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-001"
+      ]
+    },
+    {
+      "id": "CLM-014",
+      "statement": "Preuves insuffisantes sur l'exercice contre les bouffées de chaleur.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-006"
+      ]
+    },
+    {
+      "id": "CLM-015",
+      "statement": "Fuites urinaires : 25,9 % des sportives en sport à impact (20,7 % à l'effort).",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-007"
+      ]
+    },
+    {
+      "id": "CLM-016",
+      "statement": "La boxe soigne ou prévient l'ostéoporose ou les symptômes de la ménopause.",
+      "status": "forbidden",
+      "source_ids": []
+    },
+    {
+      "id": "CLM-017",
+      "statement": "Les appuis et changements de direction de la boxe sollicitent l'équilibre ; aucune étude boxe ne l'a mesuré.",
+      "status": "hypothesis",
+      "source_ids": []
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG-001",
+      "placement": "cover",
+      "type": "photo",
+      "alt_text": "Femme d'une cinquantaine d'années en garde de boxe au studio, appuis stables, lumière naturelle",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "IMG-002",
+      "placement": "after-h2:impacts-charge",
+      "type": "schema",
+      "alt_text": "Repères du consensus britannique 2022 sur l'exercice et l'ostéoporose : impacts, renforcement, équilibre",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-003",
+      "placement": "after-h2:seance-boxe",
+      "type": "photo",
+      "alt_text": "Jeu de jambes en boxe, petits sautillés sur le sol du studio, plan rapproché sur les pieds",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-004",
+      "placement": "after-h3:equilibre",
+      "type": "photo",
+      "alt_text": "Pratiquante en shadow boxing qui transfère son appui, travail d'équilibre au studio de Genève",
+      "aspect_ratio": "4:3"
+    }
+  ],
+  "cta": {
+    "url": "/#planning",
+    "anchor": "Réserver une première séance"
+  },
+  "frontmatter": {
+    "author": "Équipe Bis Repetita",
+    "category": "guide",
+    "draft": true
+  }
+}

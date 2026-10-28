@@ -1,0 +1,364 @@
+{
+  "schema_version": 1,
+  "source_brief": "content/_drafts/blog/cardio-boxe-ou-boxe-technique.md",
+  "slug": "cardio-boxe-ou-boxe-technique",
+  "locale": "fr",
+  "module": "E",
+  "snippet": {
+    "title": "Cardio-boxe ou boxe technique : ce qui fait progresser",
+    "h1": "Cardio-boxe ou boxe technique : ce qui fait progresser",
+    "description": "Le cardio-boxe fait transpirer, la boxe technique apprend la garde et la distance. Comparatif des deux formats et notre avis pour choisir à Genève."
+  },
+  "dates": {
+    "pubDate": "2026-10-29",
+    "updatedDate": null,
+    "reviewedDate": null
+  },
+  "word_count": {
+    "minimum": 1400,
+    "maximum": 1800
+  },
+  "primary_keyword": "cardio boxe",
+  "keywords": [
+    {
+      "role": "primary",
+      "query": "cardio boxe",
+      "natural_form": "le cardio-boxe",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "boxe fitness Genève",
+      "natural_form": "un cours de boxe fitness à Genève",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "cours de cardio boxing",
+      "natural_form": "un cours de cardio-boxing",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "boxing fitness ou boxe anglaise",
+      "natural_form": "choisir entre la boxe fitness et la boxe anglaise",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "boxe sur musique",
+      "natural_form": "la boxe sur musique",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "apprendre la boxe technique",
+      "natural_form": "apprendre la technique de la boxe anglaise",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "cours de boxe technique Genève",
+      "natural_form": "un cours de boxe technique à Genève",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "le cardio boxing est-il de la vraie boxe",
+      "natural_form": "le cardio-boxing, est-ce vraiment de la boxe ?",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "douleur poignet cardio boxing",
+      "natural_form": "une douleur au poignet après un cours de cardio-boxe",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "passer du cardio boxing à la boxe anglaise",
+      "natural_form": "passer du cardio-boxe à la boxe anglaise",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "cardio boxe débutant",
+      "natural_form": "débuter par le cardio-boxe",
+      "volume": null
+    }
+  ],
+  "structure": [
+    {
+      "id": "comparatif",
+      "level": 2,
+      "heading": "Cardio-boxe et boxe technique : le comparatif en un tableau",
+      "purpose": "Tableau 8 critères, sans notes ; colonne cardio-boxe au conditionnel de source publique"
+    },
+    {
+      "id": "cinquante-minutes",
+      "level": 2,
+      "heading": "Ce qui se passe pendant 50 minutes dans chaque format",
+      "purpose": "Déroulé côte à côte ; Round by Round comme format de boxe technique"
+    },
+    {
+      "id": "cardio-boxe-seance",
+      "level": 3,
+      "heading": "Un cours de cardio-boxe",
+      "purpose": "Format générique, respectueux, aucune enseigne"
+    },
+    {
+      "id": "boxe-technique-seance",
+      "level": 3,
+      "heading": "Une séance de boxe technique",
+      "purpose": "Format Round by Round publié"
+    },
+    {
+      "id": "developpe",
+      "level": 2,
+      "heading": "Ce que chaque format développe vraiment",
+      "purpose": "Compendium (MET) et Sigrist 2013"
+    },
+    {
+      "id": "souffle",
+      "level": 3,
+      "heading": "Le souffle : à cadence de frappe égale, la dépense se ressemble",
+      "purpose": "Compendium, extrapolation dite comme telle"
+    },
+    {
+      "id": "garde-feedback",
+      "level": 3,
+      "heading": "La garde, la distance, les appuis : seulement avec un feedback",
+      "purpose": "Sigrist 2013"
+    },
+    {
+      "id": "risque",
+      "level": 2,
+      "heading": "Le vrai risque : les mauvaises habitudes qui s'installent",
+      "purpose": "3 habitudes ; Loosemore 2015 avec limite"
+    },
+    {
+      "id": "avis",
+      "level": 2,
+      "heading": "Notre avis : lequel choisir, et comment passer de l'un à l'autre",
+      "purpose": "Pour qui / pas pour qui, Si vous cherchez, Notre avis, passage de l'un à l'autre"
+    },
+    {
+      "id": "faq",
+      "level": 2,
+      "heading": "FAQ",
+      "purpose": "5 questions, réponses 40-70 mots"
+    },
+    {
+      "id": "conclusion",
+      "level": 2,
+      "heading": "Conclusion",
+      "purpose": "3-4 phrases puis CTA unique"
+    },
+    {
+      "id": "sources",
+      "level": 2,
+      "heading": "Sources et références",
+      "purpose": "Liste des sources"
+    }
+  ],
+  "internal_links": [
+    {
+      "url": "/cours-de-boxe-geneve",
+      "anchor": "cours de boxe à Genève",
+      "section_id": "intro",
+      "required": true
+    },
+    {
+      "url": "/services/round-by-round",
+      "anchor": "le format Round by Round",
+      "section_id": "boxe-technique-seance",
+      "required": true
+    },
+    {
+      "url": "/blog/la-boxe-est-elle-dangereuse-blessures-loisir",
+      "anchor": "les blessures en boxe loisir",
+      "section_id": "risque",
+      "required": true
+    },
+    {
+      "url": "/blog/equipement-boxe-debutant-geneve",
+      "anchor": "bien poser ses bandes et choisir ses gants",
+      "section_id": "risque",
+      "required": true
+    },
+    {
+      "url": "/blog/premier-cours-de-boxe-preparation",
+      "anchor": "préparer votre premier cours de boxe",
+      "section_id": "avis",
+      "required": true
+    },
+    {
+      "url": "/blog/combien-seances-boxe-par-semaine-debutant",
+      "anchor": "combien de séances par semaine",
+      "section_id": "faq",
+      "required": true
+    },
+    {
+      "url": "/services/coaching-solo",
+      "anchor": "le coaching solo",
+      "section_id": "avis",
+      "required": true
+    },
+    {
+      "url": "/blog/quelle-boxe-choisir-femme-geneve",
+      "anchor": "quelle boxe choisir pour une femme",
+      "section_id": "comparatif",
+      "required": false
+    },
+    {
+      "url": "/blog/cours-boxe-prive-petit-groupe-collectif",
+      "anchor": "privé, petit groupe ou collectif",
+      "section_id": "avis",
+      "required": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "url": "https://pacompendium.com/sports/",
+      "title": "2024 Adult Compendium of Physical Activities, rubrique Sports",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-002",
+      "url": "https://europepmc.org/article/MED/23132605",
+      "title": "Sigrist et al. 2013, Psychonomic Bulletin & Review",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-003",
+      "url": "https://europepmc.org/article/MED/26192194",
+      "title": "Loosemore et al. 2015, Br J Sports Med",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-004",
+      "url": "https://conseilsport.decathlon.fr/cardio-boxing-fit-boxing-aeroboxe-quelle-boxe-fitness-me-convient",
+      "title": "Decathlon Conseil Sport, Cardio boxing, fit boxing, aéroboxe",
+      "status": "to_verify",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-005",
+      "url": "https://bisrepetita.ch/services/round-by-round",
+      "title": "Page Round by Round du site (fait studio)",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "statement": "Compendium 2024 : sac de frappe en général 5,8 MET ; 120 coups/min 8,5 ; 180 coups/min 10,8 ; round de boxe simulé 9,3",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-001"
+      ],
+      "limits": "moyennes de population ; aucune valeur pour un cours de cardio-boxe sur musique, extrapolation dite comme telle ; pas de calories par heure"
+    },
+    {
+      "id": "CLM-002",
+      "statement": "Le feedback d'un expert améliore l'apprentissage moteur",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-002"
+      ],
+      "limits": "revue ; mode optimal débattu"
+    },
+    {
+      "id": "CLM-003",
+      "statement": "Chez des boxeurs d'élite, la main est la zone la plus touchée",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-003"
+      ],
+      "limits": "non transposable tel quel au cardio-boxe, à dire"
+    },
+    {
+      "id": "CLM-004",
+      "statement": "Le cardio-boxing vise le cardio et la dépense, pas la technique de combat",
+      "status": "to_confirm",
+      "source_ids": [
+        "SRC-004"
+      ],
+      "limits": "citation entre guillemets seulement si retrouvée mot pour mot ; sinon paraphrase"
+    },
+    {
+      "id": "CLM-005",
+      "statement": "Round by Round : 8 personnes au plus, 1 coach, 50 minutes, sans échange de coups, rounds de 2 minutes",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-005"
+      ]
+    },
+    {
+      "id": "CLM-006",
+      "statement": "Musique en Round by Round",
+      "status": "to_confirm",
+      "source_ids": [],
+      "limits": "décision n° 1 du brief : ne pas affirmer ; écrire que le rythme vient du round et du coach"
+    },
+    {
+      "id": "CLM-007",
+      "statement": "Prix : Round by Round CHF 40.- la séance, coaching solo CHF 120.- la séance",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-005"
+      ],
+      "limits": "docs/tarifs-reference.md ; aucun prix de salle de cardio-boxe"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG-001",
+      "placement": "cover",
+      "type": "photo",
+      "alt_text": "Poing bandé sur une patte d'ours pendant un cours de boxe technique",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "IMG-002",
+      "placement": "after-h2:Cardio-boxe et boxe technique : le comparatif en un tableau",
+      "type": "schema",
+      "alt_text": "Tableau comparatif cardio-boxe et boxe technique selon huit critères",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-003",
+      "placement": "after-h3:Une séance de boxe technique",
+      "type": "photo",
+      "alt_text": "Coach qui corrige la garde d'un pratiquant au sac de frappe à Genève",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-004",
+      "placement": "after-h2:Le vrai risque : les mauvaises habitudes qui s'installent",
+      "type": "photo",
+      "alt_text": "Bandes de boxe autour du poignet pour protéger la main",
+      "aspect_ratio": "4:3"
+    }
+  ],
+  "cta": {
+    "url": "/#planning",
+    "anchor": "Réserver une première séance"
+  },
+  "frontmatter": {
+    "author": "Équipe Bis Repetita",
+    "category": "guide",
+    "tags": [
+      "cardio boxe",
+      "boxe technique",
+      "boxe fitness",
+      "boxe Genève"
+    ],
+    "draft": true
+  }
+}

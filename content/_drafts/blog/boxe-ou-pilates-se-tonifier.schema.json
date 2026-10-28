@@ -1,0 +1,57 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://bisrepetita.ch/blog/boxe-ou-pilates-se-tonifier#article",
+      "mainEntityOfPage": "https://bisrepetita.ch/blog/boxe-ou-pilates-se-tonifier",
+      "headline": "Boxe ou Pilates pour se tonifier : notre avis",
+      "description": "Boxe et Pilates comparés pour se tonifier : cardio, posture, impacts, prix. Notre avis, et les cas où le Pilates est le bon choix.",
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "author": {
+        "@type": "Person",
+        "name": "Équipe Bis Repetita"
+      },
+      "image": "https://bisrepetita.ch/images/blog/boxe-ou-pilates-se-tonifier.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://bisrepetita.ch/blog/boxe-ou-pilates-se-tonifier#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Le Pilates suffit-il pour se tonifier ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il travaille la tonicité et le contrôle, avec peu de cardio. Il peut convenir si c'est ce que vous cherchez. Aucun résultat ne peut être promis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Boxe ou Pilates pour maigrir ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Selon le Compendium, la dépense énergétique est plus élevée en boxe. La silhouette dépend du bilan global, et nous ne promettons aucun résultat. Le détail est dans l'article sur la boxe et la silhouette."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "C'est quoi le piloxing ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C'est un cours qui mélange des mouvements de boxe, de danse et de Pilates, souvent sur musique. Ce n'est pas une boxe apprise avec correction de la garde. Nous n'en proposons pas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on faire du Pilates et de la boxe le même jour ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, par exemple le Pilates après la boxe, ou un autre jour. Écoutez la fatigue : c'est un repère, pas une règle. ---"
+          }
+        }
+      ]
+    }
+  ]
+}

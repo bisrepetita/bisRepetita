@@ -1,0 +1,73 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://bisrepetita.ch/blog/boxe-menopause-os-equilibre#article",
+      "mainEntityOfPage": "https://bisrepetita.ch/blog/boxe-menopause-os-equilibre",
+      "headline": "Sport et ménopause : la boxe, les os et l'équilibre",
+      "description": "Impacts, charge, équilibre : ce que recommandent les spécialistes de l'os après la ménopause, et la place d'une séance de boxe. Sources citées.",
+      "datePublished": "2026-11-26",
+      "dateModified": "2026-11-26",
+      "author": {
+        "@type": "Person",
+        "name": "Équipe Bis Repetita"
+      },
+      "image": "https://bisrepetita.ch/images/blog/boxe-menopause-os-equilibre.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://bisrepetita.ch/blog/boxe-menopause-os-equilibre#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "La boxe est-elle bonne pour les os après la ménopause ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En partie. Le jeu de jambes ressemble aux impacts modérés que recommandent les spécialistes, mais aucune étude n'a mesuré l'effet de la boxe sur la densité osseuse. Le renforcement avec charge reste à compléter ailleurs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on boxer avec une ostéoporose ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cela dépend de votre situation : demandez d'abord l'avis de votre médecin. Avec une fracture vertébrale, le consensus britannique limite les impacts au niveau de la marche rapide et conseille un physiothérapeute au départ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de fois par semaine ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les repères du consensus sont des impacts modérés la plupart des jours et du renforcement deux à trois jours par semaine. La boxe n'en couvre qu'une partie : elle se combine avec le reste."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il sauter si j'ai des fuites ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pas par principe. Signalez-le au coach dès l'échange initial, et consultez un physiothérapeute en rééducation périnéale si les fuites persistent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel sport choisir après 50 ans ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Une combinaison d'impacts modérés, de renforcement avec charge et de travail d'équilibre, selon le consensus britannique. La boxe en couvre une partie. Pour l'âge de départ, voir à quel âge commencer la boxe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-il trop tard pour commencer la boxe à 55 ans ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non, en loisir : la séance s'adapte à la personne. Le coach tient compte de votre passé sportif et de votre état du jour."
+          }
+        }
+      ]
+    }
+  ]
+}

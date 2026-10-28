@@ -1,0 +1,23 @@
+{
+  "reviewer": "auto-revue par @article-producer (pas de /seo-review automatisé)",
+  "date": "2026-10-17",
+  "article": "content/_drafts/blog/boxe-menopause-os-equilibre.article.mdx",
+  "health_review_required": true,
+  "verdict": "revision_sante_requise",
+  "blockers": [
+    "Relecture par un professionnel de santé (D1) avant toute publication"
+  ],
+  "checks": {
+    "claims": "CLM-001 à 015 et 017 écrits dans leurs limites ; CLM-016 absent ; CLM-010, 011, 017 présentés comme inférence ou hypothèse",
+    "scope_limits": "LIFTMOR non généralisé ; CLM-012 limité aux 65 ans et plus dans la phrase ; CLM-015 population sportive dite ; CLM-001 cohorte observationnelle dite",
+    "no_medical_promise": true,
+    "no_invented_fact": true,
+    "ymyl_disclaimer": "présent sous l'intro",
+    "tone": "vouvoiement, sans exclamation ni em dash ni superlatif de marque"
+  },
+  "warnings": [
+    "Mots : environ 1730 hors sources (cible 1400-1700), tableau et FAQ inclus",
+    "Sources non re-vérifiées dans cette passe : chiffres repris du brief et du spec",
+    "3 images en TODO, cover non générée"
+  ]
+}

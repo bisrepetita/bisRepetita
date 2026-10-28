@@ -1,0 +1,23 @@
+{
+  "topic": "coaching boxe à domicile ou en studio",
+  "slug": "coaching-boxe-domicile-ou-studio",
+  "generated_at": "2026-10-17T18:23:02.530550+00:00",
+  "source": "docs/seo/plan-editorial-2026-10-11.md §5 (réserve)",
+  "candidates": [
+    {
+      "keyword": "coaching boxe à domicile ou en studio",
+      "verdict": "PASS",
+      "gates": {
+        "surprise_gap": "pass",
+        "grounding": "pass"
+      },
+      "signals": {
+        "intent": "do",
+        "pseo_scalable": false
+      },
+      "failed_pillar": null,
+      "rationale": "Surprise Gap : la recherche du 2026-10-17 note que coachs-sportifs.ch pousse le domicile à 89 CHF et que « personne n'explique le pour et le contre » ; les faits propres (matériel apporté, 6 à 8 m², pas de ring ni de sacs, prix 120 vs dès 150) sont absents d'un corpus générique. Grounding : page /services/coaching-boxe-domicile et tarifs-reference.md. Réserve : contradictions de la page domicile (D1–D3 du brief). Intention Do (choix d'un lieu avant réservation). Volumes : Non vérifié.",
+      "priority": "haute"
+    }
+  ]
+}

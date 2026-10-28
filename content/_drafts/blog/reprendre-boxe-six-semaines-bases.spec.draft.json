@@ -1,0 +1,326 @@
+{
+  "schema_version": 1,
+  "source_brief": "content/_drafts/blog/reprendre-boxe-six-semaines-bases.md",
+  "slug": "reprendre-boxe-six-semaines-bases",
+  "locale": "fr",
+  "module": "B",
+  "snippet": {
+    "title": "Reprendre la boxe en janvier : 6 semaines pour les bases",
+    "h1": "Reprendre la boxe en janvier : 6 semaines pour les bases",
+    "description": "Garde, appuis, enchaînements, rounds : un plan de six semaines pour reprendre ou débuter la boxe à Genève, avec les repères à observer et les formats."
+  },
+  "dates": {
+    "pubDate": "2026-12-29",
+    "updatedDate": null,
+    "reviewedDate": null
+  },
+  "word_count": {
+    "minimum": 1500,
+    "maximum": 1900
+  },
+  "primary_keyword": "reprendre la boxe en janvier",
+  "keywords": [
+    {
+      "role": "primary",
+      "query": "reprendre la boxe en janvier",
+      "natural_form": "reprendre la boxe en janvier",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "reprendre le sport en janvier",
+      "natural_form": "reprendre une activité physique en janvier",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "reprendre la boxe après une pause",
+      "natural_form": "reprendre la boxe après une pause",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "programme boxe débutant 6 semaines",
+      "natural_form": "un plan de six semaines pour débuter la boxe",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "bonnes résolutions sport boxe",
+      "natural_form": "tenir sa résolution de faire du sport",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "recommencer la boxe après des années",
+      "natural_form": "recommencer la boxe après des années d'arrêt",
+      "volume": null
+    },
+    {
+      "role": "secondary",
+      "query": "commencer la boxe à Genève",
+      "natural_form": "commencer la boxe à Genève",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "combien de temps pour reprendre la boxe après une pause",
+      "natural_form": "le temps qu'il faut pour reprendre",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "que faire les premières semaines de boxe",
+      "natural_form": "ce que l'on fait pendant les premières semaines",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "garde et appuis boxe débutant",
+      "natural_form": "poser sa garde et ses appuis",
+      "volume": null
+    },
+    {
+      "role": "long_tail",
+      "query": "comment ne pas abandonner le sport en février",
+      "natural_form": "tenir au-delà des premières semaines",
+      "volume": null
+    }
+  ],
+  "structure": [
+    {
+      "id": "avant",
+      "level": 2,
+      "heading": "Avant de commencer : trois questions à vous poser",
+      "purpose": "Trois questions : objectif, fréquence réaliste, état de santé"
+    },
+    {
+      "id": "semaines",
+      "level": 2,
+      "heading": "Les six semaines, par paliers de deux",
+      "purpose": "Plan en trois paliers (D1) avec repères observables"
+    },
+    {
+      "id": "s1",
+      "level": 3,
+      "heading": "Semaines 1 et 2 : la garde et les appuis",
+      "purpose": "Palier 1 : garde, appuis, premiers directs"
+    },
+    {
+      "id": "s3",
+      "level": 3,
+      "heading": "Semaines 3 et 4 : les enchaînements et le rythme",
+      "purpose": "Palier 2 : enchaînements simples, rythme des rounds"
+    },
+    {
+      "id": "s5",
+      "level": 3,
+      "heading": "Semaines 5 et 6 : la durée et l'intensité",
+      "purpose": "Palier 3 : durée, intensité, premier bilan"
+    },
+    {
+      "id": "format",
+      "level": 2,
+      "heading": "Quel format choisir pour ces six semaines",
+      "purpose": "Formats adaptés au plan, prix à la séance seulement, renvoi vers l'article du 20 oct."
+    },
+    {
+      "id": "tenir",
+      "level": 2,
+      "heading": "Après les six semaines : tenir dans la durée",
+      "purpose": "Habitude : étude de Lally, rater une séance, Notre avis"
+    },
+    {
+      "id": "faq",
+      "level": 2,
+      "heading": "Questions fréquentes sur la reprise de la boxe",
+      "purpose": "FAQ : séances par semaine, séance manquée, condition physique"
+    },
+    {
+      "id": "conclusion",
+      "level": 2,
+      "heading": "Conclusion : six semaines pour des repères, pas pour un résultat",
+      "purpose": "Conclusion 80–120 mots et CTA unique"
+    }
+  ],
+  "internal_links": [
+    {
+      "url": "/cours-de-boxe-geneve",
+      "anchor": "les cours de boxe à Genève",
+      "section_id": "intro",
+      "required": true
+    },
+    {
+      "url": "/blog/combien-seances-boxe-par-semaine-debutant",
+      "anchor": "combien de séances par semaine quand on débute",
+      "section_id": "avant",
+      "required": true
+    },
+    {
+      "url": "/blog/premier-cours-de-boxe-preparation",
+      "anchor": "préparer votre premier cours",
+      "section_id": "faq",
+      "required": true
+    },
+    {
+      "url": "/blog/equipement-boxe-debutant-geneve",
+      "anchor": "le matériel pour débuter",
+      "section_id": "format",
+      "required": false
+    },
+    {
+      "url": "/blog/cours-boxe-prive-petit-groupe-collectif",
+      "anchor": "choisir entre cours privé, petit groupe et collectif",
+      "section_id": "format",
+      "required": true
+    },
+    {
+      "url": "/blog/prix-cours-boxe-geneve-2026",
+      "anchor": "le détail des prix des cours de boxe à Genève",
+      "section_id": "format",
+      "required": false
+    },
+    {
+      "url": "/services/coaching-solo",
+      "anchor": "le coaching solo",
+      "section_id": "format",
+      "required": true
+    },
+    {
+      "url": "/services/round-by-round",
+      "anchor": "les cours Round by Round",
+      "section_id": "format",
+      "required": true
+    },
+    {
+      "url": "/blog/round-by-round-deroule-seance",
+      "anchor": "le déroulé d'une séance Round by Round",
+      "section_id": "s3",
+      "required": false
+    },
+    {
+      "url": "/services/small-group-training",
+      "anchor": "le Small Group Training",
+      "section_id": "format",
+      "required": false
+    },
+    {
+      "url": "/#planning",
+      "anchor": "Réserver une première séance",
+      "section_id": "conclusion",
+      "required": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "url": "https://www.who.int/fr/news-room/fact-sheets/detail/physical-activity",
+      "title": "OMS, fiche Activité physique, 26 juin 2024",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-002",
+      "url": "https://doi.org/10.1002/ejsp.674",
+      "title": "Lally et al. 2010, How are habits formed, Eur J Soc Psychol 40(6):998-1009",
+      "status": "verified",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    },
+    {
+      "id": "SRC-003",
+      "url": "https://bjsm.bmj.com/content/48/11/871",
+      "title": "Lauersen et al. 2014, exercise interventions to prevent sports injuries, BJSM 48:871-877",
+      "status": "to_verify",
+      "accessed_at": "2026-10-17T00:00:00Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "statement": "L'OMS recommande au moins 150 minutes d'activité modérée par semaine aux adultes.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-001"
+      ],
+      "limits": "pas de promesse santé ; deux séances de boxe en couvrent une partie"
+    },
+    {
+      "id": "CLM-002",
+      "statement": "Dans une étude de 96 volontaires sur 12 semaines, le temps pour qu'un comportement devienne automatique allait de 18 à 254 jours ; manquer une occasion n'a pas eu d'effet notable.",
+      "status": "confirmed",
+      "source_ids": [
+        "SRC-002"
+      ],
+      "limits": "comportements variés (alimentation, boisson, activité), pas la boxe ; ne pas citer 66 jours (non lu)"
+    },
+    {
+      "id": "CLM-003",
+      "statement": "Le renforcement musculaire réduit les blessures sportives à moins d'un tiers du risque (méta-analyse de 25 essais).",
+      "status": "to_confirm",
+      "source_ids": [
+        "SRC-003"
+      ],
+      "limits": "sports en général ; à rouvrir avant citation"
+    },
+    {
+      "id": "CLM-004",
+      "statement": "Le plan de six semaines en trois paliers (garde et appuis ; enchaînements et rythme ; durée et intensité) est la proposition du studio.",
+      "status": "hypothesis",
+      "source_ids": [],
+      "limits": "décision D1 ; ne pas le présenter comme une méthode éprouvée"
+    },
+    {
+      "id": "CLM-005",
+      "statement": "Prix publiés à la séance : solo 120, Small Group 200, Round by Round 40 (CHF) ; Round by Round : 8 personnes au plus, 1 coach, 50 minutes, aucun échange de coups.",
+      "status": "confirmed",
+      "source_ids": [],
+      "limits": "libellés exacts de `/tarifs` ; aucun pack ; aucun total ; Small Group sans prix par personne"
+    },
+    {
+      "id": "CLM-006",
+      "statement": "Six semaines créent une habitude ; vous obtiendrez un résultat (perte de poids, forme) en six semaines ; garantie de progression.",
+      "status": "forbidden",
+      "source_ids": [],
+      "limits": "promesse de résultat interdite ; contredit CLM-002"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG-001",
+      "placement": "cover",
+      "type": "photo",
+      "alt_text": "Personne enroulant ses bandes de main avant une séance de boxe au studio Bis Repetita à Genève",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "IMG-002",
+      "placement": "after-h2:semaines",
+      "type": "schéma",
+      "alt_text": "Schéma des six semaines de reprise de la boxe en trois paliers : garde et appuis, enchaînements, durée et intensité",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "id": "IMG-003",
+      "placement": "after-h3:s3",
+      "type": "photo",
+      "alt_text": "Participants d'un cours collectif Round by Round frappant chacun leur sac au studio Bis Repetita à Genève",
+      "aspect_ratio": "4:3"
+    }
+  ],
+  "cta": {
+    "url": "/#planning",
+    "anchor": "Réserver une première séance"
+  },
+  "frontmatter": {
+    "author": "Équipe Bis Repetita",
+    "category": "guide",
+    "tags": [
+      "reprendre la boxe en janvier",
+      "reprendre le sport en janvier",
+      "programme boxe débutant",
+      "commencer la boxe à Genève",
+      "boxe débutant"
+    ],
+    "draft": true
+  }
+}
